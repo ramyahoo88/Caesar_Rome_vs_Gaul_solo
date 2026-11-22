@@ -45,15 +45,16 @@ def md_page(md_path, title, extra_css=''):
     foot = (title + ' · unofficial fan variant for Caesar: Rome vs. Gaul (GMT Games) · page ').replace('"', "'")
     page_css = ('@page { @bottom-center { content: "' + foot + '" counter(page); font-family: \'DejaVu Serif\', serif; '
                 'font-size: 8pt; color: #777; } }')
-    return f"""<!doctype html><html><head><meta charset="utf-8"><title>{html.escape(title)}</title>
-<style>{BASE_CSS}{page_css}{extra_css}</style></head><body>{body}</body></html>"""
+    base = 'file://' + HERE + '/'
+    return f"""<!doctype html><html><head><meta charset="utf-8"><base href="{base}"><title>{html.escape(title)}</title>
+<style>{BASE_CSS}{page_css}img {{ width: 5.4in; max-width: 100%; display: block; margin: 4pt auto; }}{extra_css}</style></head><body>{body}</body></html>"""
 
 
 # ------------------------------------------------------------------ Directive cards
 MISSION_TEXT = {
     'RULE': 'Control Table lines 0–3: presence, convert, Provincia, gain a province.',
     'SIEGE': 'March and roll vs a Town that surrenders (3:1), has 2+ Siege Points, or (Caesar, 2:1) 1 point. Octodurus last.',
-    'RAID': 'SWEEP Gallic IMs: 4 Gallic province in Celtica / Provincia; 3 other Gallic province; 2 near Roman control.',
+    'RAID': 'SWEEP Gallic IMs: 4 Gallic province in Celtica / Provincia; 3 other Gallic province; 2 near Roman control. Not into danger (Caesar may).',
     'SETTLE': 'Whole Control Table (0–6).',
     'STRIKE': 'Attack Gallic CUs at 2:1 BS (Caesar 1.5:1). 3:1 first, then largest, then nearest.',
     'INVADE': 'Turn 3+, Caesar unmoved, 6 strongest CUs CS 12+: Britannia / Germania IMs.',
@@ -62,7 +63,7 @@ MISSION_TEXT = {
     'AGITATE': 'One Agitate Table action.',
     'BANK': 'Turns 1–5: one IM into the Council Box (max 6).',
 }
-GAUL_RAID = 'SWEEP Roman IMs: 4 Narbonensis; 3 Roman province; 2 other Provincia; 1 else. Never at/next to Caesar.'
+GAUL_RAID = 'SWEEP Roman IMs: 4 Narbonensis; 3 Roman province; 2 other Provincia; 1 else. Never at/next to Caesar or into danger.'
 
 
 def cards_html(cards):

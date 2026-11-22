@@ -76,7 +76,9 @@ The bot never takes its Event and AP from the same card except for Bonus cards (
 
 **Path.** An army always moves by the cheapest route. If two routes tie, use the compass.
 
-**Danger (Imperator).** A Roman army is *in danger* in a space if a Gallic army (as Concilium forms them, below) could reach that space on its next activation with a BS at least 1.5× the BS of all Roman CUs there, the army included. A space with a Roman Walled City is never dangerous. Caesar's army ignores danger.
+**Danger.** Whether a space is safe to end a move in:
+* **Imperator:** a Roman army is *in danger* in a space if a Gallic army (formed as Concilium forms its armies) could reach that space on its next activation with a BS at least 1.5× the BS of all Roman CUs there, the army included. A space with a Roman Walled City is never dangerous. Caesar's army ignores danger.
+* **Concilium:** a Gallic army is *in danger* in a space if a Roman army (formed as Imperator forms its armies) could reach that space on its next activation with a BS at least equal to the BS of all Gallic CUs there, the army included. A space with a Gallic Fortified Town is never dangerous.
 
 **Removing an IM** costs 2 MP in the space (8.3.3). **A siege roll** costs 2 MP (10.4.2). No location takes more than one siege roll per card (14.3.4).
 
@@ -158,7 +160,7 @@ Take the first line that gives a legal Place or Convert (8.3). Among spaces on t
 
 Pick the **target and the army** together: the highest-weight IM, with no enemy CU in its space, that some army can reach with at least 2 MP left. Judge all weights at the start of the mission. Among equal weights, take the IM an army reaches for the fewest MP; then the army with the most MP left over; then the stronger army; then the compass (for the IM).
 
-That army moves there and removes the IM. **Imperator:** an army other than Caesar's never sweeps into a space where it would be in danger (3). While it has MP, it steps to an adjacent space with a wanted IM (highest weight, then compass) and removes that one too. Each step costs the path cost plus 2.
+That army moves there and removes the IM. **Danger:** an Imperator army other than Caesar's, and every Concilium army, never sweeps into a space where it would be in danger (3). While it has MP, it steps to an adjacent space with a wanted IM (highest weight, then compass) and removes that one too. Each step costs the path cost plus 2.
 
 ### 5.4 Event Guide (Imperator)
 
@@ -240,7 +242,7 @@ That army moves there and removes the IM. **Imperator:** an army other than Caes
 * 2: elsewhere in Provincia;
 * 1: anything else.
 
-It never targets a space in or next to Caesar's space.
+It never targets a space in or next to Caesar's space, and never sweeps into danger (3).
 
 **AGITATE.** One Agitate Table action.
 
@@ -323,11 +325,11 @@ Ties go to the compass.
 |---|---|---|
 | 1 | Rules only | You win with 9+ VP |
 | 2 | +1 AP on each of its first 4 card plays each turn | You win with 10+ VP |
-| 3 (standard) | +1 AP on every card play | Rules only (12 VP) |
-| 4 | +1 AP on every card play; Rome wins with 10+ VP | Concilium +1 AP on each of its first 4 card plays |
-| 5 | +1 AP on every card play; Rome wins with 9+ VP | Concilium +1 AP on every card play |
+| 3 (start here) | +1 AP on every card play | You win with 11+ VP |
+| 4 | +1 AP on every card play; Rome wins with 10+ VP | Rules only (12 VP) |
+| 5 | +1 AP on every card play; Rome wins with 9+ VP | Concilium +1 AP on each of its first 4 card plays each turn |
 
-The bonus AP is added to cards played for AP and to Bonus cards. Card #4 still gives exactly 5. The Gallic automatic victory (19.1.1) and the Roman automatic victory (19.1.2) are unchanged.
+Start at level 3 against either bot, then move up or down one level after each game you win or lose. The bonus AP is added to cards played for AP and to Bonus cards. Card #4 still gives exactly 5. The Gallic automatic victory (19.1.1) and the Roman automatic victory (19.1.2) are unchanged.
 
 ---
 

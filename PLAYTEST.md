@@ -15,7 +15,7 @@ The bots have only been tested in simulation, so they still need games at the ta
 
 ## Things to try first
 
-- **Imperator, level 3 (you play Gaul).** Watch whether its armies get stranded out of supply. Watch whether PROTECT holds Provincia, and whether the +1 AP bonus feels right.
+- **Imperator, level 3 (you play Gaul).** Watch whether its armies get stranded out of supply, and whether PROTECT holds Provincia. Note how long the *danger* check (section 3) takes at the table: it drives REGROUP and the SWEEP limit. Note too whether the +1 AP bonus feels right.
 - **Concilium, level 3 (you play Rome).** In simulation it beats every Roman computer player, including a lookahead player. A good human Rome may still find a pattern the computer players miss. Raiding Gallic bands leaving their Fortified Towns empty would be one such pattern. Note any you find.
 - **One game of each bot at level 1.** This checks the unassisted rules.
 

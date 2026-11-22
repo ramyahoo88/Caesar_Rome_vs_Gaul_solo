@@ -44,9 +44,23 @@ All files are in [`print/`](print):
 |---|---|---|
 | 1 | Rules only | Rome wins at 9 VP |
 | 2 | +1 AP on its first 4 card plays each turn | Rome wins at 10 VP |
-| 3 | +1 AP on every card play | Standard rules |
-| 4 | +1 AP on every play, and wins at 10 VP | +1 AP on its first 4 card plays each turn |
-| 5 | +1 AP on every play, and wins at 9 VP | +1 AP on every card play |
+| 3 (start here) | +1 AP on every card play | Rome wins at 11 VP |
+| 4 | +1 AP on every play, and wins at 10 VP | Standard rules (12 VP) |
+| 5 | +1 AP on every play, and wins at 9 VP | +1 AP on its first 4 card plays each turn |
+
+## Results at a glance
+
+Win rates from the final simulation study (5,300 games on fresh seeds) against the strongest computer opponent, a one-ply lookahead player, and against the other bot:
+
+| Level | Imperator vs lookahead Gaul | Imperator vs Concilium | Concilium vs lookahead Rome | Concilium vs Imperator (+1 AP) |
+|---|---|---|---|---|
+| 1 | 0% | 3% | 60% | 34% |
+| 2 | 0% | 10% | 74% | 50% |
+| 3 | 18% | 24% | 82% | 66% |
+| 4 | 41% | 49% | 89% | 79% |
+| 5 | 62% | 61% | 98% | 91% |
+
+A strong human should do better than these computer players. The full tables, method and caveats are in the [simulation report](print/Caesar_Solo_Sim_Report.md).
 
 ## How it was tested
 
@@ -59,7 +73,10 @@ The [`code/`](code) folder holds a Python engine for the full 2nd-edition rules 
 
 Thousands of games tuned the Directive decks and mission rules. The final study then ran every level against every opponent, on seeds never used during development. The details are in the [simulation report](print/Caesar_Solo_Sim_Report.md).
 
-The engine was audited against the 2023 living rules by an independent reviewer. That report and the response are in [`audit/`](audit).
+Two independent checks were run, each by a separate agent that had not written the code. Both reports and the responses to them are in [`audit/`](audit).
+
+* **Engine audit.** The engine was checked against the 2023 living rules.
+* **Clean-room test.** A second bot was written from the printed rules alone, then compared with the simulation bot decision by decision. It agreed on 99.8% of card choices and 99.4% of mission choices. Every gap it found has been closed, either in the text or in the code.
 
 ```
 cd code

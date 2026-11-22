@@ -100,7 +100,7 @@ class BotPolicy(BasePolicy):
             r_siege_min_col=2, r_siege_min_col_caesar=1, r_strike_ratio=2.0, r_strike_ratio_caesar=1.5,
             g_ambush_ratio=1.5, g_avoid_ratio=1.5, r_avoid_ratio=1.5, g_inside_ratio=1.0,
             r_invade_turn=3, bank_turn_max=5, rise_min=3, deny=True, block=False, block_first=False, celtica_first=True, dominance_race=False, protect=True, r_pre=('CONTINUE', 'PROTECT', 'SUBMIT', 'REGROUP'), siege_strict=True, strike_submit_only=False, winter_neutral=True,
-            regroup=True, r_post=('GATHER', 'CONTROL'), expedition=False, invade_cs=12, safe_raid=True,
+            regroup=True, r_post=('GATHER', 'CONTROL'), expedition=False, invade_cs=12, safe_raid=True, g_safe_raid=1.0, g_regroup=0, g_pre=(), r_danger=1.5,
         )
         self.cfg.update({k: v for k, v in params.items() if k in self.cfg})
 
@@ -283,7 +283,7 @@ class BotPolicy(BasePolicy):
         while ap > 0 and guard < 12:
             guard += 1
             done = False
-            pre = list(self.cfg['r_pre']) if side == 'R' else []
+            pre = list(self.cfg['r_pre']) if side == 'R' else list(self.cfg['g_pre'])
             for m in pre + order + (list(self.cfg['r_post']) if side == 'R' else ['AGITATE']):
                 cost = self.try_mission(g, side, m, ap)
                 if cost:
@@ -517,13 +517,68 @@ class BotPolicy(BasePolicy):
                 u.moved = True
         return thr
 
+    def roman_threat(self, g):
+        """Largest Roman BS one Roman army could bring into each space (moved flags ignored)."""
+        thr = {}
+        moved = [u for u in g.units.values() if u.side == 'R' and u.moved] + [l for l in g.leaders.values() if l.moved]
+        for u in moved:
+            u.moved = False
+        try:
+            for leader, units, start in self.roman_armies(g):
+                if not units:
+                    continue
+                ma, dist, parent = self.army_reach(g, 'R', leader, units, start)
+                cs = stack_strength(units)
+                for t in dist:
+                    v = cs + g.local_support('R', t)
+                    if v > thr.get(t, 0):
+                        thr[t] = v
+        finally:
+            for u in moved:
+                u.moved = True
+        return thr
+
+    def gallic_unsafe(self, g, thr, t, extra=()):
+        if g.ctrl[t] == 'G' and g.ctype[t] == 'FT':
+            return False
+        us = [u for u in g.units.values() if u.loc == t and u.side == 'G' and u not in extra] + list(extra)
+        return thr.get(t, 0) >= self.cfg['g_regroup' if self.cfg['g_regroup'] else 'g_safe_raid'] * (stack_strength(us) + g.local_support('G', t))
+
+    def m_regroup_g(self, g, ap):
+        """A Gallic army Rome could attack at the danger ratio moves to safety (its own Fortified Town first)."""
+        ratio = self.cfg.get('g_regroup')
+        if not ratio:
+            return 0
+        thr = self.roman_threat(g)
+        cz = g.leaders.get('Caesar')
+        cands = []
+        for leader, units, start in self.gallic_armies(g):
+            allu = units + ([leader] if leader is not None else [])
+            if not self.gallic_unsafe(g, thr, start):
+                continue
+            ma, dist, parent = self.army_reach(g, 'G', leader, units, start)
+            for t, d in dist.items():
+                if t == start or enemy_outside_at(g, t, 'G'):
+                    continue
+                if self.gallic_unsafe(g, thr, t, allu):
+                    continue
+                ft = g.ctrl[t] == 'G' and g.ctype[t] == 'FT'
+                far = HOPS[cz.loc][t] if cz is not None and isinstance(cz.loc, int) else 0
+                cands.append(((0 if ft else 1, -far, d), t, (leader, units, parent)))
+        c = self.pick(cands)
+        if not c:
+            return 0
+        leader, units, parent = c[2]
+        g.activate('G', leader, units, [('to', x) for x in path_to(parent, c[1])])
+        return 1
+
     def m_regroup(self, g, ap):
         """A Roman army (not Caesar's) that a Gallic army could attack at 1.5:1 joins a stronger
         Roman force or a Roman Walled City it can reach where it would be safe."""
         if not self.cfg.get('regroup'):
             return 0
         thr = self.gallic_threat(g)
-        ratio = self.cfg['g_ambush_ratio']
+        ratio = self.cfg['r_danger']
 
         def rbs(t, extra=()):
             us = [u for u in g.units.values() if u.loc == t and u.side == 'R' and u not in extra] + list(extra)
@@ -644,14 +699,22 @@ class BotPolicy(BasePolicy):
                     and not any(u.loc == t and u.side == enemy for u in g.units.values())
                     and not (avoid and avoid(t)))
         thr = self.gallic_threat(g) if (side == 'R' and self.cfg.get('safe_raid')) else None
+        rthr = self.roman_threat(g) if (side == 'G' and self.cfg.get('g_safe_raid')) else None
 
         def unsafe(t, leader, units):
+            if rthr is not None:
+                ratio = self.cfg['g_safe_raid']
+                if g.ctrl[t] == 'G' and g.ctype[t] == 'FT':
+                    return False
+                us = [u for u in g.units.values() if u.loc == t and u.side == 'G' and u not in units] + list(units) \
+                    + ([leader] if leader is not None and isinstance(leader, Unit) else [])
+                return rthr.get(t, 0) >= ratio * (stack_strength(us) + g.local_support('G', t))
             if thr is None or (leader is not None and leader.name == 'Caesar'):
                 return False
             if g.ctrl[t] == 'R' and g.ctype[t] == 'WC':
                 return False
             us = [u for u in g.units.values() if u.loc == t and u.side == 'R' and u not in units] + list(units)
-            return thr.get(t, 0) >= self.cfg['g_ambush_ratio'] * (stack_strength(us) + g.local_support('R', t))
+            return thr.get(t, 0) >= self.cfg['r_danger'] * (stack_strength(us) + g.local_support('R', t))
         cands = []
         for leader, units, start in armies:
             ma, dist, parent = self.army_reach(g, side, leader, units, start)
@@ -1014,6 +1077,8 @@ class BotPolicy(BasePolicy):
     def try_mission(self, g, side, m, ap):
         if side == 'G' and m == 'RAID':
             return self.m_raid_g(g, ap)
+        if side == 'G' and m == 'REGROUP':
+            return self.m_regroup_g(g, ap)
         fn = getattr(self, 'm_' + m.lower(), None)
         if fn is None:
             return 0
