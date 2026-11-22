@@ -53,7 +53,7 @@ def md_page(md_path, title, extra_css=''):
 # ------------------------------------------------------------------ Directive cards
 MISSION_TEXT = {
     'RULE': 'Control Table lines 0–3: presence, convert, Provincia, gain a province.',
-    'SIEGE': 'March and roll vs a Town that surrenders (3:1), has 2+ Siege Points, or (Caesar, 2:1) 1 point. Octodurus last.',
+    'SIEGE': 'March and roll vs a Town that surrenders (3:1), has 2+ Siege Points (1:1), or where Caesar has 2:1. Octodurus last.',
     'RAID': 'SWEEP Gallic IMs: 4 Gallic province in Celtica / Provincia; 3 other Gallic province; 2 near Roman control. Not into danger (Caesar may).',
     'SETTLE': 'Whole Control Table (0–6).',
     'STRIKE': 'Attack Gallic CUs at 2:1 BS (Caesar 1.5:1). 3:1 first, then largest, then nearest.',

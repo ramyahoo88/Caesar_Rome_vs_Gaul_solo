@@ -99,8 +99,8 @@ class BotPolicy(BasePolicy):
         self.cfg = dict(
             r_siege_min_col=2, r_siege_min_col_caesar=1, r_strike_ratio=2.0, r_strike_ratio_caesar=1.5,
             g_ambush_ratio=1.5, g_avoid_ratio=1.5, r_avoid_ratio=1.5, g_inside_ratio=1.0,
-            r_invade_turn=3, bank_turn_max=5, rise_min=3, deny=True, block=False, block_first=False, celtica_first=True, dominance_race=False, protect=True, r_pre=('CONTINUE', 'PROTECT', 'SUBMIT', 'REGROUP'), siege_strict=True, strike_submit_only=False, winter_neutral=True,
-            regroup=True, r_post=('GATHER', 'CONTROL'), expedition=False, invade_cs=12, safe_raid=True, g_safe_raid=1.0, g_regroup=0, g_pre=(), r_danger=1.5,
+            r_invade_turn=3, bank_turn_max=5, rise_min=3, deny=True, block=False, block_first=False, celtica_first=True, dominance_race=True, protect=True, r_pre=('CONTINUE', 'PROTECT', 'SUBMIT', 'REGROUP'), siege_strict=True, strike_submit_only=False, winter_neutral=True,
+            regroup=True, r_post=('GATHER', 'CONTROL'), expedition=False, invade_cs=12, safe_raid=True, g_safe_raid=1.0, g_regroup=0, g_pre=(), r_danger=1.5, caesar_siege_col=3,
         )
         self.cfg.update({k: v for k, v in params.items() if k in self.cfg})
 
@@ -410,7 +410,8 @@ class BotPolicy(BasePolicy):
                     if leader is None and col != 4:
                         continue
                     if self.cfg.get('siege_strict'):
-                        ok = col == 4 or (pts >= 2 and col >= 1) or (pts >= 1 and caesar and col >= 3)
+                        ok = col == 4 or (pts >= 2 and col >= 1) or (pts >= 1 and caesar and col >= 3) \
+                            or (caesar and self.cfg.get('caesar_siege_col') is not None and col >= self.cfg['caesar_siege_col'])
                     else:
                         ok = col == 4 or col >= need or (pts >= 1 and col >= 1)
                     if ok:
@@ -903,10 +904,12 @@ class BotPolicy(BasePolicy):
         regord = {'Celtica': 0, 'Belgica': 1, 'Aquitania': 2, 'Provincia': 3, 'Germania': 4, 'Britannia': 4}
         if self.cfg.get('dominance_race'):
             # the region where Rome lacks Dominance (and is closest to it) comes first
+            # the region where Rome lacks Dominance comes first (if both, the one Gaul leads by less);
+            # if Rome has Dominance in both, Celtica first
             gap = {}
             for reg in ('Celtica', 'Belgica'):
                 r = sum(1 for p in REG_PROVS[reg] if pc[p] == 'R'); gl = sum(1 for p in REG_PROVS[reg] if pc[p] == 'G')
-                gap[reg] = (0 if r <= gl else 1, gl - r)
+                gap[reg] = (0, gl - r) if r <= gl else (1, 0)
             first, second = sorted(('Celtica', 'Belgica'), key=lambda r: (gap[r], r != 'Celtica'))
             regord = {first: 0, second: 1, 'Aquitania': 2, 'Provincia': 3, 'Germania': 4, 'Britannia': 4}
         def ft_in(p):
@@ -956,12 +959,6 @@ class BotPolicy(BasePolicy):
                 opts = [s for s in places if REGION[s] == reg]
                 if opts:
                     return ('place', min(opts, key=key))
-        # 6b two IMs short of control (no FT)
-        if self.cfg.get('dominance_race'):
-            two = [s for s in places if prov_margin(g, PROV[s], 'R') == 2 and not ft_in(PROV[s]) and pc[PROV[s]] != 'R'
-                   and REGION[s] in GAUL_REGIONS]
-            if two:
-                return ('place', min(two, key=key))
         # 7 province (no FT, not yet Roman) closest to control
         opts = [s for s in places if REGION[s] in GAUL_REGIONS and not ft_in(PROV[s]) and pc[PROV[s]] != 'R']
         if opts:

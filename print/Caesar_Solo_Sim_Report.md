@@ -4,14 +4,14 @@
 
 ## 1. Summary
 
-* **Both bots play complete games of the 2nd-edition rules** from a Directive card and a two-card Offer. Every decision comes from the printed rules, and the bot never looks at hidden cards. An independent clean-room implementation of the printed rules matched the simulation bot on more than 99% of card and mission choices.
+* **Both bots play complete games of the 2nd-edition rules.** Each decision comes from a Directive card and a two-card Offer, following the printed rules. The bot never looks at hidden cards. An independent clean-room implementation of the printed rules matched the simulation bot on more than 99% of card and mission choices.
 * **The levels form a smooth ladder against every computer opponent.** Against the strongest of them, the Lookahead player:
-    * Imperator wins 0% at level 1, 18% at level 3 and 62% at level 5;
+    * Imperator wins 0% at level 1, 29% at level 3 and 69% at level 5;
     * Concilium wins 60% at level 1, 82% at level 3 and 98% at level 5.
-* **Concilium is the stronger bot.** At the standard rules it beats every Roman computer player at least 79% of the time. Even so, Rome-side computer players are weaker than skilled humans, so Concilium's levels start with a lower VP target for you: 9 at level 1. Level 3 (11 VP) is the recommended start.
-* **Imperator at level 3** (+1 AP on every card play) wins about a quarter of its games against Concilium and about half against the Heuristic players.
-* **A typical bot-vs-bot game** (both at level 3) is a Governance race. Rome scores 9 of its VP from Governance, plus Caesar's Pass. There are only 1–2 battles and about 5 siege rolls a game. One VP either way decides about a third of the games.
-* 5,300 games were played for the final study and many thousands more during development.
+* **Concilium is the stronger bot.** Under the standard rules (its level 4) it wins 67% against Imperator with +1 AP and 89% against the Lookahead player. Rome-side computer players are weaker than skilled humans, so Concilium's levels start with a lower VP target for you: 9 VP at level 1. Level 3 (11 VP) is the recommended start.
+* **Imperator at level 3** (+1 AP on every card play) wins 43% of its games against Concilium and about 48% against the Heuristic players.
+* **A typical bot-vs-bot game (Imperator at level 3, Concilium under the standard rules) is a Governance race.** Rome earns most of its VP from Governance, plus Caesar's Pass. A game has few battles (about 1.5) and around 9 siege rolls.
+* 5,300 games were played for the final study, and many thousands more during development.
 
 ## 2. The simulation engine
 
@@ -32,7 +32,7 @@ Each bot was tested against four computer players of the other side.
 
 | Opponent | How it plays |
 |---|---|
-| **Bot** | The other paper bot, following its printed rules exactly. In the Imperator rows it is Concilium at the standard rules. In the Concilium rows it is Imperator at its level 3 (+1 AP on every card play), the strongest Roman player we have. |
+| **Bot** | The other paper bot, following its printed rules exactly. In the Imperator rows it is Concilium under the standard rules. In the Concilium rows it is Imperator at its level 3 (+1 AP on every card play), the strongest Roman player available. |
 | **Heuristic** | Sees its whole hand and scores every Event and AP use with hand-tuned values. |
 | **Heuristic (aggressive)** | The same player with 1.5× weight on attacks and 0.7× on influence. |
 | **Lookahead** | For each card, tries the candidate plays on a copy of the game with fresh dice (so it cannot see the future) and keeps the one its position evaluation likes best. |
@@ -62,7 +62,7 @@ Ideas that did not help, and were dropped:
 
 * An expedition to Britannia or Germania from Turn 3. The 2 VP rarely made up for Caesar's absence.
 * More sieges.
-* A "dominance race" that switches the Control Table's region order.
+* Looser siege rules for every army. They helped against Concilium but cost VP against the Heuristic and Lookahead players. Only Caesar's army was given the looser rule (section 6).
 * Blocking provinces before their Tribe arrives.
 * A danger ratio other than 1.5 for Imperator. Ratios of 1.0, 1.25 and 2.0 were all tried.
 
@@ -102,6 +102,15 @@ These changes were made after the clean-room fixes. Each row compares the same s
 
 Below 1× the gains level off, and 1× ("a Roman army could reach it with at least equal strength") is the simplest rule to apply at the table.
 
+**Two last Imperator changes**, tested against the final Concilium. Each cell is the change in Imperator's mean VP at level 3 on the same seeds, one figure per seed set: 200 games against Concilium and against the Heuristic player, and 120 against the Lookahead player.
+
+| Change | vs Concilium | vs Heuristic | vs Lookahead |
+|---|---|---|---|
+| Control Table: **lagging region first** (Celtica or Belgica, whichever Rome is not winning) | +0.35, +0.42 | +0.32, +0.52 | +0.84, +0.08 |
+| SIEGE: **Caesar's army at 2:1** may siege any Town (before: only a Town with a Siege Point already on it) | +0.61, +0.24 | −0.35, −0.21 | +0.19, +0.30 |
+
+Both were adopted. The second costs a little against the Heuristic player but gains against the two stronger opponents.
+
 
 ## 7. Final study
 
@@ -114,7 +123,7 @@ Below 1× the gains level off, and 1× ("a Roman army could reach it with at lea
 
 ![Imperator win rate by level](sim/imperator_levels.png)
 
-*Error bars: one standard error.*
+*Error bars show one standard error.*
 
 ![Concilium win rate by level](sim/concilium_levels.png)
 
@@ -122,52 +131,52 @@ Below 1× the gains level off, and 1× ("a Roman army could reach it with at lea
 
 | Level | Bot | Heuristic | Heuristic (aggressive) | Lookahead |
 |---|---|---|---|---|
-| 1 | 3% (6.2 VP) | 5% (6.8 VP) | 5% (7.0 VP) | 0% (3.3 VP) |
-| 2 | 10% (8.2 VP) | 18% (8.6 VP) | 24% (9.4 VP) | 0% (6.3 VP) |
-| 3 | 24% (9.5 VP) | 49% (11.1 VP) | 53% (11.5 VP) | 18% (8.8 VP) |
-| 4 | 49% (9.5 VP) | 75% (11.1 VP) | 75% (11.5 VP) | 41% (8.8 VP) |
-| 5 | 61% (9.5 VP) | 81% (11.1 VP) | 87% (11.5 VP) | 62% (8.8 VP) |
+| 1 | 7% (7.2 VP) | 6% (6.5 VP) | 7% (6.9 VP) | 0% (3.6 VP) |
+| 2 | 17% (9.0 VP) | 23% (9.2 VP) | 25% (9.4 VP) | 6% (6.7 VP) |
+| 3 | 43% (10.7 VP) | 46% (10.8 VP) | 51% (11.4 VP) | 29% (9.6 VP) |
+| 4 | 72% (10.7 VP) | 66% (10.8 VP) | 77% (11.4 VP) | 50% (9.6 VP) |
+| 5 | 82% (10.7 VP) | 76% (10.8 VP) | 85% (11.4 VP) | 69% (9.6 VP) |
 
 ### Concilium (bot plays Gaul; cells = Concilium win rate, mean Roman VP)
 
 | Level | Bot | Heuristic | Heuristic (aggressive) | Lookahead |
 |---|---|---|---|---|
-| 1 | 34% (9.4 VP) | 83% (4.7 VP) | 86% (4.5 VP) | 60% (7.4 VP) |
-| 2 | 50% (9.4 VP) | 89% (4.7 VP) | 92% (4.5 VP) | 74% (7.4 VP) |
-| 3 | 66% (9.4 VP) | 95% (4.7 VP) | 94% (4.5 VP) | 82% (7.4 VP) |
-| 4 | 79% (9.4 VP) | 97% (4.7 VP) | 97% (4.5 VP) | 89% (7.4 VP) |
-| 5 | 91% (8.2 VP) | 100% (2.1 VP) | 99% (1.5 VP) | 98% (4.2 VP) |
+| 1 | 21% (10.3 VP) | 83% (4.7 VP) | 86% (4.5 VP) | 60% (7.4 VP) |
+| 2 | 35% (10.3 VP) | 89% (4.7 VP) | 92% (4.5 VP) | 74% (7.4 VP) |
+| 3 | 50% (10.3 VP) | 95% (4.7 VP) | 94% (4.5 VP) | 82% (7.4 VP) |
+| 4 | 67% (10.3 VP) | 97% (4.7 VP) | 97% (4.5 VP) | 89% (7.4 VP) |
+| 5 | 81% (8.9 VP) | 100% (2.1 VP) | 99% (1.5 VP) | 98% (4.2 VP) |
 
 Imperator levels 3–5 differ only in the VP Rome needs, so they play the same games and show the same mean VP. The same is true of Concilium levels 1–4.
 
 
 ## 8. How the games are decided
 
-These figures come from 300 games of Imperator (level 3) against Concilium (level 3), on seeds 300000 and up. Rome won 74 of them (25%), with a mean of 9.7 VP.
+These figures come from 300 games of Imperator (level 3) against Concilium (standard rules), on seeds from 300000 up. Rome won 126 of them (42%), with a mean of 10.6 VP.
 
 **Where Rome's VP come from (per game):**
 
 | Source | VP |
 |---|---|
-| Governance (six winters) | 9.0 |
-| Caesar's Pass | 0.97 |
-| Germania and Britannia | 0.12 |
-| Eliminated Tribes (÷4) | about 0.5 (2.1 Tribes) |
-| Eliminated Legions | −0.55 |
+| Governance (six winters) | 9.6 |
+| Caesar's Pass | 0.83 |
+| Germania and Britannia | 0.07 |
+| Eliminated Tribes (÷4) | about 0.9 (3.6 Tribes) |
+| Eliminated Legions | −0.49 |
 
-**Governance points by winter (mean; 9–10 gives 2 VP, 7–8 gives 1):**
+**Mean Governance by winter** (9–10 Governance gives 2 VP, 7–8 gives 1):
 
 | Turn | 1 | 2 | 3 | 4 | 5 | 6 |
 |---|---|---|---|---|---|---|
-| Mean Governance | 9.0 | 9.0 | 9.1 | 8.9 | 8.8 | 8.5 |
+| Mean Governance | 9.2 | 9.3 | 9.3 | 9.1 | 8.9 | 8.7 |
 
-Rome reaches 9–10 Governance in about half the winters. The other half it falls to 7–8, nearly always because Belgica is tied or lost. Turn 6 is the hardest winter: Concilium saves Submitted Tribes and Council IMs for a late Major Uprising.
+65% of Rome's winters reach 9–10 Governance. The rest fall to 7–8, nearly always because Belgica is tied or lost. Turn 6 is the hardest winter, because Concilium saves its Submitted Tribes and Council IMs for a late Major Uprising.
 
-**Battles are rare between the bots.** There are 1.6 battles and 5.4 siege rolls per game. Neither bot gives the other good odds: REGROUP keeps Imperator's Legate armies out of reach, and Concilium never sweeps into danger. A human who takes risks will see more fighting.
+**Battles are rare.** A game averages 1.5 battles and 9.2 siege rolls, because neither bot gives the other good odds. REGROUP keeps Imperator's Legate armies out of reach, and Concilium never sweeps into danger. A human who takes risks will see more fighting.
 
-**Close games.** 31% of games end on 11 or 12 VP, one point either side of the target. Every Governance point matters.
+**Close games.** 36% of games end on 11 or 12 VP, a point either side of the target, so every Governance point matters.
 
-**VP distribution:** 1: 1, 2: 2, 3: 1, 4: 3, 5: 6, 6: 7, 7: 32, 8: 38, 9: 43, 10: 44, 11: 49, 12: 43, 13: 25, 14: 4, 15: 1, 16: 1 (VP: games).
+**VP distribution (VP: games):** 3: 2, 5: 6, 6: 9, 7: 13, 8: 26, 9: 37, 10: 39, 11: 42, 12: 66, 13: 38, 14: 19, 15: 3.
 
 ## 9. Limitations
 

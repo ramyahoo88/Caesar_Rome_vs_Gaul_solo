@@ -1,4 +1,4 @@
-"""How games are decided: Imperator (level 3) vs Concilium (level 3), VP sources and Governance by turn."""
+"""How games are decided: Imperator (level 3) vs Concilium (standard rules), VP sources and Governance by turn."""
 import sys, json, statistics
 from collections import Counter, defaultdict
 from harness import evaluate

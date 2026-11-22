@@ -122,7 +122,7 @@ Each mission says which army acts. *Target order* lists the tie-breaks in turn; 
 **SIEGE.** An army that can reach a Gallic Fortified Town with at least 2 MP left marches there and rolls. Only these targets count:
 * a Town that must **surrender** (odds 3:1 or more); any army may go, and a leaderless Legion stack may take a third Legion over its Command Rating for this;
 * a Town with **2 or more Siege Points** where the odds are at least 1:1 (leader's army);
-* a Town with **1 Siege Point** if Caesar's army has odds of at least 2:1.
+* any Town where **Caesar's army** has odds of at least 2:1.
 
 If Gallic CUs stand outside the Town and it will not surrender, leave it to STRIKE. Until Caesar's Pass is opened, a leader's army with CS 2+ may also subjugate **Octodurus**, after all Town targets.
 Skip any location already rolled against this card.
@@ -146,7 +146,9 @@ Skip any location already rolled against this card.
 
 ### 5.2 Control Table (Imperator)
 
-Take the first line that gives a legal Place or Convert (8.3). Among spaces on that line, take **Celtica first**, then Belgica, Aquitania, Provincia, then Germania and Britannia, then the compass.
+Take the first line that gives a legal Place or Convert (8.3). Among spaces on that line, take the **lagging region** first, then the other of Celtica and Belgica, then Aquitania, Provincia, Germania and Britannia, then the compass.
+
+**Lagging region:** of Celtica and Belgica, the one where Rome does *not* control more provinces than Gaul. If that is true of both, take the one where Gaul's lead (Gallic minus Roman provinces) is smaller. If it is true of neither, or there is still a tie, take Celtica.
 
 0. **Presence.** If Rome has no space in Aquitania, Belgica or Celtica (checked in that order), convert a Gallic IM there; else place there.
 1. **Convert** a Gallic IM in a space with a Roman CU. Prefer Gallic-controlled provinces.
