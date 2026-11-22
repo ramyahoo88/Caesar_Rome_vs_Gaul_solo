@@ -1,0 +1,227 @@
+[
+ {
+  "id": "I-1",
+  "side": "R",
+  "name": "Pacify",
+  "missions": [
+   "RULE",
+   "SIEGE",
+   "RAID",
+   "SETTLE",
+   "STRIKE"
+  ],
+  "compass": "N"
+ },
+ {
+  "id": "I-2",
+  "side": "R",
+  "name": "Pacify",
+  "missions": [
+   "RULE",
+   "SIEGE",
+   "RAID",
+   "SETTLE",
+   "STRIKE"
+  ],
+  "compass": "S"
+ },
+ {
+  "id": "I-3",
+  "side": "R",
+  "name": "Pacify",
+  "missions": [
+   "RULE",
+   "SIEGE",
+   "RAID",
+   "SETTLE",
+   "STRIKE"
+  ],
+  "compass": "E"
+ },
+ {
+  "id": "I-4",
+  "side": "R",
+  "name": "Pacify",
+  "missions": [
+   "RULE",
+   "SIEGE",
+   "RAID",
+   "SETTLE",
+   "STRIKE"
+  ],
+  "compass": "W"
+ },
+ {
+  "id": "I-5",
+  "side": "R",
+  "name": "Rule",
+  "missions": [
+   "RULE",
+   "RAID",
+   "SIEGE",
+   "SETTLE",
+   "STRIKE"
+  ],
+  "compass": "N"
+ },
+ {
+  "id": "I-6",
+  "side": "R",
+  "name": "Rule",
+  "missions": [
+   "RULE",
+   "RAID",
+   "SIEGE",
+   "SETTLE",
+   "STRIKE"
+  ],
+  "compass": "W"
+ },
+ {
+  "id": "I-7",
+  "side": "R",
+  "name": "Raid",
+  "missions": [
+   "RAID",
+   "RULE",
+   "SIEGE",
+   "SETTLE",
+   "STRIKE"
+  ],
+  "compass": "E"
+ },
+ {
+  "id": "I-8",
+  "side": "R",
+  "name": "Campaign",
+  "missions": [
+   "RULE",
+   "SIEGE",
+   "STRIKE",
+   "RAID",
+   "SETTLE"
+  ],
+  "compass": "S"
+ },
+ {
+  "id": "I-9",
+  "side": "R",
+  "name": "Glory",
+  "missions": [
+   "RULE",
+   "INVADE",
+   "SIEGE",
+   "RAID",
+   "SETTLE"
+  ],
+  "compass": "N"
+ },
+ {
+  "id": "C-1",
+  "side": "G",
+  "name": "Revolt",
+  "missions": [
+   "RISE",
+   "AMBUSH",
+   "RAID",
+   "AGITATE"
+  ],
+  "compass": "N"
+ },
+ {
+  "id": "C-2",
+  "side": "G",
+  "name": "Revolt",
+  "missions": [
+   "RISE",
+   "RAID",
+   "AMBUSH",
+   "AGITATE"
+  ],
+  "compass": "S"
+ },
+ {
+  "id": "C-3",
+  "side": "G",
+  "name": "Agitate",
+  "missions": [
+   "AGITATE",
+   "RAID",
+   "AMBUSH",
+   "BANK"
+  ],
+  "compass": "E"
+ },
+ {
+  "id": "C-4",
+  "side": "G",
+  "name": "Agitate",
+  "missions": [
+   "AGITATE",
+   "AMBUSH",
+   "RAID",
+   "BANK"
+  ],
+  "compass": "W"
+ },
+ {
+  "id": "C-5",
+  "side": "G",
+  "name": "Raid",
+  "missions": [
+   "RAID",
+   "AGITATE",
+   "AMBUSH",
+   "BANK"
+  ],
+  "compass": "S"
+ },
+ {
+  "id": "C-6",
+  "side": "G",
+  "name": "Raid",
+  "missions": [
+   "RAID",
+   "AMBUSH",
+   "AGITATE",
+   "BANK"
+  ],
+  "compass": "N"
+ },
+ {
+  "id": "C-7",
+  "side": "G",
+  "name": "Ambush",
+  "missions": [
+   "AMBUSH",
+   "RAID",
+   "AGITATE",
+   "BANK"
+  ],
+  "compass": "E"
+ },
+ {
+  "id": "C-8",
+  "side": "G",
+  "name": "Council",
+  "missions": [
+   "BANK",
+   "AGITATE",
+   "RAID",
+   "AMBUSH"
+  ],
+  "compass": "W"
+ },
+ {
+  "id": "C-9",
+  "side": "G",
+  "name": "Council",
+  "missions": [
+   "RISE",
+   "BANK",
+   "AGITATE",
+   "RAID"
+  ],
+  "compass": "N"
+ }
+]

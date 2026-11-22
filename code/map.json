@@ -1,0 +1,2934 @@
+{
+ "spaces": {
+  "Durovernon": {
+   "id": 0,
+   "name": "Durovernon",
+   "type": "vp",
+   "province": "Britannia",
+   "region": "Britannia",
+   "section": null,
+   "x": 1042,
+   "y": 127
+  },
+  "Dubris": {
+   "id": 4,
+   "name": "Dubris",
+   "type": "vp",
+   "province": "Britannia",
+   "region": "Britannia",
+   "section": null,
+   "x": 1248,
+   "y": 171
+  },
+  "Portus Itius": {
+   "id": 6,
+   "name": "Portus Itius",
+   "type": "town",
+   "province": "Atrebates",
+   "region": "Belgica",
+   "section": null,
+   "x": 1429,
+   "y": 235,
+   "ports": [
+    "Oceanus Britannicus"
+   ]
+  },
+  "Menapii": {
+   "id": 2,
+   "name": "Menapii",
+   "type": "stronghold",
+   "province": "Nervii",
+   "region": "Belgica",
+   "section": null,
+   "x": 2011,
+   "y": 138
+  },
+  "Morini": {
+   "id": 3,
+   "name": "Morini",
+   "type": "stronghold",
+   "province": "Atrebates",
+   "region": "Belgica",
+   "section": null,
+   "x": 1655,
+   "y": 160
+  },
+  "Turnacum": {
+   "id": 7,
+   "name": "Turnacum",
+   "type": "town",
+   "province": "Atrebates",
+   "region": "Belgica",
+   "section": null,
+   "x": 1827,
+   "y": 278
+  },
+  "Nervii": {
+   "id": 10,
+   "name": "Nervii",
+   "type": "town",
+   "province": "Nervii",
+   "region": "Belgica",
+   "section": null,
+   "x": 2150,
+   "y": 294
+  },
+  "Atrebates": {
+   "id": 14,
+   "name": "Atrebates",
+   "type": "town",
+   "province": "Atrebates",
+   "region": "Belgica",
+   "section": null,
+   "x": 1604,
+   "y": 386
+  },
+  "Ambiani": {
+   "id": 17,
+   "name": "Ambiani",
+   "type": "town",
+   "province": "Atrebates",
+   "region": "Belgica",
+   "section": null,
+   "x": 1421,
+   "y": 446,
+   "ports": [
+    "Oceanus Britannicus"
+   ]
+  },
+  "Nemetocenna": {
+   "id": 18,
+   "name": "Nemetocenna",
+   "type": "town",
+   "province": "Atrebates",
+   "region": "Belgica",
+   "section": null,
+   "x": 1772,
+   "y": 462
+  },
+  "Bagacum": {
+   "id": 19,
+   "name": "Bagacum",
+   "type": "town",
+   "province": "Nervii",
+   "region": "Belgica",
+   "section": null,
+   "x": 2043,
+   "y": 483
+  },
+  "Viromandui": {
+   "id": 24,
+   "name": "Viromandui",
+   "type": "town",
+   "province": "Nervii",
+   "region": "Belgica",
+   "section": null,
+   "x": 1832,
+   "y": 614
+  },
+  "Samarobriva": {
+   "id": 25,
+   "name": "Samarobriva",
+   "type": "town",
+   "province": "Bellovaci",
+   "region": "Belgica",
+   "section": null,
+   "x": 1599,
+   "y": 634
+  },
+  "Caleti": {
+   "id": 27,
+   "name": "Caleti",
+   "type": "town",
+   "province": "Bellovaci",
+   "region": "Belgica",
+   "section": null,
+   "x": 1311,
+   "y": 637
+  },
+  "Bibrax": {
+   "id": 32,
+   "name": "Bibrax",
+   "type": "town",
+   "province": "Remi",
+   "region": "Belgica",
+   "section": null,
+   "x": 2021,
+   "y": 729
+  },
+  "Iuliobona": {
+   "id": 35,
+   "name": "Iuliobona",
+   "type": "town",
+   "province": "Bellovaci",
+   "region": "Belgica",
+   "section": null,
+   "x": 1078,
+   "y": 737,
+   "ports": [
+    "Oceanus Britannicus"
+   ]
+  },
+  "Venelli": {
+   "id": 37,
+   "name": "Venelli",
+   "type": "town",
+   "province": "Armorici",
+   "region": "Celtica",
+   "section": null,
+   "x": 600,
+   "y": 782
+  },
+  "Bellovaci": {
+   "id": 38,
+   "name": "Bellovaci",
+   "type": "town",
+   "province": "Bellovaci",
+   "region": "Belgica",
+   "section": null,
+   "x": 1499,
+   "y": 784
+  },
+  "Bratuspantium": {
+   "id": 39,
+   "name": "Bratuspantium",
+   "type": "town",
+   "province": "Bellovaci",
+   "region": "Belgica",
+   "section": null,
+   "x": 1684,
+   "y": 814
+  },
+  "Suessiones": {
+   "id": 41,
+   "name": "Suessiones",
+   "type": "town",
+   "province": "Suessiones",
+   "region": "Belgica",
+   "section": null,
+   "x": 1873,
+   "y": 854
+  },
+  "Durocortorum": {
+   "id": 45,
+   "name": "Durocortorum",
+   "type": "town",
+   "province": "Remi",
+   "region": "Belgica",
+   "section": null,
+   "x": 2088,
+   "y": 884
+  },
+  "Veliocasses": {
+   "id": 46,
+   "name": "Veliocasses",
+   "type": "town",
+   "province": "Bellovaci",
+   "region": "Belgica",
+   "section": null,
+   "x": 1302,
+   "y": 891
+  },
+  "Esubii": {
+   "id": 47,
+   "name": "Esubii",
+   "type": "town",
+   "province": "Armorici",
+   "region": "Celtica",
+   "section": null,
+   "x": 898,
+   "y": 903
+  },
+  "Lexovii": {
+   "id": 51,
+   "name": "Lexovii",
+   "type": "town",
+   "province": "Armorici",
+   "region": "Celtica",
+   "section": null,
+   "x": 1111,
+   "y": 949
+  },
+  "Silvanectes": {
+   "id": 53,
+   "name": "Silvanectes",
+   "type": "town",
+   "province": "Suessiones",
+   "region": "Belgica",
+   "section": null,
+   "x": 1750,
+   "y": 985
+  },
+  "Meldi": {
+   "id": 54,
+   "name": "Meldi",
+   "type": "town",
+   "province": "Suessiones",
+   "region": "Belgica",
+   "section": null,
+   "x": 1947,
+   "y": 1029
+  },
+  "Lutetia": {
+   "id": 55,
+   "name": "Lutetia",
+   "type": "town",
+   "province": "Parisii",
+   "region": "Celtica",
+   "section": null,
+   "x": 1505,
+   "y": 1037
+  },
+  "Abrincatui": {
+   "id": 56,
+   "name": "Abrincatui",
+   "type": "town",
+   "province": "Armorici",
+   "region": "Celtica",
+   "section": null,
+   "x": 694,
+   "y": 1061
+  },
+  "Catalauni": {
+   "id": 57,
+   "name": "Catalauni",
+   "type": "town",
+   "province": "Remi",
+   "region": "Belgica",
+   "section": null,
+   "x": 2207,
+   "y": 1086
+  },
+  "Eburovices": {
+   "id": 60,
+   "name": "Eburovices",
+   "type": "town",
+   "province": "Aulerci",
+   "region": "Celtica",
+   "section": null,
+   "x": 984,
+   "y": 1159
+  },
+  "Curiosolites": {
+   "id": 61,
+   "name": "Curiosolites",
+   "type": "town",
+   "province": "Veneti",
+   "region": "Celtica",
+   "section": null,
+   "x": 457,
+   "y": 1160,
+   "ports": [
+    "Oceanus Britannicus"
+   ]
+  },
+  "Metiosedum": {
+   "id": 63,
+   "name": "Metiosedum",
+   "type": "town",
+   "province": "Parisii",
+   "region": "Celtica",
+   "section": null,
+   "x": 1632,
+   "y": 1215
+  },
+  "Autricum": {
+   "id": 64,
+   "name": "Autricum",
+   "type": "town",
+   "province": "Carnutes",
+   "region": "Celtica",
+   "section": null,
+   "x": 1287,
+   "y": 1223
+  },
+  "Germania A": {
+   "id": 8,
+   "name": "Germania A",
+   "type": "vp",
+   "province": "Germania",
+   "region": "Germania",
+   "section": null,
+   "x": 2838,
+   "y": 287
+  },
+  "Germania B": {
+   "id": 9,
+   "name": "Germania B",
+   "type": "vp",
+   "province": "Germania",
+   "region": "Germania",
+   "section": null,
+   "x": 3109,
+   "y": 287
+  },
+  "Aduatuci": {
+   "id": 1,
+   "name": "Aduatuci",
+   "type": "town",
+   "province": "Eburones",
+   "region": "Belgica",
+   "section": null,
+   "x": 2298,
+   "y": 138
+  },
+  "Eburones": {
+   "id": 5,
+   "name": "Eburones",
+   "type": "town",
+   "province": "Eburones",
+   "region": "Belgica",
+   "section": null,
+   "x": 2581,
+   "y": 211
+  },
+  "Tungri": {
+   "id": 12,
+   "name": "Tungri",
+   "type": "town",
+   "province": "Eburones",
+   "region": "Belgica",
+   "section": null,
+   "x": 2444,
+   "y": 332
+  },
+  "Condrusi": {
+   "id": 16,
+   "name": "Condrusi",
+   "type": "town",
+   "province": "Nervii",
+   "region": "Belgica",
+   "section": null,
+   "x": 2276,
+   "y": 424
+  },
+  "Caerosi": {
+   "id": 20,
+   "name": "Caerosi",
+   "type": "stronghold",
+   "province": "Treveri",
+   "region": "Belgica",
+   "section": null,
+   "x": 2632,
+   "y": 502
+  },
+  "Paemani": {
+   "id": 26,
+   "name": "Paemani",
+   "type": "stronghold",
+   "province": "Treveri",
+   "region": "Belgica",
+   "section": null,
+   "x": 2448,
+   "y": 633
+  },
+  "Vangiones": {
+   "id": 23,
+   "name": "Vangiones",
+   "type": "town",
+   "province": "Treveri",
+   "region": "Belgica",
+   "section": null,
+   "x": 2828,
+   "y": 595
+  },
+  "Segni": {
+   "id": 29,
+   "name": "Segni",
+   "type": "town",
+   "province": "Remi",
+   "region": "Belgica",
+   "section": null,
+   "x": 2249,
+   "y": 708
+  },
+  "Treveri": {
+   "id": 34,
+   "name": "Treveri",
+   "type": "town",
+   "province": "Treveri",
+   "region": "Belgica",
+   "section": null,
+   "x": 2646,
+   "y": 736
+  },
+  "Nemetes": {
+   "id": 42,
+   "name": "Nemetes",
+   "type": "town",
+   "province": "Treveri",
+   "region": "Belgica",
+   "section": null,
+   "x": 2908,
+   "y": 867
+  },
+  "Virodunum": {
+   "id": 48,
+   "name": "Virodunum",
+   "type": "town",
+   "province": "Treveri",
+   "region": "Belgica",
+   "section": null,
+   "x": 2386,
+   "y": 916
+  },
+  "Divodurum": {
+   "id": 50,
+   "name": "Divodurum",
+   "type": "town",
+   "province": "Treveri",
+   "region": "Belgica",
+   "section": null,
+   "x": 2590,
+   "y": 938
+  },
+  "Mediomatrici": {
+   "id": 58,
+   "name": "Mediomatrici",
+   "type": "town",
+   "province": "Leuci",
+   "region": "Belgica",
+   "section": null,
+   "x": 2667,
+   "y": 1115
+  },
+  "Tullum": {
+   "id": 59,
+   "name": "Tullum",
+   "type": "town",
+   "province": "Leuci",
+   "region": "Belgica",
+   "section": null,
+   "x": 2433,
+   "y": 1133
+  },
+  "Triboci": {
+   "id": 62,
+   "name": "Triboci",
+   "type": "town",
+   "province": "Leuci",
+   "region": "Belgica",
+   "section": null,
+   "x": 2939,
+   "y": 1163
+  },
+  "Leuci": {
+   "id": 67,
+   "name": "Leuci",
+   "type": "town",
+   "province": "Leuci",
+   "region": "Belgica",
+   "section": null,
+   "x": 2570,
+   "y": 1311
+  },
+  "Agedincum": {
+   "id": 65,
+   "name": "Agedincum",
+   "type": "town",
+   "province": "Senones/Lingones",
+   "region": "Celtica",
+   "section": "Senones",
+   "x": 1875,
+   "y": 1295
+  },
+  "Tricasses": {
+   "id": 69,
+   "name": "Tricasses",
+   "type": "town",
+   "province": "Senones/Lingones",
+   "region": "Celtica",
+   "section": "Lingones",
+   "x": 2149,
+   "y": 1320
+  },
+  "Andematunnum": {
+   "id": 73,
+   "name": "Andematunnum",
+   "type": "town",
+   "province": "Senones/Lingones",
+   "region": "Celtica",
+   "section": "Lingones",
+   "x": 2349,
+   "y": 1405
+  },
+  "Rauraci": {
+   "id": 75,
+   "name": "Rauraci",
+   "type": "town",
+   "province": "Sequani",
+   "region": "Celtica",
+   "section": null,
+   "x": 2908,
+   "y": 1449
+  },
+  "Vellaunodurum": {
+   "id": 77,
+   "name": "Vellaunodurum",
+   "type": "town",
+   "province": "Senones/Lingones",
+   "region": "Celtica",
+   "section": "Senones",
+   "x": 1771,
+   "y": 1515
+  },
+  "Autessiodurum": {
+   "id": 78,
+   "name": "Autessiodurum",
+   "type": "town",
+   "province": "Senones/Lingones",
+   "region": "Celtica",
+   "section": "Senones",
+   "x": 2012,
+   "y": 1517
+  },
+  "Magetobriga": {
+   "id": 79,
+   "name": "Magetobriga",
+   "type": "town",
+   "province": "Sequani",
+   "region": "Celtica",
+   "section": null,
+   "x": 2542,
+   "y": 1518
+  },
+  "Epomanduodurum": {
+   "id": 80,
+   "name": "Epomanduodurum",
+   "type": "town",
+   "province": "Sequani",
+   "region": "Celtica",
+   "section": null,
+   "x": 2760,
+   "y": 1553
+  },
+  "Alesia": {
+   "id": 83,
+   "name": "Alesia",
+   "type": "town",
+   "province": "Senones/Lingones",
+   "region": "Celtica",
+   "section": "Lingones",
+   "x": 2253,
+   "y": 1597
+  },
+  "Vesontio": {
+   "id": 86,
+   "name": "Vesontio",
+   "type": "town",
+   "province": "Sequani",
+   "region": "Celtica",
+   "section": null,
+   "x": 2535,
+   "y": 1676
+  },
+  "Osismi": {
+   "id": 66,
+   "name": "Osismi",
+   "type": "stronghold",
+   "province": "Veneti",
+   "region": "Celtica",
+   "section": null,
+   "x": 125,
+   "y": 1299,
+   "ports": [
+    "Oceanus Britannicus",
+    "Oceanus Atlanticus"
+   ]
+  },
+  "Redones": {
+   "id": 68,
+   "name": "Redones",
+   "type": "town",
+   "province": "Veneti",
+   "region": "Celtica",
+   "section": null,
+   "x": 571,
+   "y": 1316
+  },
+  "Diablintes": {
+   "id": 70,
+   "name": "Diablintes",
+   "type": "town",
+   "province": "Aulerci",
+   "region": "Celtica",
+   "section": null,
+   "x": 814,
+   "y": 1332
+  },
+  "Cenomani": {
+   "id": 71,
+   "name": "Cenomani",
+   "type": "town",
+   "province": "Aulerci",
+   "region": "Celtica",
+   "section": null,
+   "x": 1072,
+   "y": 1363
+  },
+  "Cenabum": {
+   "id": 74,
+   "name": "Cenabum",
+   "type": "town",
+   "province": "Carnutes",
+   "region": "Celtica",
+   "section": null,
+   "x": 1493,
+   "y": 1415
+  },
+  "Veneti": {
+   "id": 76,
+   "name": "Veneti",
+   "type": "town",
+   "province": "Veneti",
+   "region": "Celtica",
+   "section": null,
+   "x": 304,
+   "y": 1493,
+   "ports": [
+    "Oceanus Atlanticus"
+   ]
+  },
+  "Andes": {
+   "id": 81,
+   "name": "Andes",
+   "type": "town",
+   "province": "Aulerci",
+   "region": "Celtica",
+   "section": null,
+   "x": 858,
+   "y": 1559
+  },
+  "Turoni": {
+   "id": 82,
+   "name": "Turoni",
+   "type": "town",
+   "province": "Bituriges",
+   "region": "Celtica",
+   "section": null,
+   "x": 1194,
+   "y": 1574
+  },
+  "Namnetes": {
+   "id": 84,
+   "name": "Namnetes",
+   "type": "town",
+   "province": "Veneti",
+   "region": "Celtica",
+   "section": null,
+   "x": 585,
+   "y": 1648,
+   "ports": [
+    "Oceanus Atlanticus"
+   ]
+  },
+  "Bituriges": {
+   "id": 85,
+   "name": "Bituriges",
+   "type": "town",
+   "province": "Bituriges",
+   "region": "Celtica",
+   "section": null,
+   "x": 1349,
+   "y": 1671
+  },
+  "Avaricum": {
+   "id": 87,
+   "name": "Avaricum",
+   "type": "town",
+   "province": "Bituriges",
+   "region": "Celtica",
+   "section": null,
+   "x": 1569,
+   "y": 1710
+  },
+  "Bibracte": {
+   "id": 88,
+   "name": "Bibracte",
+   "type": "town",
+   "province": "Aedui",
+   "region": "Celtica",
+   "section": null,
+   "x": 2016,
+   "y": 1774
+  },
+  "Pictavi": {
+   "id": 89,
+   "name": "Pictavi",
+   "type": "town",
+   "province": "Pictones/Santones",
+   "region": "Celtica",
+   "section": "Pictones",
+   "x": 879,
+   "y": 1784
+  },
+  "Anagnutes": {
+   "id": 90,
+   "name": "Anagnutes",
+   "type": "town",
+   "province": "Pictones/Santones",
+   "region": "Celtica",
+   "section": "Pictones",
+   "x": 638,
+   "y": 1836
+  },
+  "Cabillonum": {
+   "id": 91,
+   "name": "Cabillonum",
+   "type": "town",
+   "province": "Aedui",
+   "region": "Celtica",
+   "section": null,
+   "x": 2256,
+   "y": 1837
+  },
+  "Gorgobina": {
+   "id": 92,
+   "name": "Gorgobina",
+   "type": "town",
+   "province": "Arverni",
+   "region": "Celtica",
+   "section": null,
+   "x": 1773,
+   "y": 1849
+  },
+  "Cubi": {
+   "id": 93,
+   "name": "Cubi",
+   "type": "town",
+   "province": "Bituriges",
+   "region": "Celtica",
+   "section": null,
+   "x": 1459,
+   "y": 1861
+  },
+  "Limonum": {
+   "id": 94,
+   "name": "Limonum",
+   "type": "town",
+   "province": "Pictones/Santones",
+   "region": "Celtica",
+   "section": "Pictones",
+   "x": 1088,
+   "y": 1926
+  },
+  "Cambiovicenses": {
+   "id": 96,
+   "name": "Cambiovicenses",
+   "type": "town",
+   "province": "Arverni",
+   "region": "Celtica",
+   "section": null,
+   "x": 1638,
+   "y": 2013
+  },
+  "Brigiosum": {
+   "id": 97,
+   "name": "Brigiosum",
+   "type": "town",
+   "province": "Pictones/Santones",
+   "region": "Celtica",
+   "section": "Pictones",
+   "x": 786,
+   "y": 2017
+  },
+  "Matisco": {
+   "id": 98,
+   "name": "Matisco",
+   "type": "town",
+   "province": "Aedui",
+   "region": "Celtica",
+   "section": null,
+   "x": 2242,
+   "y": 2018
+  },
+  "Boii": {
+   "id": 99,
+   "name": "Boii",
+   "type": "town",
+   "province": "Aedui",
+   "region": "Celtica",
+   "section": null,
+   "x": 2005,
+   "y": 2050
+  },
+  "Lemovices": {
+   "id": 100,
+   "name": "Lemovices",
+   "type": "town",
+   "province": "Pictones/Santones",
+   "region": "Celtica",
+   "section": "Santones",
+   "x": 1350,
+   "y": 2151
+  },
+  "Santoni": {
+   "id": 102,
+   "name": "Santoni",
+   "type": "town",
+   "province": "Pictones/Santones",
+   "region": "Celtica",
+   "section": "Santones",
+   "x": 870,
+   "y": 2216,
+   "ports": [
+    "Oceanus Atlanticus"
+   ]
+  },
+  "Gergovia": {
+   "id": 103,
+   "name": "Gergovia",
+   "type": "town",
+   "province": "Arverni",
+   "region": "Celtica",
+   "section": null,
+   "x": 1806,
+   "y": 2216
+  },
+  "Iculisma": {
+   "id": 104,
+   "name": "Iculisma",
+   "type": "town",
+   "province": "Pictones/Santones",
+   "region": "Celtica",
+   "section": "Santones",
+   "x": 1116,
+   "y": 2225
+  },
+  "Petrocorii": {
+   "id": 106,
+   "name": "Petrocorii",
+   "type": "town",
+   "province": "Cadurci",
+   "region": "Celtica",
+   "section": null,
+   "x": 1423,
+   "y": 2396
+  },
+  "Vellavi": {
+   "id": 107,
+   "name": "Vellavi",
+   "type": "town",
+   "province": "Arverni",
+   "region": "Celtica",
+   "section": null,
+   "x": 1974,
+   "y": 2397
+  },
+  "Nitiobroges": {
+   "id": 109,
+   "name": "Nitiobroges",
+   "type": "town",
+   "province": "Cadurci",
+   "region": "Celtica",
+   "section": null,
+   "x": 1154,
+   "y": 2483
+  },
+  "Burdigala": {
+   "id": 111,
+   "name": "Burdigala",
+   "type": "town",
+   "province": "Aquitania",
+   "region": "Aquitania",
+   "section": null,
+   "x": 856,
+   "y": 2527,
+   "ports": [
+    "Oceanus Atlanticus"
+   ]
+  },
+  "Gabali": {
+   "id": 112,
+   "name": "Gabali",
+   "type": "stronghold",
+   "province": "Arverni",
+   "region": "Celtica",
+   "section": null,
+   "x": 1824,
+   "y": 2574
+  },
+  "Carantomagus": {
+   "id": 114,
+   "name": "Carantomagus",
+   "type": "town",
+   "province": "Cadurci",
+   "region": "Celtica",
+   "section": null,
+   "x": 1556,
+   "y": 2651
+  },
+  "Uxellodunum": {
+   "id": 115,
+   "name": "Uxellodunum",
+   "type": "town",
+   "province": "Cadurci",
+   "region": "Celtica",
+   "section": null,
+   "x": 1305,
+   "y": 2656
+  },
+  "Sotium": {
+   "id": 117,
+   "name": "Sotium",
+   "type": "town",
+   "province": "Cadurci",
+   "region": "Celtica",
+   "section": null,
+   "x": 1102,
+   "y": 2726
+  },
+  "Ruteni": {
+   "id": 121,
+   "name": "Ruteni",
+   "type": "stronghold",
+   "province": "Cadurci",
+   "region": "Celtica",
+   "section": null,
+   "x": 1570,
+   "y": 2825
+  },
+  "Cadurci": {
+   "id": 122,
+   "name": "Cadurci",
+   "type": "town",
+   "province": "Cadurci",
+   "region": "Celtica",
+   "section": null,
+   "x": 1305,
+   "y": 2829
+  },
+  "Sotiates": {
+   "id": 123,
+   "name": "Sotiates",
+   "type": "town",
+   "province": "Aquitania",
+   "region": "Aquitania",
+   "section": null,
+   "x": 963,
+   "y": 2882
+  },
+  "Tarbelli": {
+   "id": 125,
+   "name": "Tarbelli",
+   "type": "town",
+   "province": "Aquitania",
+   "region": "Aquitania",
+   "section": null,
+   "x": 742,
+   "y": 2922
+  },
+  "Ausci": {
+   "id": 130,
+   "name": "Ausci",
+   "type": "town",
+   "province": "Aquitania",
+   "region": "Aquitania",
+   "section": null,
+   "x": 1150,
+   "y": 3027
+  },
+  "Bigerriones": {
+   "id": 133,
+   "name": "Bigerriones",
+   "type": "stronghold",
+   "province": "Aquitania",
+   "region": "Aquitania",
+   "section": null,
+   "x": 904,
+   "y": 3112
+  },
+  "Octodurus": {
+   "id": 95,
+   "name": "Octodurus",
+   "type": "stronghold",
+   "province": "Allobroges",
+   "region": "Provincia",
+   "section": null,
+   "x": 2756,
+   "y": 2010
+  },
+  "Allobroges": {
+   "id": 101,
+   "name": "Allobroges",
+   "type": "town",
+   "province": "Allobroges",
+   "region": "Provincia",
+   "section": null,
+   "x": 2528,
+   "y": 2173
+  },
+  "Vienne": {
+   "id": 105,
+   "name": "Vienne",
+   "type": "town",
+   "province": "Allobroges",
+   "region": "Provincia",
+   "section": null,
+   "x": 2253,
+   "y": 2254
+  },
+  "Cularo": {
+   "id": 108,
+   "name": "Cularo",
+   "type": "town",
+   "province": "Allobroges",
+   "region": "Provincia",
+   "section": null,
+   "x": 2484,
+   "y": 2416
+  },
+  "Valentia": {
+   "id": 110,
+   "name": "Valentia",
+   "type": "town",
+   "province": "Narbonensis",
+   "region": "Provincia",
+   "section": null,
+   "x": 2245,
+   "y": 2526
+  },
+  "Brigantium": {
+   "id": 116,
+   "name": "Brigantium",
+   "type": "town",
+   "province": "Narbonensis",
+   "region": "Provincia",
+   "section": null,
+   "x": 2526,
+   "y": 2697
+  },
+  "Arausio": {
+   "id": 119,
+   "name": "Arausio",
+   "type": "town",
+   "province": "Narbonensis",
+   "region": "Provincia",
+   "section": null,
+   "x": 2256,
+   "y": 2800
+  },
+  "Vapincum": {
+   "id": 124,
+   "name": "Vapincum",
+   "type": "town",
+   "province": "Narbonensis",
+   "region": "Provincia",
+   "section": null,
+   "x": 2504,
+   "y": 2899
+  },
+  "Arelate": {
+   "id": 127,
+   "name": "Arelate",
+   "type": "walled",
+   "province": "Narbonensis",
+   "region": "Provincia",
+   "section": null,
+   "x": 2241,
+   "y": 2984,
+   "garrison_roman": 4,
+   "garrison_gallic": 1,
+   "siege_drm_roman": -1,
+   "ports": [
+    "Sinus Gallicus"
+   ]
+  },
+  "Ambrussum": {
+   "id": 129,
+   "name": "Ambrussum",
+   "type": "town",
+   "province": "Narbonensis",
+   "region": "Provincia",
+   "section": null,
+   "x": 2019,
+   "y": 3010
+  },
+  "Massilia": {
+   "id": 132,
+   "name": "Massilia",
+   "type": "walled",
+   "province": "Narbonensis",
+   "region": "Provincia",
+   "section": null,
+   "x": 2435,
+   "y": 3114,
+   "garrison_roman": 6,
+   "garrison_gallic": 2,
+   "siege_drm_roman": -1,
+   "ports": [
+    "Sinus Gallicus"
+   ]
+  },
+  "Narbo": {
+   "id": 134,
+   "name": "Narbo",
+   "type": "walled",
+   "province": "Narbonensis",
+   "region": "Provincia",
+   "section": null,
+   "x": 1848,
+   "y": 3149,
+   "garrison_roman": 4,
+   "garrison_gallic": 1,
+   "siege_drm_roman": -1,
+   "ports": [
+    "Sinus Gallicus"
+   ]
+  },
+  "Volcae Arecomici": {
+   "id": 120,
+   "name": "Volcae Arecomici",
+   "type": "town",
+   "province": "Volcae",
+   "region": "Provincia",
+   "section": null,
+   "x": 1953,
+   "y": 2825
+  },
+  "Volcae Tectosages": {
+   "id": 126,
+   "name": "Volcae Tectosages",
+   "type": "town",
+   "province": "Volcae",
+   "region": "Provincia",
+   "section": null,
+   "x": 1762,
+   "y": 2949
+  },
+  "Tolosa": {
+   "id": 128,
+   "name": "Tolosa",
+   "type": "town",
+   "province": "Volcae",
+   "region": "Provincia",
+   "section": null,
+   "x": 1399,
+   "y": 2997
+  },
+  "Carcaso": {
+   "id": 131,
+   "name": "Carcaso",
+   "type": "town",
+   "province": "Volcae",
+   "region": "Provincia",
+   "section": null,
+   "x": 1614,
+   "y": 3111
+  }
+ },
+ "edges": [
+  [
+   "Abrincatui",
+   "Curiosolites",
+   "path"
+  ],
+  [
+   "Abrincatui",
+   "Diablintes",
+   "path"
+  ],
+  [
+   "Abrincatui",
+   "Eburovices",
+   "path"
+  ],
+  [
+   "Abrincatui",
+   "Redones",
+   "path"
+  ],
+  [
+   "Aduatuci",
+   "Eburones",
+   "path"
+  ],
+  [
+   "Aduatuci",
+   "Menapii",
+   "rough"
+  ],
+  [
+   "Aduatuci",
+   "Nervii",
+   "path"
+  ],
+  [
+   "Aduatuci",
+   "Tungri",
+   "path"
+  ],
+  [
+   "Agedincum",
+   "Autessiodurum",
+   "path"
+  ],
+  [
+   "Agedincum",
+   "Tricasses",
+   "path"
+  ],
+  [
+   "Agedincum",
+   "Vellaunodurum",
+   "path"
+  ],
+  [
+   "Alesia",
+   "Bibracte",
+   "path"
+  ],
+  [
+   "Alesia",
+   "Cabillonum",
+   "path"
+  ],
+  [
+   "Alesia",
+   "Vesontio",
+   "path"
+  ],
+  [
+   "Allobroges",
+   "Cularo",
+   "path"
+  ],
+  [
+   "Allobroges",
+   "Vienne",
+   "path"
+  ],
+  [
+   "Ambiani",
+   "Caleti",
+   "rough"
+  ],
+  [
+   "Ambiani",
+   "Samarobriva",
+   "path"
+  ],
+  [
+   "Ambrussum",
+   "Narbo",
+   "path"
+  ],
+  [
+   "Anagnutes",
+   "Brigiosum",
+   "path"
+  ],
+  [
+   "Andematunnum",
+   "Alesia",
+   "path"
+  ],
+  [
+   "Andematunnum",
+   "Magetobriga",
+   "path"
+  ],
+  [
+   "Andes",
+   "Anagnutes",
+   "path"
+  ],
+  [
+   "Andes",
+   "Namnetes",
+   "path"
+  ],
+  [
+   "Andes",
+   "Pictavi",
+   "path"
+  ],
+  [
+   "Andes",
+   "Turoni",
+   "path"
+  ],
+  [
+   "Arausio",
+   "Ambrussum",
+   "path"
+  ],
+  [
+   "Arausio",
+   "Arelate",
+   "path"
+  ],
+  [
+   "Arausio",
+   "Vapincum",
+   "path"
+  ],
+  [
+   "Arausio",
+   "Volcae Arecomici",
+   "path"
+  ],
+  [
+   "Arelate",
+   "Ambrussum",
+   "path"
+  ],
+  [
+   "Arelate",
+   "Massilia",
+   "path"
+  ],
+  [
+   "Atrebates",
+   "Ambiani",
+   "path"
+  ],
+  [
+   "Atrebates",
+   "Nemetocenna",
+   "path"
+  ],
+  [
+   "Atrebates",
+   "Samarobriva",
+   "path"
+  ],
+  [
+   "Ausci",
+   "Bigerriones",
+   "path"
+  ],
+  [
+   "Autessiodurum",
+   "Alesia",
+   "path"
+  ],
+  [
+   "Autessiodurum",
+   "Bibracte",
+   "path"
+  ],
+  [
+   "Autricum",
+   "Cenabum",
+   "path"
+  ],
+  [
+   "Autricum",
+   "Cenomani",
+   "path"
+  ],
+  [
+   "Autricum",
+   "Turoni",
+   "path"
+  ],
+  [
+   "Avaricum",
+   "Cubi",
+   "path"
+  ],
+  [
+   "Avaricum",
+   "Gorgobina",
+   "path"
+  ],
+  [
+   "Bagacum",
+   "Bibrax",
+   "path"
+  ],
+  [
+   "Bagacum",
+   "Segni",
+   "path"
+  ],
+  [
+   "Bagacum",
+   "Viromandui",
+   "path"
+  ],
+  [
+   "Bellovaci",
+   "Bratuspantium",
+   "path"
+  ],
+  [
+   "Bellovaci",
+   "Lutetia",
+   "path"
+  ],
+  [
+   "Bellovaci",
+   "Veliocasses",
+   "path"
+  ],
+  [
+   "Bibracte",
+   "Boii",
+   "path"
+  ],
+  [
+   "Bibracte",
+   "Cabillonum",
+   "path"
+  ],
+  [
+   "Bibracte",
+   "Gorgobina",
+   "path"
+  ],
+  [
+   "Bibracte",
+   "Matisco",
+   "path"
+  ],
+  [
+   "Bibrax",
+   "Durocortorum",
+   "path"
+  ],
+  [
+   "Bibrax",
+   "Suessiones",
+   "path"
+  ],
+  [
+   "Bituriges",
+   "Avaricum",
+   "path"
+  ],
+  [
+   "Bituriges",
+   "Cubi",
+   "path"
+  ],
+  [
+   "Bituriges",
+   "Limonum",
+   "path"
+  ],
+  [
+   "Boii",
+   "Gergovia",
+   "path"
+  ],
+  [
+   "Boii",
+   "Vienne",
+   "path"
+  ],
+  [
+   "Bratuspantium",
+   "Lutetia",
+   "path"
+  ],
+  [
+   "Bratuspantium",
+   "Silvanectes",
+   "path"
+  ],
+  [
+   "Bratuspantium",
+   "Suessiones",
+   "path"
+  ],
+  [
+   "Brigantium",
+   "Vapincum",
+   "path"
+  ],
+  [
+   "Brigiosum",
+   "Santoni",
+   "path"
+  ],
+  [
+   "Burdigala",
+   "Sotiates",
+   "path"
+  ],
+  [
+   "Burdigala",
+   "Sotium",
+   "path"
+  ],
+  [
+   "Burdigala",
+   "Tarbelli",
+   "path"
+  ],
+  [
+   "Cabillonum",
+   "Matisco",
+   "path"
+  ],
+  [
+   "Cadurci",
+   "Ausci",
+   "path"
+  ],
+  [
+   "Cadurci",
+   "Tolosa",
+   "path"
+  ],
+  [
+   "Caerosi",
+   "Paemani",
+   "rough"
+  ],
+  [
+   "Caerosi",
+   "Treveri",
+   "path"
+  ],
+  [
+   "Caerosi",
+   "Vangiones",
+   "path"
+  ],
+  [
+   "Caleti",
+   "Bellovaci",
+   "path"
+  ],
+  [
+   "Caleti",
+   "Iuliobona",
+   "path"
+  ],
+  [
+   "Caleti",
+   "Veliocasses",
+   "path"
+  ],
+  [
+   "Cambiovicenses",
+   "Gergovia",
+   "path"
+  ],
+  [
+   "Cambiovicenses",
+   "Lemovices",
+   "path"
+  ],
+  [
+   "Carantomagus",
+   "Ruteni",
+   "path"
+  ],
+  [
+   "Carantomagus",
+   "Uxellodunum",
+   "path"
+  ],
+  [
+   "Carcaso",
+   "Narbo",
+   "path"
+  ],
+  [
+   "Catalauni",
+   "Tricasses",
+   "path"
+  ],
+  [
+   "Catalauni",
+   "Tullum",
+   "path"
+  ],
+  [
+   "Cenabum",
+   "Avaricum",
+   "path"
+  ],
+  [
+   "Cenabum",
+   "Bituriges",
+   "path"
+  ],
+  [
+   "Cenabum",
+   "Turoni",
+   "path"
+  ],
+  [
+   "Cenabum",
+   "Vellaunodurum",
+   "path"
+  ],
+  [
+   "Cenomani",
+   "Andes",
+   "path"
+  ],
+  [
+   "Cenomani",
+   "Turoni",
+   "path"
+  ],
+  [
+   "Condrusi",
+   "Bagacum",
+   "path"
+  ],
+  [
+   "Condrusi",
+   "Paemani",
+   "path"
+  ],
+  [
+   "Condrusi",
+   "Segni",
+   "path"
+  ],
+  [
+   "Cubi",
+   "Cambiovicenses",
+   "path"
+  ],
+  [
+   "Cubi",
+   "Lemovices",
+   "path"
+  ],
+  [
+   "Cubi",
+   "Limonum",
+   "path"
+  ],
+  [
+   "Cularo",
+   "Valentia",
+   "path"
+  ],
+  [
+   "Curiosolites",
+   "Osismi",
+   "path"
+  ],
+  [
+   "Curiosolites",
+   "Redones",
+   "path"
+  ],
+  [
+   "Diablintes",
+   "Andes",
+   "path"
+  ],
+  [
+   "Diablintes",
+   "Cenomani",
+   "path"
+  ],
+  [
+   "Divodurum",
+   "Mediomatrici",
+   "path"
+  ],
+  [
+   "Divodurum",
+   "Tullum",
+   "path"
+  ],
+  [
+   "Dubris",
+   "Portus Itius",
+   "channel"
+  ],
+  [
+   "Durocortorum",
+   "Catalauni",
+   "path"
+  ],
+  [
+   "Durocortorum",
+   "Meldi",
+   "path"
+  ],
+  [
+   "Durocortorum",
+   "Virodunum",
+   "path"
+  ],
+  [
+   "Durovernon",
+   "Dubris",
+   "path"
+  ],
+  [
+   "Eburones",
+   "Caerosi",
+   "path"
+  ],
+  [
+   "Eburones",
+   "Germania A",
+   "rough"
+  ],
+  [
+   "Eburones",
+   "Tungri",
+   "path"
+  ],
+  [
+   "Eburovices",
+   "Autricum",
+   "path"
+  ],
+  [
+   "Eburovices",
+   "Cenomani",
+   "path"
+  ],
+  [
+   "Eburovices",
+   "Diablintes",
+   "path"
+  ],
+  [
+   "Epomanduodurum",
+   "Vesontio",
+   "path"
+  ],
+  [
+   "Esubii",
+   "Abrincatui",
+   "path"
+  ],
+  [
+   "Esubii",
+   "Eburovices",
+   "path"
+  ],
+  [
+   "Esubii",
+   "Lexovii",
+   "path"
+  ],
+  [
+   "Gabali",
+   "Carantomagus",
+   "rough"
+  ],
+  [
+   "Gabali",
+   "Ruteni",
+   "rough"
+  ],
+  [
+   "Gabali",
+   "Volcae Arecomici",
+   "rough"
+  ],
+  [
+   "Gergovia",
+   "Petrocorii",
+   "rough"
+  ],
+  [
+   "Gergovia",
+   "Vellavi",
+   "path"
+  ],
+  [
+   "Germania A",
+   "Caerosi",
+   "rough"
+  ],
+  [
+   "Germania A",
+   "Germania B",
+   "path"
+  ],
+  [
+   "Germania A",
+   "Vangiones",
+   "rough"
+  ],
+  [
+   "Gorgobina",
+   "Boii",
+   "path"
+  ],
+  [
+   "Gorgobina",
+   "Cambiovicenses",
+   "path"
+  ],
+  [
+   "Gorgobina",
+   "Gergovia",
+   "path"
+  ],
+  [
+   "Iculisma",
+   "Nitiobroges",
+   "path"
+  ],
+  [
+   "Iculisma",
+   "Petrocorii",
+   "path"
+  ],
+  [
+   "Iuliobona",
+   "Veliocasses",
+   "path"
+  ],
+  [
+   "Lemovices",
+   "Gergovia",
+   "rough"
+  ],
+  [
+   "Lemovices",
+   "Iculisma",
+   "path"
+  ],
+  [
+   "Lemovices",
+   "Petrocorii",
+   "path"
+  ],
+  [
+   "Leuci",
+   "Andematunnum",
+   "path"
+  ],
+  [
+   "Leuci",
+   "Magetobriga",
+   "path"
+  ],
+  [
+   "Lexovii",
+   "Autricum",
+   "path"
+  ],
+  [
+   "Lexovii",
+   "Eburovices",
+   "path"
+  ],
+  [
+   "Lexovii",
+   "Lutetia",
+   "path"
+  ],
+  [
+   "Limonum",
+   "Brigiosum",
+   "path"
+  ],
+  [
+   "Limonum",
+   "Iculisma",
+   "path"
+  ],
+  [
+   "Limonum",
+   "Lemovices",
+   "path"
+  ],
+  [
+   "Limonum",
+   "Santoni",
+   "path"
+  ],
+  [
+   "Lutetia",
+   "Autricum",
+   "path"
+  ],
+  [
+   "Lutetia",
+   "Metiosedum",
+   "path"
+  ],
+  [
+   "Magetobriga",
+   "Alesia",
+   "path"
+  ],
+  [
+   "Magetobriga",
+   "Epomanduodurum",
+   "path"
+  ],
+  [
+   "Magetobriga",
+   "Vesontio",
+   "path"
+  ],
+  [
+   "Matisco",
+   "Allobroges",
+   "path"
+  ],
+  [
+   "Matisco",
+   "Boii",
+   "path"
+  ],
+  [
+   "Matisco",
+   "Vienne",
+   "path"
+  ],
+  [
+   "Mediomatrici",
+   "Leuci",
+   "path"
+  ],
+  [
+   "Mediomatrici",
+   "Triboci",
+   "path"
+  ],
+  [
+   "Mediomatrici",
+   "Tullum",
+   "path"
+  ],
+  [
+   "Meldi",
+   "Agedincum",
+   "path"
+  ],
+  [
+   "Meldi",
+   "Catalauni",
+   "path"
+  ],
+  [
+   "Menapii",
+   "Bagacum",
+   "path"
+  ],
+  [
+   "Menapii",
+   "Nervii",
+   "path"
+  ],
+  [
+   "Menapii",
+   "Turnacum",
+   "path"
+  ],
+  [
+   "Metiosedum",
+   "Agedincum",
+   "path"
+  ],
+  [
+   "Metiosedum",
+   "Autricum",
+   "path"
+  ],
+  [
+   "Metiosedum",
+   "Cenabum",
+   "path"
+  ],
+  [
+   "Metiosedum",
+   "Vellaunodurum",
+   "path"
+  ],
+  [
+   "Morini",
+   "Atrebates",
+   "path"
+  ],
+  [
+   "Morini",
+   "Portus Itius",
+   "path"
+  ],
+  [
+   "Morini",
+   "Turnacum",
+   "path"
+  ],
+  [
+   "Namnetes",
+   "Anagnutes",
+   "path"
+  ],
+  [
+   "Nemetes",
+   "Divodurum",
+   "path"
+  ],
+  [
+   "Nemetes",
+   "Triboci",
+   "path"
+  ],
+  [
+   "Nemetocenna",
+   "Bagacum",
+   "path"
+  ],
+  [
+   "Nemetocenna",
+   "Samarobriva",
+   "path"
+  ],
+  [
+   "Nemetocenna",
+   "Viromandui",
+   "path"
+  ],
+  [
+   "Nervii",
+   "Bagacum",
+   "path"
+  ],
+  [
+   "Nervii",
+   "Condrusi",
+   "path"
+  ],
+  [
+   "Nitiobroges",
+   "Burdigala",
+   "path"
+  ],
+  [
+   "Nitiobroges",
+   "Sotium",
+   "path"
+  ],
+  [
+   "Nitiobroges",
+   "Uxellodunum",
+   "path"
+  ],
+  [
+   "Octodurus",
+   "Allobroges",
+   "path"
+  ],
+  [
+   "Osismi",
+   "Redones",
+   "path"
+  ],
+  [
+   "Osismi",
+   "Veneti",
+   "path"
+  ],
+  [
+   "Paemani",
+   "Segni",
+   "path"
+  ],
+  [
+   "Paemani",
+   "Treveri",
+   "path"
+  ],
+  [
+   "Paemani",
+   "Virodunum",
+   "path"
+  ],
+  [
+   "Petrocorii",
+   "Nitiobroges",
+   "path"
+  ],
+  [
+   "Petrocorii",
+   "Uxellodunum",
+   "path"
+  ],
+  [
+   "Pictavi",
+   "Anagnutes",
+   "path"
+  ],
+  [
+   "Pictavi",
+   "Brigiosum",
+   "path"
+  ],
+  [
+   "Pictavi",
+   "Limonum",
+   "path"
+  ],
+  [
+   "Portus Itius",
+   "Ambiani",
+   "path"
+  ],
+  [
+   "Portus Itius",
+   "Atrebates",
+   "path"
+  ],
+  [
+   "Rauraci",
+   "Epomanduodurum",
+   "path"
+  ],
+  [
+   "Redones",
+   "Andes",
+   "path"
+  ],
+  [
+   "Redones",
+   "Diablintes",
+   "path"
+  ],
+  [
+   "Redones",
+   "Namnetes",
+   "path"
+  ],
+  [
+   "Redones",
+   "Veneti",
+   "path"
+  ],
+  [
+   "Ruteni",
+   "Cadurci",
+   "path"
+  ],
+  [
+   "Ruteni",
+   "Tolosa",
+   "path"
+  ],
+  [
+   "Ruteni",
+   "Volcae Tectosages",
+   "rough"
+  ],
+  [
+   "Samarobriva",
+   "Bellovaci",
+   "path"
+  ],
+  [
+   "Samarobriva",
+   "Bratuspantium",
+   "path"
+  ],
+  [
+   "Samarobriva",
+   "Caleti",
+   "path"
+  ],
+  [
+   "Santoni",
+   "Burdigala",
+   "path"
+  ],
+  [
+   "Santoni",
+   "Iculisma",
+   "path"
+  ],
+  [
+   "Segni",
+   "Bibrax",
+   "path"
+  ],
+  [
+   "Segni",
+   "Durocortorum",
+   "path"
+  ],
+  [
+   "Segni",
+   "Virodunum",
+   "path"
+  ],
+  [
+   "Silvanectes",
+   "Agedincum",
+   "path"
+  ],
+  [
+   "Silvanectes",
+   "Lutetia",
+   "path"
+  ],
+  [
+   "Silvanectes",
+   "Meldi",
+   "path"
+  ],
+  [
+   "Silvanectes",
+   "Metiosedum",
+   "path"
+  ],
+  [
+   "Sotiates",
+   "Ausci",
+   "path"
+  ],
+  [
+   "Sotiates",
+   "Bigerriones",
+   "path"
+  ],
+  [
+   "Sotiates",
+   "Tarbelli",
+   "path"
+  ],
+  [
+   "Sotium",
+   "Ausci",
+   "path"
+  ],
+  [
+   "Sotium",
+   "Cadurci",
+   "path"
+  ],
+  [
+   "Sotium",
+   "Sotiates",
+   "path"
+  ],
+  [
+   "Suessiones",
+   "Durocortorum",
+   "path"
+  ],
+  [
+   "Suessiones",
+   "Meldi",
+   "path"
+  ],
+  [
+   "Suessiones",
+   "Silvanectes",
+   "path"
+  ],
+  [
+   "Tarbelli",
+   "Bigerriones",
+   "path"
+  ],
+  [
+   "Tolosa",
+   "Ausci",
+   "path"
+  ],
+  [
+   "Tolosa",
+   "Carcaso",
+   "path"
+  ],
+  [
+   "Treveri",
+   "Divodurum",
+   "path"
+  ],
+  [
+   "Treveri",
+   "Nemetes",
+   "path"
+  ],
+  [
+   "Treveri",
+   "Virodunum",
+   "path"
+  ],
+  [
+   "Triboci",
+   "Rauraci",
+   "path"
+  ],
+  [
+   "Tricasses",
+   "Alesia",
+   "path"
+  ],
+  [
+   "Tricasses",
+   "Andematunnum",
+   "path"
+  ],
+  [
+   "Tricasses",
+   "Autessiodurum",
+   "path"
+  ],
+  [
+   "Tullum",
+   "Andematunnum",
+   "path"
+  ],
+  [
+   "Tullum",
+   "Leuci",
+   "path"
+  ],
+  [
+   "Tullum",
+   "Tricasses",
+   "path"
+  ],
+  [
+   "Tungri",
+   "Caerosi",
+   "path"
+  ],
+  [
+   "Tungri",
+   "Condrusi",
+   "path"
+  ],
+  [
+   "Tungri",
+   "Paemani",
+   "path"
+  ],
+  [
+   "Turnacum",
+   "Atrebates",
+   "path"
+  ],
+  [
+   "Turnacum",
+   "Bagacum",
+   "path"
+  ],
+  [
+   "Turnacum",
+   "Nemetocenna",
+   "path"
+  ],
+  [
+   "Turoni",
+   "Bituriges",
+   "path"
+  ],
+  [
+   "Turoni",
+   "Pictavi",
+   "path"
+  ],
+  [
+   "Uxellodunum",
+   "Cadurci",
+   "path"
+  ],
+  [
+   "Uxellodunum",
+   "Sotium",
+   "path"
+  ],
+  [
+   "Valentia",
+   "Arausio",
+   "path"
+  ],
+  [
+   "Valentia",
+   "Brigantium",
+   "rough"
+  ],
+  [
+   "Vangiones",
+   "Nemetes",
+   "path"
+  ],
+  [
+   "Vangiones",
+   "Treveri",
+   "path"
+  ],
+  [
+   "Vapincum",
+   "Arelate",
+   "path"
+  ],
+  [
+   "Vapincum",
+   "Massilia",
+   "path"
+  ],
+  [
+   "Veliocasses",
+   "Lexovii",
+   "path"
+  ],
+  [
+   "Veliocasses",
+   "Lutetia",
+   "path"
+  ],
+  [
+   "Vellaunodurum",
+   "Autessiodurum",
+   "path"
+  ],
+  [
+   "Vellaunodurum",
+   "Avaricum",
+   "path"
+  ],
+  [
+   "Vellaunodurum",
+   "Bibracte",
+   "path"
+  ],
+  [
+   "Vellaunodurum",
+   "Gorgobina",
+   "path"
+  ],
+  [
+   "Vellavi",
+   "Gabali",
+   "rough"
+  ],
+  [
+   "Venelli",
+   "Abrincatui",
+   "path"
+  ],
+  [
+   "Venelli",
+   "Esubii",
+   "path"
+  ],
+  [
+   "Veneti",
+   "Namnetes",
+   "path"
+  ],
+  [
+   "Vesontio",
+   "Cabillonum",
+   "path"
+  ],
+  [
+   "Vienne",
+   "Cularo",
+   "path"
+  ],
+  [
+   "Vienne",
+   "Valentia",
+   "path"
+  ],
+  [
+   "Vienne",
+   "Vellavi",
+   "rough"
+  ],
+  [
+   "Virodunum",
+   "Catalauni",
+   "path"
+  ],
+  [
+   "Virodunum",
+   "Divodurum",
+   "path"
+  ],
+  [
+   "Virodunum",
+   "Tullum",
+   "path"
+  ],
+  [
+   "Viromandui",
+   "Bibrax",
+   "path"
+  ],
+  [
+   "Viromandui",
+   "Bratuspantium",
+   "path"
+  ],
+  [
+   "Viromandui",
+   "Samarobriva",
+   "path"
+  ],
+  [
+   "Viromandui",
+   "Suessiones",
+   "path"
+  ],
+  [
+   "Volcae Arecomici",
+   "Ambrussum",
+   "path"
+  ],
+  [
+   "Volcae Arecomici",
+   "Volcae Tectosages",
+   "rough"
+  ],
+  [
+   "Volcae Tectosages",
+   "Ambrussum",
+   "path"
+  ],
+  [
+   "Volcae Tectosages",
+   "Carcaso",
+   "path"
+  ],
+  [
+   "Volcae Tectosages",
+   "Narbo",
+   "path"
+  ]
+ ],
+ "provinces": {
+  "Eburones": {
+   "num": 1,
+   "region": "Belgica",
+   "spaces": [
+    "Aduatuci",
+    "Eburones",
+    "Tungri"
+   ],
+   "need": 2
+  },
+  "Nervii": {
+   "num": 2,
+   "region": "Belgica",
+   "spaces": [
+    "Menapii",
+    "Nervii",
+    "Condrusi",
+    "Bagacum",
+    "Viromandui"
+   ],
+   "need": 3
+  },
+  "Atrebates": {
+   "num": 3,
+   "region": "Belgica",
+   "spaces": [
+    "Morini",
+    "Portus Itius",
+    "Turnacum",
+    "Atrebates",
+    "Ambiani",
+    "Nemetocenna"
+   ],
+   "need": 4
+  },
+  "Bellovaci": {
+   "num": 4,
+   "region": "Belgica",
+   "spaces": [
+    "Samarobriva",
+    "Caleti",
+    "Iuliobona",
+    "Bellovaci",
+    "Bratuspantium",
+    "Veliocasses"
+   ],
+   "need": 4
+  },
+  "Remi": {
+   "num": 5,
+   "region": "Belgica",
+   "spaces": [
+    "Segni",
+    "Bibrax",
+    "Durocortorum",
+    "Catalauni"
+   ],
+   "need": 3
+  },
+  "Suessiones": {
+   "num": 6,
+   "region": "Belgica",
+   "spaces": [
+    "Suessiones",
+    "Silvanectes",
+    "Meldi"
+   ],
+   "need": 2
+  },
+  "Treveri": {
+   "num": 7,
+   "region": "Belgica",
+   "spaces": [
+    "Caerosi",
+    "Vangiones",
+    "Paemani",
+    "Treveri",
+    "Nemetes",
+    "Virodunum",
+    "Divodurum"
+   ],
+   "need": 4
+  },
+  "Leuci": {
+   "num": 8,
+   "region": "Belgica",
+   "spaces": [
+    "Mediomatrici",
+    "Tullum",
+    "Triboci",
+    "Leuci"
+   ],
+   "need": 3
+  },
+  "Armorici": {
+   "num": 9,
+   "region": "Celtica",
+   "spaces": [
+    "Venelli",
+    "Esubii",
+    "Lexovii",
+    "Abrincatui"
+   ],
+   "need": 3
+  },
+  "Parisii": {
+   "num": 10,
+   "region": "Celtica",
+   "spaces": [
+    "Lutetia",
+    "Metiosedum"
+   ],
+   "need": 2
+  },
+  "Senones/Lingones": {
+   "num": 11,
+   "region": "Celtica",
+   "spaces": [
+    "Agedincum",
+    "Tricasses",
+    "Andematunnum",
+    "Vellaunodurum",
+    "Autessiodurum",
+    "Alesia"
+   ],
+   "need": 4
+  },
+  "Sequani": {
+   "num": 12,
+   "region": "Celtica",
+   "spaces": [
+    "Rauraci",
+    "Magetobriga",
+    "Epomanduodurum",
+    "Vesontio"
+   ],
+   "need": 3
+  },
+  "Veneti": {
+   "num": 13,
+   "region": "Celtica",
+   "spaces": [
+    "Curiosolites",
+    "Osismi",
+    "Redones",
+    "Veneti",
+    "Namnetes"
+   ],
+   "need": 3
+  },
+  "Aulerci": {
+   "num": 14,
+   "region": "Celtica",
+   "spaces": [
+    "Eburovices",
+    "Diablintes",
+    "Cenomani",
+    "Andes"
+   ],
+   "need": 3
+  },
+  "Carnutes": {
+   "num": 15,
+   "region": "Celtica",
+   "spaces": [
+    "Autricum",
+    "Cenabum"
+   ],
+   "need": 2
+  },
+  "Bituriges": {
+   "num": 16,
+   "region": "Celtica",
+   "spaces": [
+    "Turoni",
+    "Bituriges",
+    "Avaricum",
+    "Cubi"
+   ],
+   "need": 3
+  },
+  "Pictones/Santones": {
+   "num": 17,
+   "region": "Celtica",
+   "spaces": [
+    "Pictavi",
+    "Anagnutes",
+    "Limonum",
+    "Brigiosum",
+    "Lemovices",
+    "Santoni",
+    "Iculisma"
+   ],
+   "need": 4
+  },
+  "Arverni": {
+   "num": 18,
+   "region": "Celtica",
+   "spaces": [
+    "Gorgobina",
+    "Cambiovicenses",
+    "Gergovia",
+    "Vellavi",
+    "Gabali"
+   ],
+   "need": 3
+  },
+  "Aedui": {
+   "num": 19,
+   "region": "Celtica",
+   "spaces": [
+    "Bibracte",
+    "Cabillonum",
+    "Matisco",
+    "Boii"
+   ],
+   "need": 3
+  },
+  "Cadurci": {
+   "num": 20,
+   "region": "Celtica",
+   "spaces": [
+    "Petrocorii",
+    "Nitiobroges",
+    "Carantomagus",
+    "Uxellodunum",
+    "Sotium",
+    "Ruteni",
+    "Cadurci"
+   ],
+   "need": 4
+  },
+  "Aquitania": {
+   "num": 21,
+   "region": "Aquitania",
+   "spaces": [
+    "Burdigala",
+    "Sotiates",
+    "Tarbelli",
+    "Ausci",
+    "Bigerriones"
+   ],
+   "need": 3
+  },
+  "Volcae": {
+   "num": 22,
+   "region": "Provincia",
+   "spaces": [
+    "Volcae Arecomici",
+    "Volcae Tectosages",
+    "Tolosa",
+    "Carcaso"
+   ],
+   "need": 3
+  },
+  "Allobroges": {
+   "num": 23,
+   "region": "Provincia",
+   "spaces": [
+    "Octodurus",
+    "Allobroges",
+    "Vienne",
+    "Cularo"
+   ],
+   "need": 3
+  },
+  "Narbonensis": {
+   "num": 24,
+   "region": "Provincia",
+   "spaces": [
+    "Valentia",
+    "Brigantium",
+    "Arausio",
+    "Vapincum",
+    "Arelate",
+    "Ambrussum",
+    "Massilia",
+    "Narbo"
+   ],
+   "need": 5
+  },
+  "Germania": {
+   "num": 25,
+   "region": "Germania",
+   "spaces": [
+    "Germania A",
+    "Germania B"
+   ],
+   "need": 2
+  },
+  "Britannia": {
+   "num": 26,
+   "region": "Britannia",
+   "spaces": [
+    "Durovernon",
+    "Dubris"
+   ],
+   "need": 2
+  }
+ },
+ "rome_links": [
+  "Brigantium"
+ ],
+ "german_entry": {
+  "Usipetes": [
+   "Eburones"
+  ],
+  "Ubii": [
+   "Vangiones"
+  ],
+  "Suebi": [
+   "Nemetes",
+   "Triboci"
+  ]
+ },
+ "sea_zones": {
+  "Oceanus Britannicus": [
+   "Portus Itius",
+   "Ambiani",
+   "Iuliobona",
+   "Curiosolites",
+   "Osismi"
+  ],
+  "Oceanus Atlanticus": [
+   "Osismi",
+   "Veneti",
+   "Namnetes",
+   "Santoni",
+   "Burdigala"
+  ],
+  "Sinus Gallicus": [
+   "Arelate",
+   "Massilia",
+   "Narbo"
+  ]
+ }
+}
