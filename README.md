@@ -28,6 +28,7 @@ All files are in [`print/`](print):
 | [Caesar_Solo_Record_Sheet.pdf](print/Caesar_Solo_Record_Sheet.pdf) | Game record sheet for playtesting |
 | [Caesar_Solo_Sample_Game.pdf](print/Caesar_Solo_Sample_Game.pdf) | A full bot-vs-bot game, card by card |
 | [Caesar_Solo_Sim_Report.pdf](print/Caesar_Solo_Sim_Report.pdf) | How the bots were tested, and the results |
+| [Caesar_Solo_Deck.html](print/Caesar_Solo_Deck.html) | Optional offline helper: draws Directive cards, tracks turns and level bonuses, and has quick-reference panels. Open it in any browser instead of using the paper deck. |
 
 `Caesar_Solo_Rules.md` is the editable source. Run `python3 print/build.py` to rebuild the PDFs. It needs Python-Markdown, pypdf and Chrome or Chromium.
 

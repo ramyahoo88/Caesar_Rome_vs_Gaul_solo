@@ -65,6 +65,11 @@ Ideas that did not help, and were dropped:
 * Looser siege rules for every army. They helped against Concilium but cost VP against the Heuristic and Lookahead players. Only Caesar's army was given the looser rule (section 6).
 * Blocking provinces before their Tribe arrives.
 * A danger ratio other than 1.5 for Imperator. Ratios of 1.0, 1.25 and 2.0 were all tried.
+* Putting RAID first on more Directive cards.
+* A lower STRIKE ratio for Caesar's army.
+* Putting SIEGE first on more Directive cards.
+
+The last checks on Concilium varied its AMBUSH ratio (1.25× and 2×), the RISE threshold and the last BANK turn. None of these moved the result by more than about 0.2 VP, which is within the noise, so Concilium's rules were left unchanged.
 
 ## 5. Independent checks
 
@@ -77,6 +82,8 @@ Two separate agents checked the work. Neither had written the code.
     * 90–96% of full AP decisions (mission, army and target).
 
     Every gap it found was closed, either by clarifying the text or by fixing the code. One of the code fixes was an engine bug in how losses were applied, which affected both sides. See `audit/CLEANROOM_RESPONSE.md`.
+
+    This check covered the rules text as it stood before the last round of changes in section 6. Those changes are the danger rule, REGROUP, the lagging-region order and Caesar's 2:1 sieges. Their text was written to match the code line by line, but no independent check has been run on them yet.
 
 ## 6. The final changes and what they were worth
 
@@ -181,7 +188,7 @@ These figures come from 300 games of Imperator (level 3) against Concilium (stan
 ## 9. Limitations
 
 * **These are computer opponents.** A strong human will beat the Heuristic and Lookahead players. Expect your results against Imperator to be better than theirs, and against Concilium perhaps much better.
-* **The 2nd-edition card values are assumed.** The 2nd edition gives five cards 3 AP, three cards 1 AP and makes the rest 2 AP. Which cards carry which value is assumed. The card texts are 1st edition, and the 2nd edition changes some text.
+* **The 2nd-edition card values are assumed.** The 2nd edition gives five cards 3 AP, three cards 1 AP and makes the rest 2 AP. Which cards carry which value is assumed. The card texts are 1st edition, and the 2nd edition changes some text. To check that this does not matter much, the main matchups were re-run with the 1st-edition AP values on the same seeds. Imperator (level 3) against Concilium won 38.5% (42.0% with the 2nd-edition values). Imperator against the Lookahead player won 26% (39%). Concilium under the standard rules against the Lookahead player won 89% (94%). The bots' rules work with either deck.
 * **Simplifications in the engine.** Sorties and a few rare rules are simplified (see the audit response). They change the numbers a little but not the bots' rules.
 * **Tuning targets.** Imperator was tuned against the Concilium, Heuristic and Lookahead players, so it may be tuned to their habits. Concilium was tuned against Imperator and the Heuristic player.
 

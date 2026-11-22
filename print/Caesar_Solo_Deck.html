@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Caesar Solo Deck</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE: a quiet table companion: the bot's hand, not a dashboard.
+   IDEA: the Directive card being turned over on the campaign table.
+   PICTURE: the current Directive card, large, in its faction's colour, compass seal top right.
+   COLOUR and TYPE: legion red #8a1414 / Gallic blue #1d4f86 on white or night slate; Cinzel for names, Source Sans 3 for text.
+   LAYOUT: controls row, then card left and play steps right; stacks below 760px. */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#12161c);--ink:light-dark(#191919,#ece9e4);--mute:light-dark(#5d5a55,#a9a59e);--line:light-dark(#dedad3,#2c333d);--panel:light-dark(#f5f3ef,#1a2028);--R:#8a1414;--G:#1d4f86;--side:var(--R)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 'Source Sans 3',system-ui,sans-serif;overflow-x:clip}
+body.G{--side:var(--G)}
+header{background:var(--side);color:#fff;padding:18px max(5vw,16px) 14px;display:flex;flex-wrap:wrap;gap:12px 24px;align-items:end;justify-content:space-between;transition:background .3s}
+h1{font:800 clamp(26px,4vw,40px)/1.05 Cinzel,serif;margin:0;letter-spacing:.5px}
+header p{margin:4px 0 0;opacity:.85;font-size:15px}
+.seg{display:flex;border:1.5px solid rgba(255,255,255,.7);border-radius:10px;overflow:hidden}
+.seg button{background:transparent;color:#fff;border:0;padding:10px 16px;font:600 16px 'Source Sans 3',sans-serif;min-height:44px;cursor:pointer}
+.seg button[aria-pressed=true]{background:#fff;color:var(--side)}
+main{max-width:1240px;margin:0 auto;padding:22px max(5vw,16px) 40px}
+.bar{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin-bottom:18px}
+.bar label{font-weight:600}
+select,button.act{font:600 16px 'Source Sans 3',sans-serif;min-height:44px;border-radius:10px;padding:8px 14px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
+button.act.primary{background:var(--side);border-color:var(--side);color:#fff;font-size:18px;padding:10px 22px}
+button.act:focus-visible,select:focus-visible,.seg button:focus-visible{outline:3px solid #e0a100;outline-offset:2px}
+.pill{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-weight:600;white-space:nowrap}
+.pill b{color:var(--side)}
+#lvltxt{white-space:normal;border-radius:14px}
+.grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:24px;align-items:start}
+@media(max-width:760px){.grid{grid-template-columns:minmax(0,1fr)}}
+.card{border-radius:18px;border:2px solid var(--side);background:var(--bg);box-shadow:0 10px 30px rgba(0,0,0,.12);overflow:hidden;min-height:420px}
+.card .band{background:var(--side);color:#fff;font-weight:700;letter-spacing:1px;padding:8px 16px;display:flex;justify-content:space-between}
+.card .head{display:flex;align-items:center;justify-content:space-between;padding:16px 18px 10px;border-bottom:1px solid var(--line)}
+.card h2{font:800 clamp(30px,5vw,46px)/1 Cinzel,serif;margin:0}
+.seal{width:64px;height:64px;border-radius:50%;border:3px solid var(--side);display:grid;place-items:center;font:800 30px Cinzel,serif;color:var(--side);flex:none}
+.card ol{margin:14px 18px 6px;padding-left:22px}
+.card li{margin:0 0 10px}.card li b{font-size:18px;color:var(--side)}
+.card .foot{margin:6px 18px 16px;padding-top:10px;border-top:1px dashed var(--line);color:var(--mute);font-size:15px}
+.empty{display:grid;place-items:center;min-height:420px;text-align:center;color:var(--mute);padding:24px}
+.empty .seal{margin:0 auto 14px;opacity:.5}
+.flip{animation:flip .45s ease-out}
+@keyframes flip{from{transform:perspective(900px) rotateY(80deg);opacity:.2}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.flip{animation:none}}
+.steps{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.steps h3,.ref h3{font:700 19px Cinzel,serif;margin:0 0 8px;color:var(--side)}
+.steps ol{margin:0;padding-left:22px}.steps li{margin:0 0 9px}
+.ap{display:inline-block;background:var(--side);color:#fff;border-radius:8px;padding:1px 8px;font-weight:700}
+.hist{margin-top:16px;font-size:15px;color:var(--mute)}
+.hist span{display:inline-block;border:1px solid var(--line);border-radius:8px;padding:2px 8px;margin:3px 4px 0 0;color:var(--ink)}
+.ref{margin-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:14px}
+details{border:1px solid var(--line);border-radius:12px;padding:12px 16px;background:var(--bg)}
+summary{cursor:pointer;font-weight:700;min-height:28px}
+details p,details li{font-size:15px}
+.note{color:var(--mute);font-size:14px;margin-top:22px}
+</style>
+</head>
+<body class="R">
+<header>
+  <div><h1 id="title">Imperator</h1><p id="sub">Rome's Directive deck. You play Gaul.</p></div>
+  <div class="seg" role="group" aria-label="Bot">
+    <button id="bR" aria-pressed="true">Imperator (Rome)</button><button id="bG" aria-pressed="false">Concilium (Gaul)</button>
+  </div>
+</header>
+<main>
+  <div class="bar">
+    <label for="lvl">Level</label>
+    <select id="lvl"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option></select>
+    <span class="pill" id="lvltxt"></span>
+    <span class="pill">Turn <b id="turn">1</b> · bot card play <b id="play">0</b></span>
+    <span class="pill">Deck <b id="left">9</b> left</span>
+  </div>
+  <div class="bar">
+    <button class="act primary" id="draw">Turn over Directive</button>
+    <button class="act" id="undo">Undo</button>
+    <button class="act" id="next">Next turn</button>
+    <button class="act" id="reset">New game</button>
+  </div>
+  <div class="grid">
+    <div id="cardbox" aria-live="polite"></div>
+    <div>
+      <div class="steps">
+        <h3>This card play</h3>
+        <ol>
+          <li><b>Offer.</b> Shuffle the bot's hand and reveal 2 cards. Surprise cards and #24 go to its Reserve; reveal another instead.</li>
+          <li><b>Choose.</b> A ★ Event that is Live → higher AP → Live Event → first revealed.</li>
+          <li><b>Event or AP.</b> Live Event: play it (Bonus: Event, then AP). Otherwise play for AP.</li>
+          <li><b>Each AP:</b> <span id="order"></span>. First mission that can be done; 1 AP (Major Uprising 2).</li>
+          <li id="bonus"></li>
+        </ol>
+      </div>
+      <div class="hist" id="hist"></div>
+    </div>
+  </div>
+  <div class="ref" id="ref"></div>
+  <p class="note">A companion to the print-and-play Caesar solo rules (v1.0), not a replacement for them. Section numbers refer to that booklet. The deck state is kept in this browser where it can be. Unofficial fan variant for <i>Caesar: Rome vs. Gaul</i> (GMT Games).</p>
+</main>
+<script>
+{
+const M={RULE:'Control Table lines 0–3: presence, convert, Provincia, gain a province.',
+SIEGE:'March and roll vs a Town that must surrender (3:1), has 2+ Siege Points (1:1), or where Caesar has 2:1. Skip a location rolled this card. Octodurus last.',
+RAID:'SWEEP Gallic IMs: 4 Gallic province in Celtica, or Provincia; 3 other Gallic province; 2 near Roman control. Never into danger (Caesar may).',
+SETTLE:'The whole Control Table (lines 0–6).',
+STRIKE:'Attack Gallic CUs at 2:1 BS (Caesar 1.5:1). 3:1 first, then largest, then nearest. Siege too if a Town is there.',
+INVADE:'Turn 3+, Caesar unmoved, his 6 strongest CUs CS 12+: remove a Britannia / Germania IM, else march closer.',
+RISE:'Major Uprising (Turn 4+, 2 AP, 2+ Submitted Tribes with a space), or empty the Council Box (a Tribe may come out, or 3+ IMs).',
+AMBUSH:'Attack Roman CUs at 1.5:1 BS (Caesar’s army 2.1:1). Caesar first, then largest, then nearest.',
+GRAID:'SWEEP Roman IMs: 4 Narbonensis; 3 Roman province; 2 other Provincia; 1 else. Never in or next to Caesar’s space, never into danger.',
+AGITATE:'One Agitate Table action.',
+BANK:'Turns 1–5: one IM into the Council Box (max 6).'};
+const D={R:[['I-1','Pacify','RULE SIEGE RAID SETTLE STRIKE','N'],['I-2','Pacify','RULE SIEGE RAID SETTLE STRIKE','S'],['I-3','Pacify','RULE SIEGE RAID SETTLE STRIKE','E'],['I-4','Pacify','RULE SIEGE RAID SETTLE STRIKE','W'],['I-5','Rule','RULE RAID SIEGE SETTLE STRIKE','N'],['I-6','Rule','RULE RAID SIEGE SETTLE STRIKE','W'],['I-7','Raid','RAID RULE SIEGE SETTLE STRIKE','E'],['I-8','Campaign','RULE SIEGE STRIKE RAID SETTLE','S'],['I-9','Glory','RULE INVADE SIEGE RAID SETTLE','N']],
+G:[['C-1','Revolt','RISE AMBUSH RAID AGITATE','N'],['C-2','Revolt','RISE RAID AMBUSH AGITATE','S'],['C-3','Agitate','AGITATE RAID AMBUSH BANK','E'],['C-4','Agitate','AGITATE AMBUSH RAID BANK','W'],['C-5','Raid','RAID AGITATE AMBUSH BANK','S'],['C-6','Raid','RAID AMBUSH AGITATE BANK','N'],['C-7','Ambush','AMBUSH RAID AGITATE BANK','E'],['C-8','Council','BANK AGITATE RAID AMBUSH','W'],['C-9','Council','RISE BANK AGITATE RAID','N']]};
+const LV={R:['Rules only.','+1 AP on each of its first 4 card plays each turn.','+1 AP on every card play.','+1 AP on every card play; Rome wins with 10+ VP.','+1 AP on every card play; Rome wins with 9+ VP.'],
+G:['You win with 9+ VP.','You win with 10+ VP.','You win with 11+ VP.','Rules only (12 VP).','Concilium +1 AP on each of its first 4 card plays each turn.']};
+const REF={R:[['Danger (section 3)','A Roman army is in danger where a Gallic army could reach it next activation with BS at least 1.5× all Roman CUs there. A Roman Walled City is never dangerous. Caesar’s army ignores danger.'],
+['REGROUP','A non-Caesar army in danger moves where it is safe: Caesar’s space, then most Roman BS, then nearest. The army in most danger goes first.'],
+['SWEEP (5.3)','Highest-weight IM (weights fixed at the start, no enemy CU) reachable with 2 MP left → fewest MP → most MP left → stronger army → compass. Remove it, then keep stepping to adjacent wanted IMs (path cost + 2).'],
+['Control Table (5.2)','Lagging region first (Celtica or Belgica where Rome does not hold more provinces than Gaul), then the other, Aquitania, Provincia, then compass. 0 Presence · 1 Convert · 2 Provincia · 3 Gain · 4 Deny · 5 Advance · 6 anywhere.']],
+G:[['Danger (section 3)','A Gallic army is in danger where a Roman army could reach it next activation with BS at least equal to all Gallic CUs there. A Gallic Fortified Town is never dangerous.'],
+['SWEEP (5.3)','Highest-weight IM (weights fixed at the start, no enemy CU) reachable with 2 MP left → fewest MP → most MP left → stronger army → compass. Never into danger.'],
+['Agitate Table (6.2)','1 Convert (Gallic CUs there) · 2 Provincia (Narbonensis first) · 3 Gain (Celtica first) · 4 Deny · 5 Cut · 6 nearest non-Gallic province of Gaul, then anywhere. Ties: compass.'],
+['Tribes (6.3)','Keep the 3 strongest drawn Tribes with a legal space. Place each farthest from any Legion (up to 4), then fewest adjacent Roman markers, then northernmost.']]};
+const $=id=>document.getElementById(id);
+let S={side:'R',lvl:{R:3,G:3},turn:1,play:0,deck:{R:[],G:[]},cur:null,hist:[],prev:[]};
+try{const t=JSON.parse(localStorage.getItem('caesarSoloDeck')||'null');if(t&&t.deck)S=Object.assign(S,t)}catch(e){}
+const save=()=>{try{localStorage.setItem('caesarSoloDeck',JSON.stringify(S))}catch(e){}};
+const shuffle=a=>{for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const fresh=s=>shuffle(D[s].map((_,i)=>i));
+function bonusText(){const s=S.side,l=S.lvl[s],n=S.play;
+  if(s==='R'){if(l===1)return 'No bonus AP at this level.';if(l===2)return n>=1&&n<=4?'<span class="ap">+1 AP</span> on this card (one of its first 4 plays this turn).':'No bonus on this card (past its first 4 plays).';return '<span class="ap">+1 AP</span> on this card (cards played for AP and Bonus cards; #4 still gives 5).'}
+  if(l===5)return n>=1&&n<=4?'<span class="ap">+1 AP</span> on this card (one of its first 4 plays this turn).':'No bonus on this card (past its first 4 plays).';
+  return 'No bonus AP at this level. The level changes only the VP you need.'}
+function render(){const s=S.side;document.body.className=s;
+  $('bR').setAttribute('aria-pressed',s==='R');$('bG').setAttribute('aria-pressed',s==='G');
+  $('title').textContent=s==='R'?'Imperator':'Concilium';
+  $('sub').textContent=s==='R'?'Rome’s Directive deck. You play Gaul.':'Gaul’s Directive deck. You play Rome.';
+  $('lvl').value=S.lvl[s];$('lvltxt').textContent='Level '+S.lvl[s]+': '+LV[s][S.lvl[s]-1];
+  $('turn').textContent=S.turn;$('play').textContent=S.play;$('left').textContent=S.deck[s].length||9;
+  $('order').innerHTML=s==='R'?'<b>CONTINUE · PROTECT · SUBMIT · REGROUP</b> → Directive missions → <b>GATHER · CONTROL</b>':'Directive missions → <b>AGITATE</b>';
+  $('bonus').innerHTML='<b>Bonus:</b> '+bonusText();
+  const c=S.cur!==null&&S.cur.side===s?D[s][S.cur.i]:null;
+  $('cardbox').innerHTML=c?`<article class="card flip"><div class="band"><span>${s==='R'?'IMPERATOR':'CONCILIUM'}</span><span>${c[0]}</span></div>
+    <div class="head"><h2>${c[1]}</h2><div class="seal" aria-label="Compass ${c[3]}">${c[3]}</div></div>
+    <ol>${c[2].split(' ').map(m=>`<li><b>${m}</b> — ${M[s==='G'&&m==='RAID'?'GRAID':m]}</li>`).join('')}</ol>
+    <div class="foot">${s==='R'?'Before: CONTINUE · PROTECT · SUBMIT · REGROUP | After: GATHER · CONTROL':'After: AGITATE'} · Ties go to the compass: <b>${c[3]}</b></div></article>`
+    :`<div class="card"><div class="empty"><div><div class="seal">?</div><p>Turn over a Directive when it is the bot's card play.</p></div></div></div>`;
+  $('hist').innerHTML=S.hist.length?'This turn: '+S.hist.filter(h=>h.side===s).map(h=>`<span>${h.n}. ${D[s][h.i][1]} (${D[s][h.i][3]})</span>`).join(''):'';
+  $('ref').innerHTML=REF[s].map(r=>`<details><summary>${r[0]}</summary><p>${r[1]}</p></details>`).join('');
+  save()}
+$('bR').onclick=()=>{S.side='R';render()};$('bG').onclick=()=>{S.side='G';render()};
+$('lvl').onchange=e=>{S.lvl[S.side]=+e.target.value;render()};
+$('draw').onclick=()=>{const s=S.side;S.prev.push(JSON.stringify({deck:S.deck,cur:S.cur,hist:S.hist,play:S.play}));if(S.prev.length>30)S.prev.shift();
+  if(!S.deck[s].length)S.deck[s]=fresh(s);const i=S.deck[s].pop();S.play++;S.cur={side:s,i};S.hist.push({side:s,i,n:S.play});render()};
+$('undo').onclick=()=>{const p=S.prev.pop();if(!p)return;Object.assign(S,JSON.parse(p));render()};
+$('next').onclick=()=>{if(S.turn<6)S.turn++;S.play=0;S.hist=[];S.cur=null;S.prev=[];render()};
+$('reset').onclick=()=>{S.turn=1;S.play=0;S.hist=[];S.cur=null;S.prev=[];S.deck={R:fresh('R'),G:fresh('G')};render()};
+if(!S.deck.R.length&&!S.deck.G.length&&S.cur===null){S.deck={R:fresh('R'),G:fresh('G')}}
+render();
+}
+</script>
+</body>
+</html>
