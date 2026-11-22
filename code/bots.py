@@ -7,7 +7,7 @@ spaces, battle strengths, siege odds and simple priority lists.  The printed rul
 import random
 from engine import (N, NAMES, IDX, ADJ, EDGE, PROV, REGION, STYPE, PROVINCES, REG_PROVS, GAUL_REGIONS,
                     PROVINCIA, OTHER, Leader, Unit, GERMANIA_VP, BRITANNIA_VP, OCTODURUS, BRIGANTIUM,
-                    battle_result, odds_col, CARDS, SEA, GERMAN_SH, WC_GARRISON, HOPS)
+                    battle_result, odds_col, CARDS, SEA, GERMAN_SH, WC_GARRISON, HOPS, PORTS)
 from heur import reach, path_to, stack_strength, enemy_outside_at, prov_margin
 from policies import BasePolicy
 import events as EV
@@ -94,11 +94,13 @@ class BotPolicy(BasePolicy):
         self.directive = None
         self.compass = 'N'
         self.reserve = []
+        self.expedition = False
         self.p.update(dict(noise=0.0))
         self.cfg = dict(
             r_siege_min_col=2, r_siege_min_col_caesar=1, r_strike_ratio=2.0, r_strike_ratio_caesar=1.5,
             g_ambush_ratio=1.5, g_avoid_ratio=1.5, r_avoid_ratio=1.5, g_inside_ratio=1.0,
-            r_invade_turn=3, bank_turn_max=5, rise_min=3, deny=True, block=False, block_first=False, celtica_first=True, dominance_race=False, protect=True, r_pre=('CONTINUE', 'PROTECT', 'SUBMIT'), siege_strict=True, strike_submit_only=False, winter_neutral=True,
+            r_invade_turn=3, bank_turn_max=5, rise_min=3, deny=True, block=False, block_first=False, celtica_first=True, dominance_race=False, protect=True, r_pre=('CONTINUE', 'PROTECT', 'SUBMIT', 'REGROUP'), siege_strict=True, strike_submit_only=False, winter_neutral=True,
+            regroup=True, r_post=('GATHER', 'CONTROL'), expedition=False, invade_cs=12, safe_raid=True,
         )
         self.cfg.update({k: v for k, v in params.items() if k in self.cfg})
 
@@ -161,7 +163,8 @@ class BotPolicy(BasePolicy):
                 return cz_on and not g.caesar_delayed
             if c == 3:
                 rome = g.path_to_rome()
-                return sum(1 for u in g.on_map('R', 'legion') if u.steps == 1 and u.loc in rome) + 2 * min(1, len(g.elim_legions)) >= 2
+                return sum(1 for u in g.on_map('R', 'legion') if u.steps == 1 and u.loc in rome and not g.unit_besieged(u)) \
+                    + 2 * min(1, len(g.elim_legions)) >= 2
             if c == 4:
                 return g.turn <= 4
             if c == 9:
@@ -189,7 +192,7 @@ class BotPolicy(BasePolicy):
                 return n_targets_remove(lambda s: PROV[s] in adj and not any(u.loc == s and u.side == 'G' for u in g.units.values())) > 0
             if c == 20:
                 rome = g.path_to_rome()
-                return any(u.steps == 1 and u.loc in rome for u in g.on_map('R', 'legion'))
+                return any(u.steps == 1 and u.loc in rome and not g.unit_besieged(u) for u in g.on_map('R', 'legion'))
             if c in (29, 30):
                 return any(u.loc == 'hold' and u.name.startswith('Germani Cav') for u in g.units.values()) and bool(EV.german_supply_legions(g))
             if c == 31:
@@ -199,7 +202,9 @@ class BotPolicy(BasePolicy):
                 return any(not any(l.loc == u.loc for l in g.leaders.values()) for u in g.on_map('R', 'legion'))
             if c in (37, 38):
                 return len({REGION[u.loc] for u in g.on_map('R')}) >= 3
-            if c in (45, 48):
+            if c == 45:
+                return n_targets_remove(lambda s: REGION[s] in GAUL_REGIONS + ('Provincia',) and not any(u.loc == s and u.side == 'G' for u in g.units.values())) > 0
+            if c == 48:
                 return n_targets_remove(lambda s: REGION[s] in GAUL_REGIONS + ('Provincia',) and not any(u.loc == s for u in g.units.values())) > 0
             if c == 44:
                 return any(l.br == 0 for l in g.leaders.values() if l.name != 'Caesar' and isinstance(l.loc, int))
@@ -258,10 +263,14 @@ class BotPolicy(BasePolicy):
             fp = {PROV[s] for s in range(N) if g.ctrl[s] == side and g.ctype[s] == 'IM'}
             return n_targets_remove(lambda s: PROV[s] in fp and not any(u.loc == s and u.side == OTHER[side] for u in g.units.values())) > 0
         if c == 40:
-            return n_targets_remove(lambda s: not any(u.loc == s for u in g.units.values())) > 0
+            vac = {p for p, v in PROVINCES.items() if any(g.ctrl[x] is None for x in v['idx'])}
+            return n_targets_remove(lambda s: PROV[s] in vac and not any(u.loc == s for u in g.units.values())) > 0
         if c in (34, 35):
             return True
-        if c in (50, 51):
+        if c == 50:
+            return any(g.ctype[s] in ('FT', 'WC') and PORTS[s] and any(g.naval_supremacy(side, z) for z in PORTS[s])
+                       and g.is_besieged(s) and g.fort_owner(s) != side for s in range(N))
+        if c == 51:
             return any(g.is_besieged(s) and g.fort_owner(s) != side for s in range(N))
         return False
 
@@ -275,7 +284,7 @@ class BotPolicy(BasePolicy):
             guard += 1
             done = False
             pre = list(self.cfg['r_pre']) if side == 'R' else []
-            for m in pre + order + (['GATHER', 'CONTROL'] if side == 'R' else ['AGITATE']):
+            for m in pre + order + (list(self.cfg['r_post']) if side == 'R' else ['AGITATE']):
                 cost = self.try_mission(g, side, m, ap)
                 if cost:
                     if g.logging:
@@ -319,7 +328,7 @@ class BotPolicy(BasePolicy):
     def gallic_armies(self, g):
         out = []
         used = set()
-        for u in g.on_map('G', 'gleader'):
+        for u in sorted(g.on_map('G', 'gleader'), key=lambda x: x.name != 'Vercingetorix'):
             if u.moved or g.unit_besieged(u):
                 continue
             us = [x for x in g.units.values() if x.loc == u.loc and x.side == 'G' and x is not u and not x.moved
@@ -350,10 +359,16 @@ class BotPolicy(BasePolicy):
         return ma, dist, parent
 
     def pick(self, cands):
-        """cands: list of (priority tuple, space, payload). Lower tuple wins; compass breaks ties."""
+        """cands: list of (priority tuple, space, payload). Lower tuple wins; compass breaks ties;
+        if several armies tie for the same space, the strongest army goes (then army order)."""
         if not cands:
             return None
-        return min(cands, key=lambda c: (c[0], compass_key(c[1], self.compass)))
+        def army_str(c):
+            try:
+                return -stack_strength(c[2][1])
+            except Exception:
+                return 0
+        return min(cands, key=lambda c: (c[0], compass_key(c[1], self.compass), army_str(c)))
 
     # ============================================================ ROMAN missions
     def bs(self, g, side, units, s):
@@ -379,13 +394,16 @@ class BotPolicy(BasePolicy):
         for leader, units, start in armies + extra:
             caesar = leader is not None and leader.name == 'Caesar'
             ma, dist, parent = self.army_reach(g, 'R', leader, units, start)
-            cs = stack_strength(units)
+            cs0 = stack_strength(units)
             for t, d in dist.items():
-                if ma - d < smp:
+                if ma - d < smp or t in g.sieged_this_card:
                     continue
+                cs = cs0 + stack_strength([u for u in g.units.values() if u.loc == t and u.side == 'R' and u not in units
+                                           and not u.inside])
                 if g.ctype[t] == 'FT':
-                    gar = 3 if t in g.ft_up else 2
-                    dfn = gar + stack_strength([u for u in g.units.values() if u.loc == t and u.side == 'G'])
+                    # defenders inside may come out, so every Gallic CU in the space counts
+                    dfn = g.fort_defense(t)[0] + stack_strength([u for u in g.units.values() if u.loc == t and u.side == 'G'
+                                                                 and not u.inside])
                     col = odds_col(cs, dfn)
                     pts = g.siege.get(t, 0)
                     need = self.cfg['r_siege_min_col_caesar'] if caesar else self.cfg['r_siege_min_col']
@@ -411,6 +429,10 @@ class BotPolicy(BasePolicy):
         return 1
 
     def m_continue(self, g, ap):
+        if self.cfg.get('expedition') and self.expedition:
+            r = self.m_invade(g, ap, force=True)
+            if r:
+                return r
         """An army already besieging a Fortified Town (or Stronghold) rolls again."""
         for leader, units, start in self.roman_armies(g):
             if leader is None:
@@ -418,10 +440,12 @@ class BotPolicy(BasePolicy):
             t = start
             if t in g.sieged_this_card:
                 continue
-            if g.ctype[t] == 'FT' and g.siege.get(t, 0) >= 1 and not enemy_outside_at(g, t, 'R'):
+            here = stack_strength([u for u in g.units.values() if u.loc == t and u.side == 'R' and not u.inside])
+            if g.ctype[t] == 'FT' and g.siege.get(t, 0) >= 1 and not enemy_outside_at(g, t, 'R') \
+                    and odds_col(here, g.fort_defense(t)[0]) >= 0:
                 g.activate('R', leader, units, [('siege',)])
                 return 1
-            if g.ctype[t] == 'SH' and g.ctrl[t] == 'G' and g.siege.get(t, 0) >= 1:
+            if g.ctype[t] == 'SH' and g.ctrl[t] == 'G' and g.siege.get(t, 0) >= 1 and here >= 2:
                 g.activate('R', leader, units, [('siege',)])
                 return 1
         return 0
@@ -446,7 +470,8 @@ class BotPolicy(BasePolicy):
                 ga = [u for u in g.units.values() if u.loc == t and u.side == 'G' and not u.inside]
                 if not ga:
                     continue
-                mine = self.bs(g, 'R', units, t); theirs = self.bs(g, 'G', ga, t)
+                # units inside a fortification may come out and fight: count them all
+                mine = self.bs(g, 'R', units, t); theirs = self.bs(g, 'G', [u for u in g.units.values() if u.loc == t and u.side == 'G'], t)
                 if theirs > 0 and mine >= theirs:
                     cands.append(((0 if mine >= 3 * theirs else 1, -theirs, d), t, (leader, units, parent)))
         c = self.pick(cands)
@@ -462,11 +487,72 @@ class BotPolicy(BasePolicy):
             if r:
                 g.activate('R', r[0], r[1], r[2])
                 return 1
-            act = self.roman_control_choice(g)
-            if act is not None and REGION[act[1]] == 'Provincia':
-                EV.do_influence(g, 'R', act)
+            if getattr(self, '_activating', False):
+                return 0
+            places = [s for s in range(N) if g.can_place('R', s) and REGION[s] == 'Provincia' and pc[PROV[s]] != 'R']
+            if places:
+                s = min(places, key=lambda s: (0 if PROV[s] == 'Narbonensis' else 1, compass_key(s, self.compass)))
+                EV.do_influence(g, 'R', ('place', s))
                 return 1
         return 0
+
+    def gallic_threat(self, g):
+        """Largest Gallic BS one Gallic army could bring into each space (moved flags ignored)."""
+        thr = {}
+        moved = [u for u in g.units.values() if u.side == 'G' and u.moved]
+        for u in moved:
+            u.moved = False
+        try:
+            for leader, units, start in self.gallic_armies(g):
+                if not units:
+                    continue
+                ma, dist, parent = self.army_reach(g, 'G', leader, units, start)
+                cs = stack_strength(units + ([leader] if leader is not None else []))
+                for t in dist:
+                    v = cs + g.local_support('G', t)
+                    if v > thr.get(t, 0):
+                        thr[t] = v
+        finally:
+            for u in moved:
+                u.moved = True
+        return thr
+
+    def m_regroup(self, g, ap):
+        """A Roman army (not Caesar's) that a Gallic army could attack at 1.5:1 joins a stronger
+        Roman force or a Roman Walled City it can reach where it would be safe."""
+        if not self.cfg.get('regroup'):
+            return 0
+        thr = self.gallic_threat(g)
+        ratio = self.cfg['g_ambush_ratio']
+
+        def rbs(t, extra=()):
+            us = [u for u in g.units.values() if u.loc == t and u.side == 'R' and u not in extra] + list(extra)
+            return stack_strength(us) + g.local_support('R', t) if us else 0
+
+        def safe(t, extra=()):
+            if g.ctrl[t] == 'R' and g.ctype[t] == 'WC':
+                return True
+            return thr.get(t, 0) < ratio * rbs(t, extra)
+        cands = []
+        for leader, units, start in self.roman_armies(g):
+            if leader is not None and leader.name == 'Caesar':
+                continue
+            if safe(start):
+                continue
+            ma, dist, parent = self.army_reach(g, 'R', leader, units, start)
+            for t, d in dist.items():
+                if t == start or enemy_outside_at(g, t, 'R'):
+                    continue
+                if not safe(t, units):
+                    continue
+                cz = any(l.loc == t and l.name == 'Caesar' for l in g.leaders.values())
+                cands.append(((-thr.get(start, 0) / max(1, rbs(start)), 0 if cz else 1, -rbs(t), d), t, (leader, units, parent)))
+        c = self.pick(cands)
+        if not c:
+            return 0
+        leader, units, parent = c[2]
+        g.activate('R', leader, units, [('to', x) for x in path_to(parent, c[1])])
+        return 1
 
     def m_submit(self, g, ap):
         """STRIKE restricted to targets that must Submit (3:1)."""
@@ -489,7 +575,8 @@ class BotPolicy(BasePolicy):
                 ga = [u for u in g.units.values() if u.loc == t and u.side == 'G' and not u.inside]
                 if not ga:
                     continue
-                mine = self.bs(g, 'R', units, t); theirs = self.bs(g, 'G', ga, t)
+                # units inside a fortification may come out and fight: count them all
+                mine = self.bs(g, 'R', units, t); theirs = self.bs(g, 'G', [u for u in g.units.values() if u.loc == t and u.side == 'G'], t)
                 if theirs <= 0:
                     continue
                 r = mine / theirs
@@ -556,11 +643,20 @@ class BotPolicy(BasePolicy):
             return (t not in done and g.ctrl[t] == enemy and g.ctype[t] == 'IM' and weight(t) > 0
                     and not any(u.loc == t and u.side == enemy for u in g.units.values())
                     and not (avoid and avoid(t)))
+        thr = self.gallic_threat(g) if (side == 'R' and self.cfg.get('safe_raid')) else None
+
+        def unsafe(t, leader, units):
+            if thr is None or (leader is not None and leader.name == 'Caesar'):
+                return False
+            if g.ctrl[t] == 'R' and g.ctype[t] == 'WC':
+                return False
+            us = [u for u in g.units.values() if u.loc == t and u.side == 'R' and u not in units] + list(units)
+            return thr.get(t, 0) >= self.cfg['g_ambush_ratio'] * (stack_strength(us) + g.local_support('R', t))
         cands = []
         for leader, units, start in armies:
             ma, dist, parent = self.army_reach(g, side, leader, units, start)
             for t, d in dist.items():
-                if ma - d >= 2 and removable(t):
+                if ma - d >= 2 and removable(t) and not unsafe(t, leader, units):
                     cands.append(((-weight(t), d, -(ma - d), -stack_strength(units)), t, (leader, units, start, parent, ma - d)))
         c = self.pick(cands)
         if not c:
@@ -578,7 +674,7 @@ class BotPolicy(BasePolicy):
             for x, k in ADJ[cur]:
                 cost = (1 if k == 'path' else 2) + over
                 if cost + 2 <= left and removable(x, done) and not enemy_outside_at(g, x, side) \
-                        and not (side == 'G' and REGION[x] in ('Germania', 'Britannia')):
+                        and not (side == 'G' and REGION[x] in ('Germania', 'Britannia')) and not unsafe(x, leader, units):
                     nxt.append(((-weight(x),), x, cost))
             if not nxt:
                 break
@@ -594,12 +690,12 @@ class BotPolicy(BasePolicy):
         pc = g.prov_control()
         def weight(t):
             p = PROV[t]
-            if t in GERMANIA_VP or t in BRITANNIA_VP:
+            if REGION[t] in ('Germania', 'Britannia'):
                 return 0
-            if pc[p] == 'G':
-                return 4 if REGION[t] == 'Celtica' else 3
             if REGION[t] == 'Provincia':
                 return 4
+            if pc[p] == 'G':
+                return 4 if REGION[t] == 'Celtica' else 3
             if prov_margin(g, p, 'R') <= 1 and not any(g.ctype[x] == 'FT' for x in PROVINCES[p]['idx']):
                 return 2
             return 0
@@ -609,16 +705,17 @@ class BotPolicy(BasePolicy):
         g.activate('R', r[0], r[1], r[2])
         return 1
 
-    def m_invade(self, g, ap):
-        if g.turn < self.cfg['r_invade_turn']:
+    def m_invade(self, g, ap, force=False):
+        if g.turn < self.cfg['r_invade_turn'] and not force:
             return 0
+        self.expedition = False
         cz = g.leaders.get('Caesar')
         if not cz or not isinstance(cz.loc, int) or cz.moved:
             return 0
         units = [u for u in g.units.values() if u.loc == cz.loc and u.side == 'R' and not u.moved and not g.unit_besieged(u)]
         units.sort(key=lambda u: -u.strength())
         units = units[:6]
-        if stack_strength(units) < 12:
+        if stack_strength(units) < self.cfg['invade_cs']:
             return 0
         targets = []
         if not g.britannia_done:
@@ -636,6 +733,8 @@ class BotPolicy(BasePolicy):
                     best = (dist[t], t)
         if best:
             g.activate('R', cz, units, [('to', x) for x in path_to(parent, best[1])] + [('remove_im',)])
+            # more targets left in the same land: keep going
+            self.expedition = any(g.ctrl[t] == 'G' for t in (BRITANNIA_VP if best[1] in BRITANNIA_VP else GERMANIA_VP))
             return 1
         # march toward the nearest target
         goal = min(targets, key=lambda t: HOPS[cz.loc][t])
@@ -646,6 +745,7 @@ class BotPolicy(BasePolicy):
         if HOPS[t][goal] >= HOPS[cz.loc][goal]:
             return 0
         g.activate('R', cz, units, [('to', x) for x in path_to(parent, t)])
+        self.expedition = True
         return 1
 
     def near_sup(self, t, sup=None):
@@ -840,7 +940,8 @@ class BotPolicy(BasePolicy):
                 if not ra:
                     continue
                 caesar = any(l.loc == t and l.name == 'Caesar' for l in g.leaders.values())
-                mine = self.bs(g, 'G', units, t); theirs = self.bs(g, 'R', ra, t)
+                mine = self.bs(g, 'G', units + ([leader] if leader is not None else []), t)
+                theirs = self.bs(g, 'R', [u for u in g.units.values() if u.loc == t and u.side == 'R'], t)
                 need = self.cfg['g_ambush_ratio'] * (1.4 if caesar else 1.0)
                 if theirs > 0 and mine >= need * theirs:
                     cands.append(((0 if caesar else 1, -theirs, d), t, (leader, units, parent)))
@@ -896,7 +997,8 @@ class BotPolicy(BasePolicy):
         gain = [s for s in places if prov_margin(g, PROV[s], 'G') == 1 and pc[PROV[s]] != 'G' and REGION[s] in GAUL_REGIONS]
         if gain:
             return ('place', min(gain, key=lambda s: (0 if REGION[s] == 'Celtica' else 1, compass_key(s, self.compass))))
-        deny = [s for s in places if REGION[s] in GAUL_REGIONS and pc[PROV[s]] != 'R' and prov_margin(g, PROV[s], 'R') <= 1]
+        deny = [s for s in places if REGION[s] in GAUL_REGIONS and pc[PROV[s]] != 'R' and prov_margin(g, PROV[s], 'R') == 1
+                and not any(g.ctype[x] == 'FT' for x in PROVINCES[PROV[s]]['idx'])]
         if deny:
             return ('place', min(deny, key=lambda s: compass_key(s, self.compass)))
         cut = [s for s in places if REGION[s] in GAUL_REGIONS and sum(1 for t, k in ADJ[s] if g.ctrl[t] == 'R' and g.ctype[t] == 'IM') >= 2]
@@ -904,7 +1006,7 @@ class BotPolicy(BasePolicy):
             return ('place', min(cut, key=lambda s: (-sum(1 for t, k in ADJ[s] if g.ctrl[t] == 'R'), compass_key(s, self.compass))))
         opts = [s for s in places if REGION[s] in GAUL_REGIONS]
         if opts:
-            return ('place', min(opts, key=lambda s: (prov_margin(g, PROV[s], 'G'), compass_key(s, self.compass))))
+            return ('place', min(opts, key=lambda s: (pc[PROV[s]] == 'G', prov_margin(g, PROV[s], 'G'), compass_key(s, self.compass))))
         if places:
             return ('place', min(places, key=lambda s: compass_key(s, self.compass)))
         return None
@@ -972,11 +1074,15 @@ class BotPolicy(BasePolicy):
     def activate_leader(self, g, side, leader, free=True):
         """Event activation of one named leader: his army does the first Activation Mission
         (Imperator: PROTECT, SUBMIT, CONTINUE, SIEGE, STRIKE, INVADE, RAID) it can."""
-        for m in (self.ACT_R if side == 'R' else self.ACT_G):
-            if m == 'GATHER':
-                continue
-            if self.try_filtered(g, side, m, lambda a: a[0] is leader):
-                return
+        self._activating = True
+        try:
+            for m in (self.ACT_R if side == 'R' else self.ACT_G):
+                if m == 'GATHER':
+                    continue
+                if self.try_filtered(g, side, m, lambda a: a[0] is leader):
+                    return
+        finally:
+            self._activating = False
 
     def try_filtered(self, g, side, m, keep):
         """Run mission m with the bot's armies limited to those for which keep(army) is true."""
@@ -1007,11 +1113,18 @@ class BotPolicy(BasePolicy):
             leader, units_, start = a
             if purpose == 'belgic_confederation' and REGION[start] != 'Belgica':
                 return False
-            if purpose == 'caesars_legions' and leader is not None:
+            if purpose == 'caesars_legions' and (leader is not None or any(l.loc == start for l in g.leaders.values())):
                 return False
             if purpose == 'motus_ubique' and REGION[start] in regions_done:
                 return False
             return True
+        self._activating = True
+        try:
+            self._mass(g, side, missions, keep, purpose, regions_done)
+        finally:
+            self._activating = False
+
+    def _mass(self, g, side, missions, keep, purpose, regions_done):
         for _ in range(20):
             acted = False
             for m in missions:
@@ -1031,6 +1144,16 @@ class BotPolicy(BasePolicy):
             if not acted:
                 break
 
+    def choose_ims_to_remove(self, g, ims, n):
+        """Caesar displaced: Roman IMs outside Roman-controlled provinces first, Provincia last."""
+        pc = g.prov_control()
+        return sorted(ims, key=lambda s: (REGION[s] == 'Provincia', pc[PROV[s]] == 'R', compass_key(s, self.compass)))[:n]
+
+    def choose_unit(self, g, side, units, purpose):
+        if purpose == 'restore' and side == 'R':
+            return self.choose_replacement(g, units)
+        return super().choose_unit(g, side, units, purpose)
+
     def choose_replacement(self, g, red):
         cz = g.leaders.get('Caesar')
         def key(u):
@@ -1049,10 +1172,12 @@ class BotPolicy(BasePolicy):
         pc = g.prov_control()
         p = PROV[t]
         if side == 'R':
-            if pc[p] == 'G':
-                return 4 if REGION[t] == 'Celtica' else 3
+            if REGION[t] in ('Germania', 'Britannia'):
+                return 1
             if REGION[t] == 'Provincia':
                 return 4
+            if pc[p] == 'G':
+                return 4 if REGION[t] == 'Celtica' else 3
             if prov_margin(g, p, 'R') <= 1 and not any(g.ctype[x] == 'FT' for x in PROVINCES[p]['idx']):
                 return 2
             return 1
@@ -1111,7 +1236,13 @@ class BotPolicy(BasePolicy):
                     return cz.loc
                 return max(opts, key=lambda t: (legs(t), -compass_key(t, self.compass)))
             # legates / Labienus: the largest Legion stack without a leader, else with Caesar
-            return max(opts, key=lambda t: (not has_leader(t), legs(t), -compass_key(t, self.compass)))
+            free = [t for t in opts if legs(t) > 0 and not has_leader(t)]
+            if free:
+                return max(free, key=lambda t: (legs(t), -compass_key(t, self.compass)))
+            cz = g.leaders.get('Caesar')
+            if cz is not None and cz.loc in opts:
+                return cz.loc
+            return max(opts, key=lambda t: (legs(t), -compass_key(t, self.compass)))
         return super().choose_space(g, side, opts, purpose)
 
     def avoid_dest(self, g, side, s, units, dests):

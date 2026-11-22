@@ -39,7 +39,7 @@ Each time it is the bot's turn to play a card:
 
 2.3 **Choose the card.** Take the first that applies:
 
-1. A card whose Event is **★** in the bot's Event Guide **and Live**.
+1. A card whose Event is **★** in the bot's Event Guide **and Live**. If both are, go on to the next step with those two.
 2. The card with the higher AP value.
 3. If still tied, the card whose Event is Live.
 4. Otherwise, the first card revealed.
@@ -50,7 +50,7 @@ Return the other card face down.
 
 2.5 **Spend each AP.** For each Action Point, work down the list below. Do the first mission that *can* be done. It costs 1 AP; a Major Uprising costs 2. If nothing can be done, the remaining AP are lost.
 
-* **Imperator:** CONTINUE, PROTECT, SUBMIT, then the Directive's missions in order, then GATHER, then CONTROL.
+* **Imperator:** CONTINUE, PROTECT, SUBMIT, REGROUP, then the Directive's missions in order, then GATHER, then CONTROL.
 * **Concilium:** the Directive's missions in order, then AGITATE.
 
 The bot never takes its Event and AP from the same card except for Bonus cards (7.5).
@@ -62,17 +62,21 @@ The bot never takes its Event and AP from the same card except for Bonus cards (
 **Army.** The bot forms its armies afresh for each mission, from units that have not moved this card play:
 
 * **Imperator:** each Roman leader (Caesar first, then Legates by Battle Rating, highest first) with up to his Command Rating of CUs from his space, strongest first; then each other Legion stack (up to 2 Legions).
-* **Concilium:** each Gallic leader with up to his Command Rating of CUs from his space, strongest first (Ambiorix: Belgic Tribes and Mercenaries only); then each other Tribe, with the strongest other Tribe or Mercenary in its space.
+* **Concilium:** each Gallic leader (Vercingetorix, then Ambiorix) with up to his Command Rating of CUs from his space, strongest first (Ambiorix: Belgic Tribes and Mercenaries only); then each other Tribe or the Minor Tribe, with the strongest other Tribe or Mercenary in its space. A Gallic leader's own CS counts in his army's BS.
+
+**Ties between armies.** If two armies could carry out a mission against the same target equally well, the stronger army goes; if they are equally strong, the one listed first above goes.
 
 **Reach.** Spaces an army can enter this activation with its MA, paying 1 MP per path and 2 per rough path or Channel crossing, +1 per space if it carries more CUs than its Command Rating (9.3). A space with enemy CUs outside a fortification ends the move.
 
-**Battle Strength (BS).** Combat Strength plus Local Support (13.2).
+**Battle Strength (BS).** Combat Strength plus Local Support (13.2). When a bot sizes up an attack on enemy CUs standing outside, it counts *every* enemy CU in that space, including any inside a fortification, because they may come out to fight.
 
-**Odds.** Attacking BS ÷ defending BS. For a siege, the defender is the Garrison plus every Gallic CU in the space (14.3.2).
+**Odds.** Attacking BS ÷ defending BS. For a siege, the attacker is every Roman CU in the space (the army plus any already there), and the defender is the Garrison plus every Gallic CU in the space, inside or out (14.3.2).
 
 **Compass.** When choices tie, take the one farthest in the Directive's direction (N = nearest the top edge of the map).
 
 **Path.** An army always moves by the cheapest route. If two routes tie, use the compass.
+
+**Danger (Imperator).** A Roman army is *in danger* in a space if a Gallic army (as Concilium forms them, below) could reach that space on its next activation with a BS at least 1.5× the BS of all Roman CUs there, the army included. A space with a Roman Walled City is never dangerous. Caesar's army ignores danger.
 
 **Removing an IM** costs 2 MP in the space (8.3.3). **A siege roll** costs 2 MP (10.4.2). No location takes more than one siege roll per card (14.3.4).
 
@@ -84,7 +88,7 @@ The bot never takes its Event and AP from the same card except for Bonus cards (
 
 4.2 **Avoid Battle.** The bot tries to avoid when the enemy's BS is at least 1.5 times its own. It moves to the adjacent space that is friendly-controlled, then one with its own CUs, then by compass.
 
-4.3 **Interception.** Imperator intercepts if its stack plus any Roman CUs already in the target space have at least 2× the mover's BS. Concilium needs 1.5×, or 2× if Caesar is moving. Only one stack tries: the strongest.
+4.3 **Interception.** Imperator intercepts if its stack plus any Roman CUs already in the target space have at least 2× the mover's BS. Concilium needs 1.5×, or 2× if Caesar is moving. Only one stack tries: the strongest. Units inside a fortification neither intercept nor count.
 
 4.4 **Backing up.** When intercepted, the bot tries to back up (12.2.2) if its army's strength is less than the enemy's in the space.
 
@@ -102,14 +106,16 @@ The bot never takes its Event and AP from the same card except for Bonus cards (
 
 Each mission says which army acts. *Target order* lists the tie-breaks in turn; the last tie-break is always the compass.
 
-**CONTINUE.** A leader's army already in a space whose Fortified Town (or Stronghold) has at least 1 Siege Point, with no Gallic CUs outside, rolls on the Siege Table again.
+**CONTINUE.** A leader's army already in a space whose Fortified Town (or Stronghold) has at least 1 Siege Point, with no Gallic CUs outside, rolls on the Siege Table again. It needs odds of at least 1:2 (a Stronghold: CS 2+), and the location must not have been rolled against yet this card.
 
 **PROTECT.** Only if a Provincia province is not Roman-controlled, or Gallic CUs stand outside in Provincia:
 1. An army that can reach Gallic CUs in Provincia with at least equal BS attacks them. *Target order:* a 3:1 attack; the largest Gallic BS; the nearest.
 2. Otherwise, if a Provincia province is lost, an army SWEEPs Gallic IMs in the lost provinces (5.3).
-3. Otherwise, it places an IM in Provincia (Control Table line 2).
+3. Otherwise, if a Provincia province is lost, it places an IM in a Provincia province Rome does not control, Narbonensis first (Control Table line 2). PROTECT never places an IM during an Activation Event (5.5).
 
-**SUBMIT.** An army that can reach Gallic CUs (outside) with at least **3×** their BS attacks them, so they must Submit (13.3). *Target order:* the largest Gallic BS; the nearest.
+**REGROUP.** Only if a Roman army other than Caesar's is in danger where it stands. It moves to a space it can reach where it is not in danger: Caesar's space first; then the space with the most Roman BS; then the nearest. If several armies are in danger, the one facing the highest ratio of Gallic BS to its own goes first.
+
+**SUBMIT.** An army that can reach Gallic CUs (outside) with at least **3×** their BS attacks them, so they must Submit (13.3). *Target order:* the largest Gallic BS; the nearest. If a Gallic Fortified Town is in that space and MP remain, roll a siege as well.
 
 **SIEGE.** An army that can reach a Gallic Fortified Town with at least 2 MP left marches there and rolls. Only these targets count:
 * a Town that must **surrender** (odds 3:1 or more); any army may go, and a leaderless Legion stack may take a third Legion over its Command Rating for this;
@@ -117,7 +123,8 @@ Each mission says which army acts. *Target order* lists the tie-breaks in turn; 
 * a Town with **1 Siege Point** if Caesar's army has odds of at least 2:1.
 
 If Gallic CUs stand outside the Town and it will not surrender, leave it to STRIKE. Until Caesar's Pass is opened, a leader's army with CS 2+ may also subjugate **Octodurus**, after all Town targets.
-*Target order:* a surrender; a Town in or next to a space with a Roman control marker; most Siege Points; in Celtica; best odds; nearest.
+Skip any location already rolled against this card.
+*Target order:* a surrender; a Town in or next to a space with a Roman control marker; most Siege Points; in Celtica; best Siege Table column; nearest.
 
 **STRIKE.** An army attacks Gallic CUs (outside) it can reach with at least 2× their BS (Caesar's army: 1.5×). *Target order:* a 3:1 attack; the largest Gallic BS; the nearest. If a Gallic Fortified Town is in that space and MP remain, roll a siege as well.
 
@@ -142,16 +149,16 @@ Take the first line that gives a legal Place or Convert (8.3). Among spaces on t
 0. **Presence.** If Rome has no space in Aquitania, Belgica or Celtica (checked in that order), convert a Gallic IM there; else place there.
 1. **Convert** a Gallic IM in a space with a Roman CU. Prefer Gallic-controlled provinces.
 2. **Provincia.** Place an IM in a Provincia province Rome does not control. Narbonensis comes first.
-3. **Gain.** Place an IM that gives Rome control of a province: one IM short, no Fortified Town, not already Roman.
-4. **Deny.** Place an IM in an uncontrolled province where Gaul is one marker short of control.
-5. **Advance.** Place an IM in a province with no Fortified Town that Rome does not control; the province needing the fewest more IMs comes first, then the region order.
+3. **Gain.** Place an IM that gives Rome control of a province of Gaul: one IM short, no Fortified Town, not already Roman.
+4. **Deny.** Place an IM in an uncontrolled province of Gaul where Gaul is one marker short of control.
+5. **Advance.** Place an IM in a province of Gaul with no Fortified Town that Rome does not control; the province needing the fewest more IMs comes first, then the region order.
 6. Place anywhere in Gaul, next to the most Roman control markers; then anywhere legal.
 
 ### 5.3 SWEEP
 
-Pick the **target** first: the highest-weight IM, with no enemy CU in its space, that some army can reach with at least 2 MP left. Among equal weights, take the one an army reaches for the fewest MP.
+Pick the **target and the army** together: the highest-weight IM, with no enemy CU in its space, that some army can reach with at least 2 MP left. Judge all weights at the start of the mission. Among equal weights, take the IM an army reaches for the fewest MP; then the army with the most MP left over; then the stronger army; then the compass (for the IM).
 
-That army goes; if several tie, the one with the most MP left, then the strongest. It moves there and removes the IM. While it has MP, it steps to an adjacent space with a wanted IM (highest weight, then compass) and removes that one too. Each step costs the path cost plus 2.
+That army moves there and removes the IM. **Imperator:** an army other than Caesar's never sweeps into a space where it would be in danger (3). While it has MP, it steps to an adjacent space with a wanted IM (highest weight, then compass) and removes that one too. Each step costs the path cost plus 2.
 
 ### 5.4 Event Guide (Imperator)
 
@@ -178,7 +185,8 @@ That army goes; if several tie, the one with the most MP left, then the stronges
 | 39, 40 | Incite Through Sedition; Unrest Spreads (Bonus) | a target exists | |
 | 44 | Legate Called to Rome (Bonus) | a Legate with Battle Rating 0 is on the map | |
 | 45, 48 | Diplomacy; Roman Bribes | a target exists | |
-| 50, 51 | Naval Supremacy; Stratagem & Treachery (Bonus) | Rome is besieging a location | |
+| 50 | Naval Supremacy | Rome is besieging a port location and has Naval Supremacy in one of its sea zones | |
+| 51 | Stratagem & Treachery (Bonus) | Rome is besieging a location | |
 | 47 | Winter Campaign | never: Imperator never interrupts; the card is 1 AP | |
 | 49 | Three Days March | never | |
 
@@ -188,8 +196,9 @@ That army goes; if several tie, the one with the most MP left, then the stronges
 
 * **Influence actions** in Events (#10, #12 and others): use the Control Table, limited to the spaces the Event allows. For #12, choose the Region with more Roman IMs.
 * **Remove or convert a Gallic IM:** take the highest RAID weight (5.1), counting any other IM as 1.
-* **Activation Events** (#1, #2, #11, #17, #32, #37, #38): each activated army does the first of PROTECT, SUBMIT, CONTINUE, SIEGE, STRIKE, INVADE (Caesar only), RAID. With several armies, one acts at a time until none can act. #32 activates only Legion stacks without a leader. #37 and #38 activate at most one army per Region. #1 then activates the Legate with the largest stack.
-* **#17:** if Labienus is in the cup, place him with the largest Legion stack that has no leader and return the lowest-rated other Legate. Otherwise, activate a Legate not with Caesar.
+* **Activation Events.** When one leader is activated (#1, #2, #17), his army does the first of PROTECT, SUBMIT, CONTINUE, SIEGE, STRIKE, INVADE (Caesar only), RAID that it can. When several armies are activated (#11, #32, #37, #38), repeat this: find the first mission in the list PROTECT, SUBMIT, CONTINUE, SIEGE, STRIKE, INVADE, RAID, GATHER that *any* activated army that has not yet acted can do, and do it (the mission picks the army). Stop when none can act. #32 activates only Legion stacks in spaces with no leader. #37 and #38 activate at most one army per Region. #1 then activates the Legate with the largest stack (then the highest Battle Rating).
+* **#17:** if Labienus is in the cup, place him with the largest Legion stack that has no leader (if there is none, with Caesar) and return the lowest-rated other Legate. Otherwise, activate the Legate not with Caesar who has the largest stack (then the highest Battle Rating).
+* **#20:** restore the reduced Legion with Caesar first, then the one in the largest stack.
 * **#29, #30:** put the Cavalry with Caesar if possible, otherwise with the largest qualifying Legion stack.
 * **#34, #35:** bring the Germans in only through an entry space holding a Gallic IM. Move them to a space within 3 MP that holds a Gallic IM (highest RAID weight). If there is none, they do not move.
 * **#44:** swap the Legate with Battle Rating 0.
@@ -201,15 +210,15 @@ That army goes; if several tie, the one with the most MP left, then the stronges
 * **Turn 5 Legions:** they go with Caesar if he qualifies, otherwise with the largest qualifying stack.
 * **Caesar** (5.3): place him with the largest Legion stack in a friendly space with a path to Rome.
 * **Legates** (5.4): each goes to the largest Legion stack without a leader, otherwise with Caesar.
-* **Winter camp** (16.2.2): legions move one at a time, full-strength first. Each goes, within 3 MP, to the first of these with room under its forage level (16.2.4):
+* **Winter camp** (16.2.2): legions move one at a time, full-strength first. Each goes, within 3 MP, to the first of these with room under its forage level (16.2.4); room counts only the Legions already moved there this Winter:
   1. a neutral space in Gaul next to a Roman control marker;
   2. a Roman IM space in a Roman province;
   3. a Roman Walled City;
   4. another Roman IM space;
   5. any neutral space in Gaul.
   Take the nearest, then the most northern.
-* **Kept Legate** (5.4.2): keep the Legate with the highest Battle Rating if it is 2 or more.
-* **Caesar displaced:** remove Roman IMs outside Roman-controlled provinces first, Provincia last.
+* **Kept Legate** (5.4.2): keep the Legate with the highest Battle Rating if it is 2 or more (ties: the higher Command Rating).
+* **Caesar displaced:** remove Roman IMs outside Provincia first; among those, IMs outside Roman-controlled provinces first. Caesar then goes to the space with the most Legions.
 
 ---
 
@@ -242,9 +251,9 @@ Take the first line that gives a legal action:
 1. **Convert** a Roman IM in a space with Gallic CUs. Prefer Roman-controlled provinces.
 2. **Provincia.** Place an IM in Provincia (8.3.1 adjacency). Narbonensis comes first.
 3. **Gain.** Place an IM that gives Gaul control of a province: one marker short. Celtica comes first.
-4. **Deny.** Place an IM in a province Rome does not control where Rome is one IM short.
+4. **Deny.** Place an IM in a province with no Fortified Town where one more Roman IM would give Rome control.
 5. **Cut.** Place an IM in a vacant space next to 2+ Roman IMs. Take the space with the most adjacent Roman markers.
-6. Place an IM in the province Gaul is nearest to controlling; then anywhere.
+6. Place an IM in the province of Gaul, not yet Gallic-controlled, that Gaul is nearest to controlling; then in a Gallic-controlled province of Gaul; then anywhere.
 
 Ties go to the compass.
 
@@ -253,6 +262,7 @@ Ties go to the compass.
 * **Reinforcements** (5.1): keep the three strongest drawn Tribes that have a legal space. Return the weakest.
 * **Placement:** place each Tribe in the legal space farthest from any Legion (count up to 4 spaces). If that ties, take the space next to the fewest Roman markers, then the most northern.
 * **Council Box:** a Tribe goes there only when it has no legal space.
+* **Displaced IM:** if a Tribe is placed on a Gallic IM, move that IM to a vacant Town in the same province, the one farthest in the compass direction.
 * **Ambiorix and Vercingetorix:** on arrival and in winter, each goes to the Gallic-controlled space in his Region with the most Gallic CS, a Fortified Town first.
 * **Spring Muster:** Concilium does not move.
 
@@ -282,7 +292,8 @@ Ties go to the compass.
 | 43 | The Aedui Switch Sides (Bonus) | the Aedui are in their box and an Aedui space is free of Roman IMs and CUs | ★ |
 | 44 | Legate Called to Rome (Bonus) | a Legate with Battle Rating 2+ is on the map | |
 | 45 | Diplomacy | a target exists | |
-| 50, 51 | Naval Supremacy; Stratagem (Bonus) | Gaul is besieging a Walled City | |
+| 50 | Naval Supremacy | Gaul is besieging a port Walled City and has Naval Supremacy in one of its sea zones | |
+| 51 | Stratagem (Bonus) | Gaul is besieging a Walled City | |
 | 49 | Three Days March | never | |
 
 **Cancel list (#24):** Roman #1, 2, 3, 4, 10, 11, 12.
@@ -291,7 +302,7 @@ Ties go to the compass.
 
 * **Influence actions** in Events: use the Agitate Table, limited to the spaces the Event allows.
 * **Remove or convert a Roman IM:** take the highest RAID weight (6.1).
-* **Activation Events** (#5, #16, #37, #38, #53): each activated army does AMBUSH, or else RAID. They act one at a time until none can act. #5 activates only armies in Belgica. #37 and #38 activate at most one army per Region.
+* **Activation Events** (#5, #16, #37, #38, #53): repeat this: if any activated army that has not yet acted can AMBUSH, it does; otherwise one RAIDs. Stop when none can act. #5 activates only armies in Belgica. #37 and #38 activate at most one army per Region.
 * **#8:** choose the province with the most Roman IMs; Roman-controlled provinces come first.
 * **#13:** restore the strongest reduced Tribe.
 * **#15, #25, #26, #41:** place the unit in the eligible space nearest a Legion.
@@ -301,6 +312,7 @@ Ties go to the compass.
 * **#42:** after taking your card, Concilium plays again at once: a new Directive and a new Offer from its whole hand (2.1–2.4).
 * **#23:** remove a Roman IM next to a Gallic Stronghold if there is one; otherwise take one Agitate action next to a Stronghold.
 * **#43:** use the eligible Aedui space nearest the compass.
+* **#50, #51:** use the location with the most Siege Points.
 * **#44:** swap the Legate with the highest Battle Rating.
 
 ---

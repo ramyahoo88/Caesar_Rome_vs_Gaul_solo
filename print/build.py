@@ -26,7 +26,6 @@ th { background: #efe4cf; }
 tr { break-inside: avoid; }
 code { font-family: 'DejaVu Sans Mono', monospace; font-size: 9pt; }
 hr { border: none; border-top: 1px solid #c9b18a; margin: 10pt 0; }
-.footer { position: fixed; bottom: -0.4in; left: 0; right: 0; text-align: center; font-size: 8pt; color: #777; }
 """
 
 
@@ -43,9 +42,11 @@ def chrome_pdf(html_text, pdf_path):
 def md_page(md_path, title, extra_css=''):
     text = open(md_path, encoding='utf-8').read()
     body = markdown.markdown(text, extensions=['tables', 'sane_lists'])
+    foot = (title + ' · unofficial fan variant for Caesar: Rome vs. Gaul (GMT Games) · page ').replace('"', "'")
+    page_css = ('@page { @bottom-center { content: "' + foot + '" counter(page); font-family: \'DejaVu Serif\', serif; '
+                'font-size: 8pt; color: #777; } }')
     return f"""<!doctype html><html><head><meta charset="utf-8"><title>{html.escape(title)}</title>
-<style>{BASE_CSS}{extra_css}</style></head><body>{body}
-<div class="footer">{html.escape(title)} · unofficial fan variant for Caesar: Rome vs. Gaul (GMT Games)</div></body></html>"""
+<style>{BASE_CSS}{page_css}{extra_css}</style></head><body>{body}</body></html>"""
 
 
 # ------------------------------------------------------------------ Directive cards
@@ -94,7 +95,7 @@ li { margin: 0 0 3pt 0; } li b { font-size: 8.6pt; }
                 t = GAUL_RAID if (side == 'G' and m == 'RAID') else MISSION_TEXT[m]
                 items.append(f'<li><b>{m}</b> — {html.escape(t)}</li>')
             if side == 'R':
-                foot = 'Before: CONTINUE · PROTECT · SUBMIT &nbsp;|&nbsp; After: GATHER · CONTROL'
+                foot = 'Before: CONTINUE · PROTECT · SUBMIT · REGROUP &nbsp;|&nbsp; After: GATHER · CONTROL'
             else:
                 foot = 'After: AGITATE &nbsp;|&nbsp; Reveal 2 · ★ Live event · higher AP'
             cells.append(f"""<div class="card {side}"><div class="band"><span>{'IMPERATOR' if side == 'R' else 'CONCILIUM'}</span><span>{c['id']}</span></div>

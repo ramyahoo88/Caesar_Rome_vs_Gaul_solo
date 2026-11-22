@@ -542,18 +542,25 @@ class Game:
     def lose_steps(self, side, order, hits, space):
         """Apply hits in the given unit order (owner's choice). Returns steps actually lost."""
         lost = 0
+        i = 0
         while hits > 0:
-            cands = [u for u in order if u.steps > 0 and u.loc == space]
-            if not cands:
-                break
-            u = cands[0]
+            # each entry of the owner's order takes one hit (a 2-step unit appears twice: full, then reduced)
+            u = None
+            while i < len(order):
+                c = order[i]; i += 1
+                if c.steps > 0 and c.loc == space:
+                    u = c
+                    break
+            if u is None:
+                cands = [x for x in order if x.steps > 0 and x.loc == space]
+                if not cands:
+                    break
+                u = cands[0]
             u.steps -= 1; hits -= 1; lost += 1
             if u.kind == 'legion':
                 self.stats['legion_steps_lost'] += 1
             if u.steps <= 0 or u.kind == 'gleader':
                 self.eliminate(u, 'loss')
-            # rotate so next hit goes to next unit per policy order (policy gives an order list possibly with repeats)
-            order = order[1:] + order[:1] if len(order) > 1 and order.count(u) == 1 else order
         self.check_displacement(space)
         return lost
 
@@ -755,7 +762,7 @@ class Game:
                 nxt = op[1]
                 if (cur, nxt) not in EDGE:
                     break
-                cost = self.step_cost(cur, nxt, len(units), cr)
+                cost = self.step_cost(cur, nxt, ncu, cr)
                 if cost > mp:
                     break
                 if not self.can_enter(side, nxt, alone_roman_leader=alone):
@@ -1591,7 +1598,7 @@ class Game:
         for nxt in path:
             if (cur, nxt) not in EDGE:
                 break
-            cost = self.step_cost(cur, nxt, len(units), cr)
+            cost = self.step_cost(cur, nxt, len([u for u in units if u is not leader]), cr)
             if cost > mp or not self.muster_ok(nxt):
                 break
             mp -= cost; cur = nxt
