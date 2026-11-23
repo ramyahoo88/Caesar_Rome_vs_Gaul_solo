@@ -15,6 +15,12 @@ Each decision comes from a **Directive card** (a mission order plus a compass po
 
 This is an unofficial fan variant, not a GMT publication. You need the game to play.
 
+## Browser companion
+
+[Open the Caesar solo companion](https://solo-table.pages.dev/games/caesar-rome-vs-gaul/). It draws the Imperator or Concilium Directive deck and tracks turns and level bonuses while you play on your physical board.
+
+The **Print and downloads** section at the bottom offers one [merged print-and-play PDF](https://solo-table.pages.dev/games/caesar-rome-vs-gaul/Caesar_Solo_Print_and_Play.pdf): rules, Directive cards, reference sheets and record sheet. Both the companion and its PDF are served directly from Cloudflare.
+
 ## Print and play
 
 All files are in [`print/`](print):

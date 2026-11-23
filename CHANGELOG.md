@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.3 web publication (23 November 2026)
+
+* **Cloudflare companion.** Added Imperator and Concilium to the Solo Table catalog, with the helper and PDF served directly from Cloudflare.
+* **One print download.** The helper's bottom **Print and downloads** section links to the existing merged packet: rules, Directive cards, reference sheets and record sheet. No GitHub links appear in the helper or its catalog entry.
+* **Build source.** `cloudflare/` contains the reproducible Pages publication build. Existing site routes continue through the pinned preceding deployment.
+
+The deck JavaScript, game rules, cards, PDF bytes and study results are unchanged.
+
 ## v1.3 print-build update (23 November 2026)
 
 The independent verification of v1.3 found no new defects. See [audit/independent-v1.3/AUDIT_RESPONSE.md](audit/independent-v1.3/AUDIT_RESPONSE.md). This update changes only how the PDFs are built. The rules, bots, code and results are unchanged, and every PDF page has the same text and rendered pixels as before.

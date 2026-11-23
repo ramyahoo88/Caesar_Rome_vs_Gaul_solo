@@ -61,6 +61,11 @@ details p,details li{font-size:15px}
 .notice[hidden]{display:none}
 .notice{display:flex;gap:12px;align-items:center;background:#fff4d6;color:#4a3800;border:1px solid #e0b84a;border-radius:12px;padding:8px 12px;margin-bottom:14px}
 button.act:disabled{opacity:.45;cursor:default}
+.downloads{margin-top:30px;padding:20px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}
+.downloads h2{font:700 21px Cinzel,serif;margin:0 0 8px;color:var(--side)}
+.downloads p{margin:0 0 14px}
+.download-link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 16px;border:2px solid var(--side);border-radius:10px;background:var(--side);color:#fff;text-decoration:none;font-weight:700}
+.download-link:focus-visible{outline:3px solid #e0a100;outline-offset:3px}
 </style>
 </head>
 <body class="R">
@@ -103,6 +108,11 @@ button.act:disabled{opacity:.45;cursor:default}
   </div>
   <div class="ref" id="ref"></div>
   <p class="note">A companion to the print-and-play Caesar solo rules (v1.3), not a replacement for them. Section numbers refer to that booklet. The deck state is kept in this browser where it can be. Unofficial fan variant for <i>Caesar: Rome vs. Gaul</i> (GMT Games).</p>
+  <section class="downloads" aria-labelledby="downloads-title">
+    <h2 id="downloads-title">Print and downloads</h2>
+    <p>The complete print-and-play packet combines the rules, Directive cards, reference sheets and record sheet in one PDF.</p>
+    <a class="download-link" href="Caesar_Solo_Print_and_Play.pdf" download="Caesar_Solo_Print_and_Play.pdf">Download print-and-play rules (PDF)</a>
+  </section>
 </main>
 <script>
 {
