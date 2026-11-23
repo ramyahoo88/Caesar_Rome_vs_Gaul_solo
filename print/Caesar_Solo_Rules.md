@@ -1,6 +1,6 @@
 # Caesar: Rome vs. Gaul — Solo Bots
 
-## Imperator (Rome) and Concilium (Gaul) · version 1.0
+## Imperator (Rome) and Concilium (Gaul) · version 1.1
 
 Two card-driven paper opponents for *Caesar: Rome vs. Gaul*, 2nd edition (GMT Games). You play one side; the bot plays the other with the same cards, units, dice and rules as a human. Its hand stays face down. It never looks at yours. It rolls only the dice the game rolls.
 
@@ -16,16 +16,16 @@ Unofficial fan variant, not a GMT publication. Rule numbers (5.1.2, 13.3 and so 
 
 1.2 **Deal.** Deal the bot its cards face down. Do not look at them. Shuffle them before every bot card play.
 
-1.3 **Reserve.** Surprise cards (#52, #54, #55) and the Reaction card (#24) never enter the Offer (2.2). When you reveal one, put it face up beside the bot as its **Reserve** and reveal another card instead. Reserve cards still count as part of the bot's hand. The bot uses them as follows:
+1.3 **Reserve.** Surprise cards (#52, #54, #55) and the Reaction card (#24) never enter the Offer (2.2). When you reveal one, put it face up beside the bot as its **Reserve** and reveal another card instead. Reserve cards still count as part of the bot's hand. **Only cards in the Reserve can be used:** a Surprise or Reaction card still face down in the bot's hand does nothing until an Offer reveals it. The Reserve empties when the hands are discarded at the end of the Strategy Phase. The bot uses Reserve cards as follows:
 
 | Card | The bot uses it |
 |---|---|
-| #24 You May Believe What You Wish | To cancel your Event or Bonus Event if the card is on its Cancel list (5.4, 6.4). It is played for AP only if it is the bot's last card. |
+| #24 You May Believe What You Wish | To cancel your Event or Bonus Event if the card is on its Cancel list (5.4, 6.4). It is played for AP only when every card left in the bot's hand is in its Reserve (see below). |
 | #52 A Vow to Mars | In its next battle where the two Battle Strengths differ by 3 or less (one extra reroll). If Rome, on its next siege roll if no such battle comes first (+1). |
 | #54 Remedies for all Contingencies | +2 to its own next Avoid Battle or Interception roll. |
 | #55 Forced March | Discarded at the start of the bot's next card play; it draws a replacement. |
 
-When the bot has only Reserve Surprise cards left, it discards them and draws replacements (7.5.4). At the end of the Strategy Phase, discard what is left.
+**When only Reserve cards are left** in the bot's hand: if one of them is #24, the bot plays #24 for AP. Otherwise (only Surprise cards), it discards them and draws replacements (7.5.4), then makes its Offer from the new cards. *Example:* the bot holds #24 and #52, both in its Reserve, and nothing else. It plays #24 for AP and keeps #52. At the end of the Strategy Phase, discard what is left.
 
 ---
 
@@ -76,7 +76,7 @@ The bot never takes its Event and AP from the same card except for Bonus cards (
 
 **Path.** An army always moves by the cheapest route. If two routes tie, use the compass.
 
-**Danger.** Whether a space is safe to end a move in:
+**Danger.** Whether a space is safe to end a move in. Judge it on the board as it will be **after the move**: the army has left its old space (which may open a route that it was blocking), and any IM the move removes is gone.
 
 * **Imperator:** a Roman army is *in danger* in a space if a Gallic army (formed as Concilium forms its armies) could reach that space on its next activation with a BS at least 1.5× the BS of all Roman CUs there, the army included. A space with a Roman Walled City is never dangerous. Caesar's army ignores danger.
 * **Concilium:** a Gallic army is *in danger* in a space if a Roman army (formed as Imperator forms its armies) could reach that space on its next activation with a BS at least equal to the BS of all Gallic CUs there, the army included. A space with a Gallic Fortified Town is never dangerous.
@@ -366,7 +366,7 @@ Each bot has nine Directive cards (printed separately). The missions on a card a
 | I-8 | Campaign | RULE, SIEGE, STRIKE, RAID, SETTLE | S |
 | I-9 | Glory | RULE, INVADE, SIEGE, RAID, SETTLE | N |
 
-Before the card's missions Imperator always tries CONTINUE, PROTECT and SUBMIT; after them, GATHER and CONTROL.
+Before the card's missions Imperator always tries CONTINUE, PROTECT, SUBMIT and REGROUP; after them, GATHER and CONTROL.
 
 **Concilium**
 

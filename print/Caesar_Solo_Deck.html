@@ -58,6 +58,9 @@ details{border:1px solid var(--line);border-radius:12px;padding:12px 16px;backgr
 summary{cursor:pointer;font-weight:700;min-height:28px}
 details p,details li{font-size:15px}
 .note{color:var(--mute);font-size:14px;margin-top:22px}
+.notice[hidden]{display:none}
+.notice{display:flex;gap:12px;align-items:center;background:#fff4d6;color:#4a3800;border:1px solid #e0b84a;border-radius:12px;padding:8px 12px;margin-bottom:14px}
+button.act:disabled{opacity:.45;cursor:default}
 </style>
 </head>
 <body class="R">
@@ -68,12 +71,13 @@ details p,details li{font-size:15px}
   </div>
 </header>
 <main>
+  <div class="notice" id="noticebox" role="status" hidden><span id="notice"></span> <button class="act" id="dismiss" aria-label="Dismiss notice">OK</button></div>
   <div class="bar">
     <label for="lvl">Level</label>
     <select id="lvl"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option></select>
     <span class="pill" id="lvltxt"></span>
     <span class="pill">Turn <b id="turn">1</b> · bot card play <b id="play">0</b></span>
-    <span class="pill">Deck <b id="left">9</b> left</span>
+    <span class="pill">Deck <b id="left">9 left</b></span>
   </div>
   <div class="bar">
     <button class="act primary" id="draw">Turn over Directive</button>
@@ -98,7 +102,7 @@ details p,details li{font-size:15px}
     </div>
   </div>
   <div class="ref" id="ref"></div>
-  <p class="note">A companion to the print-and-play Caesar solo rules (v1.0), not a replacement for them. Section numbers refer to that booklet. The deck state is kept in this browser where it can be. Unofficial fan variant for <i>Caesar: Rome vs. Gaul</i> (GMT Games).</p>
+  <p class="note">A companion to the print-and-play Caesar solo rules (v1.1), not a replacement for them. Section numbers refer to that booklet. The deck state is kept in this browser where it can be. Unofficial fan variant for <i>Caesar: Rome vs. Gaul</i> (GMT Games).</p>
 </main>
 <script>
 {
@@ -117,30 +121,51 @@ const D={R:[['I-1','Pacify','RULE SIEGE RAID SETTLE STRIKE','N'],['I-2','Pacify'
 G:[['C-1','Revolt','RISE AMBUSH RAID AGITATE','N'],['C-2','Revolt','RISE RAID AMBUSH AGITATE','S'],['C-3','Agitate','AGITATE RAID AMBUSH BANK','E'],['C-4','Agitate','AGITATE AMBUSH RAID BANK','W'],['C-5','Raid','RAID AGITATE AMBUSH BANK','S'],['C-6','Raid','RAID AMBUSH AGITATE BANK','N'],['C-7','Ambush','AMBUSH RAID AGITATE BANK','E'],['C-8','Council','BANK AGITATE RAID AMBUSH','W'],['C-9','Council','RISE BANK AGITATE RAID','N']]};
 const LV={R:['Rules only.','+1 AP on each of its first 4 card plays each turn.','+1 AP on every card play.','+1 AP on every card play; Rome wins with 10+ VP.','+1 AP on every card play; Rome wins with 9+ VP.'],
 G:['You win with 9+ VP.','You win with 10+ VP.','You win with 11+ VP.','Rules only (12 VP).','Concilium +1 AP on each of its first 4 card plays each turn.']};
-const REF={R:[['Danger (section 3)','A Roman army is in danger where a Gallic army could reach it next activation with BS at least 1.5× all Roman CUs there. A Roman Walled City is never dangerous. Caesar’s army ignores danger.'],
-['REGROUP','A non-Caesar army in danger moves where it is safe: Caesar’s space, then most Roman BS, then nearest. The army in most danger goes first.'],
-['SWEEP (5.3)','Highest-weight IM (weights fixed at the start, no enemy CU) reachable with 2 MP left → fewest MP → most MP left → stronger army → compass. Remove it, then keep stepping to adjacent wanted IMs (path cost + 2).'],
-['Control Table (5.2)','Lagging region first (Celtica or Belgica where Rome does not hold more provinces than Gaul), then the other, Aquitania, Provincia, then compass. 0 Presence · 1 Convert · 2 Provincia · 3 Gain · 4 Deny · 5 Advance · 6 anywhere.']],
-G:[['Danger (section 3)','A Gallic army is in danger where a Roman army could reach it next activation with BS at least equal to all Gallic CUs there. A Gallic Fortified Town is never dangerous.'],
-['SWEEP (5.3)','Highest-weight IM (weights fixed at the start, no enemy CU) reachable with 2 MP left → fewest MP → most MP left → stronger army → compass. Never into danger.'],
-['Agitate Table (6.2)','1 Convert (Gallic CUs there) · 2 Provincia (Narbonensis first) · 3 Gain (Celtica first) · 4 Deny · 5 Cut · 6 nearest non-Gallic province of Gaul, then anywhere. Ties: compass.'],
+const REF={R:[['Danger (section 3)','A Roman army is in danger where a Gallic army could reach it on its next activation with BS at least 1.5× all Roman CUs there (the army included). Judge it on the board after the move: the army has left its old space, which may open a Gallic route, and any IM the move removes is gone. A Roman Walled City is never dangerous. Caesar’s army ignores danger.'],
+['REGROUP','A non-Caesar army in danger where it stands moves to a space it can reach, with no Gallic CUs outside, where it is not in danger: Caesar’s space, then the most Roman BS, then the nearest. The army in most danger goes first.'],
+['SWEEP (5.3)','Highest-weight IM (weights fixed at the start, no enemy CU) reachable with 2 MP left → fewest MP → most MP left → stronger army → compass. Remove it, then keep stepping to adjacent wanted IMs (path cost + 2). Never into danger, except Caesar’s army.'],
+['Control Table (5.2)','Lagging region first: of Celtica and Belgica, the one where Rome does not hold more provinces than Gaul; if both, the one where Gaul’s lead is smaller; if neither (or still tied), Celtica. Then the other region, Aquitania, Provincia, then the compass. Lines: 0 Presence · 1 Convert · 2 Provincia · 3 Gain · 4 Deny · 5 Advance · 6 anywhere.']],
+G:[['Danger (section 3)','A Gallic army is in danger where a Roman army could reach it on its next activation with BS at least equal to all Gallic CUs there (the army included). Judge it on the board after the move: the army has left its old space and any IM the move removes is gone. A Gallic Fortified Town is never dangerous.'],
+['SWEEP (5.3)','Highest-weight IM (weights fixed at the start, no enemy CU) reachable with 2 MP left → fewest MP → most MP left → stronger army → compass. Never in or next to Caesar’s space, never into danger.'],
+['Agitate Table (6.2)','1 Convert (Gallic CUs there) · 2 Provincia (Narbonensis first) · 3 Gain (Celtica first) · 4 Deny · 5 Cut · 6 the non-Gallic province of Gaul nearest to Gallic control, then a Gallic province, then anywhere. Ties: compass.'],
 ['Tribes (6.3)','Keep the 3 strongest drawn Tribes with a legal space. Place each farthest from any Legion (up to 4), then fewest adjacent Roman markers, then northernmost.']]};
 const $=id=>document.getElementById(id);
-let S={side:'R',lvl:{R:3,G:3},turn:1,play:0,deck:{R:[],G:[]},cur:null,hist:[],prev:[]};
-try{const t=JSON.parse(localStorage.getItem('caesarSoloDeck')||'null');if(t&&t.deck)S=Object.assign(S,t)}catch(e){}
-const save=()=>{try{localStorage.setItem('caesarSoloDeck',JSON.stringify(S))}catch(e){}};
+const KEY='caesarSoloDeck2';
 const shuffle=a=>{for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
 const fresh=s=>shuffle(D[s].map((_,i)=>i));
-function bonusText(){const s=S.side,l=S.lvl[s],n=S.play;
-  if(s==='R'){if(l===1)return 'No bonus AP at this level.';if(l===2)return n>=1&&n<=4?'<span class="ap">+1 AP</span> on this card (one of its first 4 plays this turn).':'No bonus on this card (past its first 4 plays).';return '<span class="ap">+1 AP</span> on this card (cards played for AP and Bonus cards; #4 still gives 5).'}
-  if(l===5)return n>=1&&n<=4?'<span class="ap">+1 AP</span> on this card (one of its first 4 plays this turn).':'No bonus on this card (past its first 4 plays).';
+const newState=()=>({side:'R',lvl:{R:3,G:3},turn:1,play:{R:0,G:0},deck:{R:fresh('R'),G:fresh('G')},cur:null,hist:[],prev:[]});
+const isInt=(v,a,b)=>Number.isInteger(v)&&v>=a&&v<=b;
+function valid(t){
+  if(!t||typeof t!=='object')return false;
+  if(t.side!=='R'&&t.side!=='G')return false;
+  if(!t.lvl||!isInt(t.lvl.R,1,5)||!isInt(t.lvl.G,1,5))return false;
+  if(!isInt(t.turn,1,6)||!t.play||!isInt(t.play.R,0,40)||!isInt(t.play.G,0,40))return false;
+  for(const s of ['R','G']){const d=t.deck&&t.deck[s];if(!Array.isArray(d)||d.length>9||!d.every(x=>isInt(x,0,8))||new Set(d).size!==d.length)return false}
+  if(t.cur!==null&&!(t.cur&&(t.cur.side==='R'||t.cur.side==='G')&&isInt(t.cur.i,0,8)))return false;
+  if(!Array.isArray(t.hist)||!t.hist.every(h=>h&&(h.side==='R'||h.side==='G')&&isInt(h.i,0,8)&&isInt(h.n,1,40)))return false;
+  if(!Array.isArray(t.prev)||!t.prev.every(x=>typeof x==='string'))return false;
+  return true}
+let S=newState(), notice='';
+try{const raw=localStorage.getItem(KEY);
+  if(raw){let t=null;try{t=JSON.parse(raw)}catch(e){}
+    if(valid(t))S=t;else{notice='The saved session could not be restored, so a new game was started.';try{localStorage.setItem(KEY+'-damaged',raw)}catch(e){}}}
+}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S));return true}catch(e){notice='This browser is not saving the session: it will be lost if you close or reload the page.';return false}};
+const snap=()=>JSON.stringify({side:S.side,lvl:S.lvl,turn:S.turn,play:S.play,deck:S.deck,cur:S.cur,hist:S.hist});
+const push=()=>{S.prev.push(snap());if(S.prev.length>40)S.prev.shift()};
+function bonusText(){const s=S.side,l=S.lvl[s],n=S.play[s];
+  const q=' (cards played for AP and Bonus cards; #4 still gives 5)';
+  if(s==='R'){if(l===1)return 'No bonus AP at this level.';if(l===2)return n>=1&&n<=4?'<span class="ap">+1 AP</span> on this card: one of its first 4 plays this turn'+q+'.':(n===0?'+1 AP on each of its first 4 card plays this turn'+q+'.':'No bonus on this card (past its first 4 plays).');return '<span class="ap">+1 AP</span> on every card'+q+'.'}
+  if(l===5)return n>=1&&n<=4?'<span class="ap">+1 AP</span> on this card: one of its first 4 plays this turn'+q+'.':(n===0?'+1 AP on each of its first 4 card plays this turn'+q+'.':'No bonus on this card (past its first 4 plays).');
   return 'No bonus AP at this level. The level changes only the VP you need.'}
 function render(){const s=S.side;document.body.className=s;
   $('bR').setAttribute('aria-pressed',s==='R');$('bG').setAttribute('aria-pressed',s==='G');
   $('title').textContent=s==='R'?'Imperator':'Concilium';
   $('sub').textContent=s==='R'?'Rome’s Directive deck. You play Gaul.':'Gaul’s Directive deck. You play Rome.';
   $('lvl').value=S.lvl[s];$('lvltxt').textContent='Level '+S.lvl[s]+': '+LV[s][S.lvl[s]-1];
-  $('turn').textContent=S.turn;$('play').textContent=S.play;$('left').textContent=S.deck[s].length||9;
+  $('turn').textContent=S.turn;$('play').textContent=S.play[s];
+  const left=S.deck[s].length;$('left').textContent=left?left+' left':'0 left · reshuffles on next draw';
+  $('next').disabled=S.turn>=6;$('next').textContent=S.turn>=6?'Last turn':'Next turn';$('undo').disabled=!S.prev.length;
   $('order').innerHTML=s==='R'?'<b>CONTINUE · PROTECT · SUBMIT · REGROUP</b> → Directive missions → <b>GATHER · CONTROL</b>':'Directive missions → <b>AGITATE</b>';
   $('bonus').innerHTML='<b>Bonus:</b> '+bonusText();
   const c=S.cur!==null&&S.cur.side===s?D[s][S.cur.i]:null;
@@ -149,17 +174,18 @@ function render(){const s=S.side;document.body.className=s;
     <ol>${c[2].split(' ').map(m=>`<li><b>${m}</b> — ${M[s==='G'&&m==='RAID'?'GRAID':m]}</li>`).join('')}</ol>
     <div class="foot">${s==='R'?'Before: CONTINUE · PROTECT · SUBMIT · REGROUP | After: GATHER · CONTROL':'After: AGITATE'} · Ties go to the compass: <b>${c[3]}</b></div></article>`
     :`<div class="card"><div class="empty"><div><div class="seal">?</div><p>Turn over a Directive when it is the bot's card play.</p></div></div></div>`;
-  $('hist').innerHTML=S.hist.length?'This turn: '+S.hist.filter(h=>h.side===s).map(h=>`<span>${h.n}. ${D[s][h.i][1]} (${D[s][h.i][3]})</span>`).join(''):'';
+  const mine=S.hist.filter(h=>h.side===s);
+  $('hist').innerHTML=mine.length?'This turn: '+mine.map(h=>`<span>${h.n}. ${D[s][h.i][1]} (${D[s][h.i][3]})</span>`).join(''):'';
   $('ref').innerHTML=REF[s].map(r=>`<details><summary>${r[0]}</summary><p>${r[1]}</p></details>`).join('');
-  save()}
+  save();$('notice').textContent=notice;$('noticebox').hidden=!notice}
 $('bR').onclick=()=>{S.side='R';render()};$('bG').onclick=()=>{S.side='G';render()};
 $('lvl').onchange=e=>{S.lvl[S.side]=+e.target.value;render()};
-$('draw').onclick=()=>{const s=S.side;S.prev.push(JSON.stringify({deck:S.deck,cur:S.cur,hist:S.hist,play:S.play}));if(S.prev.length>30)S.prev.shift();
-  if(!S.deck[s].length)S.deck[s]=fresh(s);const i=S.deck[s].pop();S.play++;S.cur={side:s,i};S.hist.push({side:s,i,n:S.play});render()};
-$('undo').onclick=()=>{const p=S.prev.pop();if(!p)return;Object.assign(S,JSON.parse(p));render()};
-$('next').onclick=()=>{if(S.turn<6)S.turn++;S.play=0;S.hist=[];S.cur=null;S.prev=[];render()};
-$('reset').onclick=()=>{S.turn=1;S.play=0;S.hist=[];S.cur=null;S.prev=[];S.deck={R:fresh('R'),G:fresh('G')};render()};
-if(!S.deck.R.length&&!S.deck.G.length&&S.cur===null){S.deck={R:fresh('R'),G:fresh('G')}}
+$('draw').onclick=()=>{const s=S.side;push();
+  if(!S.deck[s].length)S.deck[s]=fresh(s);const i=S.deck[s].pop();S.play[s]++;S.cur={side:s,i};S.hist.push({side:s,i,n:S.play[s]});render()};
+$('undo').onclick=()=>{const p=S.prev.pop();if(!p)return;const prev=S.prev;Object.assign(S,JSON.parse(p));S.prev=prev;render()};
+$('next').onclick=()=>{if(S.turn>=6)return;push();S.turn++;S.play={R:0,G:0};S.hist=[];S.cur=null;render()};
+$('reset').onclick=()=>{const keep=S.lvl;S=newState();S.lvl=keep;notice='';render()};
+$('dismiss').onclick=()=>{notice='';$('noticebox').hidden=true};
 render();
 }
 </script>

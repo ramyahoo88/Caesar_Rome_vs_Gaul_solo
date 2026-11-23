@@ -1,6 +1,6 @@
 # Caesar: Rome vs. Gaul — Solo Bots: Simulation Report
 
-*Imperator and Concilium, version 1.0. These are model results from computer play, not tabletop results.*
+*Imperator and Concilium, version 1.1. These are model results from computer play, not tabletop results.*
 
 ## 1. Summary
 
@@ -69,7 +69,7 @@ The last checks on Concilium varied its AMBUSH ratio (1.25× and 2×), the RISE 
 
 ## 5. Independent checks
 
-Two separate agents checked the work. Neither had written the code.
+Three independent reviews checked the work. None of the reviewers had written the code.
 
 * **Engine audit.** Compared the engine with the 2023 living rules and reported 23 findings. The important ones were fixed: Submission is now checked before Avoid Battle, legion attrition was corrected, and Roman supply sources now trace correctly. One item was kept on purpose (Fading Promises), and one simplification remains (Sorties). See `audit/ENGINE_AUDIT_RESPONSE.md`.
 * **Clean-room test.** Wrote a second implementation of both bots from the printed rules only, then compared it with the simulation bot decision by decision. Before fixes, the two agreed on:
@@ -79,11 +79,17 @@ Two separate agents checked the work. Neither had written the code.
 
     Every gap it found was closed, either by clarifying the text or by fixing the code. One of the code fixes was an engine bug in how losses were applied, which affected both sides. See `audit/CLEANROOM_RESPONSE.md`.
 
-    This check covered the rules text as it stood before the last round of changes in section 6. Those changes are the danger rule, REGROUP, the lagging-region order and Caesar's 2:1 sieges. Their text was written to match the code line by line, but no independent check has been run on them yet.
+    This check covered the rules text as it stood before the last round of changes in section 6: the danger rule, REGROUP, the lagging-region order and Caesar's 2:1 sieges.
+
+* **Independent v1.0 audit.** Reviewed the whole v1.0 release: rules, cards, reference, helper, sample game, report, code and the archived study. It reproduced every one of the 40 study totals and ran its own 240-game sweep. It also tested the latest changes with hand-built positions. It found eight issues. The most important was that Reaction and Surprise cards could be used before an Offer had revealed them. Two others: danger was judged before the move, missing routes the moving army had been blocking; and units that added strength to a siege could still activate again. All eight are fixed in v1.1, and every result in sections 6–8 comes from the corrected engine. See `audit/independent-v1.0/AUDIT_RESPONSE.md`.
 
 ## 6. The final changes and what they were worth
 
-These changes were made after the clean-room fixes. Each row compares the same seeds with and without the change. The Imperator rows are at level 3.
+These changes were made after the clean-room fixes. The first three tables are **development-time numbers**: they were measured on the engine before the v1.1 corrections and are kept as a record of how the decisions were made. The last table repeats the comparisons on the corrected v1.1 engine.
+
+{{LATEST}}
+
+The development-time tables follow. Each row compares the same seeds with and without the change, and the Imperator rows are at level 3.
 
 **Imperator** at level 3. Seeds 9000+: 200 games each against the Bot and Heuristic players, 100 against the Lookahead player. The Bot here is the Concilium of that time, before its own danger rule was added. Each cell gives Imperator's win rate and its mean VP.
 
@@ -137,7 +143,9 @@ Both were adopted. The second costs a little against the Heuristic player but ga
 ## 9. Limitations
 
 * **These are computer opponents.** A strong human will beat the Heuristic and Lookahead players. Expect your results against Imperator to be better than theirs, and against Concilium perhaps much better.
-* **The 2nd-edition card values are assumed.** The 2nd edition gives five cards 3 AP, three cards 1 AP and makes the rest 2 AP. Which cards carry which value is assumed. The card texts are 1st edition, and the 2nd edition changes some text. To check that this does not matter much, the main matchups were re-run with the 1st-edition AP values on the same seeds. Imperator (level 3) against Concilium won 38.5% (42.0% with the 2nd-edition values). Imperator against the Lookahead player won 26% (39%). Concilium under the standard rules against the Lookahead player won 89% (94%). The bots' rules work with either deck.
+* **The 2nd-edition card values are assumed.** The 2nd edition gives five cards 3 AP, three cards 1 AP and makes the rest 2 AP. Which cards carry which value is assumed. The card texts are 1st edition, and the 2nd edition changes some text. To check that this does not matter much, the main matchups were re-run with the 1st-edition AP values on the same seeds. {{ED1}} The bots' rules work with either deck.
+* **The Siege Table is the 1st-edition table shifted one row (−1).** It approximates the 2nd-edition table. The exact revised table has not been transcribed cell by cell, so siege results in the simulation are approximate. The printed bots use whatever table your copy of the game prints.
+* **Rulebook ambiguities.** The 2023 rulebook still says 3 MP for a siege in section 14.3, while the 2nd-edition change notes say 2 MP; the bots use 2. Fading Promises appears in the index and the 2020 rules but not in the 2023 body; the engine applies it. Both are listed in the engine audit response.
 * **Simplifications in the engine.** Sorties and a few rare rules are simplified (see the audit response). They change the numbers a little but not the bots' rules.
 * **Tuning targets.** Imperator was tuned against the Concilium, Heuristic and Lookahead players, so it may be tuned to their habits. Concilium was tuned against Imperator and the Heuristic player.
 
@@ -145,8 +153,13 @@ Both were adopted. The second costs a little against the Heuristic player but ga
 
 ```
 cd code
+python3 tests/test_smoke.py           # smoke tests
+python3 tests/test_audit_fixes.py     # regression tests for the v1.0 audit findings
 python3 study.py                      # full study, about an hour on 2 cores
-python3 sample_game.py 45 out.md      # the sample game
+python3 decide.py 300                 # bot-vs-bot breakdown (section 8)
+python3 sample_game.py 57 out.md      # the sample game's log
 ```
+
+The sample game's introduction and narrative were written by hand, so the generated file reproduces the log but not those notes.
 
 The raw results are in `results/study_final.json`.

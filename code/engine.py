@@ -1256,6 +1256,8 @@ class Game:
             col = 2
             self.sieged_this_card.add(s)
             self.stats['sieges'] += 1
+            for u in units:   # 14.3.2: every contributing CU counts as activated this card
+                u.moved = True
             return self._siege_apply(side, s, col, caesar, units, subjugation=True)
         owner = self.fort_owner(s)
         if owner is None or owner == side:
@@ -1266,6 +1268,8 @@ class Game:
             return False
         self.sieged_this_card.add(s)
         self.stats['sieges'] += 1
+        for u in units:   # 14.3.2: every contributing CU counts as activated this card
+            u.moved = True
         if col == 4:
             self.fort_surrender(side, s)
             return True
@@ -1733,7 +1737,8 @@ class Game:
                 self.pol[side].spend_ap(self, side, self.ap(c))
         else:
             self.pol[side].spend_ap(self, side, self.ap(c))
-        if c != 42:
+        # #42 leaves play only when its Event actually hands it to Rome; otherwise it is discarded
+        if not (c == 42 and 42 in self.hands['R']):
             self.discard.append(c)
         self.end_card_play(side)
 

@@ -93,7 +93,7 @@ class BotPolicy(BasePolicy):
         self.dpile = []
         self.directive = None
         self.compass = 'N'
-        self.reserve = []
+        self.reserve = set()
         self.expedition = False
         self.p.update(dict(noise=0.0))
         self.cfg = dict(
@@ -116,16 +116,27 @@ class BotPolicy(BasePolicy):
     def choose_play(self, g, side):
         d = self.draw_directive()
         self.compass = d[2]
+        self.sync_reserve(g, side)
         hand = list(g.hands[side])
-        self.rng.shuffle(hand)
-        playable = [c for c in hand if CARDS[c]['kind'] != 'surprise']
-        if not playable:
+        # 2.2 Offer: shuffle the face-down hand (not the Reserve) and reveal cards one at a time;
+        # a Surprise card or #24 goes face up into the Reserve and another card is revealed (1.3)
+        hidden = [c for c in hand if c not in self.reserve]
+        self.rng.shuffle(hidden)
+        look = self.look if self.look > 0 else len(hidden)
+        shown = []
+        for c in hidden:
+            if CARDS[c]['kind'] == 'surprise' or c == 24:
+                self.reserve.add(c)
+                continue
+            shown.append(c)
+            if len(shown) >= look:
+                break
+        if not shown:
+            # 1.3: only Reserve cards are left.  #24 is then played for AP; with only Surprise
+            # cards left the bot discards them and draws replacements (7.5.4).
+            if 24 in hand:
+                return 24, 'ap'
             return hand[0], 'ap'
-        # the Reaction card stays in Reserve unless it is the bot's last playable card
-        if len(playable) > 1 and 24 in playable:
-            playable.remove(24)
-        look = self.look if self.look > 0 else len(playable)
-        shown = playable[:look]
         best = None
         for c in shown:
             live = self.event_live(g, side, c)
@@ -498,6 +509,78 @@ class BotPolicy(BasePolicy):
                 return 1
         return 0
 
+    # ------------------------------------------------------------ danger (section 3)
+    def threat_armies(self, g, enemy):
+        """Every army the enemy could activate next (moved flags ignored): (cs, dist, leader, units, start)."""
+        moved = [u for u in g.units.values() if u.side == enemy and u.moved]
+        if enemy == 'R':
+            moved += [l for l in g.leaders.values() if l.moved]
+        for u in moved:
+            u.moved = False
+        out = []
+        try:
+            for leader, units, start in (self.gallic_armies(g) if enemy == 'G' else self.roman_armies(g)):
+                if not units:
+                    continue
+                ma, dist, parent = self.army_reach(g, enemy, leader, units, start)
+                cs = stack_strength(units + ([leader] if enemy == 'G' and leader is not None else []))
+                out.append((cs, dist, leader, units, start))
+        finally:
+            for u in moved:
+                u.moved = True
+        return out
+
+    def threat_after_move(self, g, enemy, base, movers, origin):
+        """Largest enemy CS that can reach each space once `movers` have left `origin`.
+        Vacating the origin can open a route that the movers were blocking (C02)."""
+        friend = OTHER[enemy]
+        others = [u for u in g.units.values() if u.loc == origin and u.side == friend and not u.inside
+                  and u not in movers]
+        m = {}
+        if others or not any(origin in a[1] for a in base):
+            for cs, dist, *_ in base:
+                for t in dist:
+                    if cs > m.get(t, 0):
+                        m[t] = cs
+            return m
+        saved = [(u, u.loc) for u in movers]
+        for u in movers:
+            u.loc = 'lifted'
+        try:
+            for cs, dist, leader, units, start in base:
+                if origin in dist:
+                    dist = self.army_reach(g, enemy, leader, units, start)[1]
+                for t in dist:
+                    if cs > m.get(t, 0):
+                        m[t] = cs
+        finally:
+            for u, l in saved:
+                u.loc = l
+        return m
+
+    def in_danger(self, g, side, t, movers, tmap, removed=()):
+        """Would `movers` (side's army) be in danger at t on the board after the move,
+        with the enemy IMs in `removed` already taken off?"""
+        enemy = OTHER[side]
+        if side == 'R' and g.ctrl[t] == 'R' and g.ctype[t] == 'WC':
+            return False
+        if side == 'G' and g.ctrl[t] == 'G' and g.ctype[t] == 'FT':
+            return False
+        if t not in tmap:
+            return False
+        saved = [(s, g.ctrl[s], g.ctype[s]) for s in removed if g.ctype[s] == 'IM']
+        for s, c, k in saved:
+            g.ctrl[s] = None; g.ctype[s] = None
+        try:
+            els = g.local_support(enemy, t); ols = g.local_support(side, t)
+        finally:
+            for s, c, k in saved:
+                g.ctrl[s] = c; g.ctype[s] = k
+        own = stack_strength([u for u in g.units.values() if u.loc == t and u.side == side and u not in movers]
+                             + list(movers)) + ols
+        ratio = self.cfg['r_danger'] if side == 'R' else self.cfg['g_safe_raid']
+        return tmap[t] + els >= ratio * own
+
     def gallic_threat(self, g):
         """Largest Gallic BS one Gallic army could bring into each space (moved flags ignored)."""
         thr = {}
@@ -579,31 +662,28 @@ class BotPolicy(BasePolicy):
         Roman force or a Roman Walled City it can reach where it would be safe."""
         if not self.cfg.get('regroup'):
             return 0
-        thr = self.gallic_threat(g)
-        ratio = self.cfg['r_danger']
+        base = self.threat_armies(g, 'G')
+        here = self.threat_after_move(g, 'G', base, [], None)   # the board as it stands
 
-        def rbs(t, extra=()):
-            us = [u for u in g.units.values() if u.loc == t and u.side == 'R' and u not in extra] + list(extra)
+        def rbs(t):
+            us = [u for u in g.units.values() if u.loc == t and u.side == 'R']
             return stack_strength(us) + g.local_support('R', t) if us else 0
-
-        def safe(t, extra=()):
-            if g.ctrl[t] == 'R' and g.ctype[t] == 'WC':
-                return True
-            return thr.get(t, 0) < ratio * rbs(t, extra)
         cands = []
         for leader, units, start in self.roman_armies(g):
             if leader is not None and leader.name == 'Caesar':
                 continue
-            if safe(start):
+            if not self.in_danger(g, 'R', start, [], here):
                 continue
+            after = self.threat_after_move(g, 'G', base, units, start)
             ma, dist, parent = self.army_reach(g, 'R', leader, units, start)
             for t, d in dist.items():
                 if t == start or enemy_outside_at(g, t, 'R'):
                     continue
-                if not safe(t, units):
+                if self.in_danger(g, 'R', t, units, after):
                     continue
                 cz = any(l.loc == t and l.name == 'Caesar' for l in g.leaders.values())
-                cands.append(((-thr.get(start, 0) / max(1, rbs(start)), 0 if cz else 1, -rbs(t), d), t, (leader, units, parent)))
+                cands.append(((-(here.get(start, 0) + g.local_support('G', start)) / max(1, rbs(start)),
+                               0 if cz else 1, -rbs(t), d), t, (leader, units, parent)))
         c = self.pick(cands)
         if not c:
             return 0
@@ -700,23 +780,21 @@ class BotPolicy(BasePolicy):
             return (t not in done and g.ctrl[t] == enemy and g.ctype[t] == 'IM' and weight(t) > 0
                     and not any(u.loc == t and u.side == enemy for u in g.units.values())
                     and not (avoid and avoid(t)))
-        thr = self.gallic_threat(g) if (side == 'R' and self.cfg.get('safe_raid')) else None
-        rthr = self.roman_threat(g) if (side == 'G' and self.cfg.get('g_safe_raid')) else None
+        use = (side == 'R' and self.cfg.get('safe_raid')) or (side == 'G' and self.cfg.get('g_safe_raid'))
+        base = self.threat_armies(g, OTHER[side]) if use else None
+        tcache = {}
 
-        def unsafe(t, leader, units):
-            if rthr is not None:
-                ratio = self.cfg['g_safe_raid']
-                if g.ctrl[t] == 'G' and g.ctype[t] == 'FT':
-                    return False
-                us = [u for u in g.units.values() if u.loc == t and u.side == 'G' and u not in units] + list(units) \
-                    + ([leader] if leader is not None and isinstance(leader, Unit) else [])
-                return rthr.get(t, 0) >= ratio * (stack_strength(us) + g.local_support('G', t))
-            if thr is None or (leader is not None and leader.name == 'Caesar'):
+        def unsafe(t, leader, units, removed=()):
+            if base is None or (side == 'R' and leader is not None and leader.name == 'Caesar'):
                 return False
-            if g.ctrl[t] == 'R' and g.ctype[t] == 'WC':
+            movers = list(units) + ([leader] if side == 'G' and leader is not None and isinstance(leader, Unit) else [])
+            if not movers:
                 return False
-            us = [u for u in g.units.values() if u.loc == t and u.side == 'R' and u not in units] + list(units)
-            return thr.get(t, 0) >= self.cfg['r_danger'] * (stack_strength(us) + g.local_support('R', t))
+            origin = movers[0].loc
+            key = (origin, frozenset(u.uid for u in movers))
+            if key not in tcache:
+                tcache[key] = self.threat_after_move(g, OTHER[side], base, movers, origin)
+            return self.in_danger(g, side, t, movers, tcache[key], tuple(removed) + (t,))
         cands = []
         for leader, units, start in armies:
             ma, dist, parent = self.army_reach(g, side, leader, units, start)
@@ -739,7 +817,7 @@ class BotPolicy(BasePolicy):
             for x, k in ADJ[cur]:
                 cost = (1 if k == 'path' else 2) + over
                 if cost + 2 <= left and removable(x, done) and not enemy_outside_at(g, x, side) \
-                        and not (side == 'G' and REGION[x] in ('Germania', 'Britannia')) and not unsafe(x, leader, units):
+                        and not (side == 'G' and REGION[x] in ('Germania', 'Britannia')) and not unsafe(x, leader, units, done):
                     nxt.append(((-weight(x),), x, cost))
             if not nxt:
                 break
@@ -1340,21 +1418,34 @@ class BotPolicy(BasePolicy):
     CANCEL = {'R': (5, 16, 53, 6, 14, 36, 21, 43, 27, 8),   # Imperator cancels these Gallic events
               'G': (1, 2, 4, 11, 3, 10, 12)}               # Concilium cancels these Roman events
 
+    # ------------------------------------------------------------ Reserve (1.3)
+    def sync_reserve(self, g, side):
+        """The Reserve holds only cards revealed face up this turn that are still in the hand."""
+        if getattr(self, '_reserve_turn', None) != g.turn:
+            self.reserve = set()
+            self._reserve_turn = g.turn
+        self.reserve = set(c for c in self.reserve if c in g.hands[side])
+        return self.reserve
+
+    def in_reserve(self, g, side, c):
+        return c in self.sync_reserve(g, side)
+
     def react(self, g, side, c):
-        return c in self.CANCEL[side]
+        return self.in_reserve(g, side, 24) and c in self.CANCEL[side]
 
     def use_vow_battle(self, g, side, s, a_bs, d_bs, attacker):
-        return abs(a_bs - d_bs) <= 3
+        return self.in_reserve(g, side, 52) and abs(a_bs - d_bs) <= 3
 
     def use_vow_siege(self, g, s):
-        return True
+        return self.in_reserve(g, 'R', 52)
 
     def use_remedies(self, g, side, roller, drm):
         # +2 to the bot's own Avoid Battle / Interception roll
-        return roller == side
+        return self.in_reserve(g, side, 54) and roller == side
 
     def discard_surprise(self, g, side, sur):
-        return any(c == 55 for c in sur)
+        # Forced March in the Reserve is discarded at the start of the bot's next card play
+        return any(c == 55 and self.in_reserve(g, side, 55) for c in sur)
 
     # ============================================================ reactions & phases
     def avoid(self, g, side, s, units, movers, prev):

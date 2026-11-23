@@ -16,7 +16,7 @@ def w(k):
     return v['bot_wins'] / v['n']
 
 
-summary = f"""* **Both bots play complete games of the 2nd-edition rules.** Each decision comes from a Directive card and a two-card Offer, following the printed rules. The bot never looks at hidden cards. An independent clean-room implementation of the printed rules matched the simulation bot on more than 99% of card and mission choices.
+summary = f"""* **Both bots play complete games of the 2nd-edition rules** in the simulation, with one approximation: the Siege Table is the 1st-edition table shifted one row. Each decision comes from a Directive card and a two-card Offer, following the printed rules. The bot never looks at hidden cards, and its Reaction and Surprise cards work only once an Offer has revealed them. An independent clean-room implementation of the printed rules matched the simulation bot on more than 99% of card and mission choices. An independent audit of v1.0 found eight issues, all fixed in v1.1, and every result here comes from the corrected engine.
 * **The levels form a smooth ladder against every computer opponent.** Against the strongest of them, the Lookahead player:
     * Imperator wins {w('Imperator L1 vs search'):.0%} at level 1, {w('Imperator L3 vs search'):.0%} at level 3 and {w('Imperator L5 vs search'):.0%} at level 5;
     * Concilium wins {w('Concilium L1 vs search'):.0%} at level 1, {w('Concilium L3 vs search'):.0%} at level 3 and {w('Concilium L5 vs search'):.0%} at level 5.
@@ -55,6 +55,24 @@ dec = f"""These figures come from {n} games of Imperator (level 3) against Conci
 
 **VP distribution (VP: games):** """ + ', '.join(f'{v}: {c}' for v, c in d['vp_hist']) + "."
 t = t.replace('{{DECIDE}}', dec)
+if len(sys.argv) > 6:
+    L = json.load(open(sys.argv[6]))
+    def cellr(k, o):
+        x = L[k][o]
+        return f"{x['win']:.0%} ({x['vp']:.1f} VP)"
+    rows = ['**On the corrected v1.1 engine** (seeds 20000 and up; 200 games against the Bot, 160 against the Heuristic player, 100 against the Lookahead player). Each cell is the bot\'s win rate, with the mean Roman VP in brackets.', '',
+            '| Version | vs Bot | vs Heuristic | vs Lookahead |', '|---|---|---|---|']
+    names = [('R_final', 'Imperator v1.1 (level 3)'), ('R_no_danger', '… without REGROUP and the danger limit on SWEEP'),
+             ('R_no_lagging', '… without the lagging-region order'), ('R_no_caesar21', '… without Caesar\'s 2:1 sieges'),
+             ('G_final', 'Concilium v1.1 (standard rules)'), ('G_no_danger', '… without its danger rule')]
+    for k, lab in names:
+        if k in L:
+            rows.append(f'| {lab} | ' + ' | '.join(cellr(k, o) for o in ('bot', 'smart', 'search')) + ' |')
+    rows += ['', 'For Imperator, the Bot is Concilium under the standard rules. For Concilium, the Bot is Imperator with +1 AP on every card play.']
+    t = t.replace('{{LATEST}}', '\n'.join(rows))
+if len(sys.argv) > 7:
+    E = json.load(open(sys.argv[7]))
+    t = t.replace('{{ED1}}', E['text'])
 t = t.replace("| **Bot** | The other paper bot, following its printed rules exactly. In the Imperator rows, Concilium plays at level 3. In the Concilium rows, Imperator plays with the same level adjustments as Concilium's opponent. At level 3 that means the rules only. |",
               "| **Bot** | The other paper bot, following its printed rules exactly. In the Imperator rows it is Concilium under the standard rules. In the Concilium rows it is Imperator at its level 3 (+1 AP on every card play), the strongest Roman player available. |")
 t = t.replace("The raw results are in `results/study_final.json`.", "The raw results are in `results/study_final.json`, and the bot-vs-bot breakdown is in `results/decide.json`.")

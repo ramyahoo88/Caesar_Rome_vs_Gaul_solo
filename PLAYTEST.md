@@ -21,4 +21,4 @@ The bots have only been tested in simulation, so they still need games at the ta
 
 ## Sending results
 
-Put your sheets, or a photo of them, in the repository's `playtests/` folder, or send them back in chat. Include the commit or version you played (v1.0).
+Put your sheets, or a photo of them, in the repository's `playtests/` folder, or send them back in chat. Include the commit or version you played (v1.1).

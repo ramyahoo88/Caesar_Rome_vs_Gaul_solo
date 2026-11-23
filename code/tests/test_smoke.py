@@ -37,6 +37,13 @@ def test_board_invariants():
             assert g.ctrl[s] == 'G'
 
 
+def test_card_conservation():
+    for s in range(4):
+        g, _ = play(s, ap_bonus_R=1)
+        allc = g.deck + g.discard + g.hands['R'] + g.hands['G']
+        assert len(allc) == 55 and len(set(allc)) == 55
+
+
 def test_levels_change_only_ap_or_target():
     # VP target levels play the same game; only the winner test changes
     _, a = play(42, ap_bonus_R=1)

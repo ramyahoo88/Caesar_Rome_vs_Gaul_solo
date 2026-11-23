@@ -25,6 +25,7 @@ th, td { border: 1px solid #b9a27a; padding: 2.5pt 4pt; vertical-align: top; tex
 th { background: #efe4cf; }
 tr { break-inside: avoid; }
 code { font-family: 'DejaVu Sans Mono', monospace; font-size: 9pt; }
+pre { background: #f4f1ea; border: 1px solid #ddd5c4; padding: 6pt 8pt; white-space: pre-wrap; } pre code { font-size: 8.5pt; }
 hr { border: none; border-top: 1px solid #c9b18a; margin: 10pt 0; }
 """
 
@@ -41,7 +42,7 @@ def chrome_pdf(html_text, pdf_path):
 
 def md_page(md_path, title, extra_css=''):
     text = open(md_path, encoding='utf-8').read()
-    body = markdown.markdown(text, extensions=['tables', 'sane_lists'])
+    body = markdown.markdown(text, extensions=['tables', 'sane_lists', 'fenced_code'])
     foot = (title + ' · unofficial fan variant for Caesar: Rome vs. Gaul (GMT Games) · page ').replace('"', "'")
     page_css = ('@page { @bottom-center { content: "' + foot + '" counter(page); font-family: \'DejaVu Serif\', serif; '
                 'font-size: 8pt; color: #777; } }')
@@ -109,12 +110,15 @@ li { margin: 0 0 3pt 0; } li b { font-size: 8.6pt; }
         sub = 'Rome · Directive' if side == 'R' else 'Gaul · Directive'
         backs.append('<div class="sheet">' + ''.join(
             f'<div class="card back {side}"><div class="big">{name}</div><div class="small">{sub}</div></div>' for _ in range(9)) + '</div>')
-    return f'<!doctype html><html><head><meta charset="utf-8"><style>{css}</style></head><body>{"".join(pages + backs)}</body></html>'
+    # faces and backs alternate (Imperator faces, Imperator backs, Concilium faces, Concilium backs) so that
+    # ordinary double-sided printing pairs each face with its back; every back on a sheet is identical
+    order = [pages[0], backs[0], pages[1], backs[1]]
+    return f'<!doctype html><html><head><meta charset="utf-8"><style>{css}</style></head><body>{"".join(order)}</body></html>'
 
 
 def main():
     cards = json.load(open(os.path.join(HERE, 'cards.json')))
-    chrome_pdf(md_page(os.path.join(HERE, 'Caesar_Solo_Rules.md'), 'Caesar Solo Bots — Rules v1.0'),
+    chrome_pdf(md_page(os.path.join(HERE, 'Caesar_Solo_Rules.md'), 'Caesar Solo Bots — Rules v1.1'),
                os.path.join(OUT, 'Caesar_Solo_Rules.pdf'))
     chrome_pdf(cards_html(cards), os.path.join(OUT, 'Caesar_Solo_Cards.pdf'))
     chrome_pdf(open(os.path.join(HERE, 'reference.html'), encoding='utf-8').read(), os.path.join(OUT, 'Caesar_Solo_Reference.pdf'))

@@ -1,4 +1,4 @@
-# Caesar: Rome vs. Gaul (2nd edition) — solo bots
+# Caesar: Rome vs. Gaul (2nd edition) — solo bots (v1.1)
 
 Two card-driven paper bots for GMT Games' *Caesar: Rome vs. Gaul*, 2nd edition:
 
@@ -23,7 +23,7 @@ All files are in [`print/`](print):
 |---|---|
 | [Caesar_Solo_Print_and_Play.pdf](print/Caesar_Solo_Print_and_Play.pdf) | Everything below in one file |
 | [Caesar_Solo_Rules.pdf](print/Caesar_Solo_Rules.pdf) | Bot rules, including the Event Guides and levels (11 pages) |
-| [Caesar_Solo_Cards.pdf](print/Caesar_Solo_Cards.pdf) | 18 Directive cards: 9 Imperator and 9 Concilium, poker size, 9 per page |
+| [Caesar_Solo_Cards.pdf](print/Caesar_Solo_Cards.pdf) | 18 Directive cards: 9 Imperator and 9 Concilium, poker size, 9 per page. Pages run face, back, face, back, so double-sided printing pairs them (either flip edge works, since all backs on a sheet are alike) |
 | [Caesar_Solo_Reference.pdf](print/Caesar_Solo_Reference.pdf) | Two-page reference sheet: turn sequence, mission lists, Control and Agitate tables |
 | [Caesar_Solo_Record_Sheet.pdf](print/Caesar_Solo_Record_Sheet.pdf) | Game record sheet for playtesting |
 | [Caesar_Solo_Sample_Game.pdf](print/Caesar_Solo_Sample_Game.pdf) | A full bot-vs-bot game, card by card |
@@ -78,6 +78,7 @@ Two independent checks were run, each by a separate agent that had not written t
 
 * **Engine audit.** The engine was checked against the 2023 living rules.
 * **Clean-room test.** A second bot was written from the printed rules alone, then compared with the simulation bot decision by decision. It agreed on 99.8% of card choices and 99.4% of mission choices. Every gap it found has been closed, either in the text or in the code.
+* **Independent v1.0 audit.** This reviewed the whole release and found eight issues, the most serious being Reserve cards used before they were revealed. All eight are fixed in v1.1, and every result was re-run on the corrected engine. See the [changelog](CHANGELOG.md).
 
 ```
 cd code

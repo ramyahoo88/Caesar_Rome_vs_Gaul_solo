@@ -32,9 +32,9 @@ engine.Game.winter_phase = wp
 g = Game({'R': BotPolicy('R', SEED), 'G': BotPolicy('G', SEED)}, seed=SEED, log=True, options={'ap_bonus_R': 1})
 res = g.play()
 
-lines = [f'# Sample game: Imperator (level 3) vs Concilium (level 3)', '',
+lines = [f'# Sample game: Imperator (level 3) vs Concilium (level 4, standard rules)', '',
          f'Both sides are bots, so every decision below follows the printed rules. Seed {SEED}. '
-         'Imperator gets +1 AP on every card play (level 3); Concilium plays the plain rules. '
+         'Imperator gets +1 AP on every card play (its level 3); Concilium plays the standard rules (its level 4: Rome needs 12 VP). '
          'Lines starting with a Directive show the card turned over, the two cards of the Offer '
          '(* = Event Live for the bot) and the card chosen. "AP:" lines show the mission that spent each Action Point. '
          'Moves list the leader, the number of CUs, start and end space and the operations performed. '
