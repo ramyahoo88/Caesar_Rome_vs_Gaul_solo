@@ -77,6 +77,7 @@ The bot never takes its Event and AP from the same card except for Bonus cards (
 **Path.** An army always moves by the cheapest route. If two routes tie, use the compass.
 
 **Danger.** Whether a space is safe to end a move in:
+
 * **Imperator:** a Roman army is *in danger* in a space if a Gallic army (formed as Concilium forms its armies) could reach that space on its next activation with a BS at least 1.5× the BS of all Roman CUs there, the army included. A space with a Roman Walled City is never dangerous. Caesar's army ignores danger.
 * **Concilium:** a Gallic army is *in danger* in a space if a Roman army (formed as Imperator forms its armies) could reach that space on its next activation with a BS at least equal to the BS of all Gallic CUs there, the army included. A space with a Gallic Fortified Town is never dangerous.
 
@@ -111,6 +112,7 @@ Each mission says which army acts. *Target order* lists the tie-breaks in turn; 
 **CONTINUE.** A leader's army already in a space whose Fortified Town (or Stronghold) has at least 1 Siege Point, with no Gallic CUs outside, rolls on the Siege Table again. It needs odds of at least 1:2 (a Stronghold: CS 2+), and the location must not have been rolled against yet this card.
 
 **PROTECT.** Only if a Provincia province is not Roman-controlled, or Gallic CUs stand outside in Provincia:
+
 1. An army that can reach Gallic CUs in Provincia with at least equal BS attacks them. *Target order:* a 3:1 attack; the largest Gallic BS; the nearest.
 2. Otherwise, if a Provincia province is lost, an army SWEEPs Gallic IMs in the lost provinces (5.3).
 3. Otherwise, if a Provincia province is lost, it places an IM in a Provincia province Rome does not control, Narbonensis first (Control Table line 2). PROTECT never places an IM during an Activation Event (5.5).
@@ -120,6 +122,7 @@ Each mission says which army acts. *Target order* lists the tie-breaks in turn; 
 **SUBMIT.** An army that can reach Gallic CUs (outside) with at least **3×** their BS attacks them, so they must Submit (13.3). *Target order:* the largest Gallic BS; the nearest. If a Gallic Fortified Town is in that space and MP remain, roll a siege as well.
 
 **SIEGE.** An army that can reach a Gallic Fortified Town with at least 2 MP left marches there and rolls. Only these targets count:
+
 * a Town that must **surrender** (odds 3:1 or more); any army may go, and a leaderless Legion stack may take a third Legion over its Command Rating for this;
 * a Town with **2 or more Siege Points** where the odds are at least 1:1 (leader's army);
 * any Town where **Caesar's army** has odds of at least 2:1.
@@ -131,6 +134,7 @@ Skip any location already rolled against this card.
 **STRIKE.** An army attacks Gallic CUs (outside) it can reach with at least 2× their BS (Caesar's army: 1.5×). *Target order:* a 3:1 attack; the largest Gallic BS; the nearest. If a Gallic Fortified Town is in that space and MP remain, roll a siege as well.
 
 **RAID.** An army SWEEPs (5.3) Gallic IMs with these weights:
+
 * 4: in a Gallic-controlled province in Celtica, or in Provincia;
 * 3: in a Gallic-controlled province elsewhere;
 * 2: in a province with no Fortified Town where Rome is one IM short of control or already has control;
@@ -214,13 +218,13 @@ That army moves there and removes the IM. **Danger:** an Imperator army other th
 * **Turn 5 Legions:** they go with Caesar if he qualifies, otherwise with the largest qualifying stack.
 * **Caesar** (5.3): place him with the largest Legion stack in a friendly space with a path to Rome.
 * **Legates** (5.4): each goes to the largest Legion stack without a leader, otherwise with Caesar.
-* **Winter camp** (16.2.2): legions move one at a time, full-strength first. Each goes, within 3 MP, to the first of these with room under its forage level (16.2.4); room counts only the Legions already moved there this Winter:
-  1. a neutral space in Gaul next to a Roman control marker;
-  2. a Roman IM space in a Roman province;
-  3. a Roman Walled City;
-  4. another Roman IM space;
-  5. any neutral space in Gaul.
-  Take the nearest, then the most northern.
+* **Winter camp** (16.2.2): legions move one at a time, full-strength first. Each goes, within 3 MP, to the first of these with room under its forage level (16.2.4); room counts only the Legions already moved there this Winter. Among spaces of the same kind, take the nearest, then the most northern.
+    1. a neutral space in Gaul next to a Roman control marker;
+    2. a Roman IM space in a Roman province;
+    3. a Roman Walled City;
+    4. another Roman IM space;
+    5. any neutral space in Gaul.
+
 * **Kept Legate** (5.4.2): keep the Legate with the highest Battle Rating if it is 2 or more (ties: the higher Command Rating).
 * **Caesar displaced:** remove Roman IMs outside Provincia first; among those, IMs outside Roman-controlled provinces first. Caesar then goes to the space with the most Legions.
 
@@ -231,6 +235,7 @@ That army moves there and removes the IM. **Danger:** an Imperator army other th
 ### 6.1 Missions
 
 **RISE.**
+
 * From Turn 4, with 2+ AP left and at least two Submitted Tribes that have a legal space, declare a **Major Uprising** (2 AP, 7.7.3). Place every returning Tribe (6.3). Then each Council IM removes a Roman IM in Gaul, Roman-controlled provinces first. Then any Council Tribes come out.
 * Otherwise, if a Council Tribe may come out and has a space, or there are 3+ Council IMs (any number if this is the bot's last card), **take everything out** of the Council Box (1 AP). Place the Tribes (6.3) and the IMs by the Agitate Table.
 
@@ -239,6 +244,7 @@ That army moves there and removes the IM. **Danger:** an Imperator army other th
 **AMBUSH.** An army attacks Roman CUs (outside) it can reach with at least 1.5× their BS. Against Caesar's army it needs 2.1×. *Target order:* Caesar's army; the largest Roman BS; the nearest.
 
 **RAID.** An army SWEEPs (5.3) Roman IMs with these weights:
+
 * 4: Narbonensis;
 * 3: a Roman-controlled province;
 * 2: elsewhere in Provincia;

@@ -22,7 +22,7 @@ All files are in [`print/`](print):
 | File | What it is |
 |---|---|
 | [Caesar_Solo_Print_and_Play.pdf](print/Caesar_Solo_Print_and_Play.pdf) | Everything below in one file |
-| [Caesar_Solo_Rules.pdf](print/Caesar_Solo_Rules.pdf) | Bot rules, including the Event Guides and levels (9 pages) |
+| [Caesar_Solo_Rules.pdf](print/Caesar_Solo_Rules.pdf) | Bot rules, including the Event Guides and levels (11 pages) |
 | [Caesar_Solo_Cards.pdf](print/Caesar_Solo_Cards.pdf) | 18 Directive cards: 9 Imperator and 9 Concilium, poker size, 9 per page |
 | [Caesar_Solo_Reference.pdf](print/Caesar_Solo_Reference.pdf) | Two-page reference sheet: turn sequence, mission lists, Control and Agitate tables |
 | [Caesar_Solo_Record_Sheet.pdf](print/Caesar_Solo_Record_Sheet.pdf) | Game record sheet for playtesting |
