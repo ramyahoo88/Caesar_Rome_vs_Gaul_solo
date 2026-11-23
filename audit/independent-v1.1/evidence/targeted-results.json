@@ -1,0 +1,95 @@
+[
+  {
+    "id": "R01",
+    "seed": 9,
+    "initialHand": [
+      52,
+      54
+    ],
+    "initialReserve": [
+      52,
+      54
+    ],
+    "deckTopFirst": [
+      6,
+      7
+    ],
+    "expectedHand": [
+      6,
+      7
+    ],
+    "actualHand": [
+      54,
+      6
+    ],
+    "expectedReplacementCount": 2,
+    "actualReplacementCount": 1
+  },
+  {
+    "id": "R02",
+    "seed": 94,
+    "operation": "siege at Gergovia with Caesar and six full Legions vs Arverni inside",
+    "initialHand": [
+      52,
+      45
+    ],
+    "initialReserve": [
+      52
+    ],
+    "drawPileInitiallyEmpty": true,
+    "handAfterUseAndReplacement": [
+      45,
+      52
+    ],
+    "reserveAfterUseAndReplacement": [
+      52
+    ],
+    "newOfferOccurred": false,
+    "expectedUseVowAgain": false,
+    "actualUseVowAgain": true
+  },
+  {
+    "id": "R03",
+    "seed": 31,
+    "turn": 5,
+    "gallicLeader": "Vercingetorix",
+    "leaderOrigin": "Alesia",
+    "target": "Bibracte",
+    "gallicControlledProvince": "Aedui",
+    "gallicCS": 1,
+    "gallicLocalSupport": 2,
+    "romanCS": 2,
+    "romanLocalSupport": 0,
+    "route": [
+      "Alesia",
+      "Bibracte"
+    ],
+    "routeMP": 1,
+    "expectedDanger": true,
+    "actualDanger": false,
+    "formationIncludesLeaderOnlyArmy": true
+  },
+  {
+    "id": "R05",
+    "expected": "AP-value-only comparison keeps all other rules fixed",
+    "actualNonAPRuleDifferences": {
+      "siege_shift": {
+        "edition1": 0,
+        "edition2": -1
+      },
+      "siege_mp": {
+        "edition1": 3,
+        "edition2": 2
+      },
+      "sh_points": {
+        "edition1": 2,
+        "edition2": 3
+      },
+      "ia_friendly": {
+        "edition1": 2,
+        "edition2": 1
+      }
+    },
+    "sourceScript": "code/ed1b.py"
+  }
+]

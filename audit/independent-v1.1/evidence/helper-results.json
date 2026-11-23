@@ -1,0 +1,23 @@
+{
+  "mode": "DOM/storage doubles; not a real browser",
+  "passedChecks": [
+    "clean launch",
+    "R: 108 draws with reload, unique deck cycles and turn advancement",
+    "G: 108 draws with reload, unique deck cycles and turn advancement",
+    "empty-deck label and reshuffle Undo",
+    "Undo across Next turn",
+    "Turn 6 advance blocked",
+    "80 level/bonus boundaries",
+    "independent side counters",
+    "old C05 invalid side, duplicate deck and malformed JSON recover",
+    "storage failure notice"
+  ],
+  "normalDrawReloads": 216,
+  "bonusChecks": 80,
+  "R04": {
+    "startupAcceptedDamagedHistory": true,
+    "malformedSnapshotError": "Unexpected token 'o', \"not JSON\" is not valid JSON",
+    "validJSONCorruptSnapshotError": "Cannot read properties of undefined (reading 'NaN')",
+    "sideAfterUndo": "invalid"
+  }
+}
