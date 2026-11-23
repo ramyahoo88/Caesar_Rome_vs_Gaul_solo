@@ -1,0 +1,5 @@
+ok test_games_finish
+ok test_reproducible
+ok test_board_invariants
+ok test_card_conservation
+ok test_levels_change_only_ap_or_target

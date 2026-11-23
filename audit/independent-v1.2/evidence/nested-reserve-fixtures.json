@@ -1,0 +1,123 @@
+[
+  {
+    "id": "R06",
+    "seed": 0,
+    "trigger": 42,
+    "romanInitialHand": [
+      6,
+      42
+    ],
+    "gallicInitialHand": [
+      55,
+      42,
+      47
+    ],
+    "romanReserveInitially": [],
+    "expected55DiscardedBeforeSecondOffer": true,
+    "actual55DiscardedBeforeSecondOffer": false,
+    "frames": [
+      {
+        "handBeforeOffer": [
+          55,
+          42,
+          47
+        ],
+        "chosen": [
+          42,
+          "event"
+        ],
+        "reserveAfterOffer": [
+          55
+        ]
+      },
+      {
+        "handBeforeOffer": [
+          55,
+          47,
+          45
+        ],
+        "chosen": [
+          45,
+          "event"
+        ],
+        "reserveAfterOffer": [
+          55
+        ]
+      }
+    ],
+    "gallicHandAfter": [
+      55,
+      47
+    ],
+    "log": [
+      "T1 Concilium Directive Revolt (N): RISE > AMBUSH > RAID > AGITATE; Offer #42*, #47 -> #42",
+      "T1 G plays #42 Senate Outraged as event",
+      "T1 Concilium Directive Revolt (S): RISE > RAID > AMBUSH > AGITATE; Offer #45*, #47 -> #45",
+      "T1 G plays #45 Diplomacy as event"
+    ]
+  },
+  {
+    "id": "R06",
+    "seed": 0,
+    "trigger": 21,
+    "romanInitialHand": [
+      45,
+      54
+    ],
+    "gallicInitialHand": [
+      55,
+      21,
+      47
+    ],
+    "romanReserveInitially": [
+      24
+    ],
+    "expected55DiscardedBeforeSecondOffer": true,
+    "actual55DiscardedBeforeSecondOffer": false,
+    "frames": [
+      {
+        "handBeforeOffer": [
+          55,
+          21,
+          47
+        ],
+        "chosen": [
+          21,
+          "event"
+        ],
+        "reserveAfterOffer": [
+          55
+        ]
+      },
+      {
+        "handBeforeOffer": [
+          55,
+          47,
+          53
+        ],
+        "chosen": [
+          53,
+          "ap"
+        ],
+        "reserveAfterOffer": [
+          55
+        ]
+      }
+    ],
+    "gallicHandAfter": [
+      55,
+      47
+    ],
+    "log": [
+      "T1 Concilium Directive Revolt (N): RISE > AMBUSH > RAID > AGITATE; Offer #21*, #47 -> #21",
+      "T1 G plays #21 Ties of Blood and Marriage as event",
+      "T1 R cancels #21 with #24",
+      "T1 Concilium Directive Revolt (S): RISE > RAID > AMBUSH > AGITATE; Offer #53, #47 -> #53",
+      "T1 G plays #53 Trumpets of War as ap",
+      "T1 G influence place Alesia",
+      "T1   Concilium AP: AGITATE",
+      "T1 G influence place Gorgobina",
+      "T1   Concilium AP: AGITATE"
+    ]
+  }
+]

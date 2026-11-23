@@ -1,0 +1,117 @@
+{
+  "latestChangeCellsRecounted": 18,
+  "latestChangePairedComparisons": {
+    "R_no_danger": {
+      "bot": {
+        "n": 200,
+        "mean": 0.235,
+        "SE": 0.18307500453757242
+      },
+      "smart": {
+        "n": 160,
+        "mean": -0.35625,
+        "SE": 0.2531789823251428
+      },
+      "search": {
+        "n": 100,
+        "mean": -1,
+        "SE": 0.3722712164348173
+      }
+    },
+    "R_no_lagging": {
+      "bot": {
+        "n": 200,
+        "mean": -0.445,
+        "SE": 0.19692325622998696
+      },
+      "smart": {
+        "n": 160,
+        "mean": -0.08125,
+        "SE": 0.20906573305779622
+      },
+      "search": {
+        "n": 100,
+        "mean": -0.52,
+        "SE": 0.29965636885262326
+      }
+    },
+    "R_no_caesar21": {
+      "bot": {
+        "n": 200,
+        "mean": -0.73,
+        "SE": 0.19577317405199302
+      },
+      "smart": {
+        "n": 160,
+        "mean": 0.15625,
+        "SE": 0.2456455484147328
+      },
+      "search": {
+        "n": 100,
+        "mean": -0.15,
+        "SE": 0.3367626625816629
+      }
+    },
+    "G_no_danger": {
+      "bot": {
+        "n": 200,
+        "mean": 1.315,
+        "SE": 0.2107151617634216
+      },
+      "smart": {
+        "n": 160,
+        "mean": 1.01875,
+        "SE": 0.3485675848987372
+      },
+      "search": {
+        "n": 100,
+        "mean": 1.2,
+        "SE": 0.363206817005397
+      }
+    }
+  },
+  "APOnlyScopeVerified": true,
+  "APCardsChecked": 55,
+  "R07": {
+    "expected": "per-seed AP outcomes retained for independent paired-mean and SE recount",
+    "actual": "only win-rate summaries, mean difference, SE and n are saved",
+    "rows": [
+      {
+        "matchup": "imp_con",
+        "n": 300,
+        "ap1Keys": [
+          "win"
+        ],
+        "ap2Keys": [
+          "win"
+        ],
+        "savedMeanDifference": 0.20333333333333334,
+        "savedSE": 0.16515243006972027
+      },
+      {
+        "matchup": "imp_search",
+        "n": 120,
+        "ap1Keys": [
+          "win"
+        ],
+        "ap2Keys": [
+          "win"
+        ],
+        "savedMeanDifference": 0.24166666666666667,
+        "savedSE": 0.35365158623204906
+      },
+      {
+        "matchup": "con_search",
+        "n": 120,
+        "ap1Keys": [
+          "win"
+        ],
+        "ap2Keys": [
+          "win"
+        ],
+        "savedMeanDifference": 0.3416666666666667,
+        "savedSE": 0.3931300512063804
+      }
+    ]
+  }
+}

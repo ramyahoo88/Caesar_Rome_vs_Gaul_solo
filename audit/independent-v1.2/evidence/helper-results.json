@@ -1,0 +1,21 @@
+{
+  "mode": "DOM/storage doubles; not a real browser",
+  "passedChecks": [
+    "clean launch",
+    "R: 108 draws with reload, unique deck cycles and turn advancement",
+    "G: 108 draws with reload, unique deck cycles and turn advancement",
+    "empty-deck label and reshuffle Undo",
+    "Undo across Next turn",
+    "Turn 6 advance blocked",
+    "80 level/bonus boundaries",
+    "independent side counters",
+    "old C05 invalid side, duplicate deck and malformed JSON recover",
+    "storage failure notice",
+    "R04 malformed and invalid-side snapshots dropped on restore",
+    "R04 mixed history retains valid step",
+    "R04 use-time guard skips damaged history"
+  ],
+  "normalDrawReloads": 216,
+  "bonusChecks": 80,
+  "R04": "all original and additional recovery cases pass"
+}

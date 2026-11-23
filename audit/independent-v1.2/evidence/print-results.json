@@ -1,0 +1,50 @@
+{
+  "pdfInventory": [
+    {
+      "file": "Caesar_Solo_Cards.pdf",
+      "pages": 4,
+      "sha256": "ca7801e8754701347372f526390d0fbe120a67607c37cc656b0ec9a7594a3815"
+    },
+    {
+      "file": "Caesar_Solo_Print_and_Play.pdf",
+      "pages": 18,
+      "sha256": "697ea1241a7471c73af6d52b53686ca078dcc0dc6e6e0f461098c7e33f6a435a"
+    },
+    {
+      "file": "Caesar_Solo_Record_Sheet.pdf",
+      "pages": 1,
+      "sha256": "7beb7e9e8ed8f081bd28d3888d12fc592f11329ffa1deb6771bf061c76886abf"
+    },
+    {
+      "file": "Caesar_Solo_Reference.pdf",
+      "pages": 2,
+      "sha256": "da58d23e6e3bdd9b38b30cf912308ed6c6c1799533b8eb10989201c970430467"
+    },
+    {
+      "file": "Caesar_Solo_Rules.pdf",
+      "pages": 11,
+      "sha256": "13fef36410680a58b12cfeaf83c8b897293962864cdfb1d5363e31ccc1a2e4b7"
+    },
+    {
+      "file": "Caesar_Solo_Sample_Game.pdf",
+      "pages": 11,
+      "sha256": "0e7a44ce06cc98676c3b8e99351e97b5b54936b07397dee4aa892753ccdcfaa1"
+    },
+    {
+      "file": "Caesar_Solo_Sim_Report.pdf",
+      "pages": 8,
+      "sha256": "1ab45ab7059457b7ce439899765a9ec7fe813c17e1b0cbfa27e8207a5156e4a6"
+    }
+  ],
+  "packetPagesMatchingIndividualText": 18,
+  "individuallyCheckedFaces": 18,
+  "cardOrder": "Roman faces / Roman backs / Gallic faces / Gallic backs",
+  "C06SampleByteMatchesArchivedLog": true,
+  "editedSamplePlayLogMatches": true,
+  "C07AppendixPresent": true,
+  "C08FencedCommandsAndSeed57": true,
+  "helperSHA256": "47d88bb1df00bf044d07824121495c8c924eaa9d703bdb909acaab9f65cb12f2",
+  "helperGitBlobByteMatch": true,
+  "PDFRebuild": "Not completed: no usable local Chrome",
+  "helperBuild": "Authored standalone source, no separate generator"
+}

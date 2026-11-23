@@ -1,0 +1,509 @@
+{
+  "records": [
+    {
+      "variant": "R_final",
+      "opponent": "bot",
+      "seed": 20000,
+      "expected": [
+        8,
+        false
+      ],
+      "actual": [
+        8,
+        false
+      ],
+      "matches": true
+    },
+    {
+      "variant": "R_final",
+      "opponent": "bot",
+      "seed": 20001,
+      "expected": [
+        9,
+        false
+      ],
+      "actual": [
+        9,
+        false
+      ],
+      "matches": true
+    },
+    {
+      "variant": "R_final",
+      "opponent": "smart",
+      "seed": 20000,
+      "expected": [
+        9,
+        false
+      ],
+      "actual": [
+        9,
+        false
+      ],
+      "matches": true
+    },
+    {
+      "variant": "R_final",
+      "opponent": "smart",
+      "seed": 20001,
+      "expected": [
+        2,
+        false
+      ],
+      "actual": [
+        2,
+        false
+      ],
+      "matches": true
+    },
+    {
+      "variant": "R_final",
+      "opponent": "search",
+      "seed": 20000,
+      "expected": [
+        9,
+        false
+      ],
+      "actual": [
+        9,
+        false
+      ],
+      "matches": true
+    },
+    {
+      "variant": "R_final",
+      "opponent": "search",
+      "seed": 20001,
+      "expected": [
+        14,
+        true
+      ],
+      "actual": [
+        14,
+        true
+      ],
+      "matches": true
+    },
+    {
+      "variant": "R_no_danger",
+      "opponent": "bot",
+      "seed": 20000,
+      "expected": [
+        9,
+        false
+      ],
+      "actual": [
+        9,
+        false
+      ],
+      "matches": true
+    },
+    {
+      "variant": "R_no_danger",
+      "opponent": "bot",
+      "seed": 20001,
+      "expected": [
+        9,
+        false
+      ],
+      "actual": [
+        9,
+        false
+      ],
+      "matches": true
+    },
+    {
+      "variant": "R_no_danger",
+      "opponent": "smart",
+      "seed": 20000,
+      "expected": [
+        13,
+        true
+      ],
+      "actual": [
+        13,
+        true
+      ],
+      "matches": true
+    },
+    {
+      "variant": "R_no_danger",
+      "opponent": "smart",
+      "seed": 20001,
+      "expected": [
+        4,
+        false
+      ],
+      "actual": [
+        4,
+        false
+      ],
+      "matches": true
+    },
+    {
+      "variant": "R_no_danger",
+      "opponent": "search",
+      "seed": 20000,
+      "expected": [
+        8,
+        false
+      ],
+      "actual": [
+        8,
+        false
+      ],
+      "matches": true
+    },
+    {
+      "variant": "R_no_danger",
+      "opponent": "search",
+      "seed": 20001,
+      "expected": [
+        14,
+        true
+      ],
+      "actual": [
+        14,
+        true
+      ],
+      "matches": true
+    },
+    {
+      "variant": "R_no_lagging",
+      "opponent": "bot",
+      "seed": 20000,
+      "expected": [
+        5,
+        false
+      ],
+      "actual": [
+        5,
+        false
+      ],
+      "matches": true
+    },
+    {
+      "variant": "R_no_lagging",
+      "opponent": "bot",
+      "seed": 20001,
+      "expected": [
+        12,
+        true
+      ],
+      "actual": [
+        12,
+        true
+      ],
+      "matches": true
+    },
+    {
+      "variant": "R_no_lagging",
+      "opponent": "smart",
+      "seed": 20000,
+      "expected": [
+        7,
+        false
+      ],
+      "actual": [
+        7,
+        false
+      ],
+      "matches": true
+    },
+    {
+      "variant": "R_no_lagging",
+      "opponent": "smart",
+      "seed": 20001,
+      "expected": [
+        5,
+        false
+      ],
+      "actual": [
+        5,
+        false
+      ],
+      "matches": true
+    },
+    {
+      "variant": "R_no_lagging",
+      "opponent": "search",
+      "seed": 20000,
+      "expected": [
+        9,
+        false
+      ],
+      "actual": [
+        9,
+        false
+      ],
+      "matches": true
+    },
+    {
+      "variant": "R_no_lagging",
+      "opponent": "search",
+      "seed": 20001,
+      "expected": [
+        10,
+        false
+      ],
+      "actual": [
+        10,
+        false
+      ],
+      "matches": true
+    },
+    {
+      "variant": "R_no_caesar21",
+      "opponent": "bot",
+      "seed": 20000,
+      "expected": [
+        9,
+        false
+      ],
+      "actual": [
+        9,
+        false
+      ],
+      "matches": true
+    },
+    {
+      "variant": "R_no_caesar21",
+      "opponent": "bot",
+      "seed": 20001,
+      "expected": [
+        9,
+        false
+      ],
+      "actual": [
+        9,
+        false
+      ],
+      "matches": true
+    },
+    {
+      "variant": "R_no_caesar21",
+      "opponent": "smart",
+      "seed": 20000,
+      "expected": [
+        7,
+        false
+      ],
+      "actual": [
+        7,
+        false
+      ],
+      "matches": true
+    },
+    {
+      "variant": "R_no_caesar21",
+      "opponent": "smart",
+      "seed": 20001,
+      "expected": [
+        2,
+        false
+      ],
+      "actual": [
+        2,
+        false
+      ],
+      "matches": true
+    },
+    {
+      "variant": "R_no_caesar21",
+      "opponent": "search",
+      "seed": 20000,
+      "expected": [
+        13,
+        true
+      ],
+      "actual": [
+        13,
+        true
+      ],
+      "matches": true
+    },
+    {
+      "variant": "R_no_caesar21",
+      "opponent": "search",
+      "seed": 20001,
+      "expected": [
+        13,
+        true
+      ],
+      "actual": [
+        13,
+        true
+      ],
+      "matches": true
+    },
+    {
+      "variant": "G_final",
+      "opponent": "bot",
+      "seed": 20000,
+      "expected": [
+        8,
+        true
+      ],
+      "actual": [
+        8,
+        true
+      ],
+      "matches": true
+    },
+    {
+      "variant": "G_final",
+      "opponent": "bot",
+      "seed": 20001,
+      "expected": [
+        9,
+        true
+      ],
+      "actual": [
+        9,
+        true
+      ],
+      "matches": true
+    },
+    {
+      "variant": "G_final",
+      "opponent": "smart",
+      "seed": 20000,
+      "expected": [
+        -2,
+        true
+      ],
+      "actual": [
+        -2,
+        true
+      ],
+      "matches": true
+    },
+    {
+      "variant": "G_final",
+      "opponent": "smart",
+      "seed": 20001,
+      "expected": [
+        -1,
+        true
+      ],
+      "actual": [
+        -1,
+        true
+      ],
+      "matches": true
+    },
+    {
+      "variant": "G_final",
+      "opponent": "search",
+      "seed": 20000,
+      "expected": [
+        5,
+        true
+      ],
+      "actual": [
+        5,
+        true
+      ],
+      "matches": true
+    },
+    {
+      "variant": "G_final",
+      "opponent": "search",
+      "seed": 20001,
+      "expected": [
+        8,
+        true
+      ],
+      "actual": [
+        8,
+        true
+      ],
+      "matches": true
+    },
+    {
+      "variant": "G_no_danger",
+      "opponent": "bot",
+      "seed": 20000,
+      "expected": [
+        10,
+        true
+      ],
+      "actual": [
+        10,
+        true
+      ],
+      "matches": true
+    },
+    {
+      "variant": "G_no_danger",
+      "opponent": "bot",
+      "seed": 20001,
+      "expected": [
+        12,
+        false
+      ],
+      "actual": [
+        12,
+        false
+      ],
+      "matches": true
+    },
+    {
+      "variant": "G_no_danger",
+      "opponent": "smart",
+      "seed": 20000,
+      "expected": [
+        3,
+        true
+      ],
+      "actual": [
+        3,
+        true
+      ],
+      "matches": true
+    },
+    {
+      "variant": "G_no_danger",
+      "opponent": "smart",
+      "seed": 20001,
+      "expected": [
+        15,
+        false
+      ],
+      "actual": [
+        15,
+        false
+      ],
+      "matches": true
+    },
+    {
+      "variant": "G_no_danger",
+      "opponent": "search",
+      "seed": 20000,
+      "expected": [
+        6,
+        true
+      ],
+      "actual": [
+        6,
+        true
+      ],
+      "matches": true
+    },
+    {
+      "variant": "G_no_danger",
+      "opponent": "search",
+      "seed": 20001,
+      "expected": [
+        11,
+        true
+      ],
+      "actual": [
+        11,
+        true
+      ],
+      "matches": true
+    }
+  ],
+  "seconds": 16.74416422843933
+}

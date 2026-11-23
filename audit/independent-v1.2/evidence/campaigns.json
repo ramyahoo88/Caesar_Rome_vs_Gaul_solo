@@ -1,0 +1,8966 @@
+{
+  "commit": "a52079aceab888e1f44cf6a8099337b5fbc7f243",
+  "seconds": 53.535807609558105,
+  "records": [
+    {
+      "label": "Imperator L1",
+      "options": {},
+      "seed": 910000,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 11",
+        "vp": 11,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 10,
+          "events": {
+            "R": 22,
+            "G": 27
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 4,
+          "tribes_elim": 5,
+          "legion_steps_lost": 10,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 5,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L1",
+      "options": {},
+      "seed": 910001,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 18,
+          "events": {
+            "R": 16,
+            "G": 26
+          },
+          "plays": {
+            "R": 50,
+            "G": 48
+          },
+          "submits": 1,
+          "tribes_elim": 5,
+          "legion_steps_lost": 4,
+          "intercepts": 3,
+          "avoids": 1
+        },
+        "elim": 5,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L1",
+      "options": {},
+      "seed": 910002,
+      "result": {
+        "winner": "G",
+        "reason": "governance 2 on turn 6",
+        "vp": 4,
+        "turn": 6,
+        "stats": {
+          "battles": 4,
+          "sieges": 3,
+          "events": {
+            "R": 19,
+            "G": 29
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 0,
+          "tribes_elim": 2,
+          "legion_steps_lost": 6,
+          "intercepts": 0,
+          "avoids": 4
+        },
+        "elim": 2,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L1",
+      "options": {},
+      "seed": 910003,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 8,
+          "events": {
+            "R": 21,
+            "G": 24
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 1,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 1,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L1",
+      "options": {},
+      "seed": 910004,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 1",
+        "vp": 1,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 9,
+          "events": {
+            "R": 22,
+            "G": 26
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 0,
+          "tribes_elim": 3,
+          "legion_steps_lost": 16,
+          "intercepts": 1,
+          "avoids": 0
+        },
+        "elim": 3,
+        "elim_legions": 5
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L1",
+      "options": {},
+      "seed": 910005,
+      "result": {
+        "winner": "G",
+        "reason": "governance 3 on turn 5",
+        "vp": 5,
+        "turn": 5,
+        "stats": {
+          "battles": 0,
+          "sieges": 8,
+          "events": {
+            "R": 15,
+            "G": 26
+          },
+          "plays": {
+            "R": 40,
+            "G": 41
+          },
+          "submits": 1,
+          "tribes_elim": 1,
+          "legion_steps_lost": 3,
+          "intercepts": 1,
+          "avoids": 0
+        },
+        "elim": 1,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 81,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L1",
+      "options": {},
+      "seed": 910006,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 5",
+        "vp": 5,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 3,
+          "events": {
+            "R": 13,
+            "G": 24
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 1,
+          "tribes_elim": 2,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 5
+        },
+        "elim": 2,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L1",
+      "options": {},
+      "seed": 910007,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 9,
+          "events": {
+            "R": 20,
+            "G": 25
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 6,
+          "tribes_elim": 3,
+          "legion_steps_lost": 7,
+          "intercepts": 1,
+          "avoids": 4
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L1",
+      "options": {},
+      "seed": 910008,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 9",
+        "vp": 9,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 9,
+          "events": {
+            "R": 26,
+            "G": 25
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 4,
+          "legion_steps_lost": 14,
+          "intercepts": 2,
+          "avoids": 3
+        },
+        "elim": 4,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L1",
+      "options": {},
+      "seed": 910009,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 6",
+        "vp": 6,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 13,
+          "events": {
+            "R": 24,
+            "G": 25
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 5,
+          "legion_steps_lost": 11,
+          "intercepts": 0,
+          "avoids": 3
+        },
+        "elim": 5,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L1",
+      "options": {},
+      "seed": 910010,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 7,
+          "events": {
+            "R": 19,
+            "G": 24
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 0,
+          "tribes_elim": 4,
+          "legion_steps_lost": 9,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 4,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L1",
+      "options": {},
+      "seed": 910011,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 9,
+          "events": {
+            "R": 21,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 2,
+          "tribes_elim": 2,
+          "legion_steps_lost": 4,
+          "intercepts": 0,
+          "avoids": 4
+        },
+        "elim": 2,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L1",
+      "options": {},
+      "seed": 910012,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 12,
+          "events": {
+            "R": 19,
+            "G": 31
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 3,
+          "tribes_elim": 2,
+          "legion_steps_lost": 2,
+          "intercepts": 1,
+          "avoids": 0
+        },
+        "elim": 2,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L1",
+      "options": {},
+      "seed": 910013,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 6",
+        "vp": 6,
+        "turn": 6,
+        "stats": {
+          "battles": 4,
+          "sieges": 14,
+          "events": {
+            "R": 19,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 7,
+          "tribes_elim": 7,
+          "legion_steps_lost": 14,
+          "intercepts": 1,
+          "avoids": 5
+        },
+        "elim": 7,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L1",
+      "options": {},
+      "seed": 910014,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 5,
+          "events": {
+            "R": 12,
+            "G": 24
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 1,
+          "tribes_elim": 1,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 3
+        },
+        "elim": 1,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L1",
+      "options": {},
+      "seed": 910015,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 3",
+        "vp": 3,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 7,
+          "events": {
+            "R": 13,
+            "G": 25
+          },
+          "plays": {
+            "R": 50,
+            "G": 48
+          },
+          "submits": 3,
+          "tribes_elim": 2,
+          "legion_steps_lost": 7,
+          "intercepts": 0,
+          "avoids": 3
+        },
+        "elim": 2,
+        "elim_legions": 2
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L1",
+      "options": {},
+      "seed": 910016,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 11",
+        "vp": 11,
+        "turn": 6,
+        "stats": {
+          "battles": 4,
+          "sieges": 10,
+          "events": {
+            "R": 22,
+            "G": 19
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 3,
+          "tribes_elim": 6,
+          "legion_steps_lost": 6,
+          "intercepts": 1,
+          "avoids": 3
+        },
+        "elim": 6,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L1",
+      "options": {},
+      "seed": 910017,
+      "result": {
+        "winner": "G",
+        "reason": "governance 3 on turn 5",
+        "vp": 3,
+        "turn": 5,
+        "stats": {
+          "battles": 3,
+          "sieges": 3,
+          "events": {
+            "R": 13,
+            "G": 24
+          },
+          "plays": {
+            "R": 40,
+            "G": 41
+          },
+          "submits": 0,
+          "tribes_elim": 1,
+          "legion_steps_lost": 7,
+          "intercepts": 2,
+          "avoids": 8
+        },
+        "elim": 1,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 81,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L1",
+      "options": {},
+      "seed": 910018,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 7,
+          "events": {
+            "R": 17,
+            "G": 20
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 4,
+          "tribes_elim": 5,
+          "legion_steps_lost": 7,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 5,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 98,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L1",
+      "options": {},
+      "seed": 910019,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 9",
+        "vp": 9,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 9,
+          "events": {
+            "R": 22,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 3,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L2",
+      "options": {
+        "ap_first_R": 4
+      },
+      "seed": 910000,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 6",
+        "vp": 6,
+        "turn": 6,
+        "stats": {
+          "battles": 5,
+          "sieges": 6,
+          "events": {
+            "R": 19,
+            "G": 23
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 0,
+          "tribes_elim": 5,
+          "legion_steps_lost": 19,
+          "intercepts": 1,
+          "avoids": 3
+        },
+        "elim": 5,
+        "elim_legions": 5
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L2",
+      "options": {
+        "ap_first_R": 4
+      },
+      "seed": 910001,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 11",
+        "vp": 11,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 7,
+          "events": {
+            "R": 16,
+            "G": 25
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 3,
+          "tribes_elim": 3,
+          "legion_steps_lost": 1,
+          "intercepts": 0,
+          "avoids": 3
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L2",
+      "options": {
+        "ap_first_R": 4
+      },
+      "seed": 910002,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 5",
+        "vp": 5,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 8,
+          "events": {
+            "R": 17,
+            "G": 28
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 2,
+          "tribes_elim": 2,
+          "legion_steps_lost": 8,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 2,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L2",
+      "options": {
+        "ap_first_R": 4
+      },
+      "seed": 910003,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 15,
+          "events": {
+            "R": 21,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 1,
+          "tribes_elim": 5,
+          "legion_steps_lost": 12,
+          "intercepts": 1,
+          "avoids": 3
+        },
+        "elim": 5,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L2",
+      "options": {
+        "ap_first_R": 4
+      },
+      "seed": 910004,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 12,
+          "events": {
+            "R": 21,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 2,
+          "tribes_elim": 3,
+          "legion_steps_lost": 6,
+          "intercepts": 2,
+          "avoids": 2
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L2",
+      "options": {
+        "ap_first_R": 4
+      },
+      "seed": 910005,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 17,
+          "events": {
+            "R": 15,
+            "G": 30
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 2,
+          "tribes_elim": 4,
+          "legion_steps_lost": 10,
+          "intercepts": 0,
+          "avoids": 7
+        },
+        "elim": 4,
+        "elim_legions": 2
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L2",
+      "options": {
+        "ap_first_R": 4
+      },
+      "seed": 910006,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 5",
+        "vp": 5,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 4,
+          "events": {
+            "R": 10,
+            "G": 21
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 0,
+          "tribes_elim": 2,
+          "legion_steps_lost": 7,
+          "intercepts": 0,
+          "avoids": 2
+        },
+        "elim": 2,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L2",
+      "options": {
+        "ap_first_R": 4
+      },
+      "seed": 910007,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 4,
+          "sieges": 6,
+          "events": {
+            "R": 20,
+            "G": 20
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 2,
+          "legion_steps_lost": 8,
+          "intercepts": 4,
+          "avoids": 2
+        },
+        "elim": 2,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L2",
+      "options": {
+        "ap_first_R": 4
+      },
+      "seed": 910008,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 9",
+        "vp": 9,
+        "turn": 6,
+        "stats": {
+          "battles": 7,
+          "sieges": 12,
+          "events": {
+            "R": 19,
+            "G": 24
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 5,
+          "tribes_elim": 9,
+          "legion_steps_lost": 8,
+          "intercepts": 0,
+          "avoids": 9
+        },
+        "elim": 9,
+        "elim_legions": 2
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L2",
+      "options": {
+        "ap_first_R": 4
+      },
+      "seed": 910009,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 14",
+        "vp": 14,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 16,
+          "events": {
+            "R": 22,
+            "G": 24
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 5,
+          "tribes_elim": 4,
+          "legion_steps_lost": 3,
+          "intercepts": 1,
+          "avoids": 4
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L2",
+      "options": {
+        "ap_first_R": 4
+      },
+      "seed": 910010,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 9",
+        "vp": 9,
+        "turn": 6,
+        "stats": {
+          "battles": 4,
+          "sieges": 7,
+          "events": {
+            "R": 17,
+            "G": 25
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 1,
+          "tribes_elim": 3,
+          "legion_steps_lost": 10,
+          "intercepts": 2,
+          "avoids": 3
+        },
+        "elim": 3,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L2",
+      "options": {
+        "ap_first_R": 4
+      },
+      "seed": 910011,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 6,
+          "events": {
+            "R": 20,
+            "G": 27
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 3,
+          "legion_steps_lost": 1,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L2",
+      "options": {
+        "ap_first_R": 4
+      },
+      "seed": 910012,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 9",
+        "vp": 9,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 19,
+          "events": {
+            "R": 15,
+            "G": 28
+          },
+          "plays": {
+            "R": 50,
+            "G": 50
+          },
+          "submits": 1,
+          "tribes_elim": 7,
+          "legion_steps_lost": 9,
+          "intercepts": 1,
+          "avoids": 2
+        },
+        "elim": 7,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L2",
+      "options": {
+        "ap_first_R": 4
+      },
+      "seed": 910013,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 14,
+          "events": {
+            "R": 20,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 5,
+          "tribes_elim": 5,
+          "legion_steps_lost": 7,
+          "intercepts": 1,
+          "avoids": 3
+        },
+        "elim": 5,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L2",
+      "options": {
+        "ap_first_R": 4
+      },
+      "seed": 910014,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 10,
+          "events": {
+            "R": 21,
+            "G": 26
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 3,
+          "tribes_elim": 5,
+          "legion_steps_lost": 6,
+          "intercepts": 0,
+          "avoids": 3
+        },
+        "elim": 5,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L2",
+      "options": {
+        "ap_first_R": 4
+      },
+      "seed": 910015,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 5",
+        "vp": 5,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 3,
+          "events": {
+            "R": 16,
+            "G": 25
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 0,
+          "tribes_elim": 1,
+          "legion_steps_lost": 11,
+          "intercepts": 1,
+          "avoids": 0
+        },
+        "elim": 1,
+        "elim_legions": 2
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L2",
+      "options": {
+        "ap_first_R": 4
+      },
+      "seed": 910016,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 9,
+          "events": {
+            "R": 21,
+            "G": 25
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 3,
+          "tribes_elim": 6,
+          "legion_steps_lost": 7,
+          "intercepts": 1,
+          "avoids": 2
+        },
+        "elim": 6,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L2",
+      "options": {
+        "ap_first_R": 4
+      },
+      "seed": 910017,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 14,
+          "events": {
+            "R": 21,
+            "G": 31
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 4,
+          "tribes_elim": 4,
+          "legion_steps_lost": 8,
+          "intercepts": 1,
+          "avoids": 1
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L2",
+      "options": {
+        "ap_first_R": 4
+      },
+      "seed": 910018,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 8,
+          "events": {
+            "R": 17,
+            "G": 19
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 3,
+          "tribes_elim": 1,
+          "legion_steps_lost": 1,
+          "intercepts": 1,
+          "avoids": 1
+        },
+        "elim": 1,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 98,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L2",
+      "options": {
+        "ap_first_R": 4
+      },
+      "seed": 910019,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 11,
+          "events": {
+            "R": 22,
+            "G": 30
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 1,
+          "tribes_elim": 3,
+          "legion_steps_lost": 6,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 3,
+        "elim_legions": 2
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L3",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 910000,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 10,
+          "events": {
+            "R": 17,
+            "G": 24
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 3,
+          "tribes_elim": 4,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L3",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 910001,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 11",
+        "vp": 11,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 7,
+          "events": {
+            "R": 19,
+            "G": 28
+          },
+          "plays": {
+            "R": 50,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 1,
+          "legion_steps_lost": 4,
+          "intercepts": 1,
+          "avoids": 1
+        },
+        "elim": 1,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L3",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 910002,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 5,
+          "events": {
+            "R": 17,
+            "G": 28
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 1,
+          "tribes_elim": 0,
+          "legion_steps_lost": 4,
+          "intercepts": 2,
+          "avoids": 0
+        },
+        "elim": 0,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L3",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 910003,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 11,
+          "events": {
+            "R": 20,
+            "G": 25
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 3,
+          "legion_steps_lost": 7,
+          "intercepts": 1,
+          "avoids": 3
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L3",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 910004,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 12,
+          "events": {
+            "R": 17,
+            "G": 21
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 2,
+          "tribes_elim": 3,
+          "legion_steps_lost": 5,
+          "intercepts": 1,
+          "avoids": 2
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L3",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 910005,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 11,
+          "events": {
+            "R": 15,
+            "G": 26
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 1,
+          "tribes_elim": 3,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L3",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 910006,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 9,
+          "events": {
+            "R": 20,
+            "G": 22
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 1,
+          "tribes_elim": 3,
+          "legion_steps_lost": 4,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L3",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 910007,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 5,
+          "events": {
+            "R": 22,
+            "G": 19
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 2,
+          "legion_steps_lost": 7,
+          "intercepts": 2,
+          "avoids": 0
+        },
+        "elim": 2,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L3",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 910008,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 13",
+        "vp": 13,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 10,
+          "events": {
+            "R": 18,
+            "G": 26
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 3,
+          "tribes_elim": 5,
+          "legion_steps_lost": 9,
+          "intercepts": 0,
+          "avoids": 5
+        },
+        "elim": 5,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L3",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 910009,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 4,
+          "sieges": 13,
+          "events": {
+            "R": 21,
+            "G": 24
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 0,
+          "tribes_elim": 5,
+          "legion_steps_lost": 16,
+          "intercepts": 3,
+          "avoids": 8
+        },
+        "elim": 5,
+        "elim_legions": 4
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L3",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 910010,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 16,
+          "events": {
+            "R": 18,
+            "G": 26
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 4,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L3",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 910011,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 11,
+          "events": {
+            "R": 15,
+            "G": 26
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 6,
+          "tribes_elim": 5,
+          "legion_steps_lost": 7,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 5,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L3",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 910012,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 13",
+        "vp": 13,
+        "turn": 6,
+        "stats": {
+          "battles": 5,
+          "sieges": 18,
+          "events": {
+            "R": 27,
+            "G": 30
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 2,
+          "tribes_elim": 8,
+          "legion_steps_lost": 10,
+          "intercepts": 0,
+          "avoids": 7
+        },
+        "elim": 8,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L3",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 910013,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 14",
+        "vp": 14,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 17,
+          "events": {
+            "R": 17,
+            "G": 21
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 0,
+          "tribes_elim": 5,
+          "legion_steps_lost": 9,
+          "intercepts": 4,
+          "avoids": 1
+        },
+        "elim": 5,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L3",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 910014,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 2,
+          "events": {
+            "R": 16,
+            "G": 24
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 1,
+          "tribes_elim": 0,
+          "legion_steps_lost": 6,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 0,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L3",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 910015,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 11",
+        "vp": 11,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 8,
+          "events": {
+            "R": 16,
+            "G": 25
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 3,
+          "legion_steps_lost": 7,
+          "intercepts": 3,
+          "avoids": 3
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L3",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 910016,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 11",
+        "vp": 11,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 6,
+          "events": {
+            "R": 19,
+            "G": 23
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 5,
+          "legion_steps_lost": 7,
+          "intercepts": 1,
+          "avoids": 3
+        },
+        "elim": 5,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L3",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 910017,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 4,
+          "sieges": 8,
+          "events": {
+            "R": 18,
+            "G": 27
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 3,
+          "legion_steps_lost": 9,
+          "intercepts": 0,
+          "avoids": 4
+        },
+        "elim": 3,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L3",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 910018,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 7,
+          "events": {
+            "R": 23,
+            "G": 27
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 3,
+          "tribes_elim": 3,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 98,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L3",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 910019,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 11",
+        "vp": 11,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 6,
+          "events": {
+            "R": 22,
+            "G": 27
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 2,
+          "legion_steps_lost": 2,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 2,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L4",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 10
+      },
+      "seed": 910000,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 10,
+          "events": {
+            "R": 17,
+            "G": 24
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 3,
+          "tribes_elim": 4,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L4",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 10
+      },
+      "seed": 910001,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 11",
+        "vp": 11,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 7,
+          "events": {
+            "R": 19,
+            "G": 28
+          },
+          "plays": {
+            "R": 50,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 1,
+          "legion_steps_lost": 4,
+          "intercepts": 1,
+          "avoids": 1
+        },
+        "elim": 1,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L4",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 10
+      },
+      "seed": 910002,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 5,
+          "events": {
+            "R": 17,
+            "G": 28
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 1,
+          "tribes_elim": 0,
+          "legion_steps_lost": 4,
+          "intercepts": 2,
+          "avoids": 0
+        },
+        "elim": 0,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L4",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 10
+      },
+      "seed": 910003,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 11,
+          "events": {
+            "R": 20,
+            "G": 25
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 3,
+          "legion_steps_lost": 7,
+          "intercepts": 1,
+          "avoids": 3
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L4",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 10
+      },
+      "seed": 910004,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 12,
+          "events": {
+            "R": 17,
+            "G": 21
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 2,
+          "tribes_elim": 3,
+          "legion_steps_lost": 5,
+          "intercepts": 1,
+          "avoids": 2
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L4",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 10
+      },
+      "seed": 910005,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 11,
+          "events": {
+            "R": 15,
+            "G": 26
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 1,
+          "tribes_elim": 3,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L4",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 10
+      },
+      "seed": 910006,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 9,
+          "events": {
+            "R": 20,
+            "G": 22
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 1,
+          "tribes_elim": 3,
+          "legion_steps_lost": 4,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L4",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 10
+      },
+      "seed": 910007,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 5,
+          "events": {
+            "R": 22,
+            "G": 19
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 2,
+          "legion_steps_lost": 7,
+          "intercepts": 2,
+          "avoids": 0
+        },
+        "elim": 2,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L4",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 10
+      },
+      "seed": 910008,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 13",
+        "vp": 13,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 10,
+          "events": {
+            "R": 18,
+            "G": 26
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 3,
+          "tribes_elim": 5,
+          "legion_steps_lost": 9,
+          "intercepts": 0,
+          "avoids": 5
+        },
+        "elim": 5,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L4",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 10
+      },
+      "seed": 910009,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 4,
+          "sieges": 13,
+          "events": {
+            "R": 21,
+            "G": 24
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 0,
+          "tribes_elim": 5,
+          "legion_steps_lost": 16,
+          "intercepts": 3,
+          "avoids": 8
+        },
+        "elim": 5,
+        "elim_legions": 4
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L4",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 10
+      },
+      "seed": 910010,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 16,
+          "events": {
+            "R": 18,
+            "G": 26
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 4,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L4",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 10
+      },
+      "seed": 910011,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 11,
+          "events": {
+            "R": 15,
+            "G": 26
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 6,
+          "tribes_elim": 5,
+          "legion_steps_lost": 7,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 5,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L4",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 10
+      },
+      "seed": 910012,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 13",
+        "vp": 13,
+        "turn": 6,
+        "stats": {
+          "battles": 5,
+          "sieges": 18,
+          "events": {
+            "R": 27,
+            "G": 30
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 2,
+          "tribes_elim": 8,
+          "legion_steps_lost": 10,
+          "intercepts": 0,
+          "avoids": 7
+        },
+        "elim": 8,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L4",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 10
+      },
+      "seed": 910013,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 14",
+        "vp": 14,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 17,
+          "events": {
+            "R": 17,
+            "G": 21
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 0,
+          "tribes_elim": 5,
+          "legion_steps_lost": 9,
+          "intercepts": 4,
+          "avoids": 1
+        },
+        "elim": 5,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L4",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 10
+      },
+      "seed": 910014,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 2,
+          "events": {
+            "R": 16,
+            "G": 24
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 1,
+          "tribes_elim": 0,
+          "legion_steps_lost": 6,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 0,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L4",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 10
+      },
+      "seed": 910015,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 11",
+        "vp": 11,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 8,
+          "events": {
+            "R": 16,
+            "G": 25
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 3,
+          "legion_steps_lost": 7,
+          "intercepts": 3,
+          "avoids": 3
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L4",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 10
+      },
+      "seed": 910016,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 11",
+        "vp": 11,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 6,
+          "events": {
+            "R": 19,
+            "G": 23
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 5,
+          "legion_steps_lost": 7,
+          "intercepts": 1,
+          "avoids": 3
+        },
+        "elim": 5,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L4",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 10
+      },
+      "seed": 910017,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 4,
+          "sieges": 8,
+          "events": {
+            "R": 18,
+            "G": 27
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 3,
+          "legion_steps_lost": 9,
+          "intercepts": 0,
+          "avoids": 4
+        },
+        "elim": 3,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L4",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 10
+      },
+      "seed": 910018,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 7,
+          "events": {
+            "R": 23,
+            "G": 27
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 3,
+          "tribes_elim": 3,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 98,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L4",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 10
+      },
+      "seed": 910019,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 11",
+        "vp": 11,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 6,
+          "events": {
+            "R": 22,
+            "G": 27
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 2,
+          "legion_steps_lost": 2,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 2,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L5",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 9
+      },
+      "seed": 910000,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 10,
+          "events": {
+            "R": 17,
+            "G": 24
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 3,
+          "tribes_elim": 4,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L5",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 9
+      },
+      "seed": 910001,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 11",
+        "vp": 11,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 7,
+          "events": {
+            "R": 19,
+            "G": 28
+          },
+          "plays": {
+            "R": 50,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 1,
+          "legion_steps_lost": 4,
+          "intercepts": 1,
+          "avoids": 1
+        },
+        "elim": 1,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L5",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 9
+      },
+      "seed": 910002,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 5,
+          "events": {
+            "R": 17,
+            "G": 28
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 1,
+          "tribes_elim": 0,
+          "legion_steps_lost": 4,
+          "intercepts": 2,
+          "avoids": 0
+        },
+        "elim": 0,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L5",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 9
+      },
+      "seed": 910003,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 11,
+          "events": {
+            "R": 20,
+            "G": 25
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 3,
+          "legion_steps_lost": 7,
+          "intercepts": 1,
+          "avoids": 3
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L5",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 9
+      },
+      "seed": 910004,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 12,
+          "events": {
+            "R": 17,
+            "G": 21
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 2,
+          "tribes_elim": 3,
+          "legion_steps_lost": 5,
+          "intercepts": 1,
+          "avoids": 2
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L5",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 9
+      },
+      "seed": 910005,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 11,
+          "events": {
+            "R": 15,
+            "G": 26
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 1,
+          "tribes_elim": 3,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L5",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 9
+      },
+      "seed": 910006,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 9,
+          "events": {
+            "R": 20,
+            "G": 22
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 1,
+          "tribes_elim": 3,
+          "legion_steps_lost": 4,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L5",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 9
+      },
+      "seed": 910007,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 5,
+          "events": {
+            "R": 22,
+            "G": 19
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 2,
+          "legion_steps_lost": 7,
+          "intercepts": 2,
+          "avoids": 0
+        },
+        "elim": 2,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L5",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 9
+      },
+      "seed": 910008,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 13",
+        "vp": 13,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 10,
+          "events": {
+            "R": 18,
+            "G": 26
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 3,
+          "tribes_elim": 5,
+          "legion_steps_lost": 9,
+          "intercepts": 0,
+          "avoids": 5
+        },
+        "elim": 5,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L5",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 9
+      },
+      "seed": 910009,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 4,
+          "sieges": 13,
+          "events": {
+            "R": 21,
+            "G": 24
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 0,
+          "tribes_elim": 5,
+          "legion_steps_lost": 16,
+          "intercepts": 3,
+          "avoids": 8
+        },
+        "elim": 5,
+        "elim_legions": 4
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L5",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 9
+      },
+      "seed": 910010,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 16,
+          "events": {
+            "R": 18,
+            "G": 26
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 4,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L5",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 9
+      },
+      "seed": 910011,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 11,
+          "events": {
+            "R": 15,
+            "G": 26
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 6,
+          "tribes_elim": 5,
+          "legion_steps_lost": 7,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 5,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L5",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 9
+      },
+      "seed": 910012,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 13",
+        "vp": 13,
+        "turn": 6,
+        "stats": {
+          "battles": 5,
+          "sieges": 18,
+          "events": {
+            "R": 27,
+            "G": 30
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 2,
+          "tribes_elim": 8,
+          "legion_steps_lost": 10,
+          "intercepts": 0,
+          "avoids": 7
+        },
+        "elim": 8,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L5",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 9
+      },
+      "seed": 910013,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 14",
+        "vp": 14,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 17,
+          "events": {
+            "R": 17,
+            "G": 21
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 0,
+          "tribes_elim": 5,
+          "legion_steps_lost": 9,
+          "intercepts": 4,
+          "avoids": 1
+        },
+        "elim": 5,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L5",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 9
+      },
+      "seed": 910014,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 2,
+          "events": {
+            "R": 16,
+            "G": 24
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 1,
+          "tribes_elim": 0,
+          "legion_steps_lost": 6,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 0,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L5",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 9
+      },
+      "seed": 910015,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 11",
+        "vp": 11,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 8,
+          "events": {
+            "R": 16,
+            "G": 25
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 3,
+          "legion_steps_lost": 7,
+          "intercepts": 3,
+          "avoids": 3
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L5",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 9
+      },
+      "seed": 910016,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 11",
+        "vp": 11,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 6,
+          "events": {
+            "R": 19,
+            "G": 23
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 5,
+          "legion_steps_lost": 7,
+          "intercepts": 1,
+          "avoids": 3
+        },
+        "elim": 5,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L5",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 9
+      },
+      "seed": 910017,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 4,
+          "sieges": 8,
+          "events": {
+            "R": 18,
+            "G": 27
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 3,
+          "legion_steps_lost": 9,
+          "intercepts": 0,
+          "avoids": 4
+        },
+        "elim": 3,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L5",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 9
+      },
+      "seed": 910018,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 7,
+          "events": {
+            "R": 23,
+            "G": 27
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 3,
+          "tribes_elim": 3,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 98,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Imperator L5",
+      "options": {
+        "ap_bonus_R": 1,
+        "vp_target": 9
+      },
+      "seed": 910019,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 11",
+        "vp": 11,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 6,
+          "events": {
+            "R": 22,
+            "G": 27
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 2,
+          "legion_steps_lost": 2,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 2,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L1",
+      "options": {
+        "vp_target": 9,
+        "ap_bonus_R": 1
+      },
+      "seed": 920000,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 4,
+          "sieges": 9,
+          "events": {
+            "R": 15,
+            "G": 27
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 3,
+          "tribes_elim": 5,
+          "legion_steps_lost": 12,
+          "intercepts": 3,
+          "avoids": 1
+        },
+        "elim": 5,
+        "elim_legions": 2
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L1",
+      "options": {
+        "vp_target": 9,
+        "ap_bonus_R": 1
+      },
+      "seed": 920001,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 4,
+          "events": {
+            "R": 18,
+            "G": 25
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 0,
+          "tribes_elim": 1,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 1,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L1",
+      "options": {
+        "vp_target": 9,
+        "ap_bonus_R": 1
+      },
+      "seed": 920002,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 1,
+          "events": {
+            "R": 23,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 0,
+          "tribes_elim": 2,
+          "legion_steps_lost": 14,
+          "intercepts": 2,
+          "avoids": 4
+        },
+        "elim": 2,
+        "elim_legions": 4
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L1",
+      "options": {
+        "vp_target": 9,
+        "ap_bonus_R": 1
+      },
+      "seed": 920003,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 10,
+          "events": {
+            "R": 12,
+            "G": 24
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 3,
+          "legion_steps_lost": 5,
+          "intercepts": 2,
+          "avoids": 3
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L1",
+      "options": {
+        "vp_target": 9,
+        "ap_bonus_R": 1
+      },
+      "seed": 920004,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 17,
+          "events": {
+            "R": 18,
+            "G": 25
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 6,
+          "legion_steps_lost": 6,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 6,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L1",
+      "options": {
+        "vp_target": 9,
+        "ap_bonus_R": 1
+      },
+      "seed": 920005,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 4,
+          "events": {
+            "R": 14,
+            "G": 25
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 1,
+          "legion_steps_lost": 0,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 1,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L1",
+      "options": {
+        "vp_target": 9,
+        "ap_bonus_R": 1
+      },
+      "seed": 920006,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 7,
+          "events": {
+            "R": 19,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 2,
+          "tribes_elim": 4,
+          "legion_steps_lost": 9,
+          "intercepts": 0,
+          "avoids": 2
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L1",
+      "options": {
+        "vp_target": 9,
+        "ap_bonus_R": 1
+      },
+      "seed": 920007,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 11,
+          "events": {
+            "R": 24,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 5,
+          "tribes_elim": 6,
+          "legion_steps_lost": 6,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 6,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L1",
+      "options": {
+        "vp_target": 9,
+        "ap_bonus_R": 1
+      },
+      "seed": 920008,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 13",
+        "vp": 13,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 9,
+          "events": {
+            "R": 20,
+            "G": 26
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 3,
+          "tribes_elim": 3,
+          "legion_steps_lost": 2,
+          "intercepts": 2,
+          "avoids": 2
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L1",
+      "options": {
+        "vp_target": 9,
+        "ap_bonus_R": 1
+      },
+      "seed": 920009,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 15",
+        "vp": 15,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 8,
+          "events": {
+            "R": 13,
+            "G": 20
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 5,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 3
+        },
+        "elim": 5,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L1",
+      "options": {
+        "vp_target": 9,
+        "ap_bonus_R": 1
+      },
+      "seed": 920010,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 10,
+          "events": {
+            "R": 23,
+            "G": 26
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 4,
+          "tribes_elim": 3,
+          "legion_steps_lost": 6,
+          "intercepts": 1,
+          "avoids": 0
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L1",
+      "options": {
+        "vp_target": 9,
+        "ap_bonus_R": 1
+      },
+      "seed": 920011,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 12,
+          "events": {
+            "R": 22,
+            "G": 24
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 6,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 6,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L1",
+      "options": {
+        "vp_target": 9,
+        "ap_bonus_R": 1
+      },
+      "seed": 920012,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 14",
+        "vp": 14,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 11,
+          "events": {
+            "R": 22,
+            "G": 29
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 2,
+          "tribes_elim": 7,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 5
+        },
+        "elim": 7,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L1",
+      "options": {
+        "vp_target": 9,
+        "ap_bonus_R": 1
+      },
+      "seed": 920013,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 10,
+          "events": {
+            "R": 19,
+            "G": 28
+          },
+          "plays": {
+            "R": 50,
+            "G": 50
+          },
+          "submits": 4,
+          "tribes_elim": 4,
+          "legion_steps_lost": 6,
+          "intercepts": 0,
+          "avoids": 2
+        },
+        "elim": 4,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L1",
+      "options": {
+        "vp_target": 9,
+        "ap_bonus_R": 1
+      },
+      "seed": 920014,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 13",
+        "vp": 13,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 10,
+          "events": {
+            "R": 22,
+            "G": 20
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 3,
+          "tribes_elim": 3,
+          "legion_steps_lost": 4,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L1",
+      "options": {
+        "vp_target": 9,
+        "ap_bonus_R": 1
+      },
+      "seed": 920015,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 9,
+          "events": {
+            "R": 22,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 2,
+          "legion_steps_lost": 8,
+          "intercepts": 2,
+          "avoids": 1
+        },
+        "elim": 2,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L1",
+      "options": {
+        "vp_target": 9,
+        "ap_bonus_R": 1
+      },
+      "seed": 920016,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 11,
+          "events": {
+            "R": 17,
+            "G": 24
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 4,
+          "tribes_elim": 3,
+          "legion_steps_lost": 0,
+          "intercepts": 1,
+          "avoids": 1
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L1",
+      "options": {
+        "vp_target": 9,
+        "ap_bonus_R": 1
+      },
+      "seed": 920017,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 8,
+          "events": {
+            "R": 18,
+            "G": 25
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 1,
+          "tribes_elim": 4,
+          "legion_steps_lost": 7,
+          "intercepts": 0,
+          "avoids": 3
+        },
+        "elim": 4,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L1",
+      "options": {
+        "vp_target": 9,
+        "ap_bonus_R": 1
+      },
+      "seed": 920018,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 9",
+        "vp": 9,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 9,
+          "events": {
+            "R": 22,
+            "G": 28
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 0,
+          "tribes_elim": 4,
+          "legion_steps_lost": 4,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L1",
+      "options": {
+        "vp_target": 9,
+        "ap_bonus_R": 1
+      },
+      "seed": 920019,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 10,
+          "events": {
+            "R": 17,
+            "G": 21
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 4,
+          "legion_steps_lost": 5,
+          "intercepts": 2,
+          "avoids": 0
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L2",
+      "options": {
+        "vp_target": 10,
+        "ap_bonus_R": 1
+      },
+      "seed": 920000,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 4,
+          "sieges": 9,
+          "events": {
+            "R": 15,
+            "G": 27
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 3,
+          "tribes_elim": 5,
+          "legion_steps_lost": 12,
+          "intercepts": 3,
+          "avoids": 1
+        },
+        "elim": 5,
+        "elim_legions": 2
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L2",
+      "options": {
+        "vp_target": 10,
+        "ap_bonus_R": 1
+      },
+      "seed": 920001,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 4,
+          "events": {
+            "R": 18,
+            "G": 25
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 0,
+          "tribes_elim": 1,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 1,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L2",
+      "options": {
+        "vp_target": 10,
+        "ap_bonus_R": 1
+      },
+      "seed": 920002,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 1,
+          "events": {
+            "R": 23,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 0,
+          "tribes_elim": 2,
+          "legion_steps_lost": 14,
+          "intercepts": 2,
+          "avoids": 4
+        },
+        "elim": 2,
+        "elim_legions": 4
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L2",
+      "options": {
+        "vp_target": 10,
+        "ap_bonus_R": 1
+      },
+      "seed": 920003,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 10,
+          "events": {
+            "R": 12,
+            "G": 24
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 3,
+          "legion_steps_lost": 5,
+          "intercepts": 2,
+          "avoids": 3
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L2",
+      "options": {
+        "vp_target": 10,
+        "ap_bonus_R": 1
+      },
+      "seed": 920004,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 17,
+          "events": {
+            "R": 18,
+            "G": 25
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 6,
+          "legion_steps_lost": 6,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 6,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L2",
+      "options": {
+        "vp_target": 10,
+        "ap_bonus_R": 1
+      },
+      "seed": 920005,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 4,
+          "events": {
+            "R": 14,
+            "G": 25
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 1,
+          "legion_steps_lost": 0,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 1,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L2",
+      "options": {
+        "vp_target": 10,
+        "ap_bonus_R": 1
+      },
+      "seed": 920006,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 7,
+          "events": {
+            "R": 19,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 2,
+          "tribes_elim": 4,
+          "legion_steps_lost": 9,
+          "intercepts": 0,
+          "avoids": 2
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L2",
+      "options": {
+        "vp_target": 10,
+        "ap_bonus_R": 1
+      },
+      "seed": 920007,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 11,
+          "events": {
+            "R": 24,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 5,
+          "tribes_elim": 6,
+          "legion_steps_lost": 6,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 6,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L2",
+      "options": {
+        "vp_target": 10,
+        "ap_bonus_R": 1
+      },
+      "seed": 920008,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 13",
+        "vp": 13,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 9,
+          "events": {
+            "R": 20,
+            "G": 26
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 3,
+          "tribes_elim": 3,
+          "legion_steps_lost": 2,
+          "intercepts": 2,
+          "avoids": 2
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L2",
+      "options": {
+        "vp_target": 10,
+        "ap_bonus_R": 1
+      },
+      "seed": 920009,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 15",
+        "vp": 15,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 8,
+          "events": {
+            "R": 13,
+            "G": 20
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 5,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 3
+        },
+        "elim": 5,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L2",
+      "options": {
+        "vp_target": 10,
+        "ap_bonus_R": 1
+      },
+      "seed": 920010,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 10,
+          "events": {
+            "R": 23,
+            "G": 26
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 4,
+          "tribes_elim": 3,
+          "legion_steps_lost": 6,
+          "intercepts": 1,
+          "avoids": 0
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L2",
+      "options": {
+        "vp_target": 10,
+        "ap_bonus_R": 1
+      },
+      "seed": 920011,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 12,
+          "events": {
+            "R": 22,
+            "G": 24
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 6,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 6,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L2",
+      "options": {
+        "vp_target": 10,
+        "ap_bonus_R": 1
+      },
+      "seed": 920012,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 14",
+        "vp": 14,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 11,
+          "events": {
+            "R": 22,
+            "G": 29
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 2,
+          "tribes_elim": 7,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 5
+        },
+        "elim": 7,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L2",
+      "options": {
+        "vp_target": 10,
+        "ap_bonus_R": 1
+      },
+      "seed": 920013,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 10,
+          "events": {
+            "R": 19,
+            "G": 28
+          },
+          "plays": {
+            "R": 50,
+            "G": 50
+          },
+          "submits": 4,
+          "tribes_elim": 4,
+          "legion_steps_lost": 6,
+          "intercepts": 0,
+          "avoids": 2
+        },
+        "elim": 4,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L2",
+      "options": {
+        "vp_target": 10,
+        "ap_bonus_R": 1
+      },
+      "seed": 920014,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 13",
+        "vp": 13,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 10,
+          "events": {
+            "R": 22,
+            "G": 20
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 3,
+          "tribes_elim": 3,
+          "legion_steps_lost": 4,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L2",
+      "options": {
+        "vp_target": 10,
+        "ap_bonus_R": 1
+      },
+      "seed": 920015,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 9,
+          "events": {
+            "R": 22,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 2,
+          "legion_steps_lost": 8,
+          "intercepts": 2,
+          "avoids": 1
+        },
+        "elim": 2,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L2",
+      "options": {
+        "vp_target": 10,
+        "ap_bonus_R": 1
+      },
+      "seed": 920016,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 11,
+          "events": {
+            "R": 17,
+            "G": 24
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 4,
+          "tribes_elim": 3,
+          "legion_steps_lost": 0,
+          "intercepts": 1,
+          "avoids": 1
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L2",
+      "options": {
+        "vp_target": 10,
+        "ap_bonus_R": 1
+      },
+      "seed": 920017,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 8,
+          "events": {
+            "R": 18,
+            "G": 25
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 1,
+          "tribes_elim": 4,
+          "legion_steps_lost": 7,
+          "intercepts": 0,
+          "avoids": 3
+        },
+        "elim": 4,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L2",
+      "options": {
+        "vp_target": 10,
+        "ap_bonus_R": 1
+      },
+      "seed": 920018,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 9",
+        "vp": 9,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 9,
+          "events": {
+            "R": 22,
+            "G": 28
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 0,
+          "tribes_elim": 4,
+          "legion_steps_lost": 4,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L2",
+      "options": {
+        "vp_target": 10,
+        "ap_bonus_R": 1
+      },
+      "seed": 920019,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 10,
+          "events": {
+            "R": 17,
+            "G": 21
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 4,
+          "legion_steps_lost": 5,
+          "intercepts": 2,
+          "avoids": 0
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L3",
+      "options": {
+        "vp_target": 11,
+        "ap_bonus_R": 1
+      },
+      "seed": 920000,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 4,
+          "sieges": 9,
+          "events": {
+            "R": 15,
+            "G": 27
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 3,
+          "tribes_elim": 5,
+          "legion_steps_lost": 12,
+          "intercepts": 3,
+          "avoids": 1
+        },
+        "elim": 5,
+        "elim_legions": 2
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L3",
+      "options": {
+        "vp_target": 11,
+        "ap_bonus_R": 1
+      },
+      "seed": 920001,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 4,
+          "events": {
+            "R": 18,
+            "G": 25
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 0,
+          "tribes_elim": 1,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 1,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L3",
+      "options": {
+        "vp_target": 11,
+        "ap_bonus_R": 1
+      },
+      "seed": 920002,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 1,
+          "events": {
+            "R": 23,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 0,
+          "tribes_elim": 2,
+          "legion_steps_lost": 14,
+          "intercepts": 2,
+          "avoids": 4
+        },
+        "elim": 2,
+        "elim_legions": 4
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L3",
+      "options": {
+        "vp_target": 11,
+        "ap_bonus_R": 1
+      },
+      "seed": 920003,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 10,
+          "events": {
+            "R": 12,
+            "G": 24
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 3,
+          "legion_steps_lost": 5,
+          "intercepts": 2,
+          "avoids": 3
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L3",
+      "options": {
+        "vp_target": 11,
+        "ap_bonus_R": 1
+      },
+      "seed": 920004,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 17,
+          "events": {
+            "R": 18,
+            "G": 25
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 6,
+          "legion_steps_lost": 6,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 6,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L3",
+      "options": {
+        "vp_target": 11,
+        "ap_bonus_R": 1
+      },
+      "seed": 920005,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 4,
+          "events": {
+            "R": 14,
+            "G": 25
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 1,
+          "legion_steps_lost": 0,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 1,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L3",
+      "options": {
+        "vp_target": 11,
+        "ap_bonus_R": 1
+      },
+      "seed": 920006,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 7,
+          "events": {
+            "R": 19,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 2,
+          "tribes_elim": 4,
+          "legion_steps_lost": 9,
+          "intercepts": 0,
+          "avoids": 2
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L3",
+      "options": {
+        "vp_target": 11,
+        "ap_bonus_R": 1
+      },
+      "seed": 920007,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 11,
+          "events": {
+            "R": 24,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 5,
+          "tribes_elim": 6,
+          "legion_steps_lost": 6,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 6,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L3",
+      "options": {
+        "vp_target": 11,
+        "ap_bonus_R": 1
+      },
+      "seed": 920008,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 13",
+        "vp": 13,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 9,
+          "events": {
+            "R": 20,
+            "G": 26
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 3,
+          "tribes_elim": 3,
+          "legion_steps_lost": 2,
+          "intercepts": 2,
+          "avoids": 2
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L3",
+      "options": {
+        "vp_target": 11,
+        "ap_bonus_R": 1
+      },
+      "seed": 920009,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 15",
+        "vp": 15,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 8,
+          "events": {
+            "R": 13,
+            "G": 20
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 5,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 3
+        },
+        "elim": 5,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L3",
+      "options": {
+        "vp_target": 11,
+        "ap_bonus_R": 1
+      },
+      "seed": 920010,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 10,
+          "events": {
+            "R": 23,
+            "G": 26
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 4,
+          "tribes_elim": 3,
+          "legion_steps_lost": 6,
+          "intercepts": 1,
+          "avoids": 0
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L3",
+      "options": {
+        "vp_target": 11,
+        "ap_bonus_R": 1
+      },
+      "seed": 920011,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 12,
+          "events": {
+            "R": 22,
+            "G": 24
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 6,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 6,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L3",
+      "options": {
+        "vp_target": 11,
+        "ap_bonus_R": 1
+      },
+      "seed": 920012,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 14",
+        "vp": 14,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 11,
+          "events": {
+            "R": 22,
+            "G": 29
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 2,
+          "tribes_elim": 7,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 5
+        },
+        "elim": 7,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L3",
+      "options": {
+        "vp_target": 11,
+        "ap_bonus_R": 1
+      },
+      "seed": 920013,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 10,
+          "events": {
+            "R": 19,
+            "G": 28
+          },
+          "plays": {
+            "R": 50,
+            "G": 50
+          },
+          "submits": 4,
+          "tribes_elim": 4,
+          "legion_steps_lost": 6,
+          "intercepts": 0,
+          "avoids": 2
+        },
+        "elim": 4,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L3",
+      "options": {
+        "vp_target": 11,
+        "ap_bonus_R": 1
+      },
+      "seed": 920014,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 13",
+        "vp": 13,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 10,
+          "events": {
+            "R": 22,
+            "G": 20
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 3,
+          "tribes_elim": 3,
+          "legion_steps_lost": 4,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L3",
+      "options": {
+        "vp_target": 11,
+        "ap_bonus_R": 1
+      },
+      "seed": 920015,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 9,
+          "events": {
+            "R": 22,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 2,
+          "legion_steps_lost": 8,
+          "intercepts": 2,
+          "avoids": 1
+        },
+        "elim": 2,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L3",
+      "options": {
+        "vp_target": 11,
+        "ap_bonus_R": 1
+      },
+      "seed": 920016,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 11,
+          "events": {
+            "R": 17,
+            "G": 24
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 4,
+          "tribes_elim": 3,
+          "legion_steps_lost": 0,
+          "intercepts": 1,
+          "avoids": 1
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L3",
+      "options": {
+        "vp_target": 11,
+        "ap_bonus_R": 1
+      },
+      "seed": 920017,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 8,
+          "events": {
+            "R": 18,
+            "G": 25
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 1,
+          "tribes_elim": 4,
+          "legion_steps_lost": 7,
+          "intercepts": 0,
+          "avoids": 3
+        },
+        "elim": 4,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L3",
+      "options": {
+        "vp_target": 11,
+        "ap_bonus_R": 1
+      },
+      "seed": 920018,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 9",
+        "vp": 9,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 9,
+          "events": {
+            "R": 22,
+            "G": 28
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 0,
+          "tribes_elim": 4,
+          "legion_steps_lost": 4,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L3",
+      "options": {
+        "vp_target": 11,
+        "ap_bonus_R": 1
+      },
+      "seed": 920019,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 10,
+          "events": {
+            "R": 17,
+            "G": 21
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 4,
+          "legion_steps_lost": 5,
+          "intercepts": 2,
+          "avoids": 0
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L4",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 920000,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 4,
+          "sieges": 9,
+          "events": {
+            "R": 15,
+            "G": 27
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 3,
+          "tribes_elim": 5,
+          "legion_steps_lost": 12,
+          "intercepts": 3,
+          "avoids": 1
+        },
+        "elim": 5,
+        "elim_legions": 2
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L4",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 920001,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 4,
+          "events": {
+            "R": 18,
+            "G": 25
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 0,
+          "tribes_elim": 1,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 1,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L4",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 920002,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 1,
+          "events": {
+            "R": 23,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 0,
+          "tribes_elim": 2,
+          "legion_steps_lost": 14,
+          "intercepts": 2,
+          "avoids": 4
+        },
+        "elim": 2,
+        "elim_legions": 4
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L4",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 920003,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 10,
+          "events": {
+            "R": 12,
+            "G": 24
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 3,
+          "legion_steps_lost": 5,
+          "intercepts": 2,
+          "avoids": 3
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L4",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 920004,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 17,
+          "events": {
+            "R": 18,
+            "G": 25
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 6,
+          "legion_steps_lost": 6,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 6,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L4",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 920005,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 4,
+          "events": {
+            "R": 14,
+            "G": 25
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 1,
+          "legion_steps_lost": 0,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 1,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L4",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 920006,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 7,
+          "events": {
+            "R": 19,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 2,
+          "tribes_elim": 4,
+          "legion_steps_lost": 9,
+          "intercepts": 0,
+          "avoids": 2
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L4",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 920007,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 11,
+          "events": {
+            "R": 24,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 5,
+          "tribes_elim": 6,
+          "legion_steps_lost": 6,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 6,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L4",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 920008,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 13",
+        "vp": 13,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 9,
+          "events": {
+            "R": 20,
+            "G": 26
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 3,
+          "tribes_elim": 3,
+          "legion_steps_lost": 2,
+          "intercepts": 2,
+          "avoids": 2
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L4",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 920009,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 15",
+        "vp": 15,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 8,
+          "events": {
+            "R": 13,
+            "G": 20
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 5,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 3
+        },
+        "elim": 5,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L4",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 920010,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 10,
+          "events": {
+            "R": 23,
+            "G": 26
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 4,
+          "tribes_elim": 3,
+          "legion_steps_lost": 6,
+          "intercepts": 1,
+          "avoids": 0
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L4",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 920011,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 12,
+          "events": {
+            "R": 22,
+            "G": 24
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 6,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 6,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L4",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 920012,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 14",
+        "vp": 14,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 11,
+          "events": {
+            "R": 22,
+            "G": 29
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 2,
+          "tribes_elim": 7,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 5
+        },
+        "elim": 7,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L4",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 920013,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 10,
+          "events": {
+            "R": 19,
+            "G": 28
+          },
+          "plays": {
+            "R": 50,
+            "G": 50
+          },
+          "submits": 4,
+          "tribes_elim": 4,
+          "legion_steps_lost": 6,
+          "intercepts": 0,
+          "avoids": 2
+        },
+        "elim": 4,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L4",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 920014,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 13",
+        "vp": 13,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 10,
+          "events": {
+            "R": 22,
+            "G": 20
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 3,
+          "tribes_elim": 3,
+          "legion_steps_lost": 4,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L4",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 920015,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 9,
+          "events": {
+            "R": 22,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 2,
+          "legion_steps_lost": 8,
+          "intercepts": 2,
+          "avoids": 1
+        },
+        "elim": 2,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L4",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 920016,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 11,
+          "events": {
+            "R": 17,
+            "G": 24
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 4,
+          "tribes_elim": 3,
+          "legion_steps_lost": 0,
+          "intercepts": 1,
+          "avoids": 1
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L4",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 920017,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 8,
+          "events": {
+            "R": 18,
+            "G": 25
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 1,
+          "tribes_elim": 4,
+          "legion_steps_lost": 7,
+          "intercepts": 0,
+          "avoids": 3
+        },
+        "elim": 4,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L4",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 920018,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 9",
+        "vp": 9,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 9,
+          "events": {
+            "R": 22,
+            "G": 28
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 0,
+          "tribes_elim": 4,
+          "legion_steps_lost": 4,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L4",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 920019,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 10,
+          "events": {
+            "R": 17,
+            "G": 21
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 4,
+          "legion_steps_lost": 5,
+          "intercepts": 2,
+          "avoids": 0
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L5",
+      "options": {
+        "ap_first_G": 4,
+        "ap_bonus_R": 1
+      },
+      "seed": 920000,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 5,
+          "sieges": 7,
+          "events": {
+            "R": 15,
+            "G": 28
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 3,
+          "tribes_elim": 2,
+          "legion_steps_lost": 6,
+          "intercepts": 1,
+          "avoids": 4
+        },
+        "elim": 2,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L5",
+      "options": {
+        "ap_first_G": 4,
+        "ap_bonus_R": 1
+      },
+      "seed": 920001,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 7,
+          "events": {
+            "R": 18,
+            "G": 22
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 0,
+          "tribes_elim": 2,
+          "legion_steps_lost": 4,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 2,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L5",
+      "options": {
+        "ap_first_G": 4,
+        "ap_bonus_R": 1
+      },
+      "seed": 920002,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 13",
+        "vp": 13,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 11,
+          "events": {
+            "R": 20,
+            "G": 25
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 6,
+          "tribes_elim": 5,
+          "legion_steps_lost": 4,
+          "intercepts": 0,
+          "avoids": 5
+        },
+        "elim": 5,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L5",
+      "options": {
+        "ap_first_G": 4,
+        "ap_bonus_R": 1
+      },
+      "seed": 920003,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 9",
+        "vp": 9,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 9,
+          "events": {
+            "R": 10,
+            "G": 24
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 3,
+          "tribes_elim": 2,
+          "legion_steps_lost": 7,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 2,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L5",
+      "options": {
+        "ap_first_G": 4,
+        "ap_bonus_R": 1
+      },
+      "seed": 920004,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 9",
+        "vp": 9,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 10,
+          "events": {
+            "R": 22,
+            "G": 26
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 3,
+          "tribes_elim": 3,
+          "legion_steps_lost": 12,
+          "intercepts": 0,
+          "avoids": 4
+        },
+        "elim": 3,
+        "elim_legions": 2
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L5",
+      "options": {
+        "ap_first_G": 4,
+        "ap_bonus_R": 1
+      },
+      "seed": 920005,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 9",
+        "vp": 9,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 14,
+          "events": {
+            "R": 16,
+            "G": 25
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 3,
+          "tribes_elim": 3,
+          "legion_steps_lost": 3,
+          "intercepts": 0,
+          "avoids": 2
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L5",
+      "options": {
+        "ap_first_G": 4,
+        "ap_bonus_R": 1
+      },
+      "seed": 920006,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 6,
+          "events": {
+            "R": 21,
+            "G": 25
+          },
+          "plays": {
+            "R": 48,
+            "G": 51
+          },
+          "submits": 3,
+          "tribes_elim": 6,
+          "legion_steps_lost": 7,
+          "intercepts": 2,
+          "avoids": 4
+        },
+        "elim": 6,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L5",
+      "options": {
+        "ap_first_G": 4,
+        "ap_bonus_R": 1
+      },
+      "seed": 920007,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 6",
+        "vp": 6,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 7,
+          "events": {
+            "R": 21,
+            "G": 28
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 2,
+          "tribes_elim": 3,
+          "legion_steps_lost": 7,
+          "intercepts": 0,
+          "avoids": 2
+        },
+        "elim": 3,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L5",
+      "options": {
+        "ap_first_G": 4,
+        "ap_bonus_R": 1
+      },
+      "seed": 920008,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 9",
+        "vp": 9,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 9,
+          "events": {
+            "R": 20,
+            "G": 24
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 4,
+          "tribes_elim": 2,
+          "legion_steps_lost": 2,
+          "intercepts": 0,
+          "avoids": 2
+        },
+        "elim": 2,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L5",
+      "options": {
+        "ap_first_G": 4,
+        "ap_bonus_R": 1
+      },
+      "seed": 920009,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 13",
+        "vp": 13,
+        "turn": 6,
+        "stats": {
+          "battles": 4,
+          "sieges": 5,
+          "events": {
+            "R": 18,
+            "G": 22
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 5,
+          "legion_steps_lost": 6,
+          "intercepts": 1,
+          "avoids": 6
+        },
+        "elim": 5,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L5",
+      "options": {
+        "ap_first_G": 4,
+        "ap_bonus_R": 1
+      },
+      "seed": 920010,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 7,
+          "events": {
+            "R": 19,
+            "G": 26
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 5,
+          "tribes_elim": 2,
+          "legion_steps_lost": 3,
+          "intercepts": 0,
+          "avoids": 3
+        },
+        "elim": 2,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L5",
+      "options": {
+        "ap_first_G": 4,
+        "ap_bonus_R": 1
+      },
+      "seed": 920011,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 9",
+        "vp": 9,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 8,
+          "events": {
+            "R": 19,
+            "G": 22
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 0,
+          "tribes_elim": 6,
+          "legion_steps_lost": 11,
+          "intercepts": 2,
+          "avoids": 1
+        },
+        "elim": 6,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L5",
+      "options": {
+        "ap_first_G": 4,
+        "ap_bonus_R": 1
+      },
+      "seed": 920012,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 7,
+          "events": {
+            "R": 22,
+            "G": 28
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 3,
+          "legion_steps_lost": 8,
+          "intercepts": 3,
+          "avoids": 4
+        },
+        "elim": 3,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L5",
+      "options": {
+        "ap_first_G": 4,
+        "ap_bonus_R": 1
+      },
+      "seed": 920013,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 8,
+          "events": {
+            "R": 21,
+            "G": 28
+          },
+          "plays": {
+            "R": 50,
+            "G": 49
+          },
+          "submits": 3,
+          "tribes_elim": 3,
+          "legion_steps_lost": 5,
+          "intercepts": 3,
+          "avoids": 5
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L5",
+      "options": {
+        "ap_first_G": 4,
+        "ap_bonus_R": 1
+      },
+      "seed": 920014,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 13",
+        "vp": 13,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 15,
+          "events": {
+            "R": 22,
+            "G": 21
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 4,
+          "legion_steps_lost": 6,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L5",
+      "options": {
+        "ap_first_G": 4,
+        "ap_bonus_R": 1
+      },
+      "seed": 920015,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 4,
+          "sieges": 5,
+          "events": {
+            "R": 24,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 4,
+          "legion_steps_lost": 7,
+          "intercepts": 7,
+          "avoids": 9
+        },
+        "elim": 4,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L5",
+      "options": {
+        "ap_first_G": 4,
+        "ap_bonus_R": 1
+      },
+      "seed": 920016,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 5,
+          "events": {
+            "R": 17,
+            "G": 25
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 3,
+          "tribes_elim": 1,
+          "legion_steps_lost": 6,
+          "intercepts": 3,
+          "avoids": 1
+        },
+        "elim": 1,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L5",
+      "options": {
+        "ap_first_G": 4,
+        "ap_bonus_R": 1
+      },
+      "seed": 920017,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 12,
+          "events": {
+            "R": 18,
+            "G": 25
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 3,
+          "tribes_elim": 2,
+          "legion_steps_lost": 5,
+          "intercepts": 2,
+          "avoids": 5
+        },
+        "elim": 2,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L5",
+      "options": {
+        "ap_first_G": 4,
+        "ap_bonus_R": 1
+      },
+      "seed": 920018,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 9",
+        "vp": 9,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 13,
+          "events": {
+            "R": 21,
+            "G": 29
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 7,
+          "legion_steps_lost": 7,
+          "intercepts": 2,
+          "avoids": 5
+        },
+        "elim": 7,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "Concilium L5",
+      "options": {
+        "ap_first_G": 4,
+        "ap_bonus_R": 1
+      },
+      "seed": 920019,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 11",
+        "vp": 11,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 6,
+          "events": {
+            "R": 14,
+            "G": 25
+          },
+          "plays": {
+            "R": 50,
+            "G": 48
+          },
+          "submits": 1,
+          "tribes_elim": 4,
+          "legion_steps_lost": 4,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot R",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 930000,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 9",
+        "vp": 9,
+        "turn": 6,
+        "stats": {
+          "battles": 10,
+          "sieges": 10,
+          "events": {
+            "R": 19,
+            "G": 28
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 5,
+          "tribes_elim": 11,
+          "legion_steps_lost": 25,
+          "intercepts": 2,
+          "avoids": 10
+        },
+        "elim": 11,
+        "elim_legions": 5
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot R",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 930001,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 14",
+        "vp": 14,
+        "turn": 6,
+        "stats": {
+          "battles": 6,
+          "sieges": 11,
+          "events": {
+            "R": 18,
+            "G": 25
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 6,
+          "tribes_elim": 13,
+          "legion_steps_lost": 11,
+          "intercepts": 9,
+          "avoids": 12
+        },
+        "elim": 13,
+        "elim_legions": 2
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot R",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 930002,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 13",
+        "vp": 13,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 17,
+          "events": {
+            "R": 18,
+            "G": 28
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 8,
+          "tribes_elim": 9,
+          "legion_steps_lost": 7,
+          "intercepts": 13,
+          "avoids": 4
+        },
+        "elim": 9,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot R",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 930003,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 8,
+          "sieges": 13,
+          "events": {
+            "R": 15,
+            "G": 28
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 8,
+          "tribes_elim": 12,
+          "legion_steps_lost": 14,
+          "intercepts": 4,
+          "avoids": 4
+        },
+        "elim": 12,
+        "elim_legions": 2
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot R",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 930004,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 7,
+          "sieges": 12,
+          "events": {
+            "R": 18,
+            "G": 29
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 10,
+          "tribes_elim": 14,
+          "legion_steps_lost": 15,
+          "intercepts": 3,
+          "avoids": 9
+        },
+        "elim": 14,
+        "elim_legions": 3
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot R",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 930005,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 11",
+        "vp": 11,
+        "turn": 6,
+        "stats": {
+          "battles": 8,
+          "sieges": 10,
+          "events": {
+            "R": 17,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 10,
+          "tribes_elim": 12,
+          "legion_steps_lost": 15,
+          "intercepts": 3,
+          "avoids": 4
+        },
+        "elim": 12,
+        "elim_legions": 2
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot R",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 930006,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 7,
+          "sieges": 15,
+          "events": {
+            "R": 21,
+            "G": 25
+          },
+          "plays": {
+            "R": 49,
+            "G": 50
+          },
+          "submits": 9,
+          "tribes_elim": 11,
+          "legion_steps_lost": 10,
+          "intercepts": 9,
+          "avoids": 12
+        },
+        "elim": 11,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot R",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 930007,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 6,
+          "sieges": 18,
+          "events": {
+            "R": 18,
+            "G": 28
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 12,
+          "tribes_elim": 15,
+          "legion_steps_lost": 14,
+          "intercepts": 2,
+          "avoids": 2
+        },
+        "elim": 15,
+        "elim_legions": 2
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot R",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 930008,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 29,
+          "events": {
+            "R": 20,
+            "G": 30
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 17,
+          "tribes_elim": 13,
+          "legion_steps_lost": 5,
+          "intercepts": 5,
+          "avoids": 6
+        },
+        "elim": 13,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot R",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 930009,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 15",
+        "vp": 15,
+        "turn": 6,
+        "stats": {
+          "battles": 5,
+          "sieges": 9,
+          "events": {
+            "R": 19,
+            "G": 20
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 15,
+          "tribes_elim": 14,
+          "legion_steps_lost": 5,
+          "intercepts": 3,
+          "avoids": 5
+        },
+        "elim": 14,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot R",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 930010,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 11",
+        "vp": 11,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 15,
+          "events": {
+            "R": 13,
+            "G": 24
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 13,
+          "tribes_elim": 10,
+          "legion_steps_lost": 3,
+          "intercepts": 3,
+          "avoids": 6
+        },
+        "elim": 10,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot R",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 930011,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 9",
+        "vp": 9,
+        "turn": 6,
+        "stats": {
+          "battles": 9,
+          "sieges": 17,
+          "events": {
+            "R": 19,
+            "G": 28
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 7,
+          "tribes_elim": 11,
+          "legion_steps_lost": 23,
+          "intercepts": 4,
+          "avoids": 7
+        },
+        "elim": 11,
+        "elim_legions": 5
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot R",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 930012,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 11,
+          "events": {
+            "R": 19,
+            "G": 29
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 8,
+          "tribes_elim": 11,
+          "legion_steps_lost": 11,
+          "intercepts": 9,
+          "avoids": 9
+        },
+        "elim": 11,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot R",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 930013,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 13",
+        "vp": 13,
+        "turn": 6,
+        "stats": {
+          "battles": 4,
+          "sieges": 16,
+          "events": {
+            "R": 19,
+            "G": 27
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 16,
+          "tribes_elim": 12,
+          "legion_steps_lost": 9,
+          "intercepts": 3,
+          "avoids": 8
+        },
+        "elim": 12,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot R",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 930014,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 6,
+          "events": {
+            "R": 13,
+            "G": 21
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 8,
+          "tribes_elim": 5,
+          "legion_steps_lost": 6,
+          "intercepts": 3,
+          "avoids": 3
+        },
+        "elim": 5,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot R",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 930015,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 13",
+        "vp": 13,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 22,
+          "events": {
+            "R": 19,
+            "G": 25
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 14,
+          "tribes_elim": 11,
+          "legion_steps_lost": 7,
+          "intercepts": 2,
+          "avoids": 5
+        },
+        "elim": 11,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot R",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 930016,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 11",
+        "vp": 11,
+        "turn": 6,
+        "stats": {
+          "battles": 5,
+          "sieges": 7,
+          "events": {
+            "R": 17,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 12,
+          "tribes_elim": 12,
+          "legion_steps_lost": 8,
+          "intercepts": 1,
+          "avoids": 3
+        },
+        "elim": 12,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot R",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 930017,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 9",
+        "vp": 9,
+        "turn": 6,
+        "stats": {
+          "battles": 5,
+          "sieges": 10,
+          "events": {
+            "R": 16,
+            "G": 24
+          },
+          "plays": {
+            "R": 48,
+            "G": 51
+          },
+          "submits": 11,
+          "tribes_elim": 12,
+          "legion_steps_lost": 16,
+          "intercepts": 1,
+          "avoids": 6
+        },
+        "elim": 12,
+        "elim_legions": 2
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot R",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 930018,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 4,
+          "sieges": 13,
+          "events": {
+            "R": 15,
+            "G": 29
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 10,
+          "tribes_elim": 9,
+          "legion_steps_lost": 12,
+          "intercepts": 7,
+          "avoids": 7
+        },
+        "elim": 9,
+        "elim_legions": 2
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot R",
+      "options": {
+        "ap_bonus_R": 1
+      },
+      "seed": 930019,
+      "result": {
+        "winner": "R",
+        "reason": "end VP 14",
+        "vp": 14,
+        "turn": 6,
+        "stats": {
+          "battles": 5,
+          "sieges": 12,
+          "events": {
+            "R": 21,
+            "G": 30
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 13,
+          "tribes_elim": 13,
+          "legion_steps_lost": 8,
+          "intercepts": 3,
+          "avoids": 4
+        },
+        "elim": 13,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot G",
+      "options": {
+        "vp_target": 11
+      },
+      "seed": 930000,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 5",
+        "vp": 5,
+        "turn": 6,
+        "stats": {
+          "battles": 13,
+          "sieges": 13,
+          "events": {
+            "R": 28,
+            "G": 27
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 4,
+          "tribes_elim": 10,
+          "legion_steps_lost": 23,
+          "intercepts": 4,
+          "avoids": 10
+        },
+        "elim": 10,
+        "elim_legions": 3
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot G",
+      "options": {
+        "vp_target": 11
+      },
+      "seed": 930001,
+      "result": {
+        "winner": "G",
+        "reason": "governance 3 on turn 5",
+        "vp": 2,
+        "turn": 5,
+        "stats": {
+          "battles": 9,
+          "sieges": 12,
+          "events": {
+            "R": 18,
+            "G": 20
+          },
+          "plays": {
+            "R": 40,
+            "G": 41
+          },
+          "submits": 5,
+          "tribes_elim": 6,
+          "legion_steps_lost": 16,
+          "intercepts": 1,
+          "avoids": 9
+        },
+        "elim": 6,
+        "elim_legions": 2
+      },
+      "error": null,
+      "checks": 81,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot G",
+      "options": {
+        "vp_target": 11
+      },
+      "seed": 930002,
+      "result": {
+        "winner": "G",
+        "reason": "end VP -5",
+        "vp": -5,
+        "turn": 6,
+        "stats": {
+          "battles": 9,
+          "sieges": 16,
+          "events": {
+            "R": 21,
+            "G": 18
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 2,
+          "legion_steps_lost": 30,
+          "intercepts": 2,
+          "avoids": 8
+        },
+        "elim": 2,
+        "elim_legions": 10
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot G",
+      "options": {
+        "vp_target": 11
+      },
+      "seed": 930003,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 2",
+        "vp": 2,
+        "turn": 6,
+        "stats": {
+          "battles": 11,
+          "sieges": 14,
+          "events": {
+            "R": 18,
+            "G": 24
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 5,
+          "tribes_elim": 7,
+          "legion_steps_lost": 18,
+          "intercepts": 0,
+          "avoids": 6
+        },
+        "elim": 7,
+        "elim_legions": 4
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot G",
+      "options": {
+        "vp_target": 11
+      },
+      "seed": 930004,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 5",
+        "vp": 5,
+        "turn": 6,
+        "stats": {
+          "battles": 9,
+          "sieges": 12,
+          "events": {
+            "R": 20,
+            "G": 25
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 0,
+          "tribes_elim": 7,
+          "legion_steps_lost": 26,
+          "intercepts": 3,
+          "avoids": 6
+        },
+        "elim": 7,
+        "elim_legions": 6
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot G",
+      "options": {
+        "vp_target": 11
+      },
+      "seed": 930005,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 10,
+          "sieges": 20,
+          "events": {
+            "R": 17,
+            "G": 21
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 2,
+          "tribes_elim": 11,
+          "legion_steps_lost": 21,
+          "intercepts": 2,
+          "avoids": 14
+        },
+        "elim": 11,
+        "elim_legions": 2
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot G",
+      "options": {
+        "vp_target": 11
+      },
+      "seed": 930006,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 6",
+        "vp": 6,
+        "turn": 6,
+        "stats": {
+          "battles": 8,
+          "sieges": 24,
+          "events": {
+            "R": 21,
+            "G": 20
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 3,
+          "tribes_elim": 8,
+          "legion_steps_lost": 19,
+          "intercepts": 3,
+          "avoids": 9
+        },
+        "elim": 8,
+        "elim_legions": 3
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot G",
+      "options": {
+        "vp_target": 11
+      },
+      "seed": 930007,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 5",
+        "vp": 5,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 21,
+          "events": {
+            "R": 22,
+            "G": 22
+          },
+          "plays": {
+            "R": 48,
+            "G": 51
+          },
+          "submits": 4,
+          "tribes_elim": 10,
+          "legion_steps_lost": 25,
+          "intercepts": 1,
+          "avoids": 4
+        },
+        "elim": 10,
+        "elim_legions": 3
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot G",
+      "options": {
+        "vp_target": 11
+      },
+      "seed": 930008,
+      "result": {
+        "winner": "G",
+        "reason": "governance 3 on turn 5",
+        "vp": 6,
+        "turn": 5,
+        "stats": {
+          "battles": 6,
+          "sieges": 20,
+          "events": {
+            "R": 24,
+            "G": 21
+          },
+          "plays": {
+            "R": 40,
+            "G": 40
+          },
+          "submits": 4,
+          "tribes_elim": 11,
+          "legion_steps_lost": 17,
+          "intercepts": 0,
+          "avoids": 5
+        },
+        "elim": 11,
+        "elim_legions": 2
+      },
+      "error": null,
+      "checks": 81,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot G",
+      "options": {
+        "vp_target": 11
+      },
+      "seed": 930009,
+      "result": {
+        "winner": "G",
+        "reason": "end VP -2",
+        "vp": -2,
+        "turn": 6,
+        "stats": {
+          "battles": 6,
+          "sieges": 20,
+          "events": {
+            "R": 26,
+            "G": 20
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 3,
+          "tribes_elim": 4,
+          "legion_steps_lost": 25,
+          "intercepts": 2,
+          "avoids": 10
+        },
+        "elim": 4,
+        "elim_legions": 7
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot G",
+      "options": {
+        "vp_target": 11
+      },
+      "seed": 930010,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 6",
+        "vp": 6,
+        "turn": 6,
+        "stats": {
+          "battles": 10,
+          "sieges": 21,
+          "events": {
+            "R": 25,
+            "G": 28
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 5,
+          "tribes_elim": 7,
+          "legion_steps_lost": 23,
+          "intercepts": 1,
+          "avoids": 5
+        },
+        "elim": 7,
+        "elim_legions": 4
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot G",
+      "options": {
+        "vp_target": 11
+      },
+      "seed": 930011,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 4",
+        "vp": 4,
+        "turn": 6,
+        "stats": {
+          "battles": 6,
+          "sieges": 18,
+          "events": {
+            "R": 20,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 6,
+          "tribes_elim": 7,
+          "legion_steps_lost": 19,
+          "intercepts": 3,
+          "avoids": 12
+        },
+        "elim": 7,
+        "elim_legions": 3
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot G",
+      "options": {
+        "vp_target": 11
+      },
+      "seed": 930012,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 8,
+          "sieges": 19,
+          "events": {
+            "R": 22,
+            "G": 27
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 3,
+          "tribes_elim": 10,
+          "legion_steps_lost": 15,
+          "intercepts": 2,
+          "avoids": 7
+        },
+        "elim": 10,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot G",
+      "options": {
+        "vp_target": 11
+      },
+      "seed": 930013,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 6",
+        "vp": 6,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 26,
+          "events": {
+            "R": 17,
+            "G": 25
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 5,
+          "tribes_elim": 6,
+          "legion_steps_lost": 12,
+          "intercepts": 1,
+          "avoids": 2
+        },
+        "elim": 6,
+        "elim_legions": 0
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot G",
+      "options": {
+        "vp_target": 11
+      },
+      "seed": 930014,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 4,
+          "sieges": 22,
+          "events": {
+            "R": 22,
+            "G": 21
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 10,
+          "legion_steps_lost": 14,
+          "intercepts": 7,
+          "avoids": 4
+        },
+        "elim": 10,
+        "elim_legions": 2
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot G",
+      "options": {
+        "vp_target": 11
+      },
+      "seed": 930015,
+      "result": {
+        "winner": "G",
+        "reason": "end VP -3",
+        "vp": -3,
+        "turn": 6,
+        "stats": {
+          "battles": 4,
+          "sieges": 22,
+          "events": {
+            "R": 25,
+            "G": 30
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 0,
+          "tribes_elim": 5,
+          "legion_steps_lost": 27,
+          "intercepts": 0,
+          "avoids": 2
+        },
+        "elim": 5,
+        "elim_legions": 7
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot G",
+      "options": {
+        "vp_target": 11
+      },
+      "seed": 930016,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 6",
+        "vp": 6,
+        "turn": 6,
+        "stats": {
+          "battles": 5,
+          "sieges": 25,
+          "events": {
+            "R": 22,
+            "G": 22
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 9,
+          "legion_steps_lost": 16,
+          "intercepts": 4,
+          "avoids": 6
+        },
+        "elim": 9,
+        "elim_legions": 2
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot G",
+      "options": {
+        "vp_target": 11
+      },
+      "seed": 930017,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 6,
+          "sieges": 18,
+          "events": {
+            "R": 20,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 2,
+          "tribes_elim": 9,
+          "legion_steps_lost": 19,
+          "intercepts": 0,
+          "avoids": 4
+        },
+        "elim": 9,
+        "elim_legions": 1
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot G",
+      "options": {
+        "vp_target": 11
+      },
+      "seed": 930018,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 1",
+        "vp": 1,
+        "turn": 6,
+        "stats": {
+          "battles": 4,
+          "sieges": 17,
+          "events": {
+            "R": 22,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 4,
+          "tribes_elim": 5,
+          "legion_steps_lost": 18,
+          "intercepts": 1,
+          "avoids": 2
+        },
+        "elim": 5,
+        "elim_legions": 4
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    },
+    {
+      "label": "L3 vs heuristic, bot G",
+      "options": {
+        "vp_target": 11
+      },
+      "seed": 930019,
+      "result": {
+        "winner": "G",
+        "reason": "end VP 2",
+        "vp": 2,
+        "turn": 6,
+        "stats": {
+          "battles": 8,
+          "sieges": 17,
+          "events": {
+            "R": 25,
+            "G": 28
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 0,
+          "tribes_elim": 9,
+          "legion_steps_lost": 25,
+          "intercepts": 3,
+          "avoids": 3
+        },
+        "elim": 9,
+        "elim_legions": 6
+      },
+      "error": null,
+      "checks": 97,
+      "card_issues": [],
+      "reserveRedraws": [],
+      "partialReserveReplacements": []
+    }
+  ]
+}
