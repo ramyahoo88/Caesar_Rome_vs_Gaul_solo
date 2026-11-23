@@ -1662,7 +1662,6 @@ class Game:
             guard += 1
             side = order[idx % 2]
             idx += 1
-            self.handle_surprises_start(side)
             if not self.hands[side]:
                 empty_streak += 1
                 if empty_streak >= 2 or not self.hands[OTHER[side]]:
@@ -1707,7 +1706,13 @@ class Game:
             l.moved = False
         self.sieged_this_card = set()
 
-    def card_play(self, side):
+    def card_play(self, side, _retry=False):
+        # Start of every new card play, including the immediate extra plays after #42 and after a
+        # #24 cancellation: Surprise cleanup (an all-Surprise hand, a revealed #55) comes first.
+        if not _retry:
+            self.handle_surprises_start(side)
+            if not self.hands[side]:
+                return
         self.active = side
         self.turn_plays[side] = self.turn_plays.get(side, 0) + 1
         self.reset_moved()
@@ -1720,7 +1725,7 @@ class Game:
             self.turn_plays[side] -= 1
             self._sur_guard = getattr(self, '_sur_guard', 0) + 1
             if self._sur_guard < 5 and any(CARDS[x]['kind'] != 'surprise' for x in self.hands[side]):
-                self.card_play(side)
+                self.card_play(side, _retry=True)
             self._sur_guard = 0
             return
         self.hands[side].remove(c)

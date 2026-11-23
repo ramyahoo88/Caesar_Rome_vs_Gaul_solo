@@ -1,6 +1,6 @@
 # Caesar: Rome vs. Gaul — Solo Bots: Simulation Report
 
-*Imperator and Concilium, version 1.2. These are model results from computer play, not tabletop results.*
+*Imperator and Concilium, version 1.3. These are model results from computer play, not tabletop results.*
 
 ## 1. Summary
 
@@ -81,7 +81,7 @@ Three independent reviews checked the work. None of the reviewers had written th
 
     This check covered the rules text as it stood before the last round of changes in section 6: the danger rule, REGROUP, the lagging-region order and Caesar's 2:1 sieges.
 
-* **Independent v1.0 audit.** Reviewed the whole v1.0 release: rules, cards, reference, helper, sample game, report, code and the archived study. It reproduced every one of the 40 study totals and ran its own 240-game sweep. It also tested the latest changes with hand-built positions. It found eight issues. The most important was that Reaction and Surprise cards could be used before an Offer had revealed them. Two others: danger was judged before the move, missing routes the moving army had been blocking; and units that added strength to a siege could still activate again. All eight are fixed in v1.1. A re-audit of v1.1 then found five more issues. Three were in the simulation: Surprise-only hands were only partly replaced; a spent Reserve card that was immediately redrawn stayed face up; and a Gallic leader alone was left out of the danger check. The other two were a helper Undo crash and an AP-sensitivity check that also changed four other rules. All five are fixed in v1.2. The final study (section 7), the corrected-engine comparison (section 6) and the breakdown (section 8) all come from the v1.2 engine. See `audit/independent-v1.0/AUDIT_RESPONSE.md` and `audit/independent-v1.1/AUDIT_RESPONSE.md`.
+* **Independent v1.0 audit.** Reviewed the whole v1.0 release: rules, cards, reference, helper, sample game, report, code and the archived study. It reproduced every one of the 40 study totals and ran its own 240-game sweep. It also tested the latest changes with hand-built positions. It found eight issues. The most important was that Reaction and Surprise cards could be used before an Offer had revealed them. Two others: danger was judged before the move, missing routes the moving army had been blocking; and units that added strength to a siege could still activate again. All eight are fixed in v1.1. A re-audit of v1.1 then found five more issues. Three were in the simulation: Surprise-only hands were only partly replaced; a spent Reserve card that was immediately redrawn stayed face up; and a Gallic leader alone was left out of the danger check. The other two were a helper Undo crash and an AP-sensitivity check that also changed four other rules. All five are fixed in v1.2. A third review, of v1.2, found that the immediate extra plays after #42 or after a cancelled Event skipped the Forced March cleanup, and that the AP check did not keep its per-seed results. Both are fixed in v1.3. The final study (section 7), the corrected-engine comparison (section 6) and the breakdown (section 8) all come from the v1.3 engine. See the `AUDIT_RESPONSE.md` files under `audit/independent-v1.0`, `-v1.1` and `-v1.2`.
 
 ## 6. The final changes and what they were worth
 

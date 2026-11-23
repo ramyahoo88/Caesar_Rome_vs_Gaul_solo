@@ -185,6 +185,51 @@ def test_r03_gallic_leader_alone_is_a_threat():
     base = p.threat_armies(g, 'G')
     assert p.in_danger(g, 'R', t, [], p.threat_after_move(g, 'G', base, [], None)) is False
 
+
+# ---------------------------------------------------------------- v1.2 re-audit (R06)
+class TraceBot(BotPolicy):
+    def __init__(self, *a, **kw):
+        super().__init__(*a, **kw); self.frames = []
+
+    def choose_play(self, g, side):
+        before = list(g.hands[side]); r = super().choose_play(g, side)
+        self.frames.append({'hand': before, 'chosen': list(r), 'reserve': sorted(self.reserve)})
+        return r
+
+
+def _extra_play_case(trigger):
+    p = TraceBot('G', 0); r = TraceBot('R', 0); g = Game({'G': p, 'R': r}, seed=0, log=True)
+    rh = [6, 45] if trigger == 42 else [24, 45]
+    g.hands = {'R': rh, 'G': [55, trigger, 47]}
+    g.deck = [c for c in CARDS if c not in rh + [55, trigger, 47]]; g.discard = []
+    if trigger == 21:
+        r.reserve = {24}; r._reserve_turn = g.turn
+    g.card_play('G')
+    return g, p
+
+
+def test_r06_forced_march_cleanup_before_extra_play_after_42():
+    g, p = _extra_play_case(42)
+    assert p.frames[0]['chosen'] == [42, 'event'] and 55 in p.frames[0]['reserve']
+    assert len(p.frames) >= 2 and 55 not in p.frames[1]['hand']     # discarded before the second Offer
+    assert 55 in g.discard
+    assert sorted(g.deck + g.discard + g.hands['R'] + g.hands['G']) == list(range(1, 56))
+
+
+def test_r06_forced_march_cleanup_before_play_after_cancel():
+    g, p = _extra_play_case(21)
+    assert any('cancels #21' in x for x in g.logs)
+    assert len(p.frames) >= 2 and 55 not in p.frames[1]['hand']
+    assert sorted(g.deck + g.discard + g.hands['R'] + g.hands['G']) == list(range(1, 56))
+
+
+def test_r06_unrevealed_forced_march_stays_and_normal_path_discards():
+    g = Game({s: BotPolicy(s, 0) for s in 'RG'}, seed=0); g.hands = {'G': [55, 47], 'R': [45]}
+    g.deck = [c for c in CARDS if c not in (55, 47, 45)]; g.discard = []
+    g.handle_surprises_start('G'); assert 55 in g.hands['G']          # face down: stays
+    g.pol['G'].reserve = {55}; g.pol['G']._reserve_turn = g.turn
+    g.handle_surprises_start('G'); assert 55 not in g.hands['G'] and 55 in g.discard
+
 if __name__ == '__main__':
     for name, fn in list(globals().items()):
         if name.startswith('test_'):

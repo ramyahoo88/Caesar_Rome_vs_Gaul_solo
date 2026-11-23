@@ -1,6 +1,6 @@
 # Caesar: Rome vs. Gaul — Solo Bots
 
-## Imperator (Rome) and Concilium (Gaul) · version 1.2
+## Imperator (Rome) and Concilium (Gaul) · version 1.3
 
 Two card-driven paper opponents for *Caesar: Rome vs. Gaul*, 2nd edition (GMT Games). You play one side; the bot plays the other with the same cards, units, dice and rules as a human. Its hand stays face down. It never looks at yours. It rolls only the dice the game rolls.
 
@@ -23,7 +23,7 @@ Unofficial fan variant, not a GMT publication. Rule numbers (5.1.2, 13.3 and so 
 | #24 You May Believe What You Wish | To cancel your Event or Bonus Event if the card is on its Cancel list (5.4, 6.4). It is played for AP only when every card left in the bot's hand is in its Reserve (see below). |
 | #52 A Vow to Mars | In its next battle where the two Battle Strengths differ by 3 or less (one extra reroll). If Rome, on its next siege roll if no such battle comes first (+1). |
 | #54 Remedies for all Contingencies | +2 to its own next Avoid Battle or Interception roll. |
-| #55 Forced March | Discarded at the start of the bot's next card play; it draws a replacement. |
+| #55 Forced March | Discarded at the start of the bot's next card play, including an extra play it makes at once (after #42, or after its Event is cancelled); it draws a replacement. |
 
 **When only Reserve cards are left** in the bot's hand: if one of them is #24, the bot plays #24 for AP. Otherwise (only Surprise cards), it discards them and draws replacements (7.5.4), then makes its Offer from the new cards. *Example:* the bot holds #24 and #52, both in its Reserve, and nothing else. It plays #24 for AP and keeps #52. At the end of the Strategy Phase, discard what is left.
 

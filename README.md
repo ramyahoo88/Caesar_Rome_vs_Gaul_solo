@@ -1,4 +1,4 @@
-# Caesar: Rome vs. Gaul (2nd edition) — solo bots (v1.2)
+# Caesar: Rome vs. Gaul (2nd edition) — solo bots (v1.3)
 
 Two card-driven paper bots for GMT Games' *Caesar: Rome vs. Gaul*, 2nd edition:
 
@@ -51,7 +51,7 @@ All files are in [`print/`](print):
 
 ## Results at a glance
 
-Win rates from the final v1.2 simulation study (5,300 games on fresh seeds, corrected engine) against the strongest computer opponent, a one-ply lookahead player, and against the other bot:
+Win rates from the final v1.3 simulation study (5,300 games on fresh seeds, corrected engine) against the strongest computer opponent, a one-ply lookahead player, and against the other bot:
 
 | Level | Imperator vs lookahead Gaul | Imperator vs Concilium | Concilium vs lookahead Rome | Concilium vs Imperator (+1 AP) |
 |---|---|---|---|---|
@@ -78,7 +78,7 @@ Two independent checks were run, each by a separate agent that had not written t
 
 * **Engine audit.** The engine was checked against the 2023 living rules.
 * **Clean-room test.** A second bot was written from the printed rules alone, then compared with the simulation bot decision by decision. It agreed on 99.8% of card choices and 99.4% of mission choices. Every gap it found has been closed, either in the text or in the code.
-* **Independent v1.0 audit and v1.1 re-audit.** The first review found eight issues, the most serious being Reserve cards used before they were revealed. The re-audit found five more, mostly in Reserve card handling and the danger check. All thirteen are fixed in v1.2, and every study result was re-run on the corrected engine. See the [changelog](CHANGELOG.md).
+* **Independent audits of v1.0, v1.1 and v1.2.** The first review found eight issues, the most serious being Reserve cards used before they were revealed. The re-audit found five more, mostly in Reserve card handling and the danger check. A third review, of v1.2, found two more. All fifteen are fixed in v1.3, and every study result was re-run on the corrected engine. See the [changelog](CHANGELOG.md).
 
 ```
 cd code

@@ -16,7 +16,7 @@ def w(k):
     return v['bot_wins'] / v['n']
 
 
-summary = f"""* **Both bots play complete games of the 2nd-edition rules** in the simulation, with one approximation: the Siege Table is the 1st-edition table shifted one row. Each decision comes from a Directive card and a two-card Offer, following the printed rules. The bot never looks at hidden cards, and its Reaction and Surprise cards work only once an Offer has revealed them. An independent clean-room implementation of the printed rules matched the simulation bot on more than 99% of card and mission choices. Two independent audits (of v1.0 and v1.1) found thirteen issues between them, all fixed in v1.2, and every study result here comes from the corrected v1.2 engine.
+summary = f"""* **Both bots play complete games of the 2nd-edition rules** in the simulation, with one approximation: the Siege Table is the 1st-edition table shifted one row. Each decision comes from a Directive card and a two-card Offer, following the printed rules. The bot never looks at hidden cards, and its Reaction and Surprise cards work only once an Offer has revealed them. An independent clean-room implementation of the printed rules matched the simulation bot on more than 99% of card and mission choices. Three independent audits (of v1.0, v1.1 and v1.2) found fifteen issues between them, all fixed in v1.3, and every study result here comes from the corrected v1.3 engine.
 * **The levels form a smooth ladder against every computer opponent.** Against the strongest of them, the Lookahead player:
     * Imperator wins {w('Imperator L1 vs search'):.0%} at level 1, {w('Imperator L3 vs search'):.0%} at level 3 and {w('Imperator L5 vs search'):.0%} at level 5;
     * Concilium wins {w('Concilium L1 vs search'):.0%} at level 1, {w('Concilium L3 vs search'):.0%} at level 3 and {w('Concilium L5 vs search'):.0%} at level 5.
@@ -64,11 +64,11 @@ if len(sys.argv) > 6:
             c += f"; {P[k][o]['mean_vp_diff']:+.2f} ± {P[k][o]['se']:.2f}"
         return c
     P = L.get('_paired', {})
-    rows = ['**On the corrected v1.2 engine** (seeds 20000 and up; 200 games against the Bot, 160 against the Heuristic player, 100 against the Lookahead player). Each cell is the bot\'s win rate, with the mean Roman VP in brackets. For each "without" row, the change in mean Roman VP against the final version is given on the same seeds, ± one standard error of the paired difference.', '',
+    rows = ['**On the corrected v1.3 engine** (seeds 20000 and up; 200 games against the Bot, 160 against the Heuristic player, 100 against the Lookahead player). Each cell is the bot\'s win rate, with the mean Roman VP in brackets. For each "without" row, the change in mean Roman VP against the final version is given on the same seeds, ± one standard error of the paired difference.', '',
             '| Version | vs Bot | vs Heuristic | vs Lookahead |', '|---|---|---|---|']
-    names = [('R_final', 'Imperator v1.2 (level 3)'), ('R_no_danger', '… without REGROUP and the danger limit on SWEEP'),
+    names = [('R_final', 'Imperator v1.3 (level 3)'), ('R_no_danger', '… without REGROUP and the danger limit on SWEEP'),
              ('R_no_lagging', '… without the lagging-region order'), ('R_no_caesar21', '… without Caesar\'s 2:1 sieges'),
-             ('G_final', 'Concilium v1.2 (standard rules)'), ('G_no_danger', '… without its danger rule')]
+             ('G_final', 'Concilium v1.3 (standard rules)'), ('G_no_danger', '… without its danger rule')]
     for k, lab in names:
         if k in L:
             rows.append(f'| {lab} | ' + ' | '.join(cellr(k, o) for o in ('bot', 'smart', 'search')) + ' |')

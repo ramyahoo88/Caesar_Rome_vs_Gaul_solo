@@ -1,5 +1,14 @@
 # Changelog
 
+## v1.3 (22 November 2026)
+
+This release fixes both findings of the v1.2 re-audit. See [audit/independent-v1.2/AUDIT_RESPONSE.md](audit/independent-v1.2/AUDIT_RESPONSE.md).
+
+* **Engine.** The Surprise cleanup (a revealed #55, or a hand of nothing but Surprise cards) now runs at the start of every new card play. That includes the immediate extra plays after #42 and after a cancelled Event.
+* **Rules 1.3.** The text now says that #55 is also discarded before such an extra play.
+* **AP-only check.** It now saves every per-seed result.
+* **Re-run.** The final study, the latest-change comparisons, the AP-only check and the bot-vs-bot breakdown were all re-run on v1.3.
+
 ## v1.2 (22 November 2026)
 
 This release fixes everything found by the independent v1.1 re-audit. See [audit/independent-v1.1/AUDIT_RESPONSE.md](audit/independent-v1.1/AUDIT_RESPONSE.md).
