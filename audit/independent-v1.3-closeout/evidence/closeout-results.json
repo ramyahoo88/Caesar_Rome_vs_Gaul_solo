@@ -1,0 +1,866 @@
+{
+  "oldCommit": "7c0d65c41b36de4c5cad96d7227b056d494685ff",
+  "reviewedCommit": "529c12b8c6e2bd645733f5e726561bf4b27e5f61",
+  "changedFiles": [
+    "CHANGELOG.md",
+    "README.md",
+    "audit/independent-v1.3/AUDIT_RESPONSE.md",
+    "audit/independent-v1.3/Caesar_Solo_v1.3_Verification.md",
+    "audit/independent-v1.3/Caesar_Solo_v1.3_Verification.pdf",
+    "audit/independent-v1.3/Caesar_Solo_v1.3_Verification_Evidence.zip",
+    "audit/independent-v1.3/SHA256SUMS.txt",
+    "audit/independent-v1.3/developer-checks/compare_pdfs.py",
+    "audit/independent-v1.3/developer-checks/helper-browser.json",
+    "audit/independent-v1.3/developer-checks/helper-desktop-concilium.jpg",
+    "audit/independent-v1.3/developer-checks/helper-desktop-imperator.jpg",
+    "audit/independent-v1.3/developer-checks/helper-phone.jpg",
+    "audit/independent-v1.3/developer-checks/helper_browser.py",
+    "audit/independent-v1.3/developer-checks/pdf-rebuild-fixed-dates.json",
+    "audit/independent-v1.3/developer-checks/pdf-rebuild-v1.3-build.json",
+    "audit/independent-v1.3/evidence/README.md",
+    "audit/independent-v1.3/evidence/ap-replays.json",
+    "audit/independent-v1.3/evidence/archive-replays.json",
+    "audit/independent-v1.3/evidence/campaign_audit.py",
+    "audit/independent-v1.3/evidence/campaigns.json",
+    "audit/independent-v1.3/evidence/check_experiments.py",
+    "audit/independent-v1.3/evidence/cleanup-results.json",
+    "audit/independent-v1.3/evidence/cleanup_checks.py",
+    "audit/independent-v1.3/evidence/experiment-checks.json",
+    "audit/independent-v1.3/evidence/helper-results.json",
+    "audit/independent-v1.3/evidence/helper_reaudit.cjs",
+    "audit/independent-v1.3/evidence/latest-replays.json",
+    "audit/independent-v1.3/evidence/print/Caesar_Solo_Rules.html",
+    "audit/independent-v1.3/evidence/print/Caesar_Solo_Sample_Game.html",
+    "audit/independent-v1.3/evidence/print/Caesar_Solo_Sim_Report.html",
+    "audit/independent-v1.3/evidence/print/print-results.json",
+    "audit/independent-v1.3/evidence/print_reaudit.py",
+    "audit/independent-v1.3/evidence/regression-results.txt",
+    "audit/independent-v1.3/evidence/release-checks.json",
+    "audit/independent-v1.3/evidence/release_checks.py",
+    "audit/independent-v1.3/evidence/render_prints.py",
+    "audit/independent-v1.3/evidence/render_report.py",
+    "audit/independent-v1.3/evidence/rendered/Cards-1.jpg",
+    "audit/independent-v1.3/evidence/rendered/Record_Sheet-1.jpg",
+    "audit/independent-v1.3/evidence/rendered/Reference-1.jpg",
+    "audit/independent-v1.3/evidence/rendered/Rules-1.jpg",
+    "audit/independent-v1.3/evidence/rendered/Rules-5.jpg",
+    "audit/independent-v1.3/evidence/rendered/Rules-9.jpg",
+    "audit/independent-v1.3/evidence/rendered/Sample_Game-1.jpg",
+    "audit/independent-v1.3/evidence/rendered/Sample_Game-5.jpg",
+    "audit/independent-v1.3/evidence/rendered/Sample_Game-9.jpg",
+    "audit/independent-v1.3/evidence/rendered/Sim_Report-1.jpg",
+    "audit/independent-v1.3/evidence/rendered/Sim_Report-5.jpg",
+    "audit/independent-v1.3/evidence/replay_ap.py",
+    "audit/independent-v1.3/evidence/replay_archive.py",
+    "audit/independent-v1.3/evidence/replay_latest.py",
+    "audit/independent-v1.3/evidence/sample-seed57.md",
+    "audit/independent-v1.3/evidence/smoke-results.txt",
+    "audit/independent-v1.3/evidence/source-manifest.json",
+    "audit/independent-v1.3/evidence/visual-review.json",
+    "print/Caesar_Solo_Cards.pdf",
+    "print/Caesar_Solo_Print_and_Play.pdf",
+    "print/Caesar_Solo_Record_Sheet.pdf",
+    "print/Caesar_Solo_Reference.pdf",
+    "print/Caesar_Solo_Rules.pdf",
+    "print/Caesar_Solo_Sample_Game.pdf",
+    "print/Caesar_Solo_Sim_Report.pdf",
+    "print/build.py"
+  ],
+  "changedGameRuleHelperCardOrResultFiles": [],
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "PyMuPDF": "1.26.6",
+    "pypdf": "6.21.4"
+  },
+  "pdfComparisonMethod": "Committed blobs; PyMuPDF extracted text and exact RGB samples at 100 dpi",
+  "pdfs": {
+    "Caesar_Solo_Cards.pdf": {
+      "sha256": [
+        "069191cb567d1c29c809ae786c627e56dcac8539e7dd6a4290b6496056961a7a",
+        "6bc4193d83f1fb33af69eed2e097c33bd8b4ebb3087c6e2e50fe13e8e4d5b256"
+      ],
+      "developerRecordedHashesMatchCommittedBlobs": true,
+      "metadataBefore": {
+        "/Title": "tmp_6hfg19b.html",
+        "/Creator": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+        "/Producer": "Skia/PDF m153",
+        "/CreationDate": "D:20261123052658+00'00'",
+        "/ModDate": "D:20261123052658+00'00'"
+      },
+      "metadataAfter": {
+        "/Title": "Caesar Solo Bots \u2014 Directive Cards",
+        "/Creator": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+        "/Producer": "Skia/PDF m153",
+        "/CreationDate": "D:20261122000000+00'00'",
+        "/ModDate": "D:20261122000000+00'00'"
+      },
+      "structureTreePresent": [
+        true,
+        true
+      ],
+      "pages": [
+        {
+          "page": 1,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "a908ea7f8b94f360d140cc6841bf5e3a4158ad16797b40c5f5d2f07b50cf8312",
+            "a908ea7f8b94f360d140cc6841bf5e3a4158ad16797b40c5f5d2f07b50cf8312"
+          ]
+        },
+        {
+          "page": 2,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "f1f3a9431247e39ba2cbfddc1fbc80ddce7f485f448f38edacfd5116f044b6e1",
+            "f1f3a9431247e39ba2cbfddc1fbc80ddce7f485f448f38edacfd5116f044b6e1"
+          ]
+        },
+        {
+          "page": 3,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "708740aff3eee13858899dd6312e74ada2d990d886df95dc630989193bd95b0e",
+            "708740aff3eee13858899dd6312e74ada2d990d886df95dc630989193bd95b0e"
+          ]
+        },
+        {
+          "page": 4,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "d3b79a14d96cb0dd757d08192de65429d76e24ea4b67b5085949c7f9efd1b01e",
+            "d3b79a14d96cb0dd757d08192de65429d76e24ea4b67b5085949c7f9efd1b01e"
+          ]
+        }
+      ]
+    },
+    "Caesar_Solo_Print_and_Play.pdf": {
+      "sha256": [
+        "50befd5b1dc0362961afe28347aebc1c337998d15aa7e0973d7ff809750c630e",
+        "e3f0ad7773b996534d82f615fd022da319f31128052568540528def93949e89e"
+      ],
+      "developerRecordedHashesMatchCommittedBlobs": true,
+      "metadataBefore": {
+        "/Producer": "pypdf"
+      },
+      "metadataAfter": {
+        "/Producer": "pypdf",
+        "/Title": "Caesar Solo Bots \u2014 Print and Play v1.3",
+        "/CreationDate": "D:20261122000000+00'00'",
+        "/ModDate": "D:20261122000000+00'00'"
+      },
+      "structureTreePresent": [
+        false,
+        false
+      ],
+      "pages": [
+        {
+          "page": 1,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "3f0388680fcda34e2a13a86b3a08df533856a8492d4665c924247f98665cd6fb",
+            "3f0388680fcda34e2a13a86b3a08df533856a8492d4665c924247f98665cd6fb"
+          ]
+        },
+        {
+          "page": 2,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "f3c897743d2bc02525af8687f4fa07f77fc015adbd44419ddc1f189d0ff06687",
+            "f3c897743d2bc02525af8687f4fa07f77fc015adbd44419ddc1f189d0ff06687"
+          ]
+        },
+        {
+          "page": 3,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "5e998e7f5d713ffe11d7f9f40bc1b019a44431e518424c1f17426aac9618a0cf",
+            "5e998e7f5d713ffe11d7f9f40bc1b019a44431e518424c1f17426aac9618a0cf"
+          ]
+        },
+        {
+          "page": 4,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "990f2c27e51c1d61d4d875ffa4f4070d503e265142b6158a102852366e30f897",
+            "990f2c27e51c1d61d4d875ffa4f4070d503e265142b6158a102852366e30f897"
+          ]
+        },
+        {
+          "page": 5,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "ef2c0835f7d5af4e5affabe551dfd9fc9f93044a1c83437610a98e9c45984f86",
+            "ef2c0835f7d5af4e5affabe551dfd9fc9f93044a1c83437610a98e9c45984f86"
+          ]
+        },
+        {
+          "page": 6,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "7f26eb8f030a85c19360ca7f1bb7d50a8558d53cb47fc913d02c48dae4e538da",
+            "7f26eb8f030a85c19360ca7f1bb7d50a8558d53cb47fc913d02c48dae4e538da"
+          ]
+        },
+        {
+          "page": 7,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "b6619d25793d2cdad5c1b0563ff7b6a927774fa47ac02c59b60150bd1ccffbc2",
+            "b6619d25793d2cdad5c1b0563ff7b6a927774fa47ac02c59b60150bd1ccffbc2"
+          ]
+        },
+        {
+          "page": 8,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "8c59d90fab12bd703fbf94b56e927991238942670e4605e2ac4e3d2f25587c8a",
+            "8c59d90fab12bd703fbf94b56e927991238942670e4605e2ac4e3d2f25587c8a"
+          ]
+        },
+        {
+          "page": 9,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "9b5ff15d78a30f8f23294f8f83e5c1d96f019abb213023598d7198aedd08c8f7",
+            "9b5ff15d78a30f8f23294f8f83e5c1d96f019abb213023598d7198aedd08c8f7"
+          ]
+        },
+        {
+          "page": 10,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "12ef86d3f24e8dbe7217a73812bc6de73e74a10a8a1bfab59da50f1bdd043a8b",
+            "12ef86d3f24e8dbe7217a73812bc6de73e74a10a8a1bfab59da50f1bdd043a8b"
+          ]
+        },
+        {
+          "page": 11,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "814f6671ce0922debd785bef8fcb5b65f7ee32b94f0ac46fb5ff7d5ac026526c",
+            "814f6671ce0922debd785bef8fcb5b65f7ee32b94f0ac46fb5ff7d5ac026526c"
+          ]
+        },
+        {
+          "page": 12,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "cd862b0bcdb153946a809d885e5f160eab5404c8a3a9a5ed74ce00cc57bb944d",
+            "cd862b0bcdb153946a809d885e5f160eab5404c8a3a9a5ed74ce00cc57bb944d"
+          ]
+        },
+        {
+          "page": 13,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "747ac6cf269a4d8adea08c1a623c97ece4c96347f8c026847438f3934e7b1ebc",
+            "747ac6cf269a4d8adea08c1a623c97ece4c96347f8c026847438f3934e7b1ebc"
+          ]
+        },
+        {
+          "page": 14,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "a908ea7f8b94f360d140cc6841bf5e3a4158ad16797b40c5f5d2f07b50cf8312",
+            "a908ea7f8b94f360d140cc6841bf5e3a4158ad16797b40c5f5d2f07b50cf8312"
+          ]
+        },
+        {
+          "page": 15,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "f1f3a9431247e39ba2cbfddc1fbc80ddce7f485f448f38edacfd5116f044b6e1",
+            "f1f3a9431247e39ba2cbfddc1fbc80ddce7f485f448f38edacfd5116f044b6e1"
+          ]
+        },
+        {
+          "page": 16,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "708740aff3eee13858899dd6312e74ada2d990d886df95dc630989193bd95b0e",
+            "708740aff3eee13858899dd6312e74ada2d990d886df95dc630989193bd95b0e"
+          ]
+        },
+        {
+          "page": 17,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "d3b79a14d96cb0dd757d08192de65429d76e24ea4b67b5085949c7f9efd1b01e",
+            "d3b79a14d96cb0dd757d08192de65429d76e24ea4b67b5085949c7f9efd1b01e"
+          ]
+        },
+        {
+          "page": 18,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "7e2aabc2c57db3d7f4863e526d2e84fbeccd381f153707f518b9ecfbbf010857",
+            "7e2aabc2c57db3d7f4863e526d2e84fbeccd381f153707f518b9ecfbbf010857"
+          ]
+        }
+      ]
+    },
+    "Caesar_Solo_Record_Sheet.pdf": {
+      "sha256": [
+        "7e5d79817454a30ca8ac5f69a46bb2dc2adcce7f66a3dc5215fe622f9dacfb84",
+        "86d248ced1688b368cc5fca9accdc2d71e804b6ead9a48366f73e0131e20f18d"
+      ],
+      "developerRecordedHashesMatchCommittedBlobs": true,
+      "metadataBefore": {
+        "/Title": "Caesar Solo Bots \u2014 Record Sheet",
+        "/Creator": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+        "/Producer": "Skia/PDF m153",
+        "/CreationDate": "D:20261123052659+00'00'",
+        "/ModDate": "D:20261123052659+00'00'"
+      },
+      "metadataAfter": {
+        "/Title": "Caesar Solo Bots \u2014 Record Sheet",
+        "/Creator": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+        "/Producer": "Skia/PDF m153",
+        "/CreationDate": "D:20261122000000+00'00'",
+        "/ModDate": "D:20261122000000+00'00'"
+      },
+      "structureTreePresent": [
+        true,
+        true
+      ],
+      "pages": [
+        {
+          "page": 1,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "7e2aabc2c57db3d7f4863e526d2e84fbeccd381f153707f518b9ecfbbf010857",
+            "7e2aabc2c57db3d7f4863e526d2e84fbeccd381f153707f518b9ecfbbf010857"
+          ]
+        }
+      ]
+    },
+    "Caesar_Solo_Reference.pdf": {
+      "sha256": [
+        "1dc510b5c0a07c5395545ca42e9927d86a12ba66629bc936ebb034f072a0c1e8",
+        "35975d220d5fd8ce7d9db93a7a24232948dd19f14215287955f6707cef92304f"
+      ],
+      "developerRecordedHashesMatchCommittedBlobs": true,
+      "metadataBefore": {
+        "/Title": "Caesar Solo Bots \u2014 Reference",
+        "/Creator": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+        "/Producer": "Skia/PDF m153",
+        "/CreationDate": "D:20261123052659+00'00'",
+        "/ModDate": "D:20261123052659+00'00'"
+      },
+      "metadataAfter": {
+        "/Title": "Caesar Solo Bots \u2014 Reference",
+        "/Creator": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+        "/Producer": "Skia/PDF m153",
+        "/CreationDate": "D:20261122000000+00'00'",
+        "/ModDate": "D:20261122000000+00'00'"
+      },
+      "structureTreePresent": [
+        true,
+        true
+      ],
+      "pages": [
+        {
+          "page": 1,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "cd862b0bcdb153946a809d885e5f160eab5404c8a3a9a5ed74ce00cc57bb944d",
+            "cd862b0bcdb153946a809d885e5f160eab5404c8a3a9a5ed74ce00cc57bb944d"
+          ]
+        },
+        {
+          "page": 2,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "747ac6cf269a4d8adea08c1a623c97ece4c96347f8c026847438f3934e7b1ebc",
+            "747ac6cf269a4d8adea08c1a623c97ece4c96347f8c026847438f3934e7b1ebc"
+          ]
+        }
+      ]
+    },
+    "Caesar_Solo_Rules.pdf": {
+      "sha256": [
+        "febc0aa01022b24f99285a226e3e1e31d7f615db8a6a73a97e523ec325d4519a",
+        "c4e933ab0155fa04fd0955580ddb8c72f1045ac1a67280e308f9dbeb2d6f8ebd"
+      ],
+      "developerRecordedHashesMatchCommittedBlobs": true,
+      "metadataBefore": {
+        "/Title": "Caesar Solo Bots \u2014 Rules v1.3",
+        "/Creator": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+        "/Producer": "Skia/PDF m153",
+        "/CreationDate": "D:20261123052657+00'00'",
+        "/ModDate": "D:20261123052657+00'00'"
+      },
+      "metadataAfter": {
+        "/Title": "Caesar Solo Bots \u2014 Rules v1.3",
+        "/Creator": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+        "/Producer": "Skia/PDF m153",
+        "/CreationDate": "D:20261122000000+00'00'",
+        "/ModDate": "D:20261122000000+00'00'"
+      },
+      "structureTreePresent": [
+        true,
+        true
+      ],
+      "pages": [
+        {
+          "page": 1,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "3f0388680fcda34e2a13a86b3a08df533856a8492d4665c924247f98665cd6fb",
+            "3f0388680fcda34e2a13a86b3a08df533856a8492d4665c924247f98665cd6fb"
+          ]
+        },
+        {
+          "page": 2,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "f3c897743d2bc02525af8687f4fa07f77fc015adbd44419ddc1f189d0ff06687",
+            "f3c897743d2bc02525af8687f4fa07f77fc015adbd44419ddc1f189d0ff06687"
+          ]
+        },
+        {
+          "page": 3,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "5e998e7f5d713ffe11d7f9f40bc1b019a44431e518424c1f17426aac9618a0cf",
+            "5e998e7f5d713ffe11d7f9f40bc1b019a44431e518424c1f17426aac9618a0cf"
+          ]
+        },
+        {
+          "page": 4,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "990f2c27e51c1d61d4d875ffa4f4070d503e265142b6158a102852366e30f897",
+            "990f2c27e51c1d61d4d875ffa4f4070d503e265142b6158a102852366e30f897"
+          ]
+        },
+        {
+          "page": 5,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "ef2c0835f7d5af4e5affabe551dfd9fc9f93044a1c83437610a98e9c45984f86",
+            "ef2c0835f7d5af4e5affabe551dfd9fc9f93044a1c83437610a98e9c45984f86"
+          ]
+        },
+        {
+          "page": 6,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "7f26eb8f030a85c19360ca7f1bb7d50a8558d53cb47fc913d02c48dae4e538da",
+            "7f26eb8f030a85c19360ca7f1bb7d50a8558d53cb47fc913d02c48dae4e538da"
+          ]
+        },
+        {
+          "page": 7,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "b6619d25793d2cdad5c1b0563ff7b6a927774fa47ac02c59b60150bd1ccffbc2",
+            "b6619d25793d2cdad5c1b0563ff7b6a927774fa47ac02c59b60150bd1ccffbc2"
+          ]
+        },
+        {
+          "page": 8,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "8c59d90fab12bd703fbf94b56e927991238942670e4605e2ac4e3d2f25587c8a",
+            "8c59d90fab12bd703fbf94b56e927991238942670e4605e2ac4e3d2f25587c8a"
+          ]
+        },
+        {
+          "page": 9,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "9b5ff15d78a30f8f23294f8f83e5c1d96f019abb213023598d7198aedd08c8f7",
+            "9b5ff15d78a30f8f23294f8f83e5c1d96f019abb213023598d7198aedd08c8f7"
+          ]
+        },
+        {
+          "page": 10,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "12ef86d3f24e8dbe7217a73812bc6de73e74a10a8a1bfab59da50f1bdd043a8b",
+            "12ef86d3f24e8dbe7217a73812bc6de73e74a10a8a1bfab59da50f1bdd043a8b"
+          ]
+        },
+        {
+          "page": 11,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "814f6671ce0922debd785bef8fcb5b65f7ee32b94f0ac46fb5ff7d5ac026526c",
+            "814f6671ce0922debd785bef8fcb5b65f7ee32b94f0ac46fb5ff7d5ac026526c"
+          ]
+        }
+      ]
+    },
+    "Caesar_Solo_Sample_Game.pdf": {
+      "sha256": [
+        "39da00d64f7d086f6c02f78d5881c96d572ae1f81bc81a717118a7e4822115ca",
+        "98e85438d258e0361f31810bfa3b2e4f9df989a4faf1b7b07253df8ebc9fb667"
+      ],
+      "developerRecordedHashesMatchCommittedBlobs": true,
+      "metadataBefore": {
+        "/Title": "Caesar Solo Bots \u2014 Sample Game",
+        "/Creator": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+        "/Producer": "Skia/PDF m153",
+        "/CreationDate": "D:20261123052701+00'00'",
+        "/ModDate": "D:20261123052701+00'00'"
+      },
+      "metadataAfter": {
+        "/Title": "Caesar Solo Bots \u2014 Sample Game",
+        "/Creator": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+        "/Producer": "Skia/PDF m153",
+        "/CreationDate": "D:20261122000000+00'00'",
+        "/ModDate": "D:20261122000000+00'00'"
+      },
+      "structureTreePresent": [
+        true,
+        true
+      ],
+      "pages": [
+        {
+          "page": 1,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "402b4172b9a198f9005744d3b2b06e5dd28e4365af23b322f9f458f9b7cb8ae9",
+            "402b4172b9a198f9005744d3b2b06e5dd28e4365af23b322f9f458f9b7cb8ae9"
+          ]
+        },
+        {
+          "page": 2,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "e2b4069e2500f6c732a67b7da626187fe9fde4b2de3e494a984cafa5895e120b",
+            "e2b4069e2500f6c732a67b7da626187fe9fde4b2de3e494a984cafa5895e120b"
+          ]
+        },
+        {
+          "page": 3,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "57373800fb53da042f6093c32fb6a2cec965d89245d324dcfb7ac0b1f99d56a1",
+            "57373800fb53da042f6093c32fb6a2cec965d89245d324dcfb7ac0b1f99d56a1"
+          ]
+        },
+        {
+          "page": 4,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "0adc516164f7d5d3ed9c51321a6c511a5026c4d96277cbcc17172a1c1c6eb4ab",
+            "0adc516164f7d5d3ed9c51321a6c511a5026c4d96277cbcc17172a1c1c6eb4ab"
+          ]
+        },
+        {
+          "page": 5,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "83e874b58b0cf83bf0333cdf4d82f5d19fb1648ab078c2b75a40568e1505a2e0",
+            "83e874b58b0cf83bf0333cdf4d82f5d19fb1648ab078c2b75a40568e1505a2e0"
+          ]
+        },
+        {
+          "page": 6,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "98a284fe974c63e8499532cbe220d41e46f211cb642913d98b490fb2b7a1369d",
+            "98a284fe974c63e8499532cbe220d41e46f211cb642913d98b490fb2b7a1369d"
+          ]
+        },
+        {
+          "page": 7,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "1f96607ce60a35168975cdae58381627a700d8e5125c3b03ca8e63585e523875",
+            "1f96607ce60a35168975cdae58381627a700d8e5125c3b03ca8e63585e523875"
+          ]
+        },
+        {
+          "page": 8,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "44900f72a6043ddc2751bfae50903b596e86933d00214a71e41e4d501ced620e",
+            "44900f72a6043ddc2751bfae50903b596e86933d00214a71e41e4d501ced620e"
+          ]
+        },
+        {
+          "page": 9,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "68e230b1dee2606a005f335ae1f3eb502fe7810922c6be096a549854f3466468",
+            "68e230b1dee2606a005f335ae1f3eb502fe7810922c6be096a549854f3466468"
+          ]
+        },
+        {
+          "page": 10,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "420e08fa424f4be9a83c44442dbb6506e791e817a0f1ca227ee4c033b6504567",
+            "420e08fa424f4be9a83c44442dbb6506e791e817a0f1ca227ee4c033b6504567"
+          ]
+        },
+        {
+          "page": 11,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "acbb2aaeab8173102be46a629514e7827eb37ac8eae28428c8728b0feb79e740",
+            "acbb2aaeab8173102be46a629514e7827eb37ac8eae28428c8728b0feb79e740"
+          ]
+        }
+      ]
+    },
+    "Caesar_Solo_Sim_Report.pdf": {
+      "sha256": [
+        "9d74c9319d8f7b8eaa597106c97fa15d1f59e0bc0d7ecc7a46bafba56810250c",
+        "56314478f762439b637da517098e86e220e145208c840b87b838318a2df886cf"
+      ],
+      "developerRecordedHashesMatchCommittedBlobs": true,
+      "metadataBefore": {
+        "/Title": "Caesar Solo Bots \u2014 Simulation Report",
+        "/Creator": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+        "/Producer": "Skia/PDF m153",
+        "/CreationDate": "D:20261123052700+00'00'",
+        "/ModDate": "D:20261123052700+00'00'"
+      },
+      "metadataAfter": {
+        "/Title": "Caesar Solo Bots \u2014 Simulation Report",
+        "/Creator": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+        "/Producer": "Skia/PDF m153",
+        "/CreationDate": "D:20261122000000+00'00'",
+        "/ModDate": "D:20261122000000+00'00'"
+      },
+      "structureTreePresent": [
+        true,
+        true
+      ],
+      "pages": [
+        {
+          "page": 1,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "59631fcb1c69bcd9afc1d4bc03560f270ac315eff07846f823e4a325816ed660",
+            "59631fcb1c69bcd9afc1d4bc03560f270ac315eff07846f823e4a325816ed660"
+          ]
+        },
+        {
+          "page": 2,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "57190ecca392b6d385f0b9563fa43bbed759dfe5dc6f2065561d5af539bf523b",
+            "57190ecca392b6d385f0b9563fa43bbed759dfe5dc6f2065561d5af539bf523b"
+          ]
+        },
+        {
+          "page": 3,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "4c2dfc523ebc44763f83658c984713ffae6ad4fb9a7dc4b52b3407bd78b694e4",
+            "4c2dfc523ebc44763f83658c984713ffae6ad4fb9a7dc4b52b3407bd78b694e4"
+          ]
+        },
+        {
+          "page": 4,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "3206c9e6f0dc50c4e5832b3b704aebbcb2145237ffdcc74fe0416f08c1451686",
+            "3206c9e6f0dc50c4e5832b3b704aebbcb2145237ffdcc74fe0416f08c1451686"
+          ]
+        },
+        {
+          "page": 5,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "d9bee53eefa0ec2df4fd848204b84c819d866c214a14fc176fd19b4fb5078b10",
+            "d9bee53eefa0ec2df4fd848204b84c819d866c214a14fc176fd19b4fb5078b10"
+          ]
+        },
+        {
+          "page": 6,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "7720d7f61b1b643252b20b9279870407ebb90ae75a4988f9e4808d2143c5137f",
+            "7720d7f61b1b643252b20b9279870407ebb90ae75a4988f9e4808d2143c5137f"
+          ]
+        },
+        {
+          "page": 7,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "c42bd8e18e7fbddb1eb992a4d2571284f4aee0264f602de0eea517f7c68e4676",
+            "c42bd8e18e7fbddb1eb992a4d2571284f4aee0264f602de0eea517f7c68e4676"
+          ]
+        },
+        {
+          "page": 8,
+          "textEqual": true,
+          "geometryEqual": true,
+          "rgbPixelsEqual": true,
+          "rgbSHA256": [
+            "db850f96d652c776077dfc068403aa0758a71f992c22f6e8328321d4c0f61cf5",
+            "db850f96d652c776077dfc068403aa0758a71f992c22f6e8328321d4c0f61cf5"
+          ]
+        }
+      ]
+    }
+  },
+  "developerHelperResults": {
+    "passed": 37,
+    "total": 37,
+    "errors": [],
+    "executionStatus": "Reviewed stored developer run; not independently rerun",
+    "keyboardCheckLabel": "Tab reaches side buttons, level, Draw, Undo, Next turn and Reset",
+    "keyboardRecordedOrder": "['SUMMARY', 'SUMMARY', 'SUMMARY', 'SUMMARY', 'BODY', 'bR', 'bG', 'lvl', 'draw', 'next', 'reset', 'SUMMARY', 'SUMMARY', 'SUMMARY', 'SUMMARY', 'BODY', 'bR', 'bG', 'lvl', 'draw', 'next', 'reset', 'SUMMARY', 'SUMMARY', 'SUMMARY']",
+    "undoAppearsInRecordedTabOrder": false
+  },
+  "rebuildPairsRecordedByDeveloper": {
+    "Caesar_Solo_Rules.pdf": {
+      "bytes_equal": true,
+      "all_text_equal": true,
+      "all_pixels_equal": true
+    },
+    "Caesar_Solo_Reference.pdf": {
+      "bytes_equal": true,
+      "all_text_equal": true,
+      "all_pixels_equal": true
+    },
+    "Caesar_Solo_Cards.pdf": {
+      "bytes_equal": true,
+      "all_text_equal": true,
+      "all_pixels_equal": true
+    },
+    "Caesar_Solo_Record_Sheet.pdf": {
+      "bytes_equal": true,
+      "all_text_equal": true,
+      "all_pixels_equal": true
+    },
+    "Caesar_Solo_Sim_Report.pdf": {
+      "bytes_equal": true,
+      "all_text_equal": true,
+      "all_pixels_equal": true
+    },
+    "Caesar_Solo_Sample_Game.pdf": {
+      "bytes_equal": true,
+      "all_text_equal": true,
+      "all_pixels_equal": true
+    },
+    "Caesar_Solo_Print_and_Play.pdf": {
+      "bytes_equal": true,
+      "all_text_equal": true,
+      "all_pixels_equal": true
+    }
+  },
+  "summary": {
+    "files": 7,
+    "pages": 55,
+    "allTextGeometryAndRGBPixelsEqual": true,
+    "developerPDFHashesMatchCommittedBlobs": true,
+    "freshBrowserRun": "Blocked by execution-environment/browser file-access policy",
+    "freshChromePDFRebuild": "Blocked by execution environment; not certified by this run"
+  }
+}
