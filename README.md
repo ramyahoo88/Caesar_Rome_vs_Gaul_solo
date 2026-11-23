@@ -51,15 +51,15 @@ All files are in [`print/`](print):
 
 ## Results at a glance
 
-Win rates from the final simulation study (5,300 games on fresh seeds) against the strongest computer opponent, a one-ply lookahead player, and against the other bot:
+Win rates from the final v1.1 simulation study (5,300 games on fresh seeds, corrected engine) against the strongest computer opponent, a one-ply lookahead player, and against the other bot:
 
 | Level | Imperator vs lookahead Gaul | Imperator vs Concilium | Concilium vs lookahead Rome | Concilium vs Imperator (+1 AP) |
 |---|---|---|---|---|
-| 1 | 0% | 7% | 60% | 21% |
-| 2 | 6% | 17% | 74% | 35% |
-| 3 | 29% | 43% | 82% | 50% |
-| 4 | 50% | 72% | 89% | 67% |
-| 5 | 69% | 82% | 98% | 81% |
+| 1 | 0% | 4% | 64% | 24% |
+| 2 | 6% | 20% | 76% | 37% |
+| 3 | 24% | 34% | 84% | 52% |
+| 4 | 57% | 63% | 92% | 62% |
+| 5 | 60% | 76% | 98% | 85% |
 
 A strong human should do better than these computer players. The full tables, method and caveats are in the [simulation report](print/Caesar_Solo_Sim_Report.md).
 
@@ -82,8 +82,10 @@ Two independent checks were run, each by a separate agent that had not written t
 
 ```
 cd code
+python3 tests/test_smoke.py                # smoke tests
+python3 tests/test_audit_fixes.py          # regression tests for the v1.0 audit findings
 python3 -c "from harness import evaluate, line; print(line(evaluate(('bot',{}),('bot',{}),range(20)),'bot v bot'))"
-python3 sample_game.py 33 sample.md        # a narrated bot-vs-bot game
+python3 sample_game.py 57 sample.md        # the sample game's log (the narrative is editorial)
 python3 study.py                           # the full study (about an hour on 2 cores)
 ```
 

@@ -68,7 +68,13 @@ if len(sys.argv) > 6:
     for k, lab in names:
         if k in L:
             rows.append(f'| {lab} | ' + ' | '.join(cellr(k, o) for o in ('bot', 'smart', 'search')) + ' |')
-    rows += ['', 'For Imperator, the Bot is Concilium under the standard rules. For Concilium, the Bot is Imperator with +1 AP on every card play.']
+    rows += ['', 'For Imperator, the Bot is Concilium under the standard rules. For Concilium, the Bot is Imperator with +1 AP on every card play.', '',
+             'On the corrected engine every change still pays overall, though not against every opponent:',
+             '',
+             '* **REGROUP and the danger limit** give up a little against Concilium (about 0.3 VP) but gain about 0.6 VP against the Heuristic player and 1.0 against the Lookahead player.',
+             '* **The lagging-region order** gains about 0.5 VP against both Concilium and the Lookahead player.',
+             "* **Caesar's 2:1 sieges** gain mostly against Concilium.",
+             "* **Concilium's danger rule** takes 1.0–1.4 VP off every Roman opponent."]
     t = t.replace('{{LATEST}}', '\n'.join(rows))
 if len(sys.argv) > 7:
     E = json.load(open(sys.argv[7]))
