@@ -1,0 +1,513 @@
+<!doctype html><html><head><meta charset="utf-8"><base href="file:///workspace/scratch/5f5e07a8f4f0/caesar-v13/print/"><title>Caesar Solo Bots — Sample Game</title>
+<style>
+@page { size: Letter; margin: 0.55in 0.6in 0.6in 0.6in; }
+body { font-family: 'DejaVu Serif', Georgia, serif; font-size: 10.5pt; line-height: 1.32; color: #1d1d1d; }
+h1 { font-size: 20pt; margin: 0 0 4pt 0; color: #7a1010; }
+h2 { font-size: 14pt; margin: 14pt 0 4pt 0; color: #7a1010; border-bottom: 1px solid #c9b18a; padding-bottom: 2pt; break-after: avoid; }
+h3 { font-size: 11.5pt; margin: 10pt 0 3pt 0; color: #3b2a10; break-after: avoid; }
+p { margin: 4pt 0; }
+ul, ol { margin: 3pt 0 3pt 0; padding-left: 18pt; }
+li { margin: 1.5pt 0; }
+table { border-collapse: collapse; width: 100%; margin: 5pt 0; font-size: 9.5pt; break-inside: auto; }
+th, td { border: 1px solid #b9a27a; padding: 2.5pt 4pt; vertical-align: top; text-align: left; }
+th { background: #efe4cf; }
+tr { break-inside: avoid; }
+code { font-family: 'DejaVu Sans Mono', monospace; font-size: 9pt; }
+pre { background: #f4f1ea; border: 1px solid #ddd5c4; padding: 6pt 8pt; white-space: pre-wrap; } pre code { font-size: 8.5pt; }
+hr { border: none; border-top: 1px solid #c9b18a; margin: 10pt 0; }
+@page { @bottom-center { content: "Caesar Solo Bots — Sample Game · unofficial fan variant for Caesar: Rome vs. Gaul (GMT Games) · page " counter(page); font-family: 'DejaVu Serif', serif; font-size: 8pt; color: #777; } }img { width: 5.4in; max-width: 100%; display: block; margin: 4pt auto; }</style></head><body><h1>Sample game: Imperator (level 3) vs Concilium (level 4, standard rules)</h1>
+<p>Both sides are bots, so every decision below follows the printed rules. Seed 57 (bots v1.3). Imperator gets +1 AP on every card play (its level 3); Concilium plays the standard rules (its level 4: Rome needs 12 VP). Lines starting with a Directive show the card turned over, the two cards of the Offer (* = Event Live for the bot) and the card chosen. "AP:" lines show the mission that spent each Action Point. Moves list the leader, the number of CUs, start and end space and the operations performed. Turns 1 and 2 are shown in full; later turns list only the cards played, combat, sieges, Tribes and VP.</p>
+<h2>How this game went</h2>
+<ul>
+<li><strong>Turn 1.</strong> <em>For the Glory of Caesar</em> sends Caesar and all six Legions to Octodurus. On the fourth siege roll he subjugates it and opens Caesar's Pass (+1 VP). Concilium raids in Belgica, removing Roman IMs at Condrusi and Segni. Rome leads Celtica 6–1 but holds no Belgic province (0–3): Governance 8, +1 VP.</li>
+<li><strong>Turn 2.</strong> Segni surrenders to Rome. Isolation removes two cut-off Gallic IMs. Belgica is still only 1–3: Governance 8, +1 VP.</li>
+<li><strong>Turn 3.</strong> Imperator's Control Table puts Belgica, the lagging region, first. A siege brings down the Nervii's Fortified Town, and Belgica turns 4–2: Governance 10, +2 VP.</li>
+<li><strong>Turn 4.</strong> The Treveri Submit on arrival. Concilium plays <em>Unrest in Provincia</em>, but Imperator cancels it with #24, which an earlier Offer had revealed into its Reserve. A Gallic attack at Bellovaci is beaten off. Caesar, with odds of 2:1, besieges Eburovices for three rolls until it falls and the Aulerci are eliminated. Governance 10, +2 VP, for 7 VP.</li>
+<li><strong>Turn 5.</strong> The Arverni Submit on arrival. Caesar's twelve-strength army forces Gallic stacks to Submit at Avaricum and then at Redones, where Vercingetorix is lost. Curiosolites surrenders. But Gallic raids have cost Rome control of Volcae in Provincia, so Governance is 9. That still gives +2 VP, for 9 VP.</li>
+<li><strong>Turn 6.</strong> The Parisii, Lingones and Suessiones all Submit as they arrive, and Rome holds Celtica and Belgica to the end. Volcae stays Gallic, so Governance is 9 again: +2 VP, for 11 VP. <strong>Rome finishes one point short, and Gaul wins.</strong> The two thin winters at the start, when Belgica was Gallic, decided the game.</li>
+</ul>
+<p>What this game shows about the bots:</p>
+<ul>
+<li><strong>Imperator.</strong> It wins provinces with RULE and RAID. Caesar's army forces Submissions and takes Fortified Towns at 2:1, and the Control Table always works first on the region Rome is losing. Its Reaction card works only once an Offer has revealed it.</li>
+<li><strong>Concilium.</strong> It raids wherever the Legions are not and never sweeps into danger, so there was only one battle in the whole game. It goes after Rome's weak points: Belgica early, then Provincia.</li>
+<li><strong>Governance decides the race, turn by turn.</strong> Rome needs dominance in both Celtica and Belgica, and Provincia intact, nearly every winter. Each winter short of that costs a VP.</li>
+</ul>
+<h2>How to read the log</h2>
+<ul>
+<li>A <strong>Directive</strong> line shows the Directive card turned over and its missions, then the Offer of two cards (* marks a card whose Event is Live for the bot) and the card chosen.</li>
+<li>A <strong>plays</strong> line gives the card and how it was used: as an Event, as a Bonus card (Event, then AP), or for AP.</li>
+<li>An <strong>AP:</strong> line names the mission that spent one Action Point (rules 2.5).</li>
+<li>A <strong>move</strong> line gives the leader, the number of units moving with him, the start and end spaces, and the operations done on the way.</li>
+<li>A <strong>battle</strong> line reads <em>attacker BS vs defender BS: hits scored by the attacker / hits scored by the defender → winner</em> (A or D).</li>
+<li>A <strong>siege</strong> line gives the Siege Table column, the roll, the attacker's losses and the Siege Points before and after.</li>
+<li>Turns 1 and 2 are shown in full. Later turns show only the cards played, combat, sieges, Tribe arrivals and VP.</li>
+<li>This introduction and narrative were written by hand. Running <code>python3 code/sample_game.py 57 out.md</code> regenerates the log itself, not these notes.</li>
+</ul>
+<h2>The log</h2>
+<h2>Turn 1</h2>
+<ul>
+<li>tribe Veneti placed at Curiosolites</li>
+<li>tribe Nervii placed at Nervii</li>
+<li>tribe Leuci placed at Mediomatrici</li>
+<li>Concilium Directive Council (W): BANK &gt; AGITATE &gt; RAID &gt; AMBUSH; Offer #26*, #38 -&gt; #26</li>
+<li><strong>Concilium</strong> plays #26 Mercenaries From Britannia and Hispania as <strong>bonus</strong><ul>
+<li>Concilium AP: BANK</li>
+<li>Concilium AP: BANK</li>
+</ul>
+</li>
+<li>Imperator Directive Rule (N): RULE &gt; RAID &gt; SIEGE &gt; SETTLE &gt; STRIKE; Offer #11*, #19 -&gt; #11</li>
+<li><strong>Imperator</strong> plays #11 For the Glory of Caesar as <strong>event</strong><ul>
+<li>siege Octodurus col2 roll4: loss 0 pts 0 -&gt; 0</li>
+<li>R move Caesar+6 Bibracte-&gt;Octodurus ops=['siege']</li>
+</ul>
+</li>
+<li>Concilium Directive Revolt (S): RISE &gt; RAID &gt; AMBUSH &gt; AGITATE; Offer #51, #39 -&gt; #51</li>
+<li><strong>Concilium</strong> plays #51 Stratagem &amp; Treachery as <strong>ap</strong><ul>
+<li>G influence place Namnetes</li>
+<li>Concilium AP: AGITATE</li>
+<li>G influence place Viromandui</li>
+<li>Concilium AP: AGITATE</li>
+</ul>
+</li>
+<li>Imperator Directive Glory (N): RULE &gt; INVADE &gt; SIEGE &gt; RAID &gt; SETTLE; Offer #41, #25 -&gt; #41</li>
+<li><strong>Imperator</strong> plays #41 A Call to Arms as <strong>ap</strong><ul>
+<li>siege Octodurus col2 roll10: loss 0 pts 2 -&gt; 2</li>
+<li>R move Caesar+6 Octodurus-&gt;Octodurus ops=['siege']</li>
+<li>Imperator AP: SIEGE</li>
+<li>R influence place Segni</li>
+<li>Imperator AP: SETTLE</li>
+<li>R influence place Durocortorum</li>
+<li>Imperator AP: RULE</li>
+</ul>
+</li>
+<li>Concilium Directive Agitate (W): AGITATE &gt; AMBUSH &gt; RAID &gt; BANK; Offer #39, #7 -&gt; #39</li>
+<li><strong>Concilium</strong> plays #39 Incite Through Sedition as <strong>ap</strong><ul>
+<li>G influence place Alesia</li>
+<li>Concilium AP: AGITATE</li>
+<li>G influence place Gorgobina</li>
+<li>Concilium AP: AGITATE</li>
+</ul>
+</li>
+<li>Imperator Directive Raid (E): RAID &gt; RULE &gt; SIEGE &gt; SETTLE &gt; STRIKE; Offer #2*, #31 -&gt; #2</li>
+<li><strong>Imperator</strong> plays #2 Constant as the Northern Star as <strong>bonus</strong><ul>
+<li>siege Octodurus col2 roll4: loss 0 pts 0 -&gt; 2</li>
+<li>R move Caesar+6 Octodurus-&gt;Octodurus ops=['siege']</li>
+<li>R influence place Vellavi</li>
+<li>Imperator AP: SETTLE</li>
+<li>R influence place Gergovia</li>
+<li>Imperator AP: SETTLE</li>
+<li>R influence place Cambiovicenses</li>
+<li>Imperator AP: RULE</li>
+<li>R influence place Meldi</li>
+<li>Imperator AP: SETTLE</li>
+</ul>
+</li>
+<li>Concilium Directive Agitate (E): AGITATE &gt; RAID &gt; AMBUSH &gt; BANK; Offer #32, #34* -&gt; #34</li>
+<li><strong>Concilium</strong> plays #34 German Migration as <strong>bonus</strong><ul>
+<li>G influence place Suessiones</li>
+<li>Concilium AP: AGITATE</li>
+<li>G influence place Silvanectes</li>
+<li>Concilium AP: AGITATE</li>
+</ul>
+</li>
+<li>Imperator Directive Pacify (N): RULE &gt; SIEGE &gt; RAID &gt; SETTLE &gt; STRIKE; Offer #28, #19* -&gt; #19</li>
+<li><strong>Imperator</strong> plays #19 Roman Trade as <strong>bonus</strong><ul>
+<li>IM removed: Viromandui (G)</li>
+<li>siege Octodurus col2 roll11: loss 1 pts 3 -&gt; 5</li>
+<li>stronghold Octodurus subjugated</li>
+<li>VP +1 Caesar's Pass -&gt; 1</li>
+<li>R move Caesar+6 Octodurus-&gt;Octodurus ops=['siege']</li>
+<li>Imperator AP: CONTINUE</li>
+<li>R influence place Condrusi</li>
+<li>Imperator AP: SETTLE</li>
+<li>R influence place Bagacum</li>
+<li>Imperator AP: SETTLE</li>
+</ul>
+</li>
+<li>Concilium Directive Raid (S): RAID &gt; AGITATE &gt; AMBUSH &gt; BANK; Offer #38, #7* -&gt; #7</li>
+<li><strong>Concilium</strong> plays #7 Belgic Resentment as <strong>event</strong><ul>
+<li>G influence place Viromandui</li>
+<li>G influence place Catalauni</li>
+</ul>
+</li>
+<li>Imperator Directive Campaign (S): RULE &gt; SIEGE &gt; STRIKE &gt; RAID &gt; SETTLE; Offer #28, #48* -&gt; #48</li>
+<li><strong>Imperator</strong> plays #48 Roman Bribes as <strong>event</strong></li>
+<li>Concilium Directive Ambush (E): AMBUSH &gt; RAID &gt; AGITATE &gt; BANK; Offer #32, #38 -&gt; #32</li>
+<li><strong>Concilium</strong> plays #32 Caesar's Legions as <strong>ap</strong><ul>
+<li>IM removed: Condrusi (R)</li>
+<li>G move stack+1 Nervii-&gt;Condrusi ops=['remove_im']</li>
+<li>Concilium AP: RAID</li>
+<li>G influence place Redones</li>
+<li>Concilium AP: AGITATE</li>
+</ul>
+</li>
+<li>Imperator Directive Pacify (W): RULE &gt; SIEGE &gt; RAID &gt; SETTLE &gt; STRIKE; Offer #25, #31 -&gt; #25</li>
+<li><strong>Imperator</strong> plays #25 Mercenaries From Britannia and Hispania as <strong>ap</strong><ul>
+<li>R influence place Tarbelli</li>
+<li>Imperator AP: SETTLE</li>
+<li>R influence place Sotiates</li>
+<li>Imperator AP: RULE</li>
+<li>R influence place Andes</li>
+<li>Imperator AP: SETTLE</li>
+</ul>
+</li>
+<li>Concilium Directive Council (N): RISE &gt; BANK &gt; AGITATE &gt; RAID; Offer #38 -&gt; #38</li>
+<li><strong>Concilium</strong> plays #38 Motus Ubique as <strong>ap</strong><ul>
+<li>Concilium AP: BANK</li>
+<li>G influence place Condrusi</li>
+<li>G influence place Virodunum</li>
+<li>G influence place Vangiones</li>
+<li>Concilium AP: RISE</li>
+</ul>
+</li>
+<li>Imperator Directive Pacify (S): RULE &gt; SIEGE &gt; RAID &gt; SETTLE &gt; STRIKE; Offer #28, #31 -&gt; #28</li>
+<li><strong>Imperator</strong> plays #28 Alesia as <strong>ap</strong><ul>
+<li>R influence place Cenomani</li>
+<li>Imperator AP: SETTLE</li>
+<li>R influence place Diablintes</li>
+<li>Imperator AP: RULE</li>
+<li>R influence place Autricum</li>
+<li>Imperator AP: SETTLE</li>
+</ul>
+</li>
+<li><strong>Concilium</strong> plays #24 You May Believe What You Wish as <strong>ap</strong><ul>
+<li>IM removed: Segni (R)</li>
+<li>G move stack+1 Condrusi-&gt;Segni ops=['remove_im']</li>
+<li>Concilium AP: RAID</li>
+<li>G influence place Segni</li>
+<li>Concilium AP: AGITATE</li>
+</ul>
+</li>
+<li>Imperator Directive Pacify (E): RULE &gt; SIEGE &gt; RAID &gt; SETTLE &gt; STRIKE; Offer #31 -&gt; #31</li>
+<li><strong>Imperator</strong> plays #31 A Friend of Rome as <strong>ap</strong><ul>
+<li>R influence place Cenabum</li>
+<li>Imperator AP: RULE</li>
+<li>R influence place Metiosedum</li>
+<li>Imperator AP: SETTLE</li>
+<li>R influence place Lutetia</li>
+<li>Imperator AP: RULE</li>
+<li>VP +1 governance 8 -&gt; 2</li>
+<li>governance 8</li>
+</ul>
+</li>
+</ul>
+<p><em>End of Turn 1: Celtica provinces Rome 6 / Gaul 1; Belgica Rome 0 / Gaul 3; Fortified Towns 3; Provincia provinces lost: none; Roman VP 2.</em></p>
+<h2>Turn 2</h2>
+<ul>
+<li>tribe Remi placed at Segni</li>
+<li>tribe Cadurci placed at Carantomagus</li>
+<li>tribe Eburones placed at Aduatuci</li>
+<li>Concilium Directive Revolt (N): RISE &gt; AMBUSH &gt; RAID &gt; AGITATE; Offer #12, #40* -&gt; #40</li>
+<li><strong>Concilium</strong> plays #40 Unrest Spreads as <strong>bonus</strong><ul>
+<li>IM removed: Diablintes (R)</li>
+<li>IM removed: Bagacum (R)</li>
+<li>G move stack+1 Nervii-&gt;Bagacum ops=['remove_im']</li>
+<li>Concilium AP: RAID</li>
+<li>IM removed: Bibrax (R)</li>
+<li>G move stack+1 Segni-&gt;Bibrax ops=['remove_im']</li>
+<li>Concilium AP: RAID</li>
+</ul>
+</li>
+<li>Imperator Directive Rule (W): RULE &gt; RAID &gt; SIEGE &gt; SETTLE &gt; STRIKE; Offer #10*, #37 -&gt; #10</li>
+<li><strong>Imperator</strong> plays #10 The Reach of Rome as <strong>event</strong><ul>
+<li>R influence place Diablintes</li>
+<li>R influence place Tungri</li>
+</ul>
+</li>
+<li>Concilium Directive Council (W): BANK &gt; AGITATE &gt; RAID &gt; AMBUSH; Offer #47, #12 -&gt; #12</li>
+<li><strong>Concilium</strong> plays #12 Roman Rule as <strong>ap</strong><ul>
+<li>Concilium AP: BANK</li>
+<li>Concilium AP: BANK</li>
+</ul>
+</li>
+<li>Imperator Directive Rule (W): RULE &gt; RAID &gt; SIEGE &gt; SETTLE &gt; STRIKE; Offer #17<em>, #35</em> -&gt; #17</li>
+<li><strong>Imperator</strong> plays #17 Caesar's Lieutenant as <strong>bonus</strong><ul>
+<li>IM removed: Gorgobina (G)</li>
+<li>R move Labienus+2 Vellaunodurum-&gt;Gorgobina ops=['remove_im']</li>
+<li>R influence place Eburones</li>
+<li>Imperator AP: SETTLE</li>
+<li>R influence place Abrincatui</li>
+<li>Imperator AP: SETTLE</li>
+<li>R influence place Venelli</li>
+<li>Imperator AP: SETTLE</li>
+</ul>
+</li>
+<li>Concilium Directive Agitate (W): AGITATE &gt; AMBUSH &gt; RAID &gt; BANK; Offer #6<em>, #14</em> -&gt; #6</li>
+<li><strong>Concilium</strong> plays #6 A United Gaul as <strong>event</strong><ul>
+<li>G influence place Agedincum</li>
+<li>G influence place Veneti</li>
+<li>G influence place Bagacum</li>
+<li>G influence place Bibrax</li>
+<li>G influence place Divodurum</li>
+</ul>
+</li>
+<li>Imperator Directive Raid (E): RAID &gt; RULE &gt; SIEGE &gt; SETTLE &gt; STRIKE; Offer #35*, #9 -&gt; #35</li>
+<li><strong>Imperator</strong> plays #35 German Migration as <strong>bonus</strong><ul>
+<li>IM removed: Vangiones (G)</li>
+<li>German tribe to Vangiones</li>
+<li>R influence place Lexovii</li>
+<li>Imperator AP: RULE</li>
+<li>R influence place Andematunnum</li>
+<li>Imperator AP: SETTLE</li>
+<li>R influence place Tricasses</li>
+<li>Imperator AP: SETTLE</li>
+</ul>
+</li>
+<li>Concilium Directive Agitate (E): AGITATE &gt; RAID &gt; AMBUSH &gt; BANK; Offer #47, #14* -&gt; #14</li>
+<li><strong>Concilium</strong> plays #14 Glory &amp; Liberty as <strong>event</strong><ul>
+<li>G influence place Sotium</li>
+<li>G influence place Leuci</li>
+</ul>
+</li>
+<li>Imperator Directive Pacify (W): RULE &gt; SIEGE &gt; RAID &gt; SETTLE &gt; STRIKE; Offer #36, #53 -&gt; #36</li>
+<li><strong>Imperator</strong> plays #36 Encourage the Timid as <strong>ap</strong><ul>
+<li>R influence place Autessiodurum</li>
+<li>Imperator AP: RULE</li>
+<li>IM removed: Agedincum (G)</li>
+<li>R move Labienus+2 Gorgobina-&gt;Agedincum ops=['remove_im']</li>
+<li>Imperator AP: RAID</li>
+<li>IM removed: Alesia (G)</li>
+<li>R move Caesar+4 Allobroges-&gt;Alesia ops=['remove_im']</li>
+<li>Imperator AP: RAID</li>
+</ul>
+</li>
+<li>Concilium Directive Ambush (E): AMBUSH &gt; RAID &gt; AGITATE &gt; BANK; Offer #45*, #47 -&gt; #45</li>
+<li><strong>Concilium</strong> plays #45 Diplomacy as <strong>event</strong></li>
+<li>Imperator Directive Pacify (N): RULE &gt; SIEGE &gt; RAID &gt; SETTLE &gt; STRIKE; Offer #37, #44* -&gt; #44</li>
+<li><strong>Imperator</strong> plays #44 Legate Called to Rome as <strong>bonus</strong><ul>
+<li>IM removed: Catalauni (G)</li>
+<li>R move Caesar+4 Alesia-&gt;Catalauni ops=['remove_im']</li>
+<li>Imperator AP: RAID</li>
+<li>R influence place Catalauni</li>
+<li>Imperator AP: SETTLE</li>
+<li>R influence place Tullum</li>
+<li>Imperator AP: SETTLE</li>
+</ul>
+</li>
+<li>Concilium Directive Raid (N): RAID &gt; AMBUSH &gt; AGITATE &gt; BANK; Offer #47 -&gt; #47</li>
+<li><strong>Concilium</strong> plays #47 Winter Campaign as <strong>ap</strong><ul>
+<li>G influence place Petrocorii</li>
+<li>Concilium AP: AGITATE</li>
+</ul>
+</li>
+<li>Imperator Directive Pacify (S): RULE &gt; SIEGE &gt; RAID &gt; SETTLE &gt; STRIKE; Offer #37, #53 -&gt; #37</li>
+<li><strong>Imperator</strong> plays #37 Motus Ubique as <strong>ap</strong><ul>
+<li>Segni surrenders to R</li>
+<li>R move Caesar+4 Catalauni-&gt;Segni ops=['siege']</li>
+<li>Imperator AP: SIEGE</li>
+<li>R influence place Segni</li>
+<li>Imperator AP: RULE</li>
+<li>R influence place Triboci</li>
+<li>Imperator AP: SETTLE</li>
+</ul>
+</li>
+<li>Concilium Directive Raid (S): RAID &gt; AGITATE &gt; AMBUSH &gt; BANK; Offer #8<em>, #22</em> -&gt; #8</li>
+<li><strong>Concilium</strong> plays #8 Druidic Influence as <strong>event</strong><ul>
+<li>IM removed: Rauraci (R)</li>
+<li>IM removed: Magetobriga (R)</li>
+<li>IM removed: Epomanduodurum (R)</li>
+<li>IM removed: Vesontio (R)</li>
+</ul>
+</li>
+<li>Imperator Directive Glory (N): RULE &gt; INVADE &gt; SIEGE &gt; RAID &gt; SETTLE; Offer #9*, #53 -&gt; #9</li>
+<li><strong>Imperator</strong> plays #9 Destroyed Root &amp; Branch as <strong>event</strong><ul>
+<li>IM removed: Condrusi (G)</li>
+<li>IM removed: Bibrax (G)</li>
+<li>IM removed: Virodunum (G)</li>
+</ul>
+</li>
+<li>Concilium Directive Council (N): RISE &gt; BANK &gt; AGITATE &gt; RAID; Offer #22* -&gt; #22</li>
+<li><strong>Concilium</strong> plays #22 Burn the Countryside as <strong>bonus</strong><ul>
+<li>IM removed: Eburones (R)</li>
+<li>G influence place Treveri</li>
+<li>G influence place Eburovices</li>
+<li>Concilium AP: RISE</li>
+<li>Concilium AP: BANK</li>
+</ul>
+</li>
+<li>Imperator Directive Rule (N): RULE &gt; RAID &gt; SIEGE &gt; SETTLE &gt; STRIKE; Offer #53 -&gt; #53</li>
+<li><strong>Imperator</strong> plays #53 Trumpets of War as <strong>ap</strong><ul>
+<li>IM removed: Viromandui (G)</li>
+<li>R move Caesar+4 Segni-&gt;Viromandui ops=['remove_im']</li>
+<li>Imperator AP: RAID</li>
+<li>R influence place Rauraci</li>
+<li>Imperator AP: SETTLE</li>
+<li>R influence place Magetobriga</li>
+<li>Imperator AP: SETTLE</li>
+<li>isolated G IM removed Eburovices</li>
+<li>isolated G IM removed Brigantium</li>
+<li>VP +1 governance 8 -&gt; 3</li>
+<li>governance 8</li>
+</ul>
+</li>
+</ul>
+<p><em>End of Turn 2: Celtica provinces Rome 7 / Gaul 2; Belgica Rome 1 / Gaul 3; Fortified Towns 5; Provincia provinces lost: none; Roman VP 3.</em></p>
+<h2>Turn 3</h2>
+<ul>
+<li>tribe Bellovaci placed at Iuliobona</li>
+<li>tribe Aulerci placed at Eburovices</li>
+<li>tribe Bituriges placed at Bituriges</li>
+<li><strong>Concilium</strong> plays #16 Trumpets of War as <strong>event</strong><ul>
+<li>R avoids battle Bratuspantium-&gt;Lutetia</li>
+</ul>
+</li>
+<li><strong>Imperator</strong> plays #1 Veni Vidi Vici as <strong>bonus</strong></li>
+<li><strong>Concilium</strong> plays #23 Gaul of the Long-Hairs as <strong>bonus</strong></li>
+<li><strong>Imperator</strong> plays #46 Local Raids as <strong>bonus</strong></li>
+<li><strong>Concilium</strong> plays #18 Hostages as <strong>ap</strong></li>
+<li><strong>Imperator</strong> plays #27 Unrest in Provincia as <strong>ap</strong></li>
+<li><strong>Concilium</strong> plays #4 Aid From Crassus as <strong>ap</strong></li>
+<li><strong>Imperator</strong> plays #15 Exchange of Oaths as <strong>ap</strong></li>
+<li><strong>Concilium</strong> plays #5 The Belgic Confederation as <strong>event</strong></li>
+<li><strong>Imperator</strong> plays #21 Ties of Blood and Marriage as <strong>ap</strong><ul>
+<li>siege Nervii col3 roll7: loss 1 pts 2 -&gt; 2</li>
+<li>R move Caesar+2 Treveri-&gt;Nervii ops=['siege']</li>
+</ul>
+</li>
+<li><strong>Concilium</strong> plays #29 German Auxiliary Cavalry as <strong>ap</strong></li>
+<li><strong>Imperator</strong> plays #49 Three Days March as <strong>ap</strong><ul>
+<li>siege Nervii col2 roll8: loss 1 pts 2 -&gt; 4</li>
+<li>eliminated Nervii fort fell</li>
+<li>Nervii falls to R</li>
+<li>R move Caesar+2 Nervii-&gt;Nervii ops=['siege']</li>
+</ul>
+</li>
+<li><strong>Concilium</strong> plays #30 German Auxiliary Cavalry as <strong>ap</strong></li>
+<li><strong>Imperator</strong> plays #13 Gallic War Council as <strong>ap</strong></li>
+<li><strong>Concilium</strong> plays #20 Roman Auxiliaries as <strong>ap</strong></li>
+<li><strong>Imperator</strong> plays #42 Senate Outraged as <strong>ap</strong><ul>
+<li>VP +2 governance 10 -&gt; 5</li>
+<li>governance 10</li>
+</ul>
+</li>
+</ul>
+<p><em>End of Turn 3: Celtica provinces Rome 8 / Gaul 2; Belgica Rome 4 / Gaul 2; Fortified Towns 7; Provincia provinces lost: none; Roman VP 5.</em></p>
+<h2>Turn 4</h2>
+<ul>
+<li>tribe Armorici placed at Esubii</li>
+<li>tribe Treveri submits on arrival</li>
+<li><strong>Concilium</strong> plays #14 Glory &amp; Liberty as <strong>event</strong></li>
+<li><strong>Imperator</strong> plays #48 Roman Bribes as <strong>event</strong></li>
+<li><strong>Concilium</strong> plays #1 Veni Vidi Vici as <strong>ap</strong></li>
+<li><strong>Imperator</strong> plays #26 Mercenaries From Britannia and Hispania as <strong>ap</strong><ul>
+<li>siege Eburovices col3 roll8: loss 0 pts 2 -&gt; 2</li>
+<li>R move Caesar+2 Bellovaci-&gt;Eburovices ops=['siege']</li>
+</ul>
+</li>
+<li><strong>Concilium</strong> plays #27 Unrest in Provincia as <strong>event</strong><ul>
+<li>R cancels #27 with #24</li>
+</ul>
+</li>
+<li><strong>Concilium</strong> plays #44 Legate Called to Rome as <strong>bonus</strong><ul>
+<li>battle Bellovaci G7 vs R4: hits 1/1 -&gt; D</li>
+<li>R avoids battle Bellovaci-&gt;Lutetia</li>
+</ul>
+</li>
+<li><strong>Imperator</strong> plays #36 Encourage the Timid as <strong>ap</strong><ul>
+<li>siege Eburovices col3 roll3: loss 0 pts 0 -&gt; 2</li>
+<li>R move Caesar+2 Eburovices-&gt;Eburovices ops=['siege']</li>
+</ul>
+</li>
+<li><strong>Concilium</strong> plays #8 Druidic Influence as <strong>event</strong></li>
+<li><strong>Imperator</strong> plays #28 Alesia as <strong>ap</strong><ul>
+<li>siege Eburovices col3 roll5: loss 0 pts 1 -&gt; 3</li>
+<li>eliminated Aulerci fort fell</li>
+<li>Eburovices falls to R</li>
+<li>R move Caesar+2 Eburovices-&gt;Eburovices ops=['siege']</li>
+</ul>
+</li>
+<li><strong>Concilium</strong> plays #34 German Migration as <strong>bonus</strong><ul>
+<li>German tribe to Nemetes</li>
+</ul>
+</li>
+<li><strong>Imperator</strong> plays #12 Roman Rule as <strong>event</strong></li>
+<li><strong>Concilium</strong> plays #37 Motus Ubique as <strong>ap</strong></li>
+<li><strong>Imperator</strong> plays #22 Burn the Countryside as <strong>ap</strong></li>
+<li><strong>Concilium</strong> plays #31 A Friend of Rome as <strong>ap</strong></li>
+<li><strong>Imperator</strong> plays #51 Stratagem &amp; Treachery as <strong>ap</strong><ul>
+<li>siege Bituriges col3 roll5: loss 0 pts 1 -&gt; 1</li>
+<li>R move Caesar+2 Redones-&gt;Bituriges ops=['siege']</li>
+</ul>
+</li>
+<li><strong>Concilium</strong> plays #39 Incite Through Sedition as <strong>bonus</strong></li>
+<li><strong>Imperator</strong> plays #25 Mercenaries From Britannia and Hispania as <strong>ap</strong><ul>
+<li>siege Bituriges col3 roll5: loss 0 pts 1 -&gt; 2</li>
+<li>R move Caesar+2 Bituriges-&gt;Bituriges ops=['siege']</li>
+<li>VP +2 governance 10 -&gt; 7</li>
+<li>governance 10</li>
+</ul>
+</li>
+</ul>
+<p><em>End of Turn 4: Celtica provinces Rome 8 / Gaul 3; Belgica Rome 4 / Gaul 2; Fortified Towns 7; Provincia provinces lost: none; Roman VP 7.</em></p>
+<h2>Turn 5</h2>
+<ul>
+<li>tribe Senones placed at Autessiodurum</li>
+<li>tribe Atrebates placed at Portus Itius</li>
+<li>tribe Aquitani placed at Ausci</li>
+<li><strong>Concilium</strong> plays #40 Unrest Spreads as <strong>bonus</strong></li>
+<li><strong>Imperator</strong> plays #2 Constant as the Northern Star as <strong>bonus</strong></li>
+<li><strong>Concilium</strong> plays #33 Local Raids as <strong>bonus</strong></li>
+<li><strong>Imperator</strong> plays #6 A United Gaul as <strong>ap</strong></li>
+<li><strong>Concilium</strong> plays #15 Exchange of Oaths as <strong>bonus</strong></li>
+<li><strong>Imperator</strong> plays #18 Hostages as <strong>bonus</strong></li>
+<li><strong>Concilium</strong> plays #21 Ties of Blood and Marriage as <strong>event</strong><ul>
+<li>tribe Arverni submits on arrival</li>
+</ul>
+</li>
+<li><strong>Imperator</strong> plays #17 Caesar's Lieutenant as <strong>bonus</strong><ul>
+<li>Gauls at Avaricum submit to Caesar (12:4)</li>
+</ul>
+</li>
+<li><strong>Concilium</strong> plays #29 German Auxiliary Cavalry as <strong>ap</strong></li>
+<li><strong>Imperator</strong> plays #47 Winter Campaign as <strong>ap</strong></li>
+<li><strong>Concilium</strong> plays #3 Aid From Pompey as <strong>ap</strong></li>
+<li><strong>Imperator</strong> plays #5 The Belgic Confederation as <strong>ap</strong><ul>
+<li>Curiosolites surrenders to R</li>
+<li>R move Caesar+6 Eburovices-&gt;Curiosolites ops=['siege']</li>
+</ul>
+</li>
+<li><strong>Concilium</strong> plays #49 Three Days March as <strong>ap</strong></li>
+<li><strong>Imperator</strong> plays #23 Gaul of the Long-Hairs as <strong>ap</strong><ul>
+<li>Gauls at Redones submit to Caesar (12:3)</li>
+<li>eliminated Vercingetorix submit</li>
+</ul>
+</li>
+<li><strong>Concilium</strong> plays #50 Naval Supremacy as <strong>ap</strong></li>
+<li><strong>Imperator</strong> plays #42 Senate Outraged as <strong>ap</strong><ul>
+<li>VP +2 governance 9 -&gt; 9</li>
+<li>governance 9</li>
+</ul>
+</li>
+</ul>
+<p><em>End of Turn 5: Celtica provinces Rome 8 / Gaul 1; Belgica Rome 4 / Gaul 2; Fortified Towns 9; Provincia provinces lost: Volcae; Roman VP 9.</em></p>
+<h2>Turn 6</h2>
+<ul>
+<li>tribe Parisii submits on arrival</li>
+<li>tribe Lingones submits on arrival</li>
+<li>tribe Suessiones submits on arrival</li>
+<li><strong>Concilium</strong> plays #9 Destroyed Root &amp; Branch as <strong>ap</strong></li>
+<li><strong>Imperator</strong> plays #41 A Call to Arms as <strong>ap</strong></li>
+<li><strong>Concilium</strong> plays #16 Trumpets of War as <strong>event</strong></li>
+<li><strong>Imperator</strong> plays #35 German Migration as <strong>bonus</strong><ul>
+<li>German tribe to Eburones</li>
+</ul>
+</li>
+<li><strong>Concilium</strong> plays #38 Motus Ubique as <strong>ap</strong></li>
+<li><strong>Imperator</strong> plays #43 The Aedui Switch Sides as <strong>ap</strong></li>
+<li><strong>Concilium</strong> plays #4 Aid From Crassus as <strong>ap</strong></li>
+<li><strong>Imperator</strong> plays #13 Gallic War Council as <strong>ap</strong></li>
+<li><strong>Concilium</strong> plays #11 For the Glory of Caesar as <strong>ap</strong></li>
+<li><strong>Imperator</strong> plays #7 Belgic Resentment as <strong>ap</strong></li>
+<li><strong>Concilium</strong> plays #30 German Auxiliary Cavalry as <strong>ap</strong></li>
+<li><strong>Imperator</strong> plays #53 Trumpets of War as <strong>ap</strong></li>
+<li><strong>Concilium</strong> plays #19 Roman Trade as <strong>ap</strong></li>
+<li><strong>Imperator</strong> plays #45 Diplomacy as <strong>event</strong></li>
+<li><strong>Concilium</strong> plays #20 Roman Auxiliaries as <strong>ap</strong></li>
+<li><strong>Imperator</strong> plays #10 The Reach of Rome as <strong>event</strong><ul>
+<li>VP +2 governance 9 -&gt; 11</li>
+<li>governance 9</li>
+</ul>
+</li>
+</ul>
+<p><em>End of Turn 6: Celtica provinces Rome 8 / Gaul 1; Belgica Rome 4 / Gaul 3; Fortified Towns 9; Provincia provinces lost: Volcae; Roman VP 11.</em></p>
+<p><strong>Result:</strong> Gaul wins (end VP 11). Battles 1, siege rolls 13, Tribes eliminated 3, Legions still eliminated at the end 0.</p></body></html>

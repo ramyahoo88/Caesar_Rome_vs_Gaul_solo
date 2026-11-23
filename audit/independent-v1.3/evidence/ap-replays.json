@@ -1,0 +1,293 @@
+{
+  "records": [
+    {
+      "matchup": "imp_con",
+      "AP": "ap1",
+      "seed": 14000,
+      "expected": [
+        13,
+        "R",
+        "end VP 13"
+      ],
+      "actual": [
+        13,
+        "R",
+        "end VP 13"
+      ],
+      "matches": true
+    },
+    {
+      "matchup": "imp_con",
+      "AP": "ap1",
+      "seed": 14001,
+      "expected": [
+        13,
+        "R",
+        "end VP 13"
+      ],
+      "actual": [
+        13,
+        "R",
+        "end VP 13"
+      ],
+      "matches": true
+    },
+    {
+      "matchup": "imp_con",
+      "AP": "ap1",
+      "seed": 14002,
+      "expected": [
+        10,
+        "G",
+        "end VP 10"
+      ],
+      "actual": [
+        10,
+        "G",
+        "end VP 10"
+      ],
+      "matches": true
+    },
+    {
+      "matchup": "imp_con",
+      "AP": "ap2",
+      "seed": 14000,
+      "expected": [
+        11,
+        "G",
+        "end VP 11"
+      ],
+      "actual": [
+        11,
+        "G",
+        "end VP 11"
+      ],
+      "matches": true
+    },
+    {
+      "matchup": "imp_con",
+      "AP": "ap2",
+      "seed": 14001,
+      "expected": [
+        13,
+        "R",
+        "end VP 13"
+      ],
+      "actual": [
+        13,
+        "R",
+        "end VP 13"
+      ],
+      "matches": true
+    },
+    {
+      "matchup": "imp_con",
+      "AP": "ap2",
+      "seed": 14002,
+      "expected": [
+        13,
+        "R",
+        "end VP 13"
+      ],
+      "actual": [
+        13,
+        "R",
+        "end VP 13"
+      ],
+      "matches": true
+    },
+    {
+      "matchup": "imp_search",
+      "AP": "ap1",
+      "seed": 14000,
+      "expected": [
+        11,
+        "G",
+        "end VP 11"
+      ],
+      "actual": [
+        11,
+        "G",
+        "end VP 11"
+      ],
+      "matches": true
+    },
+    {
+      "matchup": "imp_search",
+      "AP": "ap1",
+      "seed": 14001,
+      "expected": [
+        7,
+        "G",
+        "end VP 7"
+      ],
+      "actual": [
+        7,
+        "G",
+        "end VP 7"
+      ],
+      "matches": true
+    },
+    {
+      "matchup": "imp_search",
+      "AP": "ap1",
+      "seed": 14002,
+      "expected": [
+        5,
+        "G",
+        "end VP 5"
+      ],
+      "actual": [
+        5,
+        "G",
+        "end VP 5"
+      ],
+      "matches": true
+    },
+    {
+      "matchup": "imp_search",
+      "AP": "ap2",
+      "seed": 14000,
+      "expected": [
+        5,
+        "G",
+        "end VP 5"
+      ],
+      "actual": [
+        5,
+        "G",
+        "end VP 5"
+      ],
+      "matches": true
+    },
+    {
+      "matchup": "imp_search",
+      "AP": "ap2",
+      "seed": 14001,
+      "expected": [
+        4,
+        "G",
+        "end VP 4"
+      ],
+      "actual": [
+        4,
+        "G",
+        "end VP 4"
+      ],
+      "matches": true
+    },
+    {
+      "matchup": "imp_search",
+      "AP": "ap2",
+      "seed": 14002,
+      "expected": [
+        9,
+        "G",
+        "end VP 9"
+      ],
+      "actual": [
+        9,
+        "G",
+        "end VP 9"
+      ],
+      "matches": true
+    },
+    {
+      "matchup": "con_search",
+      "AP": "ap1",
+      "seed": 14000,
+      "expected": [
+        9,
+        "G",
+        "end VP 9"
+      ],
+      "actual": [
+        9,
+        "G",
+        "end VP 9"
+      ],
+      "matches": true
+    },
+    {
+      "matchup": "con_search",
+      "AP": "ap1",
+      "seed": 14001,
+      "expected": [
+        6,
+        "G",
+        "end VP 6"
+      ],
+      "actual": [
+        6,
+        "G",
+        "end VP 6"
+      ],
+      "matches": true
+    },
+    {
+      "matchup": "con_search",
+      "AP": "ap1",
+      "seed": 14002,
+      "expected": [
+        8,
+        "G",
+        "end VP 8"
+      ],
+      "actual": [
+        8,
+        "G",
+        "end VP 8"
+      ],
+      "matches": true
+    },
+    {
+      "matchup": "con_search",
+      "AP": "ap2",
+      "seed": 14000,
+      "expected": [
+        3,
+        "G",
+        "end VP 3"
+      ],
+      "actual": [
+        3,
+        "G",
+        "end VP 3"
+      ],
+      "matches": true
+    },
+    {
+      "matchup": "con_search",
+      "AP": "ap2",
+      "seed": 14001,
+      "expected": [
+        2,
+        "G",
+        "end VP 2"
+      ],
+      "actual": [
+        2,
+        "G",
+        "end VP 2"
+      ],
+      "matches": true
+    },
+    {
+      "matchup": "con_search",
+      "AP": "ap2",
+      "seed": 14002,
+      "expected": [
+        4,
+        "G",
+        "end VP 4"
+      ],
+      "actual": [
+        4,
+        "G",
+        "end VP 4"
+      ],
+      "matches": true
+    }
+  ],
+  "seconds": 13.981354713439941
+}

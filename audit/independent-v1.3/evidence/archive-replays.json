@@ -1,0 +1,2407 @@
+{
+  "commit": "7c0d65c41b36de4c5cad96d7227b056d494685ff",
+  "prefixPerCell": 3,
+  "records": [
+    {
+      "cell": "Imperator L1 vs bot",
+      "seed": 100000,
+      "expected": [
+        8,
+        "end VP 8",
+        1,
+        6
+      ],
+      "actual": [
+        8,
+        "end VP 8",
+        1,
+        6
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L1 vs bot",
+      "seed": 100001,
+      "expected": [
+        10,
+        "end VP 10",
+        7,
+        18
+      ],
+      "actual": [
+        10,
+        "end VP 10",
+        7,
+        18
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L1 vs bot",
+      "seed": 100002,
+      "expected": [
+        4,
+        "end VP 4",
+        0,
+        10
+      ],
+      "actual": [
+        4,
+        "end VP 4",
+        0,
+        10
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L1 vs smart",
+      "seed": 100000,
+      "expected": [
+        4,
+        "end VP 4",
+        8,
+        10
+      ],
+      "actual": [
+        4,
+        "end VP 4",
+        8,
+        10
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L1 vs smart",
+      "seed": 100001,
+      "expected": [
+        8,
+        "end VP 8",
+        6,
+        9
+      ],
+      "actual": [
+        8,
+        "end VP 8",
+        6,
+        9
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L1 vs smart",
+      "seed": 100002,
+      "expected": [
+        6,
+        "end VP 6",
+        4,
+        15
+      ],
+      "actual": [
+        6,
+        "end VP 6",
+        4,
+        15
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L1 vs smart-aggressive",
+      "seed": 100000,
+      "expected": [
+        7,
+        "end VP 7",
+        6,
+        11
+      ],
+      "actual": [
+        7,
+        "end VP 7",
+        6,
+        11
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L1 vs smart-aggressive",
+      "seed": 100001,
+      "expected": [
+        2,
+        "end VP 2",
+        7,
+        9
+      ],
+      "actual": [
+        2,
+        "end VP 2",
+        7,
+        9
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L1 vs smart-aggressive",
+      "seed": 100002,
+      "expected": [
+        6,
+        "end VP 6",
+        5,
+        13
+      ],
+      "actual": [
+        6,
+        "end VP 6",
+        5,
+        13
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L1 vs search",
+      "seed": 100000,
+      "expected": [
+        -1,
+        "end VP -1",
+        8,
+        10
+      ],
+      "actual": [
+        -1,
+        "end VP -1",
+        8,
+        10
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L1 vs search",
+      "seed": 100001,
+      "expected": [
+        2,
+        "end VP 2",
+        5,
+        15
+      ],
+      "actual": [
+        2,
+        "end VP 2",
+        5,
+        15
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L1 vs search",
+      "seed": 100002,
+      "expected": [
+        6,
+        "end VP 6",
+        6,
+        9
+      ],
+      "actual": [
+        6,
+        "end VP 6",
+        6,
+        9
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L2 vs bot",
+      "seed": 100000,
+      "expected": [
+        6,
+        "end VP 6",
+        3,
+        11
+      ],
+      "actual": [
+        6,
+        "end VP 6",
+        3,
+        11
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L2 vs bot",
+      "seed": 100001,
+      "expected": [
+        11,
+        "end VP 11",
+        3,
+        8
+      ],
+      "actual": [
+        11,
+        "end VP 11",
+        3,
+        8
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L2 vs bot",
+      "seed": 100002,
+      "expected": [
+        10,
+        "end VP 10",
+        1,
+        6
+      ],
+      "actual": [
+        10,
+        "end VP 10",
+        1,
+        6
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L2 vs smart",
+      "seed": 100000,
+      "expected": [
+        3,
+        "end VP 3",
+        7,
+        13
+      ],
+      "actual": [
+        3,
+        "end VP 3",
+        7,
+        13
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L2 vs smart",
+      "seed": 100001,
+      "expected": [
+        0,
+        "end VP 0",
+        12,
+        9
+      ],
+      "actual": [
+        0,
+        "end VP 0",
+        12,
+        9
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L2 vs smart",
+      "seed": 100002,
+      "expected": [
+        6,
+        "end VP 6",
+        7,
+        8
+      ],
+      "actual": [
+        6,
+        "end VP 6",
+        7,
+        8
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L2 vs smart-aggressive",
+      "seed": 100000,
+      "expected": [
+        6,
+        "end VP 6",
+        4,
+        10
+      ],
+      "actual": [
+        6,
+        "end VP 6",
+        4,
+        10
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L2 vs smart-aggressive",
+      "seed": 100001,
+      "expected": [
+        6,
+        "end VP 6",
+        8,
+        17
+      ],
+      "actual": [
+        6,
+        "end VP 6",
+        8,
+        17
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L2 vs smart-aggressive",
+      "seed": 100002,
+      "expected": [
+        5,
+        "end VP 5",
+        6,
+        10
+      ],
+      "actual": [
+        5,
+        "end VP 5",
+        6,
+        10
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L2 vs search",
+      "seed": 100000,
+      "expected": [
+        5,
+        "end VP 5",
+        5,
+        10
+      ],
+      "actual": [
+        5,
+        "end VP 5",
+        5,
+        10
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L2 vs search",
+      "seed": 100001,
+      "expected": [
+        11,
+        "end VP 11",
+        7,
+        16
+      ],
+      "actual": [
+        11,
+        "end VP 11",
+        7,
+        16
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L2 vs search",
+      "seed": 100002,
+      "expected": [
+        11,
+        "end VP 11",
+        5,
+        11
+      ],
+      "actual": [
+        11,
+        "end VP 11",
+        5,
+        11
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L3 vs bot",
+      "seed": 100000,
+      "expected": [
+        9,
+        "end VP 9",
+        1,
+        11
+      ],
+      "actual": [
+        9,
+        "end VP 9",
+        1,
+        11
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L3 vs bot",
+      "seed": 100001,
+      "expected": [
+        13,
+        "end VP 13",
+        0,
+        14
+      ],
+      "actual": [
+        13,
+        "end VP 13",
+        0,
+        14
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L3 vs bot",
+      "seed": 100002,
+      "expected": [
+        10,
+        "end VP 10",
+        0,
+        5
+      ],
+      "actual": [
+        10,
+        "end VP 10",
+        0,
+        5
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L3 vs smart",
+      "seed": 100000,
+      "expected": [
+        3,
+        "end VP 3",
+        6,
+        8
+      ],
+      "actual": [
+        3,
+        "end VP 3",
+        6,
+        8
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L3 vs smart",
+      "seed": 100001,
+      "expected": [
+        12,
+        "end VP 12",
+        9,
+        17
+      ],
+      "actual": [
+        12,
+        "end VP 12",
+        9,
+        17
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L3 vs smart",
+      "seed": 100002,
+      "expected": [
+        9,
+        "end VP 9",
+        3,
+        13
+      ],
+      "actual": [
+        9,
+        "end VP 9",
+        3,
+        13
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L3 vs smart-aggressive",
+      "seed": 100000,
+      "expected": [
+        10,
+        "end VP 10",
+        5,
+        9
+      ],
+      "actual": [
+        10,
+        "end VP 10",
+        5,
+        9
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L3 vs smart-aggressive",
+      "seed": 100001,
+      "expected": [
+        8,
+        "end VP 8",
+        6,
+        8
+      ],
+      "actual": [
+        8,
+        "end VP 8",
+        6,
+        8
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L3 vs smart-aggressive",
+      "seed": 100002,
+      "expected": [
+        5,
+        "end VP 5",
+        10,
+        6
+      ],
+      "actual": [
+        5,
+        "end VP 5",
+        10,
+        6
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L3 vs search",
+      "seed": 100000,
+      "expected": [
+        10,
+        "end VP 10",
+        1,
+        17
+      ],
+      "actual": [
+        10,
+        "end VP 10",
+        1,
+        17
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L3 vs search",
+      "seed": 100001,
+      "expected": [
+        12,
+        "end VP 12",
+        3,
+        20
+      ],
+      "actual": [
+        12,
+        "end VP 12",
+        3,
+        20
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L3 vs search",
+      "seed": 100002,
+      "expected": [
+        10,
+        "end VP 10",
+        3,
+        14
+      ],
+      "actual": [
+        10,
+        "end VP 10",
+        3,
+        14
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L4 vs bot",
+      "seed": 100000,
+      "expected": [
+        9,
+        "end VP 9",
+        1,
+        11
+      ],
+      "actual": [
+        9,
+        "end VP 9",
+        1,
+        11
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L4 vs bot",
+      "seed": 100001,
+      "expected": [
+        13,
+        "end VP 13",
+        0,
+        14
+      ],
+      "actual": [
+        13,
+        "end VP 13",
+        0,
+        14
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L4 vs bot",
+      "seed": 100002,
+      "expected": [
+        10,
+        "end VP 10",
+        0,
+        5
+      ],
+      "actual": [
+        10,
+        "end VP 10",
+        0,
+        5
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L4 vs smart",
+      "seed": 100000,
+      "expected": [
+        3,
+        "end VP 3",
+        6,
+        8
+      ],
+      "actual": [
+        3,
+        "end VP 3",
+        6,
+        8
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L4 vs smart",
+      "seed": 100001,
+      "expected": [
+        12,
+        "end VP 12",
+        9,
+        17
+      ],
+      "actual": [
+        12,
+        "end VP 12",
+        9,
+        17
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L4 vs smart",
+      "seed": 100002,
+      "expected": [
+        9,
+        "end VP 9",
+        3,
+        13
+      ],
+      "actual": [
+        9,
+        "end VP 9",
+        3,
+        13
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L4 vs smart-aggressive",
+      "seed": 100000,
+      "expected": [
+        10,
+        "end VP 10",
+        5,
+        9
+      ],
+      "actual": [
+        10,
+        "end VP 10",
+        5,
+        9
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L4 vs smart-aggressive",
+      "seed": 100001,
+      "expected": [
+        8,
+        "end VP 8",
+        6,
+        8
+      ],
+      "actual": [
+        8,
+        "end VP 8",
+        6,
+        8
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L4 vs smart-aggressive",
+      "seed": 100002,
+      "expected": [
+        5,
+        "end VP 5",
+        10,
+        6
+      ],
+      "actual": [
+        5,
+        "end VP 5",
+        10,
+        6
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L4 vs search",
+      "seed": 100000,
+      "expected": [
+        10,
+        "end VP 10",
+        1,
+        17
+      ],
+      "actual": [
+        10,
+        "end VP 10",
+        1,
+        17
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L4 vs search",
+      "seed": 100001,
+      "expected": [
+        12,
+        "end VP 12",
+        3,
+        20
+      ],
+      "actual": [
+        12,
+        "end VP 12",
+        3,
+        20
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L4 vs search",
+      "seed": 100002,
+      "expected": [
+        10,
+        "end VP 10",
+        3,
+        14
+      ],
+      "actual": [
+        10,
+        "end VP 10",
+        3,
+        14
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L5 vs bot",
+      "seed": 100000,
+      "expected": [
+        9,
+        "end VP 9",
+        1,
+        11
+      ],
+      "actual": [
+        9,
+        "end VP 9",
+        1,
+        11
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L5 vs bot",
+      "seed": 100001,
+      "expected": [
+        13,
+        "end VP 13",
+        0,
+        14
+      ],
+      "actual": [
+        13,
+        "end VP 13",
+        0,
+        14
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L5 vs bot",
+      "seed": 100002,
+      "expected": [
+        10,
+        "end VP 10",
+        0,
+        5
+      ],
+      "actual": [
+        10,
+        "end VP 10",
+        0,
+        5
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L5 vs smart",
+      "seed": 100000,
+      "expected": [
+        3,
+        "end VP 3",
+        6,
+        8
+      ],
+      "actual": [
+        3,
+        "end VP 3",
+        6,
+        8
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L5 vs smart",
+      "seed": 100001,
+      "expected": [
+        12,
+        "end VP 12",
+        9,
+        17
+      ],
+      "actual": [
+        12,
+        "end VP 12",
+        9,
+        17
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L5 vs smart",
+      "seed": 100002,
+      "expected": [
+        9,
+        "end VP 9",
+        3,
+        13
+      ],
+      "actual": [
+        9,
+        "end VP 9",
+        3,
+        13
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L5 vs smart-aggressive",
+      "seed": 100000,
+      "expected": [
+        10,
+        "end VP 10",
+        5,
+        9
+      ],
+      "actual": [
+        10,
+        "end VP 10",
+        5,
+        9
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L5 vs smart-aggressive",
+      "seed": 100001,
+      "expected": [
+        8,
+        "end VP 8",
+        6,
+        8
+      ],
+      "actual": [
+        8,
+        "end VP 8",
+        6,
+        8
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L5 vs smart-aggressive",
+      "seed": 100002,
+      "expected": [
+        5,
+        "end VP 5",
+        10,
+        6
+      ],
+      "actual": [
+        5,
+        "end VP 5",
+        10,
+        6
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L5 vs search",
+      "seed": 100000,
+      "expected": [
+        10,
+        "end VP 10",
+        1,
+        17
+      ],
+      "actual": [
+        10,
+        "end VP 10",
+        1,
+        17
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L5 vs search",
+      "seed": 100001,
+      "expected": [
+        12,
+        "end VP 12",
+        3,
+        20
+      ],
+      "actual": [
+        12,
+        "end VP 12",
+        3,
+        20
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Imperator L5 vs search",
+      "seed": 100002,
+      "expected": [
+        10,
+        "end VP 10",
+        3,
+        14
+      ],
+      "actual": [
+        10,
+        "end VP 10",
+        3,
+        14
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L1 vs bot",
+      "seed": 200000,
+      "expected": [
+        12,
+        "end VP 12",
+        2,
+        9
+      ],
+      "actual": [
+        12,
+        "end VP 12",
+        2,
+        9
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L1 vs bot",
+      "seed": 200001,
+      "expected": [
+        12,
+        "end VP 12",
+        4,
+        13
+      ],
+      "actual": [
+        12,
+        "end VP 12",
+        4,
+        13
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L1 vs bot",
+      "seed": 200002,
+      "expected": [
+        12,
+        "end VP 12",
+        2,
+        5
+      ],
+      "actual": [
+        12,
+        "end VP 12",
+        2,
+        5
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L1 vs smart",
+      "seed": 200000,
+      "expected": [
+        6,
+        "end VP 6",
+        6,
+        8
+      ],
+      "actual": [
+        6,
+        "end VP 6",
+        6,
+        8
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L1 vs smart",
+      "seed": 200001,
+      "expected": [
+        2,
+        "end VP 2",
+        5,
+        8
+      ],
+      "actual": [
+        2,
+        "end VP 2",
+        5,
+        8
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L1 vs smart",
+      "seed": 200002,
+      "expected": [
+        5,
+        "end VP 5",
+        7,
+        15
+      ],
+      "actual": [
+        5,
+        "end VP 5",
+        7,
+        15
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L1 vs smart-aggressive",
+      "seed": 200000,
+      "expected": [
+        1,
+        "end VP 1",
+        10,
+        15
+      ],
+      "actual": [
+        1,
+        "end VP 1",
+        10,
+        15
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L1 vs smart-aggressive",
+      "seed": 200001,
+      "expected": [
+        8,
+        "end VP 8",
+        10,
+        14
+      ],
+      "actual": [
+        8,
+        "end VP 8",
+        10,
+        14
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L1 vs smart-aggressive",
+      "seed": 200002,
+      "expected": [
+        6,
+        "end VP 6",
+        11,
+        20
+      ],
+      "actual": [
+        6,
+        "end VP 6",
+        11,
+        20
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L1 vs search",
+      "seed": 200000,
+      "expected": [
+        9,
+        "end VP 9",
+        3,
+        8
+      ],
+      "actual": [
+        9,
+        "end VP 9",
+        3,
+        8
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L1 vs search",
+      "seed": 200001,
+      "expected": [
+        5,
+        "end VP 5",
+        4,
+        2
+      ],
+      "actual": [
+        5,
+        "end VP 5",
+        4,
+        2
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L1 vs search",
+      "seed": 200002,
+      "expected": [
+        12,
+        "end VP 12",
+        10,
+        5
+      ],
+      "actual": [
+        12,
+        "end VP 12",
+        10,
+        5
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L2 vs bot",
+      "seed": 200000,
+      "expected": [
+        12,
+        "end VP 12",
+        2,
+        9
+      ],
+      "actual": [
+        12,
+        "end VP 12",
+        2,
+        9
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L2 vs bot",
+      "seed": 200001,
+      "expected": [
+        12,
+        "end VP 12",
+        4,
+        13
+      ],
+      "actual": [
+        12,
+        "end VP 12",
+        4,
+        13
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L2 vs bot",
+      "seed": 200002,
+      "expected": [
+        12,
+        "end VP 12",
+        2,
+        5
+      ],
+      "actual": [
+        12,
+        "end VP 12",
+        2,
+        5
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L2 vs smart",
+      "seed": 200000,
+      "expected": [
+        6,
+        "end VP 6",
+        6,
+        8
+      ],
+      "actual": [
+        6,
+        "end VP 6",
+        6,
+        8
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L2 vs smart",
+      "seed": 200001,
+      "expected": [
+        2,
+        "end VP 2",
+        5,
+        8
+      ],
+      "actual": [
+        2,
+        "end VP 2",
+        5,
+        8
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L2 vs smart",
+      "seed": 200002,
+      "expected": [
+        5,
+        "end VP 5",
+        7,
+        15
+      ],
+      "actual": [
+        5,
+        "end VP 5",
+        7,
+        15
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L2 vs smart-aggressive",
+      "seed": 200000,
+      "expected": [
+        1,
+        "end VP 1",
+        10,
+        15
+      ],
+      "actual": [
+        1,
+        "end VP 1",
+        10,
+        15
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L2 vs smart-aggressive",
+      "seed": 200001,
+      "expected": [
+        8,
+        "end VP 8",
+        10,
+        14
+      ],
+      "actual": [
+        8,
+        "end VP 8",
+        10,
+        14
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L2 vs smart-aggressive",
+      "seed": 200002,
+      "expected": [
+        6,
+        "end VP 6",
+        11,
+        20
+      ],
+      "actual": [
+        6,
+        "end VP 6",
+        11,
+        20
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L2 vs search",
+      "seed": 200000,
+      "expected": [
+        9,
+        "end VP 9",
+        3,
+        8
+      ],
+      "actual": [
+        9,
+        "end VP 9",
+        3,
+        8
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L2 vs search",
+      "seed": 200001,
+      "expected": [
+        5,
+        "end VP 5",
+        4,
+        2
+      ],
+      "actual": [
+        5,
+        "end VP 5",
+        4,
+        2
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L2 vs search",
+      "seed": 200002,
+      "expected": [
+        12,
+        "end VP 12",
+        10,
+        5
+      ],
+      "actual": [
+        12,
+        "end VP 12",
+        10,
+        5
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L3 vs bot",
+      "seed": 200000,
+      "expected": [
+        12,
+        "end VP 12",
+        2,
+        9
+      ],
+      "actual": [
+        12,
+        "end VP 12",
+        2,
+        9
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L3 vs bot",
+      "seed": 200001,
+      "expected": [
+        12,
+        "end VP 12",
+        4,
+        13
+      ],
+      "actual": [
+        12,
+        "end VP 12",
+        4,
+        13
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L3 vs bot",
+      "seed": 200002,
+      "expected": [
+        12,
+        "end VP 12",
+        2,
+        5
+      ],
+      "actual": [
+        12,
+        "end VP 12",
+        2,
+        5
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L3 vs smart",
+      "seed": 200000,
+      "expected": [
+        6,
+        "end VP 6",
+        6,
+        8
+      ],
+      "actual": [
+        6,
+        "end VP 6",
+        6,
+        8
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L3 vs smart",
+      "seed": 200001,
+      "expected": [
+        2,
+        "end VP 2",
+        5,
+        8
+      ],
+      "actual": [
+        2,
+        "end VP 2",
+        5,
+        8
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L3 vs smart",
+      "seed": 200002,
+      "expected": [
+        5,
+        "end VP 5",
+        7,
+        15
+      ],
+      "actual": [
+        5,
+        "end VP 5",
+        7,
+        15
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L3 vs smart-aggressive",
+      "seed": 200000,
+      "expected": [
+        1,
+        "end VP 1",
+        10,
+        15
+      ],
+      "actual": [
+        1,
+        "end VP 1",
+        10,
+        15
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L3 vs smart-aggressive",
+      "seed": 200001,
+      "expected": [
+        8,
+        "end VP 8",
+        10,
+        14
+      ],
+      "actual": [
+        8,
+        "end VP 8",
+        10,
+        14
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L3 vs smart-aggressive",
+      "seed": 200002,
+      "expected": [
+        6,
+        "end VP 6",
+        11,
+        20
+      ],
+      "actual": [
+        6,
+        "end VP 6",
+        11,
+        20
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L3 vs search",
+      "seed": 200000,
+      "expected": [
+        9,
+        "end VP 9",
+        3,
+        8
+      ],
+      "actual": [
+        9,
+        "end VP 9",
+        3,
+        8
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L3 vs search",
+      "seed": 200001,
+      "expected": [
+        5,
+        "end VP 5",
+        4,
+        2
+      ],
+      "actual": [
+        5,
+        "end VP 5",
+        4,
+        2
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L3 vs search",
+      "seed": 200002,
+      "expected": [
+        12,
+        "end VP 12",
+        10,
+        5
+      ],
+      "actual": [
+        12,
+        "end VP 12",
+        10,
+        5
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L4 vs bot",
+      "seed": 200000,
+      "expected": [
+        12,
+        "end VP 12",
+        2,
+        9
+      ],
+      "actual": [
+        12,
+        "end VP 12",
+        2,
+        9
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L4 vs bot",
+      "seed": 200001,
+      "expected": [
+        12,
+        "end VP 12",
+        4,
+        13
+      ],
+      "actual": [
+        12,
+        "end VP 12",
+        4,
+        13
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L4 vs bot",
+      "seed": 200002,
+      "expected": [
+        12,
+        "end VP 12",
+        2,
+        5
+      ],
+      "actual": [
+        12,
+        "end VP 12",
+        2,
+        5
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L4 vs smart",
+      "seed": 200000,
+      "expected": [
+        6,
+        "end VP 6",
+        6,
+        8
+      ],
+      "actual": [
+        6,
+        "end VP 6",
+        6,
+        8
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L4 vs smart",
+      "seed": 200001,
+      "expected": [
+        2,
+        "end VP 2",
+        5,
+        8
+      ],
+      "actual": [
+        2,
+        "end VP 2",
+        5,
+        8
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L4 vs smart",
+      "seed": 200002,
+      "expected": [
+        5,
+        "end VP 5",
+        7,
+        15
+      ],
+      "actual": [
+        5,
+        "end VP 5",
+        7,
+        15
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L4 vs smart-aggressive",
+      "seed": 200000,
+      "expected": [
+        1,
+        "end VP 1",
+        10,
+        15
+      ],
+      "actual": [
+        1,
+        "end VP 1",
+        10,
+        15
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L4 vs smart-aggressive",
+      "seed": 200001,
+      "expected": [
+        8,
+        "end VP 8",
+        10,
+        14
+      ],
+      "actual": [
+        8,
+        "end VP 8",
+        10,
+        14
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L4 vs smart-aggressive",
+      "seed": 200002,
+      "expected": [
+        6,
+        "end VP 6",
+        11,
+        20
+      ],
+      "actual": [
+        6,
+        "end VP 6",
+        11,
+        20
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L4 vs search",
+      "seed": 200000,
+      "expected": [
+        9,
+        "end VP 9",
+        3,
+        8
+      ],
+      "actual": [
+        9,
+        "end VP 9",
+        3,
+        8
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L4 vs search",
+      "seed": 200001,
+      "expected": [
+        5,
+        "end VP 5",
+        4,
+        2
+      ],
+      "actual": [
+        5,
+        "end VP 5",
+        4,
+        2
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L4 vs search",
+      "seed": 200002,
+      "expected": [
+        12,
+        "end VP 12",
+        10,
+        5
+      ],
+      "actual": [
+        12,
+        "end VP 12",
+        10,
+        5
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L5 vs bot",
+      "seed": 200000,
+      "expected": [
+        5,
+        "end VP 5",
+        5,
+        6
+      ],
+      "actual": [
+        5,
+        "end VP 5",
+        5,
+        6
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L5 vs bot",
+      "seed": 200001,
+      "expected": [
+        11,
+        "end VP 11",
+        2,
+        12
+      ],
+      "actual": [
+        11,
+        "end VP 11",
+        2,
+        12
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L5 vs bot",
+      "seed": 200002,
+      "expected": [
+        6,
+        "end VP 6",
+        0,
+        13
+      ],
+      "actual": [
+        6,
+        "end VP 6",
+        0,
+        13
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L5 vs smart",
+      "seed": 200000,
+      "expected": [
+        3,
+        "end VP 3",
+        7,
+        6
+      ],
+      "actual": [
+        3,
+        "end VP 3",
+        7,
+        6
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L5 vs smart",
+      "seed": 200001,
+      "expected": [
+        -4,
+        "end VP -4",
+        12,
+        13
+      ],
+      "actual": [
+        -4,
+        "end VP -4",
+        12,
+        13
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L5 vs smart",
+      "seed": 200002,
+      "expected": [
+        -2,
+        "governance 2 on turn 6",
+        9,
+        21
+      ],
+      "actual": [
+        -2,
+        "governance 2 on turn 6",
+        9,
+        21
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L5 vs smart-aggressive",
+      "seed": 200000,
+      "expected": [
+        -3,
+        "governance 2 on turn 6",
+        7,
+        14
+      ],
+      "actual": [
+        -3,
+        "governance 2 on turn 6",
+        7,
+        14
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L5 vs smart-aggressive",
+      "seed": 200001,
+      "expected": [
+        -5,
+        "governance 2 on turn 6",
+        8,
+        17
+      ],
+      "actual": [
+        -5,
+        "governance 2 on turn 6",
+        8,
+        17
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L5 vs smart-aggressive",
+      "seed": 200002,
+      "expected": [
+        6,
+        "governance 3 on turn 5",
+        6,
+        24
+      ],
+      "actual": [
+        6,
+        "governance 3 on turn 5",
+        6,
+        24
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L5 vs search",
+      "seed": 200000,
+      "expected": [
+        5,
+        "end VP 5",
+        11,
+        4
+      ],
+      "actual": [
+        5,
+        "end VP 5",
+        11,
+        4
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L5 vs search",
+      "seed": 200001,
+      "expected": [
+        4,
+        "end VP 4",
+        7,
+        14
+      ],
+      "actual": [
+        4,
+        "end VP 4",
+        7,
+        14
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "cell": "Concilium L5 vs search",
+      "seed": 200002,
+      "expected": [
+        5,
+        "end VP 5",
+        6,
+        13
+      ],
+      "actual": [
+        5,
+        "end VP 5",
+        6,
+        13
+      ],
+      "matches": true,
+      "reserveRedraws": [],
+      "partialReserveReplacements": [],
+      "missedForcedMarchCleanup": []
+    }
+  ],
+  "seconds": 85.63703179359436
+}

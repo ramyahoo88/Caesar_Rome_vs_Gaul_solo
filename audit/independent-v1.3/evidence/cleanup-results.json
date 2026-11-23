@@ -1,0 +1,3183 @@
+{
+  "fixtures": [
+    {
+      "seed": 0,
+      "trigger": 42,
+      "romanInitialHand": [
+        6,
+        42
+      ],
+      "gallicInitialHand": [
+        55,
+        42,
+        47
+      ],
+      "frames": [
+        {
+          "handBeforeOffer": [
+            55,
+            42,
+            47
+          ],
+          "chosen": [
+            42,
+            "event"
+          ],
+          "reserveAfterOffer": [
+            55
+          ]
+        },
+        {
+          "handBeforeOffer": [
+            47,
+            45,
+            54
+          ],
+          "chosen": [
+            45,
+            "event"
+          ],
+          "reserveAfterOffer": []
+        }
+      ],
+      "cleanupCalls": [
+        {
+          "side": "G",
+          "hand": [
+            55,
+            42,
+            47
+          ]
+        },
+        {
+          "side": "G",
+          "hand": [
+            55,
+            47,
+            45
+          ]
+        }
+      ],
+      "log": [
+        "T1 Concilium Directive Revolt (N): RISE > AMBUSH > RAID > AGITATE; Offer #42*, #47 -> #42",
+        "T1 G plays #42 Senate Outraged as event",
+        "T1 Concilium Directive Revolt (S): RISE > RAID > AMBUSH > AGITATE; Offer #45*, #47 -> #45",
+        "T1 G plays #45 Diplomacy as event"
+      ],
+      "passed": true
+    },
+    {
+      "seed": 0,
+      "trigger": 21,
+      "romanInitialHand": [
+        45,
+        54
+      ],
+      "gallicInitialHand": [
+        55,
+        21,
+        47
+      ],
+      "frames": [
+        {
+          "handBeforeOffer": [
+            55,
+            21,
+            47
+          ],
+          "chosen": [
+            21,
+            "event"
+          ],
+          "reserveAfterOffer": [
+            55
+          ]
+        },
+        {
+          "handBeforeOffer": [
+            47,
+            53,
+            52
+          ],
+          "chosen": [
+            53,
+            "ap"
+          ],
+          "reserveAfterOffer": []
+        }
+      ],
+      "cleanupCalls": [
+        {
+          "side": "G",
+          "hand": [
+            55,
+            21,
+            47
+          ]
+        },
+        {
+          "side": "G",
+          "hand": [
+            55,
+            47,
+            53
+          ]
+        }
+      ],
+      "log": [
+        "T1 Concilium Directive Revolt (N): RISE > AMBUSH > RAID > AGITATE; Offer #21*, #47 -> #21",
+        "T1 G plays #21 Ties of Blood and Marriage as event",
+        "T1 R cancels #21 with #24",
+        "T1 Concilium Directive Revolt (S): RISE > RAID > AMBUSH > AGITATE; Offer #53, #47 -> #53",
+        "T1 G plays #53 Trumpets of War as ap",
+        "T1 G influence place Alesia",
+        "T1   Concilium AP: AGITATE",
+        "T1 G influence place Gorgobina",
+        "T1   Concilium AP: AGITATE"
+      ],
+      "passed": true
+    }
+  ],
+  "normalStrategyCleanupCalls": 16,
+  "retryControl": {
+    "choices": 2,
+    "cleanupCalls": 1,
+    "countedCardPlays": 1,
+    "revealed55RetainedWithinSamePlay": true
+  },
+  "records": [
+    {
+      "seed": 950000,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 5,
+          "events": {
+            "R": 16,
+            "G": 26
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 4,
+          "legion_steps_lost": 4,
+          "intercepts": 0,
+          "avoids": 3
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950001,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 13",
+        "vp": 13,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 6,
+          "events": {
+            "R": 18,
+            "G": 25
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 1,
+          "tribes_elim": 2,
+          "legion_steps_lost": 4,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 2,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950002,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 10,
+          "events": {
+            "R": 19,
+            "G": 27
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 4,
+          "legion_steps_lost": 8,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 4,
+        "elim_legions": 1
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950003,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 10,
+          "events": {
+            "R": 20,
+            "G": 28
+          },
+          "plays": {
+            "R": 48,
+            "G": 51
+          },
+          "submits": 1,
+          "tribes_elim": 1,
+          "legion_steps_lost": 5,
+          "intercepts": 2,
+          "avoids": 3
+        },
+        "elim": 1,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950004,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 6",
+        "vp": 6,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 3,
+          "events": {
+            "R": 15,
+            "G": 27
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 0,
+          "tribes_elim": 0,
+          "legion_steps_lost": 6,
+          "intercepts": 1,
+          "avoids": 3
+        },
+        "elim": 0,
+        "elim_legions": 1
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950005,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 10,
+          "events": {
+            "R": 18,
+            "G": 25
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 1,
+          "tribes_elim": 6,
+          "legion_steps_lost": 6,
+          "intercepts": 0,
+          "avoids": 4
+        },
+        "elim": 6,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950006,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 9",
+        "vp": 9,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 7,
+          "events": {
+            "R": 16,
+            "G": 22
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 3,
+          "legion_steps_lost": 10,
+          "intercepts": 4,
+          "avoids": 3
+        },
+        "elim": 3,
+        "elim_legions": 2
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950007,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 9",
+        "vp": 9,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 7,
+          "events": {
+            "R": 14,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 2,
+          "legion_steps_lost": 0,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 2,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950008,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 8,
+          "events": {
+            "R": 21,
+            "G": 24
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 4,
+          "tribes_elim": 0,
+          "legion_steps_lost": 4,
+          "intercepts": 3,
+          "avoids": 2
+        },
+        "elim": 0,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950009,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 4,
+          "sieges": 12,
+          "events": {
+            "R": 19,
+            "G": 27
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 0,
+          "tribes_elim": 4,
+          "legion_steps_lost": 10,
+          "intercepts": 2,
+          "avoids": 2
+        },
+        "elim": 4,
+        "elim_legions": 1
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950010,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 4,
+          "sieges": 11,
+          "events": {
+            "R": 20,
+            "G": 27
+          },
+          "plays": {
+            "R": 50,
+            "G": 48
+          },
+          "submits": 3,
+          "tribes_elim": 6,
+          "legion_steps_lost": 10,
+          "intercepts": 3,
+          "avoids": 1
+        },
+        "elim": 6,
+        "elim_legions": 1
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950011,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 4,
+          "events": {
+            "R": 14,
+            "G": 20
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 2,
+          "tribes_elim": 1,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 1,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950012,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 12,
+          "events": {
+            "R": 16,
+            "G": 22
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 6,
+          "legion_steps_lost": 8,
+          "intercepts": 1,
+          "avoids": 1
+        },
+        "elim": 6,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950013,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 11",
+        "vp": 11,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 15,
+          "events": {
+            "R": 15,
+            "G": 28
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 3,
+          "tribes_elim": 6,
+          "legion_steps_lost": 6,
+          "intercepts": 0,
+          "avoids": 2
+        },
+        "elim": 6,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950014,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 11,
+          "events": {
+            "R": 24,
+            "G": 24
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 5,
+          "tribes_elim": 3,
+          "legion_steps_lost": 9,
+          "intercepts": 0,
+          "avoids": 6
+        },
+        "elim": 3,
+        "elim_legions": 1
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950015,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 11",
+        "vp": 11,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 3,
+          "events": {
+            "R": 22,
+            "G": 27
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 2,
+          "tribes_elim": 1,
+          "legion_steps_lost": 2,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 1,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950016,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 10,
+          "events": {
+            "R": 19,
+            "G": 25
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 4,
+          "legion_steps_lost": 7,
+          "intercepts": 0,
+          "avoids": 4
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950017,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 14",
+        "vp": 14,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 9,
+          "events": {
+            "R": 20,
+            "G": 29
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 4,
+          "legion_steps_lost": 6,
+          "intercepts": 3,
+          "avoids": 8
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950018,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 5,
+          "events": {
+            "R": 17,
+            "G": 21
+          },
+          "plays": {
+            "R": 50,
+            "G": 50
+          },
+          "submits": 3,
+          "tribes_elim": 0,
+          "legion_steps_lost": 1,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 0,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950019,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 6,
+          "events": {
+            "R": 16,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 3,
+          "tribes_elim": 1,
+          "legion_steps_lost": 3,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 1,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950020,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 13,
+          "events": {
+            "R": 18,
+            "G": 23
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 5,
+          "tribes_elim": 2,
+          "legion_steps_lost": 7,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 2,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950021,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 16,
+          "events": {
+            "R": 21,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 3,
+          "tribes_elim": 8,
+          "legion_steps_lost": 12,
+          "intercepts": 3,
+          "avoids": 4
+        },
+        "elim": 8,
+        "elim_legions": 2
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950022,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 13",
+        "vp": 13,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 11,
+          "events": {
+            "R": 21,
+            "G": 22
+          },
+          "plays": {
+            "R": 49,
+            "G": 50
+          },
+          "submits": 4,
+          "tribes_elim": 4,
+          "legion_steps_lost": 4,
+          "intercepts": 2,
+          "avoids": 3
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950023,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 9,
+          "events": {
+            "R": 17,
+            "G": 26
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 3,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950024,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 7,
+          "events": {
+            "R": 19,
+            "G": 24
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 2,
+          "legion_steps_lost": 4,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 2,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950025,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 13",
+        "vp": 13,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 8,
+          "events": {
+            "R": 19,
+            "G": 31
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 6,
+          "tribes_elim": 4,
+          "legion_steps_lost": 1,
+          "intercepts": 3,
+          "avoids": 2
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950026,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 7,
+          "events": {
+            "R": 22,
+            "G": 27
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 1,
+          "legion_steps_lost": 6,
+          "intercepts": 1,
+          "avoids": 1
+        },
+        "elim": 1,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950027,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 13",
+        "vp": 13,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 8,
+          "events": {
+            "R": 18,
+            "G": 19
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 4,
+          "legion_steps_lost": 2,
+          "intercepts": 2,
+          "avoids": 3
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950028,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 6,
+          "events": {
+            "R": 24,
+            "G": 25
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 2,
+          "tribes_elim": 2,
+          "legion_steps_lost": 3,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 2,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950029,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 9,
+          "events": {
+            "R": 13,
+            "G": 26
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 3,
+          "tribes_elim": 5,
+          "legion_steps_lost": 8,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 5,
+        "elim_legions": 1
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950030,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 5",
+        "vp": 5,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 7,
+          "events": {
+            "R": 17,
+            "G": 27
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 2,
+          "tribes_elim": 0,
+          "legion_steps_lost": 12,
+          "intercepts": 0,
+          "avoids": 3
+        },
+        "elim": 0,
+        "elim_legions": 2
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950031,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 4,
+          "events": {
+            "R": 15,
+            "G": 22
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 1,
+          "tribes_elim": 3,
+          "legion_steps_lost": 3,
+          "intercepts": 0,
+          "avoids": 3
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950032,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 14",
+        "vp": 14,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 13,
+          "events": {
+            "R": 20,
+            "G": 22
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 0,
+          "tribes_elim": 5,
+          "legion_steps_lost": 6,
+          "intercepts": 1,
+          "avoids": 0
+        },
+        "elim": 5,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950033,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 3,
+          "events": {
+            "R": 19,
+            "G": 26
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 1,
+          "tribes_elim": 0,
+          "legion_steps_lost": 2,
+          "intercepts": 0,
+          "avoids": 2
+        },
+        "elim": 0,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950034,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 6,
+          "events": {
+            "R": 17,
+            "G": 24
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 2,
+          "legion_steps_lost": 3,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 2,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950035,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 4,
+          "events": {
+            "R": 15,
+            "G": 22
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 1,
+          "legion_steps_lost": 8,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 1,
+        "elim_legions": 2
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950036,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 14",
+        "vp": 14,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 3,
+          "events": {
+            "R": 17,
+            "G": 25
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 5,
+          "tribes_elim": 8,
+          "legion_steps_lost": 7,
+          "intercepts": 0,
+          "avoids": 5
+        },
+        "elim": 8,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950037,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 9",
+        "vp": 9,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 5,
+          "events": {
+            "R": 16,
+            "G": 28
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 2,
+          "tribes_elim": 0,
+          "legion_steps_lost": 3,
+          "intercepts": 0,
+          "avoids": 2
+        },
+        "elim": 0,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950038,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 4,
+          "sieges": 7,
+          "events": {
+            "R": 21,
+            "G": 18
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 3,
+          "legion_steps_lost": 8,
+          "intercepts": 2,
+          "avoids": 1
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950039,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 12,
+          "events": {
+            "R": 18,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 3,
+          "tribes_elim": 3,
+          "legion_steps_lost": 3,
+          "intercepts": 0,
+          "avoids": 2
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950040,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 5,
+          "events": {
+            "R": 15,
+            "G": 23
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 2,
+          "tribes_elim": 0,
+          "legion_steps_lost": 1,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 0,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950041,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 6",
+        "vp": 6,
+        "turn": 6,
+        "stats": {
+          "battles": 4,
+          "sieges": 3,
+          "events": {
+            "R": 19,
+            "G": 22
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 2,
+          "tribes_elim": 3,
+          "legion_steps_lost": 8,
+          "intercepts": 0,
+          "avoids": 2
+        },
+        "elim": 3,
+        "elim_legions": 2
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950042,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 9,
+          "events": {
+            "R": 17,
+            "G": 26
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 0,
+          "tribes_elim": 5,
+          "legion_steps_lost": 14,
+          "intercepts": 1,
+          "avoids": 3
+        },
+        "elim": 5,
+        "elim_legions": 1
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950043,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 11",
+        "vp": 11,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 11,
+          "events": {
+            "R": 21,
+            "G": 27
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 5,
+          "tribes_elim": 3,
+          "legion_steps_lost": 6,
+          "intercepts": 2,
+          "avoids": 2
+        },
+        "elim": 3,
+        "elim_legions": 1
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950044,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 9,
+          "events": {
+            "R": 20,
+            "G": 24
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 2,
+          "tribes_elim": 3,
+          "legion_steps_lost": 3,
+          "intercepts": 0,
+          "avoids": 2
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950045,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 15",
+        "vp": 15,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 17,
+          "events": {
+            "R": 19,
+            "G": 20
+          },
+          "plays": {
+            "R": 49,
+            "G": 50
+          },
+          "submits": 4,
+          "tribes_elim": 9,
+          "legion_steps_lost": 8,
+          "intercepts": 0,
+          "avoids": 2
+        },
+        "elim": 9,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950046,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 4,
+          "events": {
+            "R": 14,
+            "G": 21
+          },
+          "plays": {
+            "R": 50,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 2,
+          "legion_steps_lost": 2,
+          "intercepts": 0,
+          "avoids": 2
+        },
+        "elim": 2,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950047,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 4,
+          "sieges": 9,
+          "events": {
+            "R": 20,
+            "G": 27
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 4,
+          "tribes_elim": 6,
+          "legion_steps_lost": 8,
+          "intercepts": 0,
+          "avoids": 2
+        },
+        "elim": 6,
+        "elim_legions": 1
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950048,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 9",
+        "vp": 9,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 10,
+          "events": {
+            "R": 20,
+            "G": 26
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 6,
+          "legion_steps_lost": 10,
+          "intercepts": 1,
+          "avoids": 5
+        },
+        "elim": 6,
+        "elim_legions": 2
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950049,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 14",
+        "vp": 14,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 13,
+          "events": {
+            "R": 15,
+            "G": 19
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 1,
+          "tribes_elim": 7,
+          "legion_steps_lost": 11,
+          "intercepts": 4,
+          "avoids": 4
+        },
+        "elim": 7,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950050,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 8,
+          "events": {
+            "R": 21,
+            "G": 18
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 2,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 2,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950051,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 5,
+          "events": {
+            "R": 18,
+            "G": 25
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 0,
+          "legion_steps_lost": 0,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 0,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950052,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 9",
+        "vp": 9,
+        "turn": 6,
+        "stats": {
+          "battles": 4,
+          "sieges": 9,
+          "events": {
+            "R": 19,
+            "G": 22
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 4,
+          "tribes_elim": 0,
+          "legion_steps_lost": 4,
+          "intercepts": 0,
+          "avoids": 3
+        },
+        "elim": 0,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950053,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 5,
+          "events": {
+            "R": 16,
+            "G": 24
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 2,
+          "tribes_elim": 0,
+          "legion_steps_lost": 0,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 0,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950054,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 10,
+          "events": {
+            "R": 19,
+            "G": 29
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 3,
+          "tribes_elim": 5,
+          "legion_steps_lost": 4,
+          "intercepts": 0,
+          "avoids": 4
+        },
+        "elim": 5,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950055,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 9",
+        "vp": 9,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 11,
+          "events": {
+            "R": 21,
+            "G": 27
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 2,
+          "tribes_elim": 6,
+          "legion_steps_lost": 10,
+          "intercepts": 0,
+          "avoids": 2
+        },
+        "elim": 6,
+        "elim_legions": 1
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950056,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 11,
+          "events": {
+            "R": 17,
+            "G": 23
+          },
+          "plays": {
+            "R": 49,
+            "G": 50
+          },
+          "submits": 3,
+          "tribes_elim": 4,
+          "legion_steps_lost": 2,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950057,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 12,
+          "events": {
+            "R": 20,
+            "G": 28
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 5,
+          "tribes_elim": 6,
+          "legion_steps_lost": 14,
+          "intercepts": 0,
+          "avoids": 2
+        },
+        "elim": 6,
+        "elim_legions": 2
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950058,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 9",
+        "vp": 9,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 7,
+          "events": {
+            "R": 19,
+            "G": 21
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 2,
+          "tribes_elim": 4,
+          "legion_steps_lost": 9,
+          "intercepts": 0,
+          "avoids": 3
+        },
+        "elim": 4,
+        "elim_legions": 1
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950059,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 7,
+          "events": {
+            "R": 19,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 3,
+          "tribes_elim": 1,
+          "legion_steps_lost": 7,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 1,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950060,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 4,
+          "sieges": 9,
+          "events": {
+            "R": 22,
+            "G": 29
+          },
+          "plays": {
+            "R": 48,
+            "G": 51
+          },
+          "submits": 2,
+          "tribes_elim": 6,
+          "legion_steps_lost": 7,
+          "intercepts": 4,
+          "avoids": 8
+        },
+        "elim": 6,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950061,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 11",
+        "vp": 11,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 13,
+          "events": {
+            "R": 12,
+            "G": 21
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 2,
+          "tribes_elim": 4,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950062,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 11",
+        "vp": 11,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 8,
+          "events": {
+            "R": 16,
+            "G": 22
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 1,
+          "tribes_elim": 6,
+          "legion_steps_lost": 11,
+          "intercepts": 2,
+          "avoids": 4
+        },
+        "elim": 6,
+        "elim_legions": 1
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950063,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 6,
+          "events": {
+            "R": 17,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 0,
+          "legion_steps_lost": 1,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 0,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950064,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 16,
+          "events": {
+            "R": 17,
+            "G": 24
+          },
+          "plays": {
+            "R": 49,
+            "G": 50
+          },
+          "submits": 6,
+          "tribes_elim": 7,
+          "legion_steps_lost": 6,
+          "intercepts": 0,
+          "avoids": 2
+        },
+        "elim": 7,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950065,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 6,
+          "events": {
+            "R": 20,
+            "G": 25
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 2,
+          "tribes_elim": 2,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 2,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950066,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 14",
+        "vp": 14,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 14,
+          "events": {
+            "R": 22,
+            "G": 24
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 6,
+          "legion_steps_lost": 6,
+          "intercepts": 0,
+          "avoids": 2
+        },
+        "elim": 6,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950067,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 5",
+        "vp": 5,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 9,
+          "events": {
+            "R": 18,
+            "G": 27
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 4,
+          "tribes_elim": 3,
+          "legion_steps_lost": 11,
+          "intercepts": 2,
+          "avoids": 2
+        },
+        "elim": 3,
+        "elim_legions": 2
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950068,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 10",
+        "vp": 10,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 7,
+          "events": {
+            "R": 19,
+            "G": 24
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 3,
+          "legion_steps_lost": 8,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950069,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 9,
+          "events": {
+            "R": 22,
+            "G": 28
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 4,
+          "tribes_elim": 3,
+          "legion_steps_lost": 7,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950070,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 7,
+          "events": {
+            "R": 14,
+            "G": 23
+          },
+          "plays": {
+            "R": 49,
+            "G": 50
+          },
+          "submits": 2,
+          "tribes_elim": 7,
+          "legion_steps_lost": 9,
+          "intercepts": 3,
+          "avoids": 4
+        },
+        "elim": 7,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950071,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 9",
+        "vp": 9,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 7,
+          "events": {
+            "R": 19,
+            "G": 30
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 3,
+          "tribes_elim": 2,
+          "legion_steps_lost": 7,
+          "intercepts": 1,
+          "avoids": 3
+        },
+        "elim": 2,
+        "elim_legions": 1
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950072,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 13,
+          "events": {
+            "R": 18,
+            "G": 26
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 5,
+          "legion_steps_lost": 13,
+          "intercepts": 0,
+          "avoids": 2
+        },
+        "elim": 5,
+        "elim_legions": 3
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950073,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 2,
+          "events": {
+            "R": 11,
+            "G": 23
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 0,
+          "tribes_elim": 0,
+          "legion_steps_lost": 0,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 0,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950074,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 11",
+        "vp": 11,
+        "turn": 6,
+        "stats": {
+          "battles": 5,
+          "sieges": 8,
+          "events": {
+            "R": 16,
+            "G": 25
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 1,
+          "tribes_elim": 6,
+          "legion_steps_lost": 12,
+          "intercepts": 1,
+          "avoids": 4
+        },
+        "elim": 6,
+        "elim_legions": 1
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950075,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 11,
+          "events": {
+            "R": 19,
+            "G": 26
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 3,
+          "tribes_elim": 3,
+          "legion_steps_lost": 3,
+          "intercepts": 0,
+          "avoids": 3
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950076,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 7",
+        "vp": 7,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 2,
+          "events": {
+            "R": 14,
+            "G": 22
+          },
+          "plays": {
+            "R": 49,
+            "G": 50
+          },
+          "submits": 0,
+          "tribes_elim": 0,
+          "legion_steps_lost": 0,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 0,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950077,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 4,
+          "sieges": 10,
+          "events": {
+            "R": 24,
+            "G": 25
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 3,
+          "tribes_elim": 6,
+          "legion_steps_lost": 9,
+          "intercepts": 1,
+          "avoids": 3
+        },
+        "elim": 6,
+        "elim_legions": 1
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950078,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 13",
+        "vp": 13,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 5,
+          "events": {
+            "R": 20,
+            "G": 18
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 2,
+          "tribes_elim": 2,
+          "legion_steps_lost": 2,
+          "intercepts": 1,
+          "avoids": 1
+        },
+        "elim": 2,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950079,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 13",
+        "vp": 13,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 9,
+          "events": {
+            "R": 15,
+            "G": 21
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 3,
+          "tribes_elim": 2,
+          "legion_steps_lost": 2,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 2,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950080,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 11,
+          "events": {
+            "R": 18,
+            "G": 21
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 5,
+          "tribes_elim": 1,
+          "legion_steps_lost": 6,
+          "intercepts": 1,
+          "avoids": 0
+        },
+        "elim": 1,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950081,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 9,
+          "events": {
+            "R": 15,
+            "G": 23
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 2,
+          "tribes_elim": 4,
+          "legion_steps_lost": 4,
+          "intercepts": 4,
+          "avoids": 1
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950082,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 6",
+        "vp": 6,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 6,
+          "events": {
+            "R": 15,
+            "G": 21
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 1,
+          "legion_steps_lost": 8,
+          "intercepts": 2,
+          "avoids": 2
+        },
+        "elim": 1,
+        "elim_legions": 3
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950083,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 13",
+        "vp": 13,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 8,
+          "events": {
+            "R": 14,
+            "G": 25
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 0,
+          "tribes_elim": 4,
+          "legion_steps_lost": 4,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950084,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 9",
+        "vp": 9,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 12,
+          "events": {
+            "R": 17,
+            "G": 21
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 0,
+          "tribes_elim": 4,
+          "legion_steps_lost": 8,
+          "intercepts": 4,
+          "avoids": 8
+        },
+        "elim": 4,
+        "elim_legions": 1
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950085,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 9",
+        "vp": 9,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 9,
+          "events": {
+            "R": 19,
+            "G": 24
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 5,
+          "tribes_elim": 4,
+          "legion_steps_lost": 1,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950086,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 14",
+        "vp": 14,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 21,
+          "events": {
+            "R": 22,
+            "G": 27
+          },
+          "plays": {
+            "R": 48,
+            "G": 50
+          },
+          "submits": 1,
+          "tribes_elim": 6,
+          "legion_steps_lost": 8,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 6,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950087,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 14",
+        "vp": 14,
+        "turn": 6,
+        "stats": {
+          "battles": 6,
+          "sieges": 11,
+          "events": {
+            "R": 22,
+            "G": 27
+          },
+          "plays": {
+            "R": 49,
+            "G": 50
+          },
+          "submits": 1,
+          "tribes_elim": 4,
+          "legion_steps_lost": 14,
+          "intercepts": 0,
+          "avoids": 2
+        },
+        "elim": 4,
+        "elim_legions": 1
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950088,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 13",
+        "vp": 13,
+        "turn": 6,
+        "stats": {
+          "battles": 5,
+          "sieges": 12,
+          "events": {
+            "R": 20,
+            "G": 31
+          },
+          "plays": {
+            "R": 48,
+            "G": 51
+          },
+          "submits": 1,
+          "tribes_elim": 7,
+          "legion_steps_lost": 13,
+          "intercepts": 2,
+          "avoids": 7
+        },
+        "elim": 7,
+        "elim_legions": 1
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950089,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 9,
+          "events": {
+            "R": 18,
+            "G": 23
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 3,
+          "tribes_elim": 3,
+          "legion_steps_lost": 4,
+          "intercepts": 2,
+          "avoids": 2
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950090,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 5",
+        "vp": 5,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 3,
+          "events": {
+            "R": 13,
+            "G": 22
+          },
+          "plays": {
+            "R": 49,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 1,
+          "legion_steps_lost": 4,
+          "intercepts": 3,
+          "avoids": 2
+        },
+        "elim": 1,
+        "elim_legions": 2
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950091,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 13",
+        "vp": 13,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 14,
+          "events": {
+            "R": 21,
+            "G": 27
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 2,
+          "tribes_elim": 4,
+          "legion_steps_lost": 6,
+          "intercepts": 0,
+          "avoids": 2
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950092,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 8",
+        "vp": 8,
+        "turn": 6,
+        "stats": {
+          "battles": 3,
+          "sieges": 13,
+          "events": {
+            "R": 21,
+            "G": 26
+          },
+          "plays": {
+            "R": 49,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 6,
+          "legion_steps_lost": 11,
+          "intercepts": 5,
+          "avoids": 4
+        },
+        "elim": 6,
+        "elim_legions": 2
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950093,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 11",
+        "vp": 11,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 13,
+          "events": {
+            "R": 15,
+            "G": 17
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 2,
+          "tribes_elim": 5,
+          "legion_steps_lost": 3,
+          "intercepts": 0,
+          "avoids": 0
+        },
+        "elim": 5,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950094,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 13",
+        "vp": 13,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 7,
+          "events": {
+            "R": 18,
+            "G": 22
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 2,
+          "tribes_elim": 1,
+          "legion_steps_lost": 2,
+          "intercepts": 0,
+          "avoids": 1
+        },
+        "elim": 1,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950095,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 11",
+        "vp": 11,
+        "turn": 6,
+        "stats": {
+          "battles": 4,
+          "sieges": 12,
+          "events": {
+            "R": 22,
+            "G": 24
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 2,
+          "tribes_elim": 6,
+          "legion_steps_lost": 12,
+          "intercepts": 1,
+          "avoids": 4
+        },
+        "elim": 6,
+        "elim_legions": 1
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950096,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 13",
+        "vp": 13,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 7,
+          "events": {
+            "R": 14,
+            "G": 23
+          },
+          "plays": {
+            "R": 49,
+            "G": 50
+          },
+          "submits": 2,
+          "tribes_elim": 1,
+          "legion_steps_lost": 4,
+          "intercepts": 0,
+          "avoids": 2
+        },
+        "elim": 1,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950097,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 2,
+          "sieges": 14,
+          "events": {
+            "R": 17,
+            "G": 20
+          },
+          "plays": {
+            "R": 48,
+            "G": 51
+          },
+          "submits": 2,
+          "tribes_elim": 6,
+          "legion_steps_lost": 6,
+          "intercepts": 2,
+          "avoids": 3
+        },
+        "elim": 6,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950098,
+      "roman": "bot",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 15",
+        "vp": 15,
+        "turn": 6,
+        "stats": {
+          "battles": 1,
+          "sieges": 9,
+          "events": {
+            "R": 20,
+            "G": 24
+          },
+          "plays": {
+            "R": 48,
+            "G": 48
+          },
+          "submits": 3,
+          "tribes_elim": 4,
+          "legion_steps_lost": 5,
+          "intercepts": 0,
+          "avoids": 2
+        },
+        "elim": 4,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 950099,
+      "roman": "bot",
+      "result": {
+        "winner": "G",
+        "reason": "end VP 11",
+        "vp": 11,
+        "turn": 6,
+        "stats": {
+          "battles": 0,
+          "sieges": 12,
+          "events": {
+            "R": 20,
+            "G": 19
+          },
+          "plays": {
+            "R": 48,
+            "G": 49
+          },
+          "submits": 1,
+          "tribes_elim": 3,
+          "legion_steps_lost": 5,
+          "intercepts": 1,
+          "avoids": 0
+        },
+        "elim": 3,
+        "elim_legions": 0
+      },
+      "missedForcedMarchCleanup": []
+    },
+    {
+      "seed": 200002,
+      "roman": "search",
+      "result": {
+        "winner": "R",
+        "reason": "end VP 12",
+        "vp": 12,
+        "turn": 6,
+        "stats": {
+          "battles": 10,
+          "sieges": 5,
+          "events": {
+            "R": 22,
+            "G": 30
+          },
+          "plays": {
+            "R": 48,
+            "G": 51
+          },
+          "submits": 2,
+          "tribes_elim": 8,
+          "legion_steps_lost": 15,
+          "intercepts": 3,
+          "avoids": 6
+        },
+        "elim": 8,
+        "elim_legions": 1
+      },
+      "missedForcedMarchCleanup": []
+    }
+  ],
+  "games": 101,
+  "affectedGames": 0,
+  "seconds": 52.70542311668396
+}

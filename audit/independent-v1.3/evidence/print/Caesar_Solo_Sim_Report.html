@@ -1,0 +1,478 @@
+<!doctype html><html><head><meta charset="utf-8"><base href="file:///workspace/scratch/5f5e07a8f4f0/caesar-v13/print/"><title>Caesar Solo Bots — Simulation Report</title>
+<style>
+@page { size: Letter; margin: 0.55in 0.6in 0.6in 0.6in; }
+body { font-family: 'DejaVu Serif', Georgia, serif; font-size: 10.5pt; line-height: 1.32; color: #1d1d1d; }
+h1 { font-size: 20pt; margin: 0 0 4pt 0; color: #7a1010; }
+h2 { font-size: 14pt; margin: 14pt 0 4pt 0; color: #7a1010; border-bottom: 1px solid #c9b18a; padding-bottom: 2pt; break-after: avoid; }
+h3 { font-size: 11.5pt; margin: 10pt 0 3pt 0; color: #3b2a10; break-after: avoid; }
+p { margin: 4pt 0; }
+ul, ol { margin: 3pt 0 3pt 0; padding-left: 18pt; }
+li { margin: 1.5pt 0; }
+table { border-collapse: collapse; width: 100%; margin: 5pt 0; font-size: 9.5pt; break-inside: auto; }
+th, td { border: 1px solid #b9a27a; padding: 2.5pt 4pt; vertical-align: top; text-align: left; }
+th { background: #efe4cf; }
+tr { break-inside: avoid; }
+code { font-family: 'DejaVu Sans Mono', monospace; font-size: 9pt; }
+pre { background: #f4f1ea; border: 1px solid #ddd5c4; padding: 6pt 8pt; white-space: pre-wrap; } pre code { font-size: 8.5pt; }
+hr { border: none; border-top: 1px solid #c9b18a; margin: 10pt 0; }
+@page { @bottom-center { content: "Caesar Solo Bots — Simulation Report · unofficial fan variant for Caesar: Rome vs. Gaul (GMT Games) · page " counter(page); font-family: 'DejaVu Serif', serif; font-size: 8pt; color: #777; } }img { width: 5.4in; max-width: 100%; display: block; margin: 4pt auto; }</style></head><body><h1>Caesar: Rome vs. Gaul — Solo Bots: Simulation Report</h1>
+<p><em>Imperator and Concilium, version 1.3. These are model results from computer play, not tabletop results.</em></p>
+<h2>1. Summary</h2>
+<ul>
+<li><strong>Both bots play complete games of the 2nd-edition rules</strong> in the simulation, with one approximation: the Siege Table is the 1st-edition table shifted one row. Each decision comes from a Directive card and a two-card Offer, following the printed rules. The bot never looks at hidden cards, and its Reaction and Surprise cards work only once an Offer has revealed them. An independent clean-room implementation of the printed rules matched the simulation bot on more than 99% of card and mission choices. Three independent audits (of v1.0, v1.1 and v1.2) found fifteen issues between them, all fixed in v1.3, and every study result here comes from the corrected v1.3 engine.</li>
+<li><strong>The levels form a smooth ladder against every computer opponent.</strong> Against the strongest of them, the Lookahead player:<ul>
+<li>Imperator wins 0% at level 1, 30% at level 3 and 65% at level 5;</li>
+<li>Concilium wins 64% at level 1, 84% at level 3 and 98% at level 5.</li>
+</ul>
+</li>
+<li><strong>Concilium is the stronger bot.</strong> Under the standard rules (its level 4) it wins 63% against Imperator with +1 AP and 91% against the Lookahead player. Rome-side computer players are weaker than skilled humans, so Concilium's levels start with a lower VP target for you: 9 VP at level 1. Level 3 (11 VP) is the recommended start.</li>
+<li><strong>Imperator at level 3</strong> (+1 AP on every card play) wins 36% of its games against Concilium and about 51% against the Heuristic players.</li>
+<li><strong>A typical bot-vs-bot game (Imperator at level 3, Concilium under the standard rules) is a Governance race.</strong> Rome earns most of its VP from Governance, plus Caesar's Pass. A game has few battles (about 1.6) and around 9 siege rolls.</li>
+<li>5,300 games were played for the final study, and many thousands more during development.</li>
+</ul>
+<h2>2. The simulation engine</h2>
+<p>The engine (<code>code/engine.py</code>, <code>events.py</code>, <code>cards.py</code>, <code>map.json</code>) plays complete games of the 2nd-edition rules:</p>
+<ul>
+<li><strong>Map:</strong> 117 spaces and 275 connections (path, rough, Channel); 26 provinces in 6 regions. Extracted from the Vassal module's map and checked against the printed province values.</li>
+<li><strong>Turns:</strong> six turns of reinforcements (3 Tribes per turn, Turn-5 Legions, Ambiorix, Vercingetorix) and card play with Reactions and Surprise cards. Each turn ends with Winter: Supply, Isolation, Governance, Winter Camps, Fading Promises and Spring Muster.</li>
+<li><strong>Cards:</strong> all 55, each played as an Event, a Bonus card or AP.</li>
+<li><strong>Movement and combat:</strong> Command Ratings and over-command, Interception, Avoid Battle and Back Up, battles with leader and elite rerolls, retreats, and Submission at 3:1.</li>
+<li><strong>Sieges:</strong> Siege Points, surrender at 3:1 and Strongholds, including Caesar's Pass.</li>
+<li><strong>Influence:</strong> Place, Convert and Remove, Local Support, the Council Box and the Major Uprising.</li>
+<li><strong>The edges of the map:</strong> Germania and Britannia with native attacks, and Storms at Sea.</li>
+<li><strong>Victory:</strong> both automatic victories and the Turn 6 VP total.</li>
+</ul>
+<h2>3. Opponents</h2>
+<p>Each bot was tested against four computer players of the other side.</p>
+<table>
+<thead>
+<tr>
+<th>Opponent</th>
+<th>How it plays</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bot</strong></td>
+<td>The other paper bot, following its printed rules exactly. In the Imperator rows it is Concilium under the standard rules. In the Concilium rows it is Imperator at its level 3 (+1 AP on every card play), the strongest Roman player available.</td>
+</tr>
+<tr>
+<td><strong>Heuristic</strong></td>
+<td>Sees its whole hand and scores every Event and AP use with hand-tuned values.</td>
+</tr>
+<tr>
+<td><strong>Heuristic (aggressive)</strong></td>
+<td>The same player with 1.5× weight on attacks and 0.7× on influence.</td>
+</tr>
+<tr>
+<td><strong>Lookahead</strong></td>
+<td>For each card, tries the candidate plays on a copy of the game with fresh dice (so it cannot see the future) and keeps the one its position evaluation likes best.</td>
+</tr>
+</tbody>
+</table>
+<p>None of them plays as well as a strong human. Read the tables as a comparison between levels and between opponents, not as a forecast of your own win rate. The Lookahead player is the strongest of them, so its column is the best guide to a skilled opponent.</p>
+<h2>4. How the bots were developed</h2>
+<p><strong>Concilium</strong> beat every Roman computer player from its first version. Its rules are short:</p>
+<ul>
+<li><strong>RAID</strong> where the Legions are not.</li>
+<li><strong>AMBUSH</strong> only at good odds.</li>
+<li><strong>AGITATE</strong>.</li>
+<li><strong>BANK</strong> IMs in the Council Box early.</li>
+<li><strong>RISE</strong> to spend them.</li>
+</ul>
+<p>Most of the tuning went into three things: the RAID weights (Narbonensis first, never next to Caesar), when to BANK and RISE, and the <em>danger</em> rule (section 6).</p>
+<p><strong>Imperator</strong> was much harder, because Rome must <em>earn</em> 12 VP while Gaul only has to stop it. The first Imperator decks were built around sieges and battles, and they scored about 3 VP a game. The fixes came from four kinds of test:</p>
+<ul>
+<li><strong>A passive opponent.</strong> Against a Gaul that did nothing, Imperator scored 14–15 VP. So the engine and the scoring were sound, and the weakness was in the decisions.</li>
+<li><strong>A lookahead hybrid.</strong> One version of Imperator tried every mission on a copy of the game with fresh dice and logged which ones paid. Removing Gallic IMs (RAID) and completing provinces (RULE) were worth far more per AP than sieges. A siege paid only when the Town was about to fall. That finding produced RULE (Control Table lines 0–3), the SWEEP procedure and the strict SIEGE targets.</li>
+<li><strong>Ablations.</strong> Each mission was switched off in turn, and so were the block and deny lines and the size of the Offer. A change was kept only if it held up on fresh seeds. An Offer of two cards played as well as seeing three cards or the whole hand, so the bot keeps the simpler Offer.</li>
+<li><strong>Loss analysis.</strong> Legions were dying to Gallic ambushes, about 2.9 per game, mostly in two-Legion Legate armies in Belgica. This produced the <em>danger</em> rule and the REGROUP mission.</li>
+</ul>
+<p>Ideas that did not help, and were dropped:</p>
+<ul>
+<li>An expedition to Britannia or Germania from Turn 3. The 2 VP rarely made up for Caesar's absence.</li>
+<li>More sieges.</li>
+<li>Looser siege rules for every army. They helped against Concilium but cost VP against the Heuristic and Lookahead players. Only Caesar's army was given the looser rule (section 6).</li>
+<li>Blocking provinces before their Tribe arrives.</li>
+<li>A danger ratio other than 1.5 for Imperator. Ratios of 1.0, 1.25 and 2.0 were all tried.</li>
+<li>Putting RAID first on more Directive cards.</li>
+<li>A lower STRIKE ratio for Caesar's army.</li>
+<li>Putting SIEGE first on more Directive cards.</li>
+<li>A different winter-camp priority order, preferring a Live Event over a higher-AP card, and more ★ Events (#9, #12).</li>
+</ul>
+<p><strong>Is the printed mission order good enough?</strong> As a final check, we built an Imperator that keeps the Offer and the Directive but picks each AP's mission by lookahead. It tries every mission on a copy of the game, with fresh dice, and keeps the one the position evaluation likes best. Over 120 games against Concilium with +1 AP (Imperator's level 3) it won 44%, with a mean of 10.7 VP. The printed Imperator won 43% with the same mean. Both figures come from the v1.0 engine, before the audit fixes. The lookahead and the printed order agreed on 70% of the 14,000 decisions. Most of the disagreements were cases where the lookahead skipped REGROUP or SIEGE to place an IM instead, and the earlier tests showed that REGROUP pays off over the following cards, which the one-step lookahead cannot see. Within the reach of a one-card lookahead, then, the printed mission order loses nothing.</p>
+<p>The last checks on Concilium varied its AMBUSH ratio (1.25× and 2×), the RISE threshold and the last BANK turn. None of these moved the result by more than about 0.2 VP, which is within the noise, so Concilium's rules were left unchanged.</p>
+<h2>5. Independent checks</h2>
+<p>Three independent reviews checked the work. None of the reviewers had written the code.</p>
+<ul>
+<li><strong>Engine audit.</strong> Compared the engine with the 2023 living rules and reported 23 findings. The important ones were fixed: Submission is now checked before Avoid Battle, legion attrition was corrected, and Roman supply sources now trace correctly. One item was kept on purpose (Fading Promises), and one simplification remains (Sorties). See <code>audit/ENGINE_AUDIT_RESPONSE.md</code>.</li>
+<li>
+<p><strong>Clean-room test.</strong> Wrote a second implementation of both bots from the printed rules only, then compared it with the simulation bot decision by decision. Before fixes, the two agreed on:</p>
+<ul>
+<li>99.8% of card choices;</li>
+<li>99.4% of mission choices;</li>
+<li>90–96% of full AP decisions (mission, army and target).</li>
+</ul>
+<p>Every gap it found was closed, either by clarifying the text or by fixing the code. One of the code fixes was an engine bug in how losses were applied, which affected both sides. See <code>audit/CLEANROOM_RESPONSE.md</code>.</p>
+<p>This check covered the rules text as it stood before the last round of changes in section 6: the danger rule, REGROUP, the lagging-region order and Caesar's 2:1 sieges.</p>
+</li>
+<li>
+<p><strong>Independent v1.0 audit.</strong> Reviewed the whole v1.0 release: rules, cards, reference, helper, sample game, report, code and the archived study. It reproduced every one of the 40 study totals and ran its own 240-game sweep. It also tested the latest changes with hand-built positions. It found eight issues. The most important was that Reaction and Surprise cards could be used before an Offer had revealed them. Two others: danger was judged before the move, missing routes the moving army had been blocking; and units that added strength to a siege could still activate again. All eight are fixed in v1.1. A re-audit of v1.1 then found five more issues. Three were in the simulation: Surprise-only hands were only partly replaced; a spent Reserve card that was immediately redrawn stayed face up; and a Gallic leader alone was left out of the danger check. The other two were a helper Undo crash and an AP-sensitivity check that also changed four other rules. All five are fixed in v1.2. A third review, of v1.2, found that the immediate extra plays after #42 or after a cancelled Event skipped the Forced March cleanup, and that the AP check did not keep its per-seed results. Both are fixed in v1.3. The final study (section 7), the corrected-engine comparison (section 6) and the breakdown (section 8) all come from the v1.3 engine. See the <code>AUDIT_RESPONSE.md</code> files under <code>audit/independent-v1.0</code>, <code>-v1.1</code> and <code>-v1.2</code>.</p>
+</li>
+</ul>
+<h2>6. The final changes and what they were worth</h2>
+<p>These changes were made after the clean-room fixes. The first table below measures them on the current, corrected engine. The three tables after it are <strong>development-time numbers</strong>: they were measured on the engine before the audit corrections and are kept as a record of how the decisions were made.</p>
+<p><strong>On the corrected v1.3 engine</strong> (seeds 20000 and up; 200 games against the Bot, 160 against the Heuristic player, 100 against the Lookahead player). Each cell is the bot's win rate, with the mean Roman VP in brackets. For each "without" row, the change in mean Roman VP against the final version is given on the same seeds, ± one standard error of the paired difference.</p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>vs Bot</th>
+<th>vs Heuristic</th>
+<th>vs Lookahead</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Imperator v1.3 (level 3)</td>
+<td>38% (10.4 VP)</td>
+<td>52% (11.4 VP)</td>
+<td>40% (10.3 VP)</td>
+</tr>
+<tr>
+<td>… without REGROUP and the danger limit on SWEEP</td>
+<td>44% (10.7 VP); +0.28 ± 0.18</td>
+<td>46% (10.9 VP); -0.46 ± 0.26</td>
+<td>29% (9.3 VP); -1.04 ± 0.37</td>
+</tr>
+<tr>
+<td>… without the lagging-region order</td>
+<td>35% (10.0 VP); -0.40 ± 0.19</td>
+<td>54% (11.3 VP); -0.10 ± 0.21</td>
+<td>23% (9.8 VP); -0.54 ± 0.30</td>
+</tr>
+<tr>
+<td>… without Caesar's 2:1 sieges</td>
+<td>30% (9.7 VP); -0.71 ± 0.20</td>
+<td>57% (11.5 VP); +0.13 ± 0.25</td>
+<td>33% (10.2 VP); -0.19 ± 0.33</td>
+</tr>
+<tr>
+<td>Concilium v1.3 (standard rules)</td>
+<td>62% (10.4 VP)</td>
+<td>94% (5.0 VP)</td>
+<td>88% (7.1 VP)</td>
+</tr>
+<tr>
+<td>… without its danger rule</td>
+<td>40% (11.7 VP); +1.32 ± 0.21</td>
+<td>92% (6.0 VP); +1.04 ± 0.37</td>
+<td>85% (8.2 VP); +1.10 ± 0.35</td>
+</tr>
+</tbody>
+</table>
+<p>For Imperator, the Bot is Concilium under the standard rules. For Concilium, the Bot is Imperator with +1 AP on every card play.</p>
+<p>On the corrected engine every change still pays overall, though not against every opponent. A minus sign means Rome scores less without the change:</p>
+<ul>
+<li><strong>REGROUP and the danger limit.</strong> Without them Imperator scores about 0.3 VP more against Concilium, but about 0.5 VP less against the Heuristic player and 1.0 VP less against the Lookahead player. They pay against the stronger, more flexible opponents.</li>
+<li><strong>The lagging-region order.</strong> Without it Imperator scores about 0.4 VP less against Concilium and 0.5 VP less against the Lookahead player.</li>
+<li><strong>Caesar's 2:1 sieges.</strong> These gain about 0.7 VP against Concilium. Against the other opponents the difference is within the noise.</li>
+<li><strong>Concilium's danger rule.</strong> It takes 1.0–1.3 VP off every Roman opponent.</li>
+</ul>
+<p>The development-time tables follow. Each row compares the same seeds with and without the change, and the Imperator rows are at level 3.</p>
+<p><strong>Imperator</strong> at level 3. Seeds 9000+: 200 games each against the Bot and Heuristic players, 100 against the Lookahead player. The Bot here is the Concilium of that time, before its own danger rule was added. Each cell gives Imperator's win rate and its mean VP.</p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>vs Bot</th>
+<th>vs Heuristic</th>
+<th>vs Lookahead</th>
+<th>Legions lost per game</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Before</td>
+<td>38.5% (10.7 VP)</td>
+<td>36.0% (10.2 VP)</td>
+<td>17% (8.5 VP)</td>
+<td>2.3</td>
+</tr>
+<tr>
+<td>+ REGROUP</td>
+<td>40.0% (10.4 VP)</td>
+<td>42.5% (10.7 VP)</td>
+<td>17% (9.1 VP)</td>
+<td>1.5</td>
+</tr>
+<tr>
+<td>+ REGROUP + danger limit on SWEEP (adopted)</td>
+<td>43.0% (10.8 VP)</td>
+<td>46.0% (10.9 VP)</td>
+<td>18% (9.0 VP)</td>
+<td>1.3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Concilium's danger ratio</strong>, the Roman BS (as a multiple of the Gallic BS) at which a space counts as dangerous for its SWEEPs. Seeds 9500+: 160 games against Imperator with +1 AP and against the Heuristic player, 80 against the Lookahead player. Each cell gives Concilium's win rate, then the mean Roman VP (lower is better for Gaul).</p>
+<table>
+<thead>
+<tr>
+<th>Danger ratio</th>
+<th>vs Imperator (+1 AP)</th>
+<th>vs Heuristic</th>
+<th>vs Lookahead</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>none</td>
+<td>53% (11.1)</td>
+<td>95% (6.0)</td>
+<td>75% (8.6)</td>
+</tr>
+<tr>
+<td>2×</td>
+<td>68% (10.2)</td>
+<td>97% (5.5)</td>
+<td>85% (7.6)</td>
+</tr>
+<tr>
+<td>1.5×</td>
+<td>71% (9.8)</td>
+<td>96% (5.5)</td>
+<td>94% (7.3)</td>
+</tr>
+<tr>
+<td><strong>1× (adopted)</strong></td>
+<td>75% (9.5)</td>
+<td>96% (4.6)</td>
+<td>98% (6.5)</td>
+</tr>
+<tr>
+<td>0.5×</td>
+<td>78% (9.4)</td>
+<td>96% (4.4)</td>
+<td>94% (6.9)</td>
+</tr>
+</tbody>
+</table>
+<p>Below 1× the gains level off, and 1× ("a Roman army could reach it with at least equal strength") is the simplest rule to apply at the table.</p>
+<p><strong>Two last Imperator changes</strong>, tested against the final Concilium. Each cell is the change in Imperator's mean VP at level 3 on the same seeds, one figure per seed set: 200 games against Concilium and against the Heuristic player, and 120 against the Lookahead player.</p>
+<table>
+<thead>
+<tr>
+<th>Change</th>
+<th>vs Concilium</th>
+<th>vs Heuristic</th>
+<th>vs Lookahead</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Control Table: <strong>lagging region first</strong> (Celtica or Belgica, whichever Rome is not winning)</td>
+<td>+0.35, +0.42</td>
+<td>+0.32, +0.52</td>
+<td>+0.84, +0.08</td>
+</tr>
+<tr>
+<td>SIEGE: <strong>Caesar's army at 2:1</strong> may siege any Town (before: only a Town with a Siege Point already on it)</td>
+<td>+0.61, +0.24</td>
+<td>−0.35, −0.21</td>
+<td>+0.19, +0.30</td>
+</tr>
+</tbody>
+</table>
+<p>Both were adopted. The second costs a little against the Heuristic player but gains against the two stronger opponents.</p>
+<h2>7. Final study</h2>
+<p><strong>Method.</strong></p>
+<ul>
+<li>Every level of each bot played every opponent: 150 games against the Bot and Heuristic players and 80 against the Lookahead player, 5,300 games in all.</li>
+<li>The study used seed ranges 100000+ (Imperator) and 200000+ (Concilium), which were never used during development.</li>
+<li>All cards used the assumed 2nd-edition AP values.</li>
+<li>The cells below give the bot's win rate and the mean Roman VP. With 150 games the margin of error is about ±7 points; with 80 games, about ±9.</li>
+</ul>
+<p><img alt="Imperator win rate by level" src="sim/imperator_levels.png" /></p>
+<p><em>Error bars show one standard error.</em></p>
+<p><img alt="Concilium win rate by level" src="sim/concilium_levels.png" /></p>
+<h3>Imperator (bot plays Rome; cells = Imperator win rate, mean Roman VP)</h3>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Bot</th>
+<th>Heuristic</th>
+<th>Heuristic (aggressive)</th>
+<th>Lookahead</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>4% (6.9 VP)</td>
+<td>6% (6.1 VP)</td>
+<td>6% (7.0 VP)</td>
+<td>0% (3.6 VP)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>18% (9.0 VP)</td>
+<td>17% (8.8 VP)</td>
+<td>26% (9.2 VP)</td>
+<td>8% (6.8 VP)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>36% (10.3 VP)</td>
+<td>44% (10.9 VP)</td>
+<td>59% (11.8 VP)</td>
+<td>30% (9.7 VP)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>63% (10.3 VP)</td>
+<td>67% (10.9 VP)</td>
+<td>77% (11.8 VP)</td>
+<td>60% (9.7 VP)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>74% (10.3 VP)</td>
+<td>81% (10.9 VP)</td>
+<td>87% (11.8 VP)</td>
+<td>65% (9.7 VP)</td>
+</tr>
+</tbody>
+</table>
+<h3>Concilium (bot plays Gaul; cells = Concilium win rate, mean Roman VP)</h3>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Bot</th>
+<th>Heuristic</th>
+<th>Heuristic (aggressive)</th>
+<th>Lookahead</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>23% (10.3 VP)</td>
+<td>85% (4.9 VP)</td>
+<td>83% (4.3 VP)</td>
+<td>64% (7.3 VP)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>37% (10.3 VP)</td>
+<td>89% (4.9 VP)</td>
+<td>90% (4.3 VP)</td>
+<td>74% (7.3 VP)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>53% (10.3 VP)</td>
+<td>95% (4.9 VP)</td>
+<td>95% (4.3 VP)</td>
+<td>84% (7.3 VP)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>63% (10.3 VP)</td>
+<td>98% (4.9 VP)</td>
+<td>97% (4.3 VP)</td>
+<td>91% (7.3 VP)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>83% (8.9 VP)</td>
+<td>100% (1.7 VP)</td>
+<td>100% (1.4 VP)</td>
+<td>98% (4.7 VP)</td>
+</tr>
+</tbody>
+</table>
+<p>Imperator levels 3–5 differ only in the VP Rome needs, so they play the same games and show the same mean VP. The same is true of Concilium levels 1–4.</p>
+<h2>8. How the games are decided</h2>
+<p>These figures come from 300 games of Imperator (level 3) against Concilium (standard rules), on seeds from 300000 up. Rome won 104 of them (35%), with a mean of 10.3 VP.</p>
+<p><strong>Where Rome's VP come from (per game):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>VP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Governance (six winters)</td>
+<td>9.4</td>
+</tr>
+<tr>
+<td>Caesar's Pass</td>
+<td>0.83</td>
+</tr>
+<tr>
+<td>Germania and Britannia</td>
+<td>0.07</td>
+</tr>
+<tr>
+<td>Eliminated Tribes (÷4)</td>
+<td>about 0.9 (3.6 Tribes)</td>
+</tr>
+<tr>
+<td>Eliminated Legions</td>
+<td>−0.53</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Mean Governance by winter</strong> (9–10 Governance gives 2 VP, 7–8 gives 1):</p>
+<table>
+<thead>
+<tr>
+<th>Turn</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mean Governance</td>
+<td>9.3</td>
+<td>9.2</td>
+<td>9.1</td>
+<td>9.0</td>
+<td>8.9</td>
+<td>8.7</td>
+</tr>
+</tbody>
+</table>
+<p>64% of Rome's winters reach 9–10 Governance. The rest fall to 7–8, nearly always because Belgica is tied or lost. Turn 6 is the hardest winter, because Concilium saves its Submitted Tribes and Council IMs for a late Major Uprising.</p>
+<p><strong>Battles are rare.</strong> A game averages 1.6 battles and 9.1 siege rolls, because neither bot gives the other good odds. REGROUP keeps Imperator's Legate armies out of reach, and Concilium never sweeps into danger. A human who takes risks will see more fighting.</p>
+<p><strong>Close games.</strong> 33% of games end on 11 or 12 VP, a point either side of the target, so every Governance point matters.</p>
+<p><strong>VP distribution (VP: games):</strong> 2: 1, 4: 2, 5: 6, 6: 7, 7: 22, 8: 28, 9: 38, 10: 42, 11: 50, 12: 50, 13: 38, 14: 13, 15: 3.</p>
+<h2>9. Limitations</h2>
+<ul>
+<li><strong>These are computer opponents.</strong> A strong human will beat the Heuristic and Lookahead players. Expect your results against Imperator to be better than theirs, and against Concilium perhaps much better.</li>
+<li><strong>The 2nd-edition card values are assumed.</strong> The 2nd edition gives five cards 3 AP, three cards 1 AP and makes the rest 2 AP. Which cards carry which value is assumed. The card texts are 1st edition, and the 2nd edition changes some text. To check how much this matters, the main matchups were re-run on the same seeds with only the AP values changed. Only the card AP values were switched to their 1st-edition numbers; every other rule stayed at the 2nd-edition settings, on the same seeds. Imperator (level 3) beat Concilium in 41% of 300 games (38% with the assumed 2nd-edition values; Roman VP +0.18 ± 0.17), Imperator beat the Lookahead player in 34% of 120 (27%; +0.25 ± 0.35 VP), and Concilium under the standard rules beat the Lookahead player in 89% of 120 (94%; Roman VP +0.44 ± 0.39). The bots' rules work with either deck.</li>
+<li><strong>The Siege Table is the 1st-edition table shifted one row (−1).</strong> It approximates the 2nd-edition table. The exact revised table has not been transcribed cell by cell, so siege results in the simulation are approximate. The printed bots use whatever table your copy of the game prints.</li>
+<li><strong>Rulebook ambiguities.</strong> The 2023 rulebook still says 3 MP for a siege in section 14.3, while the 2nd-edition change notes say 2 MP; the bots use 2. Fading Promises appears in the index and the 2020 rules but not in the 2023 body; the engine applies it, as the engine audit response explains. The independent v1.0 audit raised the siege-MP point.</li>
+<li><strong>Simplifications in the engine.</strong> Sorties and a few rare rules are simplified (see the audit response). They change the numbers a little but not the bots' rules.</li>
+<li><strong>Tuning targets.</strong> Imperator was tuned against the Concilium, Heuristic and Lookahead players, so it may be tuned to their habits. Concilium was tuned against Imperator and the Heuristic player.</li>
+</ul>
+<h2>10. Reproducing the results</h2>
+<pre><code>cd code
+python3 tests/test_smoke.py           # smoke tests
+python3 tests/test_audit_fixes.py     # regression tests for the v1.0 audit findings
+python3 study.py                      # full study, about an hour on 2 cores
+python3 decide.py 300                 # bot-vs-bot breakdown (section 8)
+python3 sample_game.py 57 out.md      # the sample game's log
+</code></pre>
+<p>The sample game's introduction and narrative were written by hand, so the generated file reproduces the log but not those notes.</p>
+<p>The raw results are in <code>results/study_final.json</code>, and the bot-vs-bot breakdown is in <code>results/decide.json</code>.</p></body></html>

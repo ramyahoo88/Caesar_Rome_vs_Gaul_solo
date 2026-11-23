@@ -1,0 +1,118 @@
+{
+  "latestChangeCellsRecounted": 18,
+  "latestChangePairedComparisons": {
+    "R_no_danger": {
+      "bot": {
+        "n": 200,
+        "mean": 0.28,
+        "SE": 0.18323722164719952
+      },
+      "smart": {
+        "n": 160,
+        "mean": -0.4625,
+        "SE": 0.26075716733095833
+      },
+      "search": {
+        "n": 100,
+        "mean": -1.04,
+        "SE": 0.3703451843288307
+      }
+    },
+    "R_no_lagging": {
+      "bot": {
+        "n": 200,
+        "mean": -0.4,
+        "SE": 0.1949101068409325
+      },
+      "smart": {
+        "n": 160,
+        "mean": -0.1,
+        "SE": 0.2098591920863717
+      },
+      "search": {
+        "n": 100,
+        "mean": -0.54,
+        "SE": 0.2976066144589145
+      }
+    },
+    "R_no_caesar21": {
+      "bot": {
+        "n": 200,
+        "mean": -0.715,
+        "SE": 0.19611522354096486
+      },
+      "smart": {
+        "n": 160,
+        "mean": 0.13125,
+        "SE": 0.24701390785966001
+      },
+      "search": {
+        "n": 100,
+        "mean": -0.19,
+        "SE": 0.3344511560117198
+      }
+    },
+    "G_no_danger": {
+      "bot": {
+        "n": 200,
+        "mean": 1.325,
+        "SE": 0.2130111351985923
+      },
+      "smart": {
+        "n": 160,
+        "mean": 1.04375,
+        "SE": 0.3657235091452414
+      },
+      "search": {
+        "n": 100,
+        "mean": 1.1,
+        "SE": 0.35205027189223126
+      }
+    }
+  },
+  "APOnlyScopeVerified": true,
+  "APCardsChecked": 55,
+  "R07": {
+    "perSeedVPWinnerReasonRetained": true,
+    "seedRangesAndSettingsRetained": true,
+    "allSummaryStatisticsRecomputed": true,
+    "rows": [
+      {
+        "matchup": "imp_con",
+        "n": 300,
+        "seedRangeHalfOpen": [
+          14000,
+          14300
+        ],
+        "ap1Win": 0.41,
+        "ap2Win": 0.38,
+        "recomputedMeanDifference": 0.18333333333333332,
+        "recomputedSE": 0.16550037862542166
+      },
+      {
+        "matchup": "imp_search",
+        "n": 120,
+        "seedRangeHalfOpen": [
+          14000,
+          14120
+        ],
+        "ap1Win": 0.3416666666666667,
+        "ap2Win": 0.26666666666666666,
+        "recomputedMeanDifference": 0.25,
+        "recomputedSE": 0.35449297046125267
+      },
+      {
+        "matchup": "con_search",
+        "n": 120,
+        "seedRangeHalfOpen": [
+          14000,
+          14120
+        ],
+        "ap1Win": 0.8916666666666667,
+        "ap2Win": 0.9416666666666667,
+        "recomputedMeanDifference": 0.44166666666666665,
+        "recomputedSE": 0.3919347672909246
+      }
+    ]
+  }
+}
