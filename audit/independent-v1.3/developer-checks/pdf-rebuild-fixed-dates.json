@@ -1,0 +1,593 @@
+{
+ "shipped_dir": "print",
+ "rebuilt_dir": "(fresh rebuild with fixed dates)",
+ "files": {
+  "Caesar_Solo_Rules.pdf": {
+   "bytes_equal": false,
+   "sha256": [
+    "febc0aa01022b24f99285a226e3e1e31d7f615db8a6a73a97e523ec325d4519a",
+    "c4e933ab0155fa04fd0955580ddb8c72f1045ac1a67280e308f9dbeb2d6f8ebd"
+   ],
+   "pages": [
+    11,
+    11
+   ],
+   "metadata": [
+    {
+     "/Title": "Caesar Solo Bots \u2014 Rules v1.3",
+     "/Creator": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+     "/Producer": "Skia/PDF m153",
+     "/CreationDate": "D:20261123052657+00'00'",
+     "/ModDate": "D:20261123052657+00'00'"
+    },
+    {
+     "/Title": "Caesar Solo Bots \u2014 Rules v1.3",
+     "/Creator": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+     "/Producer": "Skia/PDF m153",
+     "/CreationDate": "D:20261122000000+00'00'",
+     "/ModDate": "D:20261122000000+00'00'"
+    }
+   ],
+   "all_text_equal": true,
+   "all_pixels_equal": true,
+   "per_page": [
+    {
+     "page": 1,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 2,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 3,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 4,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 5,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 6,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 7,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 8,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 9,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 10,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 11,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    }
+   ]
+  },
+  "Caesar_Solo_Reference.pdf": {
+   "bytes_equal": false,
+   "sha256": [
+    "1dc510b5c0a07c5395545ca42e9927d86a12ba66629bc936ebb034f072a0c1e8",
+    "35975d220d5fd8ce7d9db93a7a24232948dd19f14215287955f6707cef92304f"
+   ],
+   "pages": [
+    2,
+    2
+   ],
+   "metadata": [
+    {
+     "/Title": "Caesar Solo Bots \u2014 Reference",
+     "/Creator": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+     "/Producer": "Skia/PDF m153",
+     "/CreationDate": "D:20261123052659+00'00'",
+     "/ModDate": "D:20261123052659+00'00'"
+    },
+    {
+     "/Title": "Caesar Solo Bots \u2014 Reference",
+     "/Creator": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+     "/Producer": "Skia/PDF m153",
+     "/CreationDate": "D:20261122000000+00'00'",
+     "/ModDate": "D:20261122000000+00'00'"
+    }
+   ],
+   "all_text_equal": true,
+   "all_pixels_equal": true,
+   "per_page": [
+    {
+     "page": 1,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 2,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    }
+   ]
+  },
+  "Caesar_Solo_Cards.pdf": {
+   "bytes_equal": false,
+   "sha256": [
+    "069191cb567d1c29c809ae786c627e56dcac8539e7dd6a4290b6496056961a7a",
+    "6bc4193d83f1fb33af69eed2e097c33bd8b4ebb3087c6e2e50fe13e8e4d5b256"
+   ],
+   "pages": [
+    4,
+    4
+   ],
+   "metadata": [
+    {
+     "/Title": "tmp_6hfg19b.html",
+     "/Creator": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+     "/Producer": "Skia/PDF m153",
+     "/CreationDate": "D:20261123052658+00'00'",
+     "/ModDate": "D:20261123052658+00'00'"
+    },
+    {
+     "/Title": "Caesar Solo Bots \u2014 Directive Cards",
+     "/Creator": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+     "/Producer": "Skia/PDF m153",
+     "/CreationDate": "D:20261122000000+00'00'",
+     "/ModDate": "D:20261122000000+00'00'"
+    }
+   ],
+   "all_text_equal": true,
+   "all_pixels_equal": true,
+   "per_page": [
+    {
+     "page": 1,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 2,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 3,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 4,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    }
+   ]
+  },
+  "Caesar_Solo_Record_Sheet.pdf": {
+   "bytes_equal": false,
+   "sha256": [
+    "7e5d79817454a30ca8ac5f69a46bb2dc2adcce7f66a3dc5215fe622f9dacfb84",
+    "86d248ced1688b368cc5fca9accdc2d71e804b6ead9a48366f73e0131e20f18d"
+   ],
+   "pages": [
+    1,
+    1
+   ],
+   "metadata": [
+    {
+     "/Title": "Caesar Solo Bots \u2014 Record Sheet",
+     "/Creator": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+     "/Producer": "Skia/PDF m153",
+     "/CreationDate": "D:20261123052659+00'00'",
+     "/ModDate": "D:20261123052659+00'00'"
+    },
+    {
+     "/Title": "Caesar Solo Bots \u2014 Record Sheet",
+     "/Creator": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+     "/Producer": "Skia/PDF m153",
+     "/CreationDate": "D:20261122000000+00'00'",
+     "/ModDate": "D:20261122000000+00'00'"
+    }
+   ],
+   "all_text_equal": true,
+   "all_pixels_equal": true,
+   "per_page": [
+    {
+     "page": 1,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    }
+   ]
+  },
+  "Caesar_Solo_Sim_Report.pdf": {
+   "bytes_equal": false,
+   "sha256": [
+    "9d74c9319d8f7b8eaa597106c97fa15d1f59e0bc0d7ecc7a46bafba56810250c",
+    "56314478f762439b637da517098e86e220e145208c840b87b838318a2df886cf"
+   ],
+   "pages": [
+    8,
+    8
+   ],
+   "metadata": [
+    {
+     "/Title": "Caesar Solo Bots \u2014 Simulation Report",
+     "/Creator": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+     "/Producer": "Skia/PDF m153",
+     "/CreationDate": "D:20261123052700+00'00'",
+     "/ModDate": "D:20261123052700+00'00'"
+    },
+    {
+     "/Title": "Caesar Solo Bots \u2014 Simulation Report",
+     "/Creator": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+     "/Producer": "Skia/PDF m153",
+     "/CreationDate": "D:20261122000000+00'00'",
+     "/ModDate": "D:20261122000000+00'00'"
+    }
+   ],
+   "all_text_equal": true,
+   "all_pixels_equal": true,
+   "per_page": [
+    {
+     "page": 1,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 2,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 3,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 4,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 5,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 6,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 7,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 8,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    }
+   ]
+  },
+  "Caesar_Solo_Sample_Game.pdf": {
+   "bytes_equal": false,
+   "sha256": [
+    "39da00d64f7d086f6c02f78d5881c96d572ae1f81bc81a717118a7e4822115ca",
+    "98e85438d258e0361f31810bfa3b2e4f9df989a4faf1b7b07253df8ebc9fb667"
+   ],
+   "pages": [
+    11,
+    11
+   ],
+   "metadata": [
+    {
+     "/Title": "Caesar Solo Bots \u2014 Sample Game",
+     "/Creator": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+     "/Producer": "Skia/PDF m153",
+     "/CreationDate": "D:20261123052701+00'00'",
+     "/ModDate": "D:20261123052701+00'00'"
+    },
+    {
+     "/Title": "Caesar Solo Bots \u2014 Sample Game",
+     "/Creator": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+     "/Producer": "Skia/PDF m153",
+     "/CreationDate": "D:20261122000000+00'00'",
+     "/ModDate": "D:20261122000000+00'00'"
+    }
+   ],
+   "all_text_equal": true,
+   "all_pixels_equal": true,
+   "per_page": [
+    {
+     "page": 1,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 2,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 3,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 4,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 5,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 6,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 7,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 8,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 9,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 10,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 11,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    }
+   ]
+  },
+  "Caesar_Solo_Print_and_Play.pdf": {
+   "bytes_equal": false,
+   "sha256": [
+    "50befd5b1dc0362961afe28347aebc1c337998d15aa7e0973d7ff809750c630e",
+    "e3f0ad7773b996534d82f615fd022da319f31128052568540528def93949e89e"
+   ],
+   "pages": [
+    18,
+    18
+   ],
+   "metadata": [
+    {
+     "/Producer": "pypdf"
+    },
+    {
+     "/Producer": "pypdf",
+     "/Title": "Caesar Solo Bots \u2014 Print and Play v1.3",
+     "/CreationDate": "D:20261122000000+00'00'",
+     "/ModDate": "D:20261122000000+00'00'"
+    }
+   ],
+   "all_text_equal": true,
+   "all_pixels_equal": true,
+   "per_page": [
+    {
+     "page": 1,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 2,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 3,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 4,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 5,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 6,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 7,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 8,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 9,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 10,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 11,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 12,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 13,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 14,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 15,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 16,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 17,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    },
+    {
+     "page": 18,
+     "text_equal": true,
+     "pixels_equal": true,
+     "pixels_differing": 0
+    }
+   ]
+  }
+ },
+ "rebuild_vs_rebuild": {
+  "Caesar_Solo_Rules.pdf": {
+   "bytes_equal": true,
+   "all_text_equal": true,
+   "all_pixels_equal": true
+  },
+  "Caesar_Solo_Reference.pdf": {
+   "bytes_equal": true,
+   "all_text_equal": true,
+   "all_pixels_equal": true
+  },
+  "Caesar_Solo_Cards.pdf": {
+   "bytes_equal": true,
+   "all_text_equal": true,
+   "all_pixels_equal": true
+  },
+  "Caesar_Solo_Record_Sheet.pdf": {
+   "bytes_equal": true,
+   "all_text_equal": true,
+   "all_pixels_equal": true
+  },
+  "Caesar_Solo_Sim_Report.pdf": {
+   "bytes_equal": true,
+   "all_text_equal": true,
+   "all_pixels_equal": true
+  },
+  "Caesar_Solo_Sample_Game.pdf": {
+   "bytes_equal": true,
+   "all_text_equal": true,
+   "all_pixels_equal": true
+  },
+  "Caesar_Solo_Print_and_Play.pdf": {
+   "bytes_equal": true,
+   "all_text_equal": true,
+   "all_pixels_equal": true
+  }
+ },
+ "summary": {
+  "files": 7,
+  "pages": 55,
+  "all_page_counts_equal": true,
+  "all_text_equal": true,
+  "all_pixels_equal": true,
+  "bytes_equal": 0
+ }
+}

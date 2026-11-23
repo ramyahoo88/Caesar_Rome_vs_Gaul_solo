@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.3 print-build update (23 November 2026)
+
+The independent verification of v1.3 found no new defects. See [audit/independent-v1.3/AUDIT_RESPONSE.md](audit/independent-v1.3/AUDIT_RESPONSE.md). This update changes only how the PDFs are built. The rules, bots, code and results are unchanged, and every PDF page has the same text and rendered pixels as before.
+
+* **PDF titles.** The cards PDF had a temporary file name as its title, and the packet had no title. Both now have proper titles.
+* **Reproducible PDF builds.** `print/build.py` writes fixed PDF dates, so a rebuild with the same Chrome is byte-identical.
+* **New checks.** The Directive helper was tested in real Chrome on desktop and phone, with real storage: 37 checks, all passing. A fresh rebuild of the v1.3 PDFs was compared page by page with the shipped files. Both checks are in `audit/independent-v1.3/developer-checks/`.
+
 ## v1.3 (22 November 2026)
 
 This release fixes both findings of the v1.2 re-audit. See [audit/independent-v1.2/AUDIT_RESPONSE.md](audit/independent-v1.2/AUDIT_RESPONSE.md).

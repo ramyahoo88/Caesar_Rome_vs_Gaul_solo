@@ -30,7 +30,7 @@ All files are in [`print/`](print):
 | [Caesar_Solo_Sim_Report.pdf](print/Caesar_Solo_Sim_Report.pdf) | How the bots were tested, and the results |
 | [Caesar_Solo_Deck.html](print/Caesar_Solo_Deck.html) | Optional offline helper: draws Directive cards, tracks turns and level bonuses, and has quick-reference panels. Open it in any browser instead of using the paper deck. |
 
-`Caesar_Solo_Rules.md` is the editable source. Run `python3 print/build.py` to rebuild the PDFs. It needs Python-Markdown, pypdf and Chrome or Chromium.
+`Caesar_Solo_Rules.md` is the editable source. Run `python3 print/build.py` to rebuild the PDFs. It needs Python-Markdown, pypdf and Chrome or Chromium. With the same Chrome version, a rebuild is byte-identical to the shipped PDFs.
 
 ## Quick start
 
@@ -74,16 +74,18 @@ The [`code/`](code) folder holds a Python engine for the full 2nd-edition rules 
 
 Thousands of games tuned the Directive decks and mission rules. The final study then ran every level against every opponent, on seeds never used during development. The details are in the [simulation report](print/Caesar_Solo_Sim_Report.md).
 
-Two independent checks were run, each by a separate agent that had not written the code. Both reports and the responses to them are in [`audit/`](audit).
+Independent checks were run by separate agents that had not written the code. Their reports and the responses to them are in [`audit/`](audit).
 
 * **Engine audit.** The engine was checked against the 2023 living rules.
 * **Clean-room test.** A second bot was written from the printed rules alone, then compared with the simulation bot decision by decision. It agreed on 99.8% of card choices and 99.4% of mission choices. Every gap it found has been closed, either in the text or in the code.
-* **Independent audits of v1.0, v1.1 and v1.2.** The first review found eight issues, the most serious being Reserve cards used before they were revealed. The re-audit found five more, mostly in Reserve card handling and the danger check. A third review, of v1.2, found two more. All fifteen are fixed in v1.3, and every study result was re-run on the corrected engine. See the [changelog](CHANGELOG.md).
+* **Independent audits of v1.0, v1.1 and v1.2.** The first review found eight issues, the most serious being Reserve cards used before they were revealed. The re-audit found five more, mostly in Reserve card handling and the danger check. A third review, of v1.2, found two more. All fifteen are fixed in v1.3, and every study result was re-run on the corrected engine. A fourth review verified v1.3 and found no new defects. See the [changelog](CHANGELOG.md).
+
+After the fourth review, the Directive helper was also tested in real Chrome, on desktop and phone, with real browser storage: all 37 checks pass. A fresh rebuild of every PDF matches the shipped files page by page ([details](audit/independent-v1.3/AUDIT_RESPONSE.md)).
 
 ```
 cd code
 python3 tests/test_smoke.py                # smoke tests
-python3 tests/test_audit_fixes.py          # regression tests for the v1.0 audit findings
+python3 tests/test_audit_fixes.py          # regression tests for the audit findings
 python3 -c "from harness import evaluate, line; print(line(evaluate(('bot',{}),('bot',{}),range(20)),'bot v bot'))"
 python3 sample_game.py 57 sample.md        # the sample game's log (the narrative is editorial)
 python3 study.py                           # the full study (about an hour on 2 cores)

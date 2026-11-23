@@ -1,0 +1,194 @@
+{
+ "url": "file://REPO/print/Caesar_Solo_Deck.html",
+ "chrome": "/usr/bin/google-chrome",
+ "checks": [
+  {
+   "check": "loads with Imperator, turn 1, play 0",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "desktop: no horizontal overflow",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "9 draws show all 9 Imperator Directives once",
+   "pass": true,
+   "detail": "[6, 2, 4, 1, 7, 8, 5, 0, 3]"
+  },
+  {
+   "check": "empty deck says it reshuffles",
+   "pass": true,
+   "detail": "0 left \u00b7 reshuffles on next draw"
+  },
+  {
+   "check": "history lists 9 plays",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "10th draw reshuffles a fresh deck (8 left, play 10)",
+   "pass": true,
+   "detail": "8 left"
+  },
+  {
+   "check": "card face shows ID, compass and before/after reminder",
+   "pass": true,
+   "detail": "IMPERATOR\nI-8\nCampaign\nS\nRULE \u2014 Control Table lines 0\u20133: presence, convert, Prov"
+  },
+  {
+   "check": "card flip finishes flat and opaque",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "reload restores the exact saved state",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "reload shows the same card and counters",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "Concilium has its own counter (0) and its own deck",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "Concilium card shows a C- ID and the AGITATE reminder",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "switching back keeps Imperator at 10 plays",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "Undo of a draw restores deck and counter",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "turn 6 reached; Next turn disabled and labelled Last turn",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "new turn clears counters and history",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "Undo across five turns returns to turn 1 with its 10 plays and history",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "all 10 level selections save and display",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "Imperator L2: +1 AP on plays 1-4 only",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "Imperator L1: never a bonus",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "Imperator L3-5: bonus on every play",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "Concilium L5: +1 AP on plays 1-4 only",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "Concilium L1-4: never a bonus",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "Tab reaches side buttons, level, Draw, Undo, Next turn and Reset",
+   "pass": true,
+   "detail": "['SUMMARY', 'SUMMARY', 'SUMMARY', 'SUMMARY', 'BODY', 'bR', 'bG', 'lvl', 'draw', 'next', 'reset', 'SUMMARY', 'SUMMARY', 'SUMMARY', 'SUMMARY', 'BODY', 'bR', 'bG', 'lvl', 'draw', 'next', 'reset', 'SUMMARY', 'SUMMARY', 'SUMMARY']"
+  },
+  {
+   "check": "Enter and Space on Draw each draw a card",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "damaged session: notice shown, new game started, damaged copy kept",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "Dismiss hides the notice",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "damaged Undo history: game restored, bad step dropped, notice shown",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "Undo then reaches the surviving snapshot",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "reduced motion: no flip animation",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "storage refusing writes: page still works and warns",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "180 resets: every Directive appears as the first card",
+   "pass": true,
+   "detail": "[15, 21, 17, 19, 22, 25, 24, 15, 22]"
+  },
+  {
+   "check": "phone: tap draws; no horizontal overflow",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "phone: main buttons at least 40 px tall",
+   "pass": true,
+   "detail": "[['draw', 192.359375, 47], ['undo', 67.25, 44], ['next', 94.296875, 44], ['reset', 101.6875, 44], ['bR', 154.234375, 44], ['bG', 146.5625, 44]]"
+  },
+  {
+   "check": "browser restart: real localStorage restores the session",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "browser restart: Undo history survives",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "no page errors or console errors/warnings in any run",
+   "pass": true,
+   "detail": ""
+  }
+ ],
+ "passed": 37,
+ "total": 37,
+ "errors": []
+}

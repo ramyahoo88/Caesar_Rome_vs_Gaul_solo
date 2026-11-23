@@ -30,7 +30,26 @@ hr { border: none; border-top: 1px solid #c9b18a; margin: 10pt 0; }
 """
 
 
-def chrome_pdf(html_text, pdf_path):
+# Fixed PDF dates so that a rebuild with the same Chrome and sources is byte-identical.
+# Set this to the release date when a release changes the printables.
+PDF_DATE = "D:20261122000000+00'00'"
+
+
+def fix_metadata(pdf_path, title=None):
+    """Replace Chrome's build-time dates (and, if given, the title) with fixed values."""
+    r = PdfReader(pdf_path)
+    w = PdfWriter(clone_from=r)
+    meta = {k: v for k, v in (r.metadata or {}).items()}
+    if title:
+        meta['/Title'] = title
+    meta['/CreationDate'] = PDF_DATE
+    meta['/ModDate'] = PDF_DATE
+    w.add_metadata(meta)
+    with open(pdf_path, 'wb') as f:
+        w.write(f)
+
+
+def chrome_pdf(html_text, pdf_path, title=None):
     with tempfile.NamedTemporaryFile('w', suffix='.html', delete=False, encoding='utf-8') as f:
         f.write(html_text)
         tmp = f.name
@@ -38,6 +57,7 @@ def chrome_pdf(html_text, pdf_path):
            f'--print-to-pdf={pdf_path}', 'file://' + tmp]
     subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     os.unlink(tmp)
+    fix_metadata(pdf_path, title)
 
 
 def md_page(md_path, title, extra_css=''):
@@ -113,14 +133,14 @@ li { margin: 0 0 3pt 0; } li b { font-size: 8.6pt; }
     # faces and backs alternate (Imperator faces, Imperator backs, Concilium faces, Concilium backs) so that
     # ordinary double-sided printing pairs each face with its back; every back on a sheet is identical
     order = [pages[0], backs[0], pages[1], backs[1]]
-    return f'<!doctype html><html><head><meta charset="utf-8"><style>{css}</style></head><body>{"".join(order)}</body></html>'
+    return f'<!doctype html><html><head><meta charset="utf-8"><title>Caesar Solo Bots — Directive Cards</title><style>{css}</style></head><body>{"".join(order)}</body></html>'
 
 
 def main():
     cards = json.load(open(os.path.join(HERE, 'cards.json')))
     chrome_pdf(md_page(os.path.join(HERE, 'Caesar_Solo_Rules.md'), 'Caesar Solo Bots — Rules v1.3'),
                os.path.join(OUT, 'Caesar_Solo_Rules.pdf'))
-    chrome_pdf(cards_html(cards), os.path.join(OUT, 'Caesar_Solo_Cards.pdf'))
+    chrome_pdf(cards_html(cards), os.path.join(OUT, 'Caesar_Solo_Cards.pdf'), 'Caesar Solo Bots — Directive Cards')
     chrome_pdf(open(os.path.join(HERE, 'reference.html'), encoding='utf-8').read(), os.path.join(OUT, 'Caesar_Solo_Reference.pdf'))
     chrome_pdf(open(os.path.join(HERE, 'record_sheet.html'), encoding='utf-8').read(), os.path.join(OUT, 'Caesar_Solo_Record_Sheet.pdf'))
     for md, title in (('Caesar_Solo_Sim_Report.md', 'Caesar Solo Bots — Simulation Report'),
@@ -132,6 +152,7 @@ def main():
     for f in ('Caesar_Solo_Rules.pdf', 'Caesar_Solo_Reference.pdf', 'Caesar_Solo_Cards.pdf', 'Caesar_Solo_Record_Sheet.pdf'):
         for pg in PdfReader(os.path.join(OUT, f)).pages:
             w.add_page(pg)
+    w.add_metadata({'/Title': 'Caesar Solo Bots — Print and Play v1.3', '/CreationDate': PDF_DATE, '/ModDate': PDF_DATE})
     with open(os.path.join(OUT, 'Caesar_Solo_Print_and_Play.pdf'), 'wb') as f:
         w.write(f)
     for f in sorted(os.listdir(OUT)):
