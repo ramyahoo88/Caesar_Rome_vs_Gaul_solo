@@ -1,0 +1,225 @@
+{
+  "baseline": "3e8dbac8d2d0bc8bf4e4e8919574ff593d3ea406",
+  "reviewDate": "2026-11-22",
+  "repository": "https://github.com/ramyahoo88/Caesar_Rome_vs_Gaul_solo",
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "node": "v24.22.3",
+    "packages": {
+      "PyMuPDF": "1.26.6",
+      "pypdf": "6.21.4",
+      "Markdown": "3.11.3",
+      "reportlab": "4.4.9",
+      "beautifulsoup4": "4.15.0"
+    }
+  },
+  "officialRulebook": {
+    "url": "https://gmtwebsiteassets.s3.us-west-2.amazonaws.com/CaesarRomeVSGaul/2nd+Edition/CAESAR-RULES-2023-1d.pdf",
+    "bytes": 10296749,
+    "sha256": "2289f25a7c421dd27175c108609e9df6c19bd5fea757d0134c1af308987a9a70",
+    "reviewedPrintedPage": 13
+  },
+  "baselineFiles": {
+    ".gitignore": {
+      "bytes": 19,
+      "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
+    },
+    "PLAYTEST.md": {
+      "bytes": 1967,
+      "sha256": "2aac046e1a1b4eb30913756d985827be5cf447aec88a6860448d3b858b3e4c6c"
+    },
+    "README.md": {
+      "bytes": 5560,
+      "sha256": "c61981ea5e63cdd924973e49495948d1d72d8e546b6e29b6c880d554085a4899"
+    },
+    "audit/CLEANROOM_REPORT.md": {
+      "bytes": 4469,
+      "sha256": "d89109dce7a46752f1269cfd2fdbb2c4cf209f484694cbdb5a782692a4bcf0a0"
+    },
+    "audit/CLEANROOM_RESPONSE.md": {
+      "bytes": 3449,
+      "sha256": "4863e58ec00e54616a7e224178136a8f8dedbf6850c6e77e326db06ef2255d91"
+    },
+    "audit/ENGINE_AUDIT_RESPONSE.md": {
+      "bytes": 3307,
+      "sha256": "7da95457911d1ef2033f455550f9560a02e1243ada45db76aeb852936a65a9be"
+    },
+    "audit/engine_audit.md": {
+      "bytes": 10367,
+      "sha256": "df278598d1561df145740f9142f78b607cd5cb455bc8f65177747c0da43077ec"
+    },
+    "code/bots.py": {
+      "bytes": 71547,
+      "sha256": "021d0d58bd2550e6934e21a3863db2c7714edab1680570d4fdc28e86a1e86017"
+    },
+    "code/cards.py": {
+      "bytes": 9075,
+      "sha256": "e74454c432fd5bd31705d3991973be819588d94339c351b1d1a24c74d1a86bcf"
+    },
+    "code/decide.py": {
+      "bytes": 1327,
+      "sha256": "dfe357ffbf0e25bded5186db1fa092330ee5b2909716c261104d0e001d2df994"
+    },
+    "code/engine.py": {
+      "bytes": 81937,
+      "sha256": "bfc12091ca039aaed3a946c75ce914ae3e4134073747ff2f6ea16aa6160a21ec"
+    },
+    "code/events.py": {
+      "bytes": 17178,
+      "sha256": "6b5e7a2bc3958b082b9942f1c14299ffd57b00667137302c36a545b74cc1b893"
+    },
+    "code/fill_report.py": {
+      "bytes": 5532,
+      "sha256": "8898dc3099c59c5aa563e5a43eabfdd8d98c1412f95252582815040bdd699913"
+    },
+    "code/harness.py": {
+      "bytes": 2362,
+      "sha256": "6ebcf79dadf430aad59703b29bdf7e90aa49e7cd65e7e02e5a3173e9fe544339"
+    },
+    "code/heur.py": {
+      "bytes": 4536,
+      "sha256": "d31dc6510220a16ca7978dad466d0e93119b3d161da22f626fca20e67e1b2fad"
+    },
+    "code/hsearch.py": {
+      "bytes": 3151,
+      "sha256": "ff16b4ebab87a623b66edd0804324e4a497de33391aab948196665e244378639"
+    },
+    "code/hybrid.py": {
+      "bytes": 2745,
+      "sha256": "2730efebcb77fbdfb82bbbcd465ff33a96328d030dea33537d3ad7d8f341e998"
+    },
+    "code/make_report.py": {
+      "bytes": 3186,
+      "sha256": "2177223932fe8770ef48a4463192291f772189a54106d505bcc1b0b868ff7fa7"
+    },
+    "code/map.json": {
+      "bytes": 40016,
+      "sha256": "81bbf271db73d63159f586d0847dff8a6c2735b133c87945ac24388ba408d7ea"
+    },
+    "code/policies.py": {
+      "bytes": 16207,
+      "sha256": "e2db0d340aa801d29c2ba27b9dbcbe88e84ee4b436f633a149b8102f322ba5a4"
+    },
+    "code/report_template.md": {
+      "bytes": 11699,
+      "sha256": "8072026ea5c868a7695bf234d8943a525d9b4514bfc74136e78cfa3118a1ad87"
+    },
+    "code/sample_game.py": {
+      "bytes": 4340,
+      "sha256": "5d5c7b2b861c94104b57af9b5be1f89e7f066f56de875ab49c464fbfa0f823f2"
+    },
+    "code/search.py": {
+      "bytes": 5540,
+      "sha256": "dcb6e586128778b8e8110b23c99a058bac61c443dd629758fc34236d39b11f7a"
+    },
+    "code/smart.py": {
+      "bytes": 30513,
+      "sha256": "bcdb0892060fe320a4a736a54856aeb71e2e5f3e26771b4328873dabdb8fa763"
+    },
+    "code/study.py": {
+      "bytes": 2036,
+      "sha256": "ab74dc5f838727cc2141a473745bd0d8e2b0fce9bdc53d6a7eaa2d663009294e"
+    },
+    "code/tests/test_smoke.py": {
+      "bytes": 1725,
+      "sha256": "50e7b88dfb459af19a4e0ba7bc0bdff99704c7dc510701313a666a90626f3f4b"
+    },
+    "data/cards.py": {
+      "bytes": 9075,
+      "sha256": "e74454c432fd5bd31705d3991973be819588d94339c351b1d1a24c74d1a86bcf"
+    },
+    "data/map.json": {
+      "bytes": 40016,
+      "sha256": "81bbf271db73d63159f586d0847dff8a6c2735b133c87945ac24388ba408d7ea"
+    },
+    "data/map_graph.png": {
+      "bytes": 187650,
+      "sha256": "9a0571ccc6582e187f3a22eacc3afbd2991c660e1360f9ebc39d818df9de63c9"
+    },
+    "print/Caesar_Solo_Cards.pdf": {
+      "bytes": 233656,
+      "sha256": "23330e24e345f0448c28c287925c3f801a87cbc939426249afee7128c2639266"
+    },
+    "print/Caesar_Solo_Deck.html": {
+      "bytes": 15041,
+      "sha256": "5e6d37aa3478f60349d4fbac9dcd20a0eeb7fcdd50b4345c70417f5858ae7f96"
+    },
+    "print/Caesar_Solo_Print_and_Play.pdf": {
+      "bytes": 363962,
+      "sha256": "6f93bc8cb2bf851d39159e73764fecbfe254210466d63e7006b61f1f2cb1656b"
+    },
+    "print/Caesar_Solo_Record_Sheet.pdf": {
+      "bytes": 40268,
+      "sha256": "8ec2efce6d2127c5af1143cc1ac2afa9ffce7e293c987c93debab3694ebb7f1a"
+    },
+    "print/Caesar_Solo_Reference.pdf": {
+      "bytes": 119927,
+      "sha256": "b564a41face088e16ca154c8594f7ccafc596823e9c3125abb7a170bff57f005"
+    },
+    "print/Caesar_Solo_Rules.md": {
+      "bytes": 27139,
+      "sha256": "7b33c3b951e00b140dc896e06663e85d1dda9a2963ffd581043aa07f33d784a9"
+    },
+    "print/Caesar_Solo_Rules.pdf": {
+      "bytes": 279881,
+      "sha256": "ca74ec74ea9ecd8181b29f4926e854aebd2e8edd1405afa9ca68bb66c63294ed"
+    },
+    "print/Caesar_Solo_Sample_Game.md": {
+      "bytes": 21258,
+      "sha256": "d0874d21c9cc035f3298ef9e23a1f80cf1934f3ebbe7b2be194b4f23d380c76d"
+    },
+    "print/Caesar_Solo_Sample_Game.pdf": {
+      "bytes": 321689,
+      "sha256": "b86dcc2ca955b3037f61b7ab93ee52966ffc7d2dec3b13e0cfd6e15dd5f4cb44"
+    },
+    "print/Caesar_Solo_Sim_Report.md": {
+      "bytes": 15658,
+      "sha256": "b3645cfa537b6c710b5087c682269b1817f01f4a3c1e1bc0bfa126ad6750302c"
+    },
+    "print/Caesar_Solo_Sim_Report.pdf": {
+      "bytes": 322479,
+      "sha256": "011b391468e8f4243e3302dcd9c1d7f56c662cb3d57339fa24002c44af0f8af1"
+    },
+    "print/build.py": {
+      "bytes": 8443,
+      "sha256": "0aef9d12195dcfc13493cff76976e5f09697114fff9a42c4cadaadc419328166"
+    },
+    "print/cards.json": {
+      "bytes": 2668,
+      "sha256": "05cd784e85e4a34e392b40db50df51548aa356775618fc1782cfb62ae902f455"
+    },
+    "print/record_sheet.html": {
+      "bytes": 2431,
+      "sha256": "dceef81d7e0902bd3f8201866bb1597423db77d1ee9e46c4d9328471796cf9fd"
+    },
+    "print/reference.html": {
+      "bytes": 11412,
+      "sha256": "7892f8b229bf0893ef179b8dae93c66ead1a44835cd04664a2af854a8f628021"
+    },
+    "print/sim/concilium_levels.png": {
+      "bytes": 80271,
+      "sha256": "398b80677dcb80c91b0494d214e34ef2f9e17b26afa4d012228fabf0aa9de196"
+    },
+    "print/sim/imperator_levels.png": {
+      "bytes": 96379,
+      "sha256": "21c5b146dad6d0c8d8a1b9f3c885daa21d6afadc6a44535d2f5ca2e0bb70848f"
+    },
+    "print/sim/tables.md": {
+      "bytes": 874,
+      "sha256": "64d82a7bd2895d24f0c01a28dcf3d11b26d58e8b71f9e781490d94ba6d37b102"
+    },
+    "results/decide.json": {
+      "bytes": 1674,
+      "sha256": "4793ce9767dbd46cf615da1ca48b0a61fe51fdde3476eb10e0484654e3905087"
+    },
+    "results/sample_game_seed47.md": {
+      "bytes": 17803,
+      "sha256": "2dffcd8cb8a6eb581f66a620547d0709085e638127e5e416efa9c01b4e7b5d8d"
+    },
+    "results/study_final.json": {
+      "bytes": 129910,
+      "sha256": "3ee2cf8a28ca6e02f9efcbdba27c0d38afc653be84bc4b2333b0ff599c53055a"
+    }
+  }
+}

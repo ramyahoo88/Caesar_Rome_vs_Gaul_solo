@@ -1,0 +1,81 @@
+{
+  "mode": "shipped JavaScript with DOM/storage doubles; not a real browser",
+  "checks": 11,
+  "descriptions": [
+    "first launch",
+    "R has nine cards",
+    "R helper cards equal print data",
+    "R twelve complete cycles; reload after every draw",
+    "G has nine cards",
+    "G helper cards equal print data",
+    "G twelve complete cycles; reload after every draw",
+    "Undo of reshuffle restores exact state",
+    "80 level/play bonus boundaries",
+    "C05 invalid saved side crashes startup",
+    "C05 a damaged duplicate deck is accepted"
+  ],
+  "bonuses": 80,
+  "deckCounter": {
+    "actualDeck": 0,
+    "shown": 9
+  },
+  "damagedSession": {
+    "saved": {
+      "side": "invalid",
+      "lvl": {
+        "R": 3,
+        "G": 3
+      },
+      "turn": 1,
+      "play": 0,
+      "deck": {
+        "R": [
+          5,
+          2,
+          1,
+          7,
+          4,
+          6,
+          3,
+          8,
+          0
+        ],
+        "G": [
+          1,
+          3,
+          2,
+          7,
+          8,
+          4,
+          0,
+          6,
+          5
+        ]
+      },
+      "cur": null,
+      "hist": [],
+      "prev": []
+    },
+    "error": "Cannot read properties of undefined (reading 'NaN')"
+  },
+  "duplicateDraws": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "storage": {
+    "error": null,
+    "bytesSaved": 0,
+    "warningPresent": false
+  },
+  "sideSwitch": {
+    "play": 5,
+    "bonus": "<b>Bonus:</b> No bonus on this card (past its first 4 plays)."
+  }
+}

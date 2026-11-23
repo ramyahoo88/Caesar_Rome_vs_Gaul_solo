@@ -1,0 +1,94 @@
+[
+  {
+    "id": "C01",
+    "expected": "Unrevealed #24 cannot be used before the first Roman Offer.",
+    "actual": "Rome cancels #6 before any Roman Directive/Offer.",
+    "log": [
+      "T1 R cancels #6 with #24"
+    ]
+  },
+  {
+    "id": "C02",
+    "from": "Aduatuci",
+    "to": "Eburones",
+    "enemy": "Menapii",
+    "chosenPlan": [
+      [
+        "to",
+        5
+      ],
+      [
+        "remove_im"
+      ]
+    ],
+    "threatBefore": 0,
+    "actualRomanBS": 4,
+    "gallicBS": 3,
+    "route": [
+      "Menapii",
+      "Aduatuci",
+      "Eburones"
+    ],
+    "routeMP": 3
+  },
+  {
+    "id": "C02b",
+    "mission": "REGROUP",
+    "from": "Aduatuci",
+    "to": "Eburones",
+    "enemy": "Menapii",
+    "gallicBS": 7,
+    "romanBSAfterJoining": 4,
+    "ratio": 1.75,
+    "route": [
+      "Menapii",
+      "Aduatuci",
+      "Eburones"
+    ]
+  },
+  {
+    "id": "C03",
+    "siegeSpace": "Gergovia",
+    "contributingUnits": [
+      "VII",
+      "VIII",
+      "IX",
+      "XI",
+      "XII",
+      "X",
+      "XIII",
+      "XIV"
+    ],
+    "unlockedContributors": [
+      "XIII",
+      "XIV"
+    ],
+    "secondActivationDestination": "Boii",
+    "sieges": 1
+  },
+  {
+    "id": "C04",
+    "card": 42,
+    "mode": "ap",
+    "expected": "42 in discard",
+    "actual": "42 absent from deck, both hands and discard",
+    "totalCards": 54
+  },
+  {
+    "control": "latest Caesar 2:1 eligibility",
+    "accepted": true,
+    "plan": [
+      "R",
+      "Caesar",
+      [
+        "VII",
+        "VIII"
+      ],
+      [
+        [
+          "siege"
+        ]
+      ]
+    ]
+  }
+]

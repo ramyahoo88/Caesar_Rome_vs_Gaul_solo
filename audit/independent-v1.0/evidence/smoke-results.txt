@@ -1,0 +1,6 @@
+Command: python3 code/tests/test_smoke.py
+Baseline: 3e8dbac8d2d0bc8bf4e4e8919574ff593d3ea406
+ok test_games_finish
+ok test_reproducible
+ok test_board_invariants
+ok test_levels_change_only_ap_or_target

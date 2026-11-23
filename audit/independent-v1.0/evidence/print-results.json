@@ -1,0 +1,70 @@
+{
+  "pdfInventory": [
+    {
+      "file": "Caesar_Solo_Cards.pdf",
+      "pages": 4,
+      "sha256": "23330e24e345f0448c28c287925c3f801a87cbc939426249afee7128c2639266"
+    },
+    {
+      "file": "Caesar_Solo_Print_and_Play.pdf",
+      "pages": 18,
+      "sha256": "6f93bc8cb2bf851d39159e73764fecbfe254210466d63e7006b61f1f2cb1656b"
+    },
+    {
+      "file": "Caesar_Solo_Record_Sheet.pdf",
+      "pages": 1,
+      "sha256": "8ec2efce6d2127c5af1143cc1ac2afa9ffce7e293c987c93debab3694ebb7f1a"
+    },
+    {
+      "file": "Caesar_Solo_Reference.pdf",
+      "pages": 2,
+      "sha256": "b564a41face088e16ca154c8594f7ccafc596823e9c3125abb7a170bff57f005"
+    },
+    {
+      "file": "Caesar_Solo_Rules.pdf",
+      "pages": 11,
+      "sha256": "ca74ec74ea9ecd8181b29f4926e854aebd2e8edd1405afa9ca68bb66c63294ed"
+    },
+    {
+      "file": "Caesar_Solo_Sample_Game.pdf",
+      "pages": 11,
+      "sha256": "b86dcc2ca955b3037f61b7ab93ee52966ffc7d2dec3b13e0cfd6e15dd5f4cb44"
+    },
+    {
+      "file": "Caesar_Solo_Sim_Report.pdf",
+      "pages": 7,
+      "sha256": "011b391468e8f4243e3302dcd9c1d7f56c662cb3d57339fa24002c44af0f8af1"
+    }
+  ],
+  "combinedPagesMatchingIndividualText": 18,
+  "cardsCheckedWithinIndividualFace": 18,
+  "printDataMatchesSimulationDecks": true,
+  "helperGitBlobByteMatch": true,
+  "helperSHA256": "5e6d37aa3478f60349d4fbac9dcd20a0eeb7fcdd50b4345c70417f5858ae7f96",
+  "regeneratedHTML": [
+    {
+      "file": "Caesar_Solo_Rules.html",
+      "sha256": "67820ff9894d807ef9d13d945c36da7d77fff645d08c521d8ff8bd4ef71b4c05"
+    },
+    {
+      "file": "Caesar_Solo_Sim_Report.html",
+      "sha256": "42517a613cb4a35f517daec282ff5b2262d821c0c64aaf80d73cbe1974f0df35"
+    },
+    {
+      "file": "Caesar_Solo_Sample_Game.html",
+      "sha256": "7c3808724415624220107d3e39b3aee072b000c144f176671e499869f0e3e29c"
+    },
+    {
+      "file": "Caesar_Solo_Cards.html",
+      "sha256": "56842c22aad1bdeba67206071d4586e8666ba89a4d5c84fd78a387963db9a043"
+    }
+  ],
+  "PDFRebuild": "Not performed: no usable local Chrome",
+  "helperRebuild": "Authored standalone HTML; no separate build generator exists",
+  "C08": {
+    "PDFPage": 7,
+    "codeFenceRenderedAsInlineCode": true,
+    "documentedSampleSeed": 45,
+    "shippedSampleSeed": 47
+  }
+}
