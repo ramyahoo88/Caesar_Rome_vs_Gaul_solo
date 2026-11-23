@@ -249,7 +249,7 @@ def do_event(g, side, c):
         rh = g.hands['R']
         if rh:
             took = g.rng.choice(rh)
-            rh.remove(took); g.hands['G'].append(took)
+            rh.remove(took); g.card_left('R', took); g.hands['G'].append(took)
             rh.append(42)
             if g.hands['G']:
                 g.card_play('G')

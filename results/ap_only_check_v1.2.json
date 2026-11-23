@@ -1,0 +1,38 @@
+{
+ "results": {
+  "imp_con": {
+   "ap2": {
+    "win": 0.37666666666666665
+   },
+   "ap1": {
+    "win": 0.4066666666666667
+   },
+   "paired_vp_diff": 0.20333333333333334,
+   "se": 0.16515243006972027,
+   "n": 300
+  },
+  "imp_search": {
+   "ap2": {
+    "win": 0.275
+   },
+   "ap1": {
+    "win": 0.3416666666666667
+   },
+   "paired_vp_diff": 0.24166666666666667,
+   "se": 0.35365158623204906,
+   "n": 120
+  },
+  "con_search": {
+   "ap2": {
+    "win": 0.9333333333333333
+   },
+   "ap1": {
+    "win": 0.8916666666666667
+   },
+   "paired_vp_diff": 0.3416666666666667,
+   "se": 0.3931300512063804,
+   "n": 120
+  }
+ },
+ "text": "Only the card AP values were switched to their 1st-edition numbers; every other rule stayed at the 2nd-edition settings, on the same seeds. Imperator (level 3) beat Concilium in 41% of 300 games (38% with the assumed 2nd-edition values; Roman VP +0.20 \u00b1 0.17), Imperator beat the Lookahead player in 34% of 120 (28%; +0.24 \u00b1 0.35 VP), and Concilium under the standard rules beat the Lookahead player in 89% of 120 (93%; Roman VP +0.34 \u00b1 0.39)."
+}

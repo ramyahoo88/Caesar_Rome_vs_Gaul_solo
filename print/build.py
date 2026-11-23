@@ -118,7 +118,7 @@ li { margin: 0 0 3pt 0; } li b { font-size: 8.6pt; }
 
 def main():
     cards = json.load(open(os.path.join(HERE, 'cards.json')))
-    chrome_pdf(md_page(os.path.join(HERE, 'Caesar_Solo_Rules.md'), 'Caesar Solo Bots — Rules v1.1'),
+    chrome_pdf(md_page(os.path.join(HERE, 'Caesar_Solo_Rules.md'), 'Caesar Solo Bots — Rules v1.2'),
                os.path.join(OUT, 'Caesar_Solo_Rules.pdf'))
     chrome_pdf(cards_html(cards), os.path.join(OUT, 'Caesar_Solo_Cards.pdf'))
     chrome_pdf(open(os.path.join(HERE, 'reference.html'), encoding='utf-8').read(), os.path.join(OUT, 'Caesar_Solo_Reference.pdf'))

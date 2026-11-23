@@ -128,6 +128,63 @@ def test_c04_card42_event_hands_it_to_rome():
     assert 42 in g.hands['R'] and 42 not in g.discard and len(allc) == 55
 
 
+
+# ---------------------------------------------------------------- v1.1 re-audit (R01-R03)
+from engine import PROV
+
+
+def test_r01_all_surprise_reserve_fully_replaced():
+    g = fresh(9); g.hands = {'R': [52, 54], 'G': [45]}; g.deck = [7, 6]
+    g.discard = [c for c in CARDS if c not in (52, 54, 45, 7, 6)]
+    p = g.pol['R']; p.reserve = {52, 54}; p._reserve_turn = g.turn
+    g.handle_surprises_start('R')
+    assert sorted(g.hands['R']) == [6, 7] and g.deck == []
+    assert len(g.deck + g.discard + g.hands['R'] + g.hands['G']) == 55
+
+
+def test_r01_three_surprises_and_mixed_hand():
+    g = fresh(9); g.hands = {'R': [52, 54, 55], 'G': [45]}; g.deck = [8, 7, 6]
+    g.discard = [c for c in CARDS if c not in (52, 54, 55, 45, 8, 7, 6)]
+    g.handle_surprises_start('R')
+    assert sorted(g.hands['R']) == [6, 7, 8]
+    # mixed hand: only a revealed #55 goes; an unrevealed one stays
+    g = fresh(9); g.hands = {'R': [55, 10], 'G': [45]}; g.deck = [6]
+    g.discard = [c for c in CARDS if c not in (55, 10, 45, 6)]
+    g.handle_surprises_start('R'); assert sorted(g.hands['R']) == [10, 55]
+    g.pol['R'].reserve = {55}; g.pol['R']._reserve_turn = g.turn
+    g.handle_surprises_start('R'); assert sorted(g.hands['R']) == [6, 10]
+
+
+def test_r02_redrawn_reserve_card_is_face_down():
+    g = fresh(94); g.hands = {'R': [52, 45], 'G': [6, 7, 8, 9, 10, 11, 12, 13]}; g.deck = []
+    g.discard = [c for c in CARDS if c not in g.hands['R'] + g.hands['G']]
+    p = g.pol['R']; p.reserve = {52}; p._reserve_turn = g.turn
+    t = IDX['Gergovia']; a = next(u for u in g.units.values() if u.name == 'Arverni'); a.loc = t; a.inside = True
+    g.set_ctrl(t, 'G', 'FT', a.uid)
+    legs = [u for u in g.units.values() if u.kind == 'legion'][:6]
+    for u in legs:
+        u.loc = t
+    cz = g.leaders['Caesar']; cz.loc = t; g.roll2 = lambda: 2
+    assert g.siege_roll('R', t, cz, legs, caesar=True)
+    assert sorted(g.hands['R']) == [45, 52]            # #52 spent, reshuffled and drawn back
+    assert p.use_vow_siege(g, t) is False              # ... but it is face down again
+
+
+def test_r03_gallic_leader_alone_is_a_threat():
+    g = fresh(31); g.turn = 5; t = IDX['Bibracte']; start = next(s for s, k in ADJ[t] if k == 'path')
+    v = next(u for u in g.units.values() if u.name == 'Vercingetorix'); v.loc = start
+    leg = next(u for u in g.units.values() if u.kind == 'legion'); leg.loc = t
+    for s in PROVINCES[PROV[t]]['idx']:
+        if s != t:
+            g.set_ctrl(s, 'G', 'IM')
+    p = g.pol['R']
+    base = p.threat_armies(g, 'G')
+    assert any(l is v for cs, d, l, us, st in base)
+    assert p.in_danger(g, 'R', t, [], p.threat_after_move(g, 'G', base, [], None)) is True
+    g.ctrl = [None] * N; g.ctype = [None] * N; g._pc_cache = None      # control: no Local Support
+    base = p.threat_armies(g, 'G')
+    assert p.in_danger(g, 'R', t, [], p.threat_after_move(g, 'G', base, [], None)) is False
+
 if __name__ == '__main__':
     for name, fn in list(globals().items()):
         if name.startswith('test_'):

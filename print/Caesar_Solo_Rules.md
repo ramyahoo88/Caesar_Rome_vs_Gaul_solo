@@ -1,6 +1,6 @@
 # Caesar: Rome vs. Gaul — Solo Bots
 
-## Imperator (Rome) and Concilium (Gaul) · version 1.1
+## Imperator (Rome) and Concilium (Gaul) · version 1.2
 
 Two card-driven paper opponents for *Caesar: Rome vs. Gaul*, 2nd edition (GMT Games). You play one side; the bot plays the other with the same cards, units, dice and rules as a human. Its hand stays face down. It never looks at yours. It rolls only the dice the game rolls.
 
@@ -16,7 +16,7 @@ Unofficial fan variant, not a GMT publication. Rule numbers (5.1.2, 13.3 and so 
 
 1.2 **Deal.** Deal the bot its cards face down. Do not look at them. Shuffle them before every bot card play.
 
-1.3 **Reserve.** Surprise cards (#52, #54, #55) and the Reaction card (#24) never enter the Offer (2.2). When you reveal one, put it face up beside the bot as its **Reserve** and reveal another card instead. Reserve cards still count as part of the bot's hand. **Only cards in the Reserve can be used:** a Surprise or Reaction card still face down in the bot's hand does nothing until an Offer reveals it. The Reserve empties when the hands are discarded at the end of the Strategy Phase. The bot uses Reserve cards as follows:
+1.3 **Reserve.** Surprise cards (#52, #54, #55) and the Reaction card (#24) never enter the Offer (2.2). When you reveal one, put it face up beside the bot as its **Reserve** and reveal another card instead. Reserve cards still count as part of the bot's hand. **Only cards in the Reserve can be used:** a Surprise or Reaction card still face down in the bot's hand does nothing until an Offer reveals it. A card leaves the Reserve as soon as it is spent, discarded or given away; if the same card is drawn again later, it starts face down like any new card. The Reserve empties when the hands are discarded at the end of the Strategy Phase. The bot uses Reserve cards as follows:
 
 | Card | The bot uses it |
 |---|---|
@@ -62,7 +62,7 @@ The bot never takes its Event and AP from the same card except for Bonus cards (
 **Army.** The bot forms its armies afresh for each mission, from units that have not moved this card play:
 
 * **Imperator:** each Roman leader (Caesar first, then Legates by Battle Rating, highest first) with up to his Command Rating of CUs from his space, strongest first; then each other Legion stack (up to 2 Legions).
-* **Concilium:** each Gallic leader (Vercingetorix, then Ambiorix) with up to his Command Rating of CUs from his space, strongest first (Ambiorix: Belgic Tribes and Mercenaries only); then each other Tribe or the Minor Tribe, with the strongest other Tribe or Mercenary in its space. A Gallic leader's own CS counts in his army's BS.
+* **Concilium:** each Gallic leader (Vercingetorix, then Ambiorix) with up to his Command Rating of CUs from his space, strongest first (Ambiorix: Belgic Tribes and Mercenaries only); then each other Tribe or the Minor Tribe, with the strongest other Tribe or Mercenary in its space. A Gallic leader is himself a CU (9.5.2): his own CS counts in his army's BS, and a leader on his own is an army too.
 
 **Ties between armies.** If two armies could carry out a mission against the same target equally well, the stronger army goes; if they are equally strong, the one listed first above goes.
 

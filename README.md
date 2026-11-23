@@ -1,4 +1,4 @@
-# Caesar: Rome vs. Gaul (2nd edition) — solo bots (v1.1)
+# Caesar: Rome vs. Gaul (2nd edition) — solo bots (v1.2)
 
 Two card-driven paper bots for GMT Games' *Caesar: Rome vs. Gaul*, 2nd edition:
 
@@ -51,15 +51,15 @@ All files are in [`print/`](print):
 
 ## Results at a glance
 
-Win rates from the final v1.1 simulation study (5,300 games on fresh seeds, corrected engine) against the strongest computer opponent, a one-ply lookahead player, and against the other bot:
+Win rates from the final v1.2 simulation study (5,300 games on fresh seeds, corrected engine) against the strongest computer opponent, a one-ply lookahead player, and against the other bot:
 
 | Level | Imperator vs lookahead Gaul | Imperator vs Concilium | Concilium vs lookahead Rome | Concilium vs Imperator (+1 AP) |
 |---|---|---|---|---|
-| 1 | 0% | 4% | 64% | 24% |
-| 2 | 6% | 20% | 76% | 37% |
-| 3 | 24% | 34% | 84% | 52% |
-| 4 | 57% | 63% | 92% | 62% |
-| 5 | 60% | 76% | 98% | 85% |
+| 1 | 0% | 4% | 62% | 25% |
+| 2 | 8% | 17% | 75% | 37% |
+| 3 | 31% | 36% | 85% | 51% |
+| 4 | 60% | 63% | 92% | 63% |
+| 5 | 65% | 75% | 98% | 83% |
 
 A strong human should do better than these computer players. The full tables, method and caveats are in the [simulation report](print/Caesar_Solo_Sim_Report.md).
 
@@ -78,7 +78,7 @@ Two independent checks were run, each by a separate agent that had not written t
 
 * **Engine audit.** The engine was checked against the 2023 living rules.
 * **Clean-room test.** A second bot was written from the printed rules alone, then compared with the simulation bot decision by decision. It agreed on 99.8% of card choices and 99.4% of mission choices. Every gap it found has been closed, either in the text or in the code.
-* **Independent v1.0 audit.** This reviewed the whole release and found eight issues, the most serious being Reserve cards used before they were revealed. All eight are fixed in v1.1, and every result was re-run on the corrected engine. See the [changelog](CHANGELOG.md).
+* **Independent v1.0 audit and v1.1 re-audit.** The first review found eight issues, the most serious being Reserve cards used before they were revealed. The re-audit found five more, mostly in Reserve card handling and the danger check. All thirteen are fixed in v1.2, and every study result was re-run on the corrected engine. See the [changelog](CHANGELOG.md).
 
 ```
 cd code

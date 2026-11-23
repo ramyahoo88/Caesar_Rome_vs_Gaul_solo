@@ -940,7 +940,7 @@ class Game:
             if side not in ('R', 'G'):
                 continue
             if 54 in self.hands[side] and self.pol[side].use_remedies(self, side, roller, drm):
-                self.hands[side].remove(54); self.discard.append(54); self.draw(side, 1)
+                self.hands[side].remove(54); self.discard.append(54); self.card_left(side, 54); self.draw(side, 1)
                 extra += 2 * sign
                 break
         return extra
@@ -1049,7 +1049,7 @@ class Game:
         # Vow to Mars (+1 reroll)
         for sd in (att, dfn):
             if sd in ('R', 'G') and 52 in self.hands[sd] and self.pol[sd].use_vow_battle(self, sd, s, a_bs, d_bs, sd == att):
-                self.hands[sd].remove(52); self.discard.append(52); self.draw(sd, 1)
+                self.hands[sd].remove(52); self.discard.append(52); self.card_left(sd, 52); self.draw(sd, 1)
                 if sd == att: a_rr += 1
                 else: d_rr += 1
         a_dice = [self.d6(), self.d6()]
@@ -1278,7 +1278,7 @@ class Game:
     def _siege_apply(self, side, s, col, caesar, units, subjugation=False):
         drm = self.siege_drm(s, side, caesar) + self.opt['siege_shift']
         if side == 'R' and 52 in self.hands['R'] and self.pol['R'].use_vow_siege(self, s):
-            self.hands['R'].remove(52); self.discard.append(52); self.draw('R', 1); drm += 1
+            self.hands['R'].remove(52); self.discard.append(52); self.card_left('R', 52); self.draw('R', 1); drm += 1
         roll = self.roll2() + drm
         res = siege_result(col, roll)
         if res == 'S':
@@ -1359,6 +1359,13 @@ class Game:
                 self.siege.pop(s, None)
 
     # ------------------------------------------------------------ cards
+    def card_left(self, side, c):
+        """Tell the owner's policy that card c has left its hand (spent, discarded or given away),
+        before any replacement is drawn: a redrawn copy of the same card starts face down again."""
+        f = getattr(self.pol.get(side) if isinstance(self.pol, dict) else None, 'card_left', None)
+        if f:
+            f(self, side, c)
+
     def draw(self, side, n):
         for _ in range(n):
             if not self.deck:
@@ -1378,7 +1385,7 @@ class Game:
         k = self.opt.get('ap_first_' + side, 0)
         if k and self.turn_plays.get(side, 0) <= k:
             b = max(b, 1)
-        return ap_value(c, self.edition) + b
+        return ap_value(c, self.opt.get('ap_edition') or self.edition) + b
 
     def event_allowed(self, side, c):
         info = CARDS[c]
@@ -1638,7 +1645,7 @@ class Game:
         first = 'G'
         if 47 in self.hands['R'] and self.pol['R'].play_winter_campaign(self):
             first = 'R'
-            self.hands['R'].remove(47); self.discard.append(47)
+            self.hands['R'].remove(47); self.discard.append(47); self.card_left('R', 47)
             self.stats['plays']['R'] += 1
             self.reset_moved()
             self.active = 'R'
@@ -1673,6 +1680,8 @@ class Game:
                 break
         # discard leftover surprise cards
         for side in ('R', 'G'):
+            for c in self.hands[side]:
+                self.card_left(side, c)
             self.discard.extend(self.hands[side]); self.hands[side] = []
         if self.caesar_delayed:
             self.caesar_delayed = False
@@ -1683,13 +1692,13 @@ class Game:
         sur = [c for c in h if CARDS[c]['kind'] == 'surprise']
         if not sur:
             return
-        if len(sur) == len(h) or self.pol[side].discard_surprise(self, side, sur):
-            # discard all-surprise hands (or as policy wishes) and draw replacements
-            n = 0
-            for c in list(sur):
-                if len(sur) == len(h) or self.pol[side].discard_surprise(self, side, [c]):
-                    h.remove(c); self.discard.append(c); n += 1
-            self.draw(side, n)
+        all_surprises = len(sur) == len(h)
+        if all_surprises or self.pol[side].discard_surprise(self, side, sur):
+            # discard an all-Surprise hand (or the cards the policy wishes) and draw replacements
+            gone = [c for c in list(sur) if all_surprises or self.pol[side].discard_surprise(self, side, [c])]
+            for c in gone:
+                h.remove(c); self.discard.append(c); self.card_left(side, c)
+            self.draw(side, len(gone))
 
     def reset_moved(self):
         for u in self.units.values():
@@ -1707,7 +1716,7 @@ class Game:
             c = [x for x in self.hands[side] if CARDS[x]['kind'] != 'surprise'][0]; mode = 'ap'
         if CARDS[c]['kind'] == 'surprise':
             # discarding a Surprise is not a card play (7.5.4): discard, replace, choose again
-            self.hands[side].remove(c); self.discard.append(c); self.draw(side, 1)
+            self.hands[side].remove(c); self.discard.append(c); self.card_left(side, c); self.draw(side, 1)
             self.turn_plays[side] -= 1
             self._sur_guard = getattr(self, '_sur_guard', 0) + 1
             if self._sur_guard < 5 and any(CARDS[x]['kind'] != 'surprise' for x in self.hands[side]):
@@ -1715,6 +1724,7 @@ class Game:
             self._sur_guard = 0
             return
         self.hands[side].remove(c)
+        self.card_left(side, c)
         self.stats['plays'][side] += 1
         if mode in ('event', 'bonus') and not self.event_allowed(side, c):
             mode = 'ap'
@@ -1722,7 +1732,7 @@ class Game:
         if mode in ('event', 'bonus'):
             opp = OTHER[side]
             if 24 in self.hands[opp] and self.pol[opp].react(self, opp, c):
-                self.hands[opp].remove(24); self.discard.append(24)
+                self.hands[opp].remove(24); self.discard.append(24); self.card_left(opp, 24)
                 self.discard.append(c)
                 self.draw(opp, 1); self.draw(side, 1)
                 self.log(f'{opp} cancels #{c} with #24')

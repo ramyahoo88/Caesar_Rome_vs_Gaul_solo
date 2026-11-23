@@ -1,6 +1,6 @@
 # Caesar: Rome vs. Gaul — Solo Bots: Simulation Report
 
-*Imperator and Concilium, version 1.1. These are model results from computer play, not tabletop results.*
+*Imperator and Concilium, version 1.2. These are model results from computer play, not tabletop results.*
 
 ## 1. Summary
 
@@ -81,11 +81,11 @@ Three independent reviews checked the work. None of the reviewers had written th
 
     This check covered the rules text as it stood before the last round of changes in section 6: the danger rule, REGROUP, the lagging-region order and Caesar's 2:1 sieges.
 
-* **Independent v1.0 audit.** Reviewed the whole v1.0 release: rules, cards, reference, helper, sample game, report, code and the archived study. It reproduced every one of the 40 study totals and ran its own 240-game sweep. It also tested the latest changes with hand-built positions. It found eight issues. The most important was that Reaction and Surprise cards could be used before an Offer had revealed them. Two others: danger was judged before the move, missing routes the moving army had been blocking; and units that added strength to a siege could still activate again. All eight are fixed in v1.1, and every result in sections 6–8 comes from the corrected engine. See `audit/independent-v1.0/AUDIT_RESPONSE.md`.
+* **Independent v1.0 audit.** Reviewed the whole v1.0 release: rules, cards, reference, helper, sample game, report, code and the archived study. It reproduced every one of the 40 study totals and ran its own 240-game sweep. It also tested the latest changes with hand-built positions. It found eight issues. The most important was that Reaction and Surprise cards could be used before an Offer had revealed them. Two others: danger was judged before the move, missing routes the moving army had been blocking; and units that added strength to a siege could still activate again. All eight are fixed in v1.1. A re-audit of v1.1 then found five more issues. Three were in the simulation: Surprise-only hands were only partly replaced; a spent Reserve card that was immediately redrawn stayed face up; and a Gallic leader alone was left out of the danger check. The other two were a helper Undo crash and an AP-sensitivity check that also changed four other rules. All five are fixed in v1.2. The final study (section 7), the corrected-engine comparison (section 6) and the breakdown (section 8) all come from the v1.2 engine. See `audit/independent-v1.0/AUDIT_RESPONSE.md` and `audit/independent-v1.1/AUDIT_RESPONSE.md`.
 
 ## 6. The final changes and what they were worth
 
-These changes were made after the clean-room fixes. The first three tables are **development-time numbers**: they were measured on the engine before the v1.1 corrections and are kept as a record of how the decisions were made. The last table repeats the comparisons on the corrected v1.1 engine.
+These changes were made after the clean-room fixes. The first table below measures them on the current, corrected engine. The three tables after it are **development-time numbers**: they were measured on the engine before the audit corrections and are kept as a record of how the decisions were made.
 
 {{LATEST}}
 
@@ -143,7 +143,7 @@ Both were adopted. The second costs a little against the Heuristic player but ga
 ## 9. Limitations
 
 * **These are computer opponents.** A strong human will beat the Heuristic and Lookahead players. Expect your results against Imperator to be better than theirs, and against Concilium perhaps much better.
-* **The 2nd-edition card values are assumed.** The 2nd edition gives five cards 3 AP, three cards 1 AP and makes the rest 2 AP. Which cards carry which value is assumed. The card texts are 1st edition, and the 2nd edition changes some text. To check that this does not matter much, the main matchups were re-run with the 1st-edition AP values on the same seeds. {{ED1}} The bots' rules work with either deck.
+* **The 2nd-edition card values are assumed.** The 2nd edition gives five cards 3 AP, three cards 1 AP and makes the rest 2 AP. Which cards carry which value is assumed. The card texts are 1st edition, and the 2nd edition changes some text. To check how much this matters, the main matchups were re-run on the same seeds with only the AP values changed. {{ED1}} The bots' rules work with either deck.
 * **The Siege Table is the 1st-edition table shifted one row (−1).** It approximates the 2nd-edition table. The exact revised table has not been transcribed cell by cell, so siege results in the simulation are approximate. The printed bots use whatever table your copy of the game prints.
 * **Rulebook ambiguities.** The 2023 rulebook still says 3 MP for a siege in section 14.3, while the 2nd-edition change notes say 2 MP; the bots use 2. Fading Promises appears in the index and the 2020 rules but not in the 2023 body; the engine applies it, as the engine audit response explains. The independent v1.0 audit raised the siege-MP point.
 * **Simplifications in the engine.** Sorties and a few rare rules are simplified (see the audit response). They change the numbers a little but not the bots' rules.

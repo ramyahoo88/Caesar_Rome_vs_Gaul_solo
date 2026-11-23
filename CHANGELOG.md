@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.2 (22 November 2026)
+
+This release fixes everything found by the independent v1.1 re-audit. See [audit/independent-v1.1/AUDIT_RESPONSE.md](audit/independent-v1.1/AUDIT_RESPONSE.md).
+
+* **Rules 1.3.** A Reserve card leaves the Reserve as soon as it is spent, discarded or given away, and a later copy starts face down.
+* **Rules, section 3.** A Gallic leader on his own is an army, because he is a CU.
+* **Engine: Surprise-only hands.** They are fully replaced. Owners are told when a card leaves the hand, before replacements are drawn.
+* **Danger check.** It now includes a Gallic leader moving alone.
+* **Helper.** Damaged Undo history is checked, dropped with a notice, and can no longer crash Undo.
+* **AP sensitivity check.** It now changes only the AP values (new `ap_edition` option) and reports paired differences.
+* **Re-runs.** The final study, the latest-change comparisons (now with per-seed results and paired standard errors) and the bot-vs-bot breakdown were re-run.
+* **Sample game.** Regenerated: seed 57 is now a narrow Gaul win.
+* **Record sheet.** It has a REGROUP tally code.
+
 ## v1.1 (22 November 2026)
 
 This release fixes everything found by the independent v1.0 audit. See [audit/independent-v1.0/AUDIT_RESPONSE.md](audit/independent-v1.0/AUDIT_RESPONSE.md).

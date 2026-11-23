@@ -520,7 +520,8 @@ class BotPolicy(BasePolicy):
         out = []
         try:
             for leader, units, start in (self.gallic_armies(g) if enemy == 'G' else self.roman_armies(g)):
-                if not units:
+                # a Gallic leader is a CU (9.5.2) and can attack on his own; a Roman leader alone cannot
+                if not units and not (enemy == 'G' and leader is not None):
                     continue
                 ma, dist, parent = self.army_reach(g, enemy, leader, units, start)
                 cs = stack_strength(units + ([leader] if enemy == 'G' and leader is not None else []))
@@ -1426,6 +1427,11 @@ class BotPolicy(BasePolicy):
             self._reserve_turn = g.turn
         self.reserve = set(c for c in self.reserve if c in g.hands[side])
         return self.reserve
+
+    def card_left(self, g, side, c):
+        """The engine reports that c left the hand: a later copy of it starts face down."""
+        if isinstance(self.reserve, set):
+            self.reserve.discard(c)
 
     def in_reserve(self, g, side, c):
         return c in self.sync_reserve(g, side)

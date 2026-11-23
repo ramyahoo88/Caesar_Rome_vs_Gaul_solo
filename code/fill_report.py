@@ -16,7 +16,7 @@ def w(k):
     return v['bot_wins'] / v['n']
 
 
-summary = f"""* **Both bots play complete games of the 2nd-edition rules** in the simulation, with one approximation: the Siege Table is the 1st-edition table shifted one row. Each decision comes from a Directive card and a two-card Offer, following the printed rules. The bot never looks at hidden cards, and its Reaction and Surprise cards work only once an Offer has revealed them. An independent clean-room implementation of the printed rules matched the simulation bot on more than 99% of card and mission choices. An independent audit of v1.0 found eight issues, all fixed in v1.1, and every result here comes from the corrected engine.
+summary = f"""* **Both bots play complete games of the 2nd-edition rules** in the simulation, with one approximation: the Siege Table is the 1st-edition table shifted one row. Each decision comes from a Directive card and a two-card Offer, following the printed rules. The bot never looks at hidden cards, and its Reaction and Surprise cards work only once an Offer has revealed them. An independent clean-room implementation of the printed rules matched the simulation bot on more than 99% of card and mission choices. Two independent audits (of v1.0 and v1.1) found thirteen issues between them, all fixed in v1.2, and every study result here comes from the corrected v1.2 engine.
 * **The levels form a smooth ladder against every computer opponent.** Against the strongest of them, the Lookahead player:
     * Imperator wins {w('Imperator L1 vs search'):.0%} at level 1, {w('Imperator L3 vs search'):.0%} at level 3 and {w('Imperator L5 vs search'):.0%} at level 5;
     * Concilium wins {w('Concilium L1 vs search'):.0%} at level 1, {w('Concilium L3 vs search'):.0%} at level 3 and {w('Concilium L5 vs search'):.0%} at level 5.
@@ -59,22 +59,26 @@ if len(sys.argv) > 6:
     L = json.load(open(sys.argv[6]))
     def cellr(k, o):
         x = L[k][o]
-        return f"{x['win']:.0%} ({x['vp']:.1f} VP)"
-    rows = ['**On the corrected v1.1 engine** (seeds 20000 and up; 200 games against the Bot, 160 against the Heuristic player, 100 against the Lookahead player). Each cell is the bot\'s win rate, with the mean Roman VP in brackets.', '',
+        c = f"{x['win']:.0%} ({x['vp']:.1f} VP)"
+        if k in P:
+            c += f"; {P[k][o]['mean_vp_diff']:+.2f} ± {P[k][o]['se']:.2f}"
+        return c
+    P = L.get('_paired', {})
+    rows = ['**On the corrected v1.2 engine** (seeds 20000 and up; 200 games against the Bot, 160 against the Heuristic player, 100 against the Lookahead player). Each cell is the bot\'s win rate, with the mean Roman VP in brackets. For each "without" row, the change in mean Roman VP against the final version is given on the same seeds, ± one standard error of the paired difference.', '',
             '| Version | vs Bot | vs Heuristic | vs Lookahead |', '|---|---|---|---|']
-    names = [('R_final', 'Imperator v1.1 (level 3)'), ('R_no_danger', '… without REGROUP and the danger limit on SWEEP'),
+    names = [('R_final', 'Imperator v1.2 (level 3)'), ('R_no_danger', '… without REGROUP and the danger limit on SWEEP'),
              ('R_no_lagging', '… without the lagging-region order'), ('R_no_caesar21', '… without Caesar\'s 2:1 sieges'),
-             ('G_final', 'Concilium v1.1 (standard rules)'), ('G_no_danger', '… without its danger rule')]
+             ('G_final', 'Concilium v1.2 (standard rules)'), ('G_no_danger', '… without its danger rule')]
     for k, lab in names:
         if k in L:
             rows.append(f'| {lab} | ' + ' | '.join(cellr(k, o) for o in ('bot', 'smart', 'search')) + ' |')
     rows += ['', 'For Imperator, the Bot is Concilium under the standard rules. For Concilium, the Bot is Imperator with +1 AP on every card play.', '',
-             'On the corrected engine every change still pays overall, though not against every opponent:',
+             'On the corrected engine every change still pays overall, though not against every opponent. A minus sign means Rome scores less without the change:',
              '',
-             '* **REGROUP and the danger limit** give up a little against Concilium (about 0.3 VP) but gain about 0.6 VP against the Heuristic player and 1.0 against the Lookahead player.',
-             '* **The lagging-region order** gains about 0.5 VP against both Concilium and the Lookahead player.',
-             "* **Caesar's 2:1 sieges** gain mostly against Concilium.",
-             "* **Concilium's danger rule** takes 1.0–1.4 VP off every Roman opponent."]
+             '* **REGROUP and the danger limit.** Without them Imperator scores about 0.2 VP more against Concilium, but about 0.4 VP less against the Heuristic player and 1.0 VP less against the Lookahead player. They pay against the stronger, more flexible opponents.',
+             '* **The lagging-region order.** Without it Imperator scores about 0.5 VP less against both Concilium and the Lookahead player.',
+             "* **Caesar's 2:1 sieges.** These gain about 0.7 VP against Concilium. Against the other opponents the difference is within the noise.",
+             "* **Concilium's danger rule.** It takes 1.0–1.3 VP off every Roman opponent."]
     t = t.replace('{{LATEST}}', '\n'.join(rows))
 if len(sys.argv) > 7:
     E = json.load(open(sys.argv[7]))

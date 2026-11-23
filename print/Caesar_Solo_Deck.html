@@ -102,7 +102,7 @@ button.act:disabled{opacity:.45;cursor:default}
     </div>
   </div>
   <div class="ref" id="ref"></div>
-  <p class="note">A companion to the print-and-play Caesar solo rules (v1.1), not a replacement for them. Section numbers refer to that booklet. The deck state is kept in this browser where it can be. Unofficial fan variant for <i>Caesar: Rome vs. Gaul</i> (GMT Games).</p>
+  <p class="note">A companion to the print-and-play Caesar solo rules (v1.2), not a replacement for them. Section numbers refer to that booklet. The deck state is kept in this browser where it can be. Unofficial fan variant for <i>Caesar: Rome vs. Gaul</i> (GMT Games).</p>
 </main>
 <script>
 {
@@ -143,12 +143,16 @@ function valid(t){
   for(const s of ['R','G']){const d=t.deck&&t.deck[s];if(!Array.isArray(d)||d.length>9||!d.every(x=>isInt(x,0,8))||new Set(d).size!==d.length)return false}
   if(t.cur!==null&&!(t.cur&&(t.cur.side==='R'||t.cur.side==='G')&&isInt(t.cur.i,0,8)))return false;
   if(!Array.isArray(t.hist)||!t.hist.every(h=>h&&(h.side==='R'||h.side==='G')&&isInt(h.i,0,8)&&isInt(h.n,1,40)))return false;
-  if(!Array.isArray(t.prev)||!t.prev.every(x=>typeof x==='string'))return false;
+  if(!Array.isArray(t.prev))return false;
   return true}
+// an Undo snapshot is a whole saved state without its own history
+const snapOk=x=>{try{const t=JSON.parse(x);return valid(Object.assign({},t,{prev:[]}))}catch(e){return false}};
 let S=newState(), notice='';
 try{const raw=localStorage.getItem(KEY);
   if(raw){let t=null;try{t=JSON.parse(raw)}catch(e){}
-    if(valid(t))S=t;else{notice='The saved session could not be restored, so a new game was started.';try{localStorage.setItem(KEY+'-damaged',raw)}catch(e){}}}
+    if(valid(t)){const ok=t.prev.filter(x=>typeof x==='string'&&snapOk(x));
+      if(ok.length!==t.prev.length)notice='Some Undo history was damaged and has been cleared; the game itself was restored.';
+      t.prev=ok;S=t}else{notice='The saved session could not be restored, so a new game was started.';try{localStorage.setItem(KEY+'-damaged',raw)}catch(e){}}}
 }catch(e){}
 const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S));return true}catch(e){notice='This browser is not saving the session: it will be lost if you close or reload the page.';return false}};
 const snap=()=>JSON.stringify({side:S.side,lvl:S.lvl,turn:S.turn,play:S.play,deck:S.deck,cur:S.cur,hist:S.hist});
@@ -182,7 +186,9 @@ $('bR').onclick=()=>{S.side='R';render()};$('bG').onclick=()=>{S.side='G';render
 $('lvl').onchange=e=>{S.lvl[S.side]=+e.target.value;render()};
 $('draw').onclick=()=>{const s=S.side;push();
   if(!S.deck[s].length)S.deck[s]=fresh(s);const i=S.deck[s].pop();S.play[s]++;S.cur={side:s,i};S.hist.push({side:s,i,n:S.play[s]});render()};
-$('undo').onclick=()=>{const p=S.prev.pop();if(!p)return;const prev=S.prev;Object.assign(S,JSON.parse(p));S.prev=prev;render()};
+$('undo').onclick=()=>{const p=S.prev.pop();if(!p)return;const prev=S.prev;
+  if(!snapOk(p)){notice='That Undo step was damaged and has been skipped.';render();return}
+  const t=JSON.parse(p);delete t.prev;Object.assign(S,t);S.prev=prev;render()};
 $('next').onclick=()=>{if(S.turn>=6)return;push();S.turn++;S.play={R:0,G:0};S.hist=[];S.cur=null;render()};
 $('reset').onclick=()=>{const keep=S.lvl;S=newState();S.lvl=keep;notice='';render()};
 $('dismiss').onclick=()=>{notice='';$('noticebox').hidden=true};
