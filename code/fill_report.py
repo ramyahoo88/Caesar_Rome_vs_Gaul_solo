@@ -75,8 +75,8 @@ if len(sys.argv) > 6:
     rows += ['', 'For Imperator, the Bot is Concilium under the standard rules. For Concilium, the Bot is Imperator with +1 AP on every card play.', '',
              'On the corrected engine every change still pays overall, though not against every opponent. A minus sign means Rome scores less without the change:',
              '',
-             '* **REGROUP and the danger limit.** Without them Imperator scores about 0.2 VP more against Concilium, but about 0.4 VP less against the Heuristic player and 1.0 VP less against the Lookahead player. They pay against the stronger, more flexible opponents.',
-             '* **The lagging-region order.** Without it Imperator scores about 0.5 VP less against both Concilium and the Lookahead player.',
+             '* **REGROUP and the danger limit.** Without them Imperator scores about 0.3 VP more against Concilium, but about 0.5 VP less against the Heuristic player and 1.0 VP less against the Lookahead player. They pay against the stronger, more flexible opponents.',
+             '* **The lagging-region order.** Without it Imperator scores about 0.4 VP less against Concilium and 0.5 VP less against the Lookahead player.',
              "* **Caesar's 2:1 sieges.** These gain about 0.7 VP against Concilium. Against the other opponents the difference is within the noise.",
              "* **Concilium's danger rule.** It takes 1.0–1.3 VP off every Roman opponent."]
     t = t.replace('{{LATEST}}', '\n'.join(rows))

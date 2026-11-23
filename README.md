@@ -55,11 +55,11 @@ Win rates from the final v1.3 simulation study (5,300 games on fresh seeds, corr
 
 | Level | Imperator vs lookahead Gaul | Imperator vs Concilium | Concilium vs lookahead Rome | Concilium vs Imperator (+1 AP) |
 |---|---|---|---|---|
-| 1 | 0% | 4% | 62% | 25% |
-| 2 | 8% | 17% | 75% | 37% |
-| 3 | 31% | 36% | 85% | 51% |
-| 4 | 60% | 63% | 92% | 63% |
-| 5 | 65% | 75% | 98% | 83% |
+| 1 | 0% | 4% | 64% | 23% |
+| 2 | 8% | 18% | 74% | 37% |
+| 3 | 30% | 36% | 84% | 53% |
+| 4 | 60% | 63% | 91% | 63% |
+| 5 | 65% | 74% | 98% | 83% |
 
 A strong human should do better than these computer players. The full tables, method and caveats are in the [simulation report](print/Caesar_Solo_Sim_Report.md).
 
