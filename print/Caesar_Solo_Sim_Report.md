@@ -68,6 +68,9 @@ Ideas that did not help, and were dropped:
 * Putting RAID first on more Directive cards.
 * A lower STRIKE ratio for Caesar's army.
 * Putting SIEGE first on more Directive cards.
+* A different winter-camp priority order, preferring a Live Event over a higher-AP card, and more ★ Events (#9, #12).
+
+**Is the printed mission order good enough?** As a final check, we built an Imperator that keeps the Offer and the Directive but picks each AP's mission by lookahead. It tries every mission on a copy of the game, with fresh dice, and keeps the one the position evaluation likes best. Over 120 games against Concilium at level 3 (+1 AP) it won 44%, with a mean of 10.7 VP. The printed Imperator wins 43% with the same mean. The lookahead and the printed order agreed on 70% of the 14,000 decisions. Most of the disagreements were cases where the lookahead skipped REGROUP or SIEGE to place an IM instead, and the earlier tests showed that REGROUP pays off over the following cards, which the one-step lookahead cannot see. Within the reach of a one-card lookahead, then, the printed mission order loses nothing.
 
 The last checks on Concilium varied its AMBUSH ratio (1.25× and 2×), the RISE threshold and the last BANK turn. None of these moved the result by more than about 0.2 VP, which is within the noise, so Concilium's rules were left unchanged.
 

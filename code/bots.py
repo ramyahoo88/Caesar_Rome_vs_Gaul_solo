@@ -100,7 +100,7 @@ class BotPolicy(BasePolicy):
             r_siege_min_col=2, r_siege_min_col_caesar=1, r_strike_ratio=2.0, r_strike_ratio_caesar=1.5,
             g_ambush_ratio=1.5, g_avoid_ratio=1.5, r_avoid_ratio=1.5, g_inside_ratio=1.0,
             r_invade_turn=3, bank_turn_max=5, rise_min=3, deny=True, block=False, block_first=False, celtica_first=True, dominance_race=True, protect=True, r_pre=('CONTINUE', 'PROTECT', 'SUBMIT', 'REGROUP'), siege_strict=True, strike_submit_only=False, winter_neutral=True,
-            regroup=True, r_post=('GATHER', 'CONTROL'), expedition=False, invade_cs=12, safe_raid=True, g_safe_raid=1.0, g_regroup=0, g_pre=(), r_danger=1.5, caesar_siege_col=3,
+            regroup=True, r_post=('GATHER', 'CONTROL'), expedition=False, invade_cs=12, safe_raid=True, g_safe_raid=1.0, g_regroup=0, g_pre=(), r_danger=1.5, caesar_siege_col=3, extra_star=(), live_first=False,
         )
         self.cfg.update({k: v for k, v in params.items() if k in self.cfg})
 
@@ -130,7 +130,8 @@ class BotPolicy(BasePolicy):
         for c in shown:
             live = self.event_live(g, side, c)
             star = live and self.priority_event(g, side, c)
-            key = (1 if star else 0, g.ap(c), 1 if live else 0)
+            key = (1 if star else 0, g.ap(c), 1 if live else 0) if not self.cfg.get('live_first') else \
+                (1 if star else 0, 1 if live else 0, g.ap(c))
             if best is None or key > best[0]:
                 best = (key, c, live)
         c, live = best[1], best[2]
@@ -145,8 +146,8 @@ class BotPolicy(BasePolicy):
     # ------------------------------------------------------------ event guide
     def priority_event(self, g, side, c):
         if side == 'R':
-            return c in (1, 2, 4, 11, 3, 10)
-        return c in (5, 16, 53, 21, 43, 6, 14, 27)
+            return c in (1, 2, 4, 11, 3, 10) + tuple(self.cfg.get('extra_star', ()))
+        return c in (5, 16, 53, 21, 43, 6, 14, 27) + tuple(self.cfg.get('extra_star', ()))
 
     def event_live(self, g, side, c):
         if not g.event_allowed(side, c):

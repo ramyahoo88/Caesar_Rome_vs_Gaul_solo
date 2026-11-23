@@ -115,7 +115,7 @@ Each mission says which army acts. *Target order* lists the tie-breaks in turn; 
 2. Otherwise, if a Provincia province is lost, an army SWEEPs Gallic IMs in the lost provinces (5.3).
 3. Otherwise, if a Provincia province is lost, it places an IM in a Provincia province Rome does not control, Narbonensis first (Control Table line 2). PROTECT never places an IM during an Activation Event (5.5).
 
-**REGROUP.** Only if a Roman army other than Caesar's is in danger where it stands. It moves to a space it can reach where it is not in danger: Caesar's space first; then the space with the most Roman BS; then the nearest. If several armies are in danger, the one facing the highest ratio of Gallic BS to its own goes first.
+**REGROUP.** Only if a Roman army other than Caesar's is in danger where it stands. It moves to a space it can reach, with no Gallic CUs outside, where it is not in danger: Caesar's space first; then the space with the most Roman BS; then the nearest. If several armies are in danger, the one facing the highest ratio of Gallic BS to its own goes first.
 
 **SUBMIT.** An army that can reach Gallic CUs (outside) with at least **3×** their BS attacks them, so they must Submit (13.3). *Target order:* the largest Gallic BS; the nearest. If a Gallic Fortified Town is in that space and MP remain, roll a siege as well.
 
